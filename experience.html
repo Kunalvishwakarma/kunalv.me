@@ -1,141 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience | Kunal Vishwakarma</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #333; }
-        header { background: #1a1a1a; color: white; padding: 30px 20px; text-align: center; }
-        nav { background: #333; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { width: 85%; max-width: 900px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; }
-        h2 { border-left: 4px solid #1a1a1a; padding-left: 10px; margin-top: 40px; }
-        .role { margin-bottom: 40px; }
-        .role h3 { margin: 0; font-size: 22px; }
-        .role p { margin: 6px 0; }
-        ul { margin-top: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Experience | Kunal Vishwakarma – Infrastructure & Network Leadership</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="title" content="Experience | Kunal Vishwakarma – Infrastructure & Network Leadership">
+  <meta name="description" content="20+ years of experience across Network Infrastructure, Datacenter Operations, Azure Migrate, Cybersecurity, and Technical Project Management.">
+  <meta name="keywords" content="Network experience, Infrastructure Lead, Technical Project Manager, Datacenter SME, Azure Migrate experience, Kunal Vishwakarma">
+
+  <meta property="og:title" content="Experience | Infrastructure & Network Leadership">
+  <meta property="og:description" content="Network SME, Infrastructure Lead, Azure Migrate, Cybersecurity, and Incident Leadership experience.">
+  <meta property="og:url" content="https://kunalv.me/experience.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Experience | Infrastructure & Network Leadership">
+  <meta name="twitter:description" content="20+ years in Network Infrastructure, Cloud, and Cybersecurity.">
+
+  <style>
+    :root {
+      --primary: #0b5ed7;
+      --primary-dark: #084298;
+      --bg: #f5f7fb;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-left span {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .nav-right a {
+      margin-left: 1rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.25rem 2rem;
+    }
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+    .role-card {
+      background: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+    }
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 0.35rem;
+    }
+    .role-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .role-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .role-company {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .role-body {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .role-list {
+      font-size: 0.88rem;
+      color: var(--text);
+      padding-left: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+    .role-list li + li { margin-top: 0.2rem; }
+
+    .skills-section {
+      margin-top: 2rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+    }
+    .skill-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+    }
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: #f3f4ff;
+      color: var(--primary-dark);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <span>Kunal Vishwakarma</span>
+      </div>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="awards.html">Awards</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<header>
-    <h1>Professional Experience</h1>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="experience.html">Experience</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<div class="container">
-
-    <h2>Key Projects</h2>
-    <p>
-        <a href="https://github.com/Kunalvishwakarma/Profile/wiki/KEY-PROJECT-EXPERIENCE" target="_blank">
-            View Full Project Portfolio →
-        </a>
+  <main>
+    <h1 class="page-title">Experience</h1>
+    <p class="page-subtitle">
+      A career built on deep network expertise, operational leadership, and delivering reliable, secure infrastructure
+      for demanding enterprise environments.
     </p>
 
-    <!-- Project Manager -->
-    <div class="role">
-        <h3>Project Manager</h3>
-        <p><strong>Cognizant Oil & Gas Consulting Services Norway AS</strong></p>
-        <p>2019 – Present</p>
-        <ul>
-            <li>Lead Azure migration programs using Jira & Azure DevOps Board.</li>
-            <li>Drive governance: RAID logs, BCM/DR, compliance, risk mitigation.</li>
-            <li>Coordinate with Microsoft, Cisco, HP, and cloud vendors.</li>
-            <li>Manage demand intake, cost estimation, and SoW/RFP processes.</li>
-            <li>Align business, infra, and security teams across the project lifecycle.</li>
+    <section class="timeline">
+
+      <article class="role-card">
+        <div class="role-header">
+          <h2 class="role-title">Network Technical Manager / Infrastructure Lead</h2>
+          <span class="role-meta">2019 – Present · Oslo, Norway</span>
+        </div>
+        <p class="role-company">Cognizant Oil & Gas Consulting Services Norway AS</p>
+        <p class="role-body">
+          Leading network and infrastructure initiatives for a major oil & gas client, with responsibility for
+          architecture, operations, and incident leadership.
+        </p>
+        <ul class="role-list">
+          <li>Own end‑to‑end network design, implementation, and lifecycle management across multiple sites.</li>
+          <li>Act as primary SME for routing, switching, firewalls, load balancers, and wireless.</li>
+          <li>Lead high‑severity incidents, coordinate with vendors, and drive root cause analysis.</li>
+          <li>Partner with stakeholders to align infrastructure decisions with business priorities.</li>
         </ul>
+      </article>
+
+      <article class="role-card">
+        <div class="role-header">
+          <h2 class="role-title">Technical Lead / Associate Operations Manager</h2>
+          <span class="role-meta">2013 – 2019</span>
+        </div>
+        <p class="role-company">Cognizant Technology Solutions</p>
+        <p class="role-body">
+          Managed network operations and delivery for enterprise customers, ensuring stability, performance, and
+          adherence to SLAs.
+        </p>
+        <ul class="role-list">
+          <li>Led a team of engineers handling day‑to‑day network operations and escalations.</li>
+          <li>Implemented process improvements and automation to reduce incident volume and MTTR.</li>
+          <li>Collaborated with cross‑functional teams on infrastructure changes and migrations.</li>
+        </ul>
+      </article>
+
+      <article class="role-card">
+        <div class="role-header">
+          <h2 class="role-title">Network / Infrastructure Engineering Roles</h2>
+          <span class="role-meta">2005 – 2013</span>
+        </div>
+        <p class="role-company">Compucom · NETSOL IBM India · Ashtech Infotech · Einfotek</p>
+        <p class="role-body">
+          Progressively responsible roles in network administration, project engineering, and technical leadership
+          across datacenter and enterprise environments.
+        </p>
+        <ul class="role-list">
+          <li>Delivered network projects from design to implementation and handover.</li>
+          <li>Maintained critical infrastructure with a strong focus on uptime and performance.</li>
+          <li>Built a foundation in routing, switching, security, and datacenter operations.</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <section class="skills-section">
+      <h2 class="page-title" style="font-size:1.25rem;">Skills & Focus Areas</h2>
+      <p class="page-subtitle">
+        A blend of hands‑on technical depth and leadership across network, cloud, and security.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Network & Infrastructure</h3>
+          <p style="font-size:0.9rem; color:var(--muted);">
+            Design, implementation, and operations of complex enterprise networks.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Routing & Switching</span>
+            <span class="pill">Firewalls</span>
+            <span class="pill">Load Balancers</span>
+            <span class="pill">Wireless</span>
+            <span class="pill">SD‑WAN</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Cloud & Azure Migrate</h3>
+          <p style="font-size:0.9rem; color:var(--muted);">
+            Network‑centric cloud migration and hybrid connectivity.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Azure Migrate</span>
+            <span class="pill">ExpressRoute</span>
+            <span class="pill">VPN</span>
+            <span class="pill">NSG / UDR</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Cybersecurity</h3>
+          <p style="font-size:0.9rem; color:var(--muted);">
+            Security‑aware network design and governance.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Cybersecurity</span>
+            <span class="pill">OSINT</span>
+            <span class="pill">Segmentation</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Leadership & Delivery</h3>
+          <p style="font-size:0.9rem; color:var(--muted);">
+            Driving outcomes through structure, communication, and ownership.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Incident Leadership</span>
+            <span class="pill">Stakeholder Mgmt</span>
+            <span class="pill">Vendor Mgmt</span>
+            <span class="pill">Technical PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Kunal Vishwakarma</span>
+      <span>Infrastructure & Network Leadership</span>
     </div>
+  </footer>
 
-    <!-- Technical Lead -->
-    <div class="role">
-        <h3>Technical Lead / Associate Operations Manager</h3>
-        <p><strong>Cognizant Technology Solutions India | Pune</strong></p>
-        <p>2013 – 2019</p>
-        <ul>
-            <li>Established Barclays’ Offshore Development Center (ODC) in Pune.</li>
-            <li>Led Web Infrastructure for Barclays Technology Solutions.</li>
-            <li>Managed F5, Bluecoat, Infoblox, Linux, Tumbleweed, Fix‑Gateways.</li>
-            <li>Directed a 20‑member team supporting US/EMEA/APAC.</li>
-            <li>Handled 500–1000 daily L1/L2 support interactions.</li>
-        </ul>
-    </div>
-
-    <!-- Technical Consultant -->
-    <div class="role">
-        <h3>Technical Consultant</h3>
-        <p><strong>Einfotek | Pune</strong></p>
-        <p>2011 – 2012</p>
-        <ul>
-            <li>Web Infrastructure Lead for Banking Domain.</li>
-            <li>Transition Lead for Barclays Capital India.</li>
-            <li>SME for Bluecoat, BIG-IP/F5, Tumbleweed, Infoblox, Fixgateway.</li>
-        </ul>
-    </div>
-
-    <!-- Technical Project Lead -->
-    <div class="role">
-        <h3>Technical Project Lead</h3>
-        <p><strong>Compucom | Pune</strong></p>
-        <p>2010 – 2011</p>
-        <ul>
-            <li>Migrated 100+ servers for Walmart.</li>
-            <li>Managed Hyper‑V private cloud operations.</li>
-            <li>Led Windows Server migrations (2003/2008 → 2012).</li>
-            <li>Maintained 100% SLA for customer issues.</li>
-        </ul>
-    </div>
-
-    <!-- Senior Network Admin -->
-    <div class="role">
-        <h3>Senior Network Administrator & Project Engineer</h3>
-        <p><strong>NETSOL IBM India | Mumbai</strong></p>
-        <p>2009 – 2010</p>
-        <ul>
-            <li>Designed scalable LAN/WAN architectures.</li>
-            <li>Implemented firewalls, VPNs, and network security.</li>
-            <li>Managed vendor contracts and DR documentation.</li>
-        </ul>
-    </div>
-
-    <!-- Network Administrator -->
-    <div class="role">
-        <h3>Network Administrator</h3>
-        <p><strong>Ashtech Infotech Pvt Ltd | Mumbai</strong></p>
-        <p>2005 – 2009</p>
-
-        <h4>Responsibilities</h4>
-        <ul>
-            <li>Design and maintain scalable network solutions.</li>
-            <li>Oversee LAN, WAN, wireless configurations.</li>
-            <li>Troubleshoot routers, switches, firewalls.</li>
-            <li>Implement firewalls, VPNs, monitoring tools.</li>
-            <li>Optimize network performance and uptime.</li>
-            <li>Mentor junior engineers and support staff.</li>
-            <li>Maintain documentation for DR and operations.</li>
-            <li>Manage vendor relationships and hardware procurement.</li>
-        </ul>
-
-        <h4>New Branch Router Rollouts</h4>
-        <ul>
-            <li>Deployed Cisco 1841 routers and switches (2960, 2950, 2970, 3750G, 4503).</li>
-            <li>Maintained leased lines, VSAT, ISDN links.</li>
-            <li>Resolved WAN issues across 26 locations and 35 branches.</li>
-            <li>Coordinated with Reliance, TATA, HUGHES for support.</li>
-        </ul>
-
-        <h4>Lupin Projects</h4>
-        <ul>
-            <li>Migrated to Symantec Antivirus (SAV 9.0).</li>
-            <li>Upgraded VSAT infrastructure for 33 sites.</li>
-            <li>Enhanced manufacturing plant networks.</li>
-            <li>Implemented MRTG, NetFlow Analyzer.</li>
-            <li>Managed Nokia IP 220 and 350+ Check Point firewalls.</li>
-            <li>Executed LAN/WAN implementations
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
