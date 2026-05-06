@@ -1,39 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Kunal Vishwakarma</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #333; }
-        header { background: #1a1a1a; color: white; padding: 30px 20px; text-align: center; }
-        nav { background: #333; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { width: 85%; max-width: 900px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; }
-        h2 { border-left: 4px solid #1a1a1a; padding-left: 10px; margin-top: 40px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Contact | Kunal Vishwakarma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="title" content="Contact | Kunal Vishwakarma">
+  <meta name="description" content="Get in touch with Kunal Vishwakarma – Network Technical Manager, Infrastructure Lead, and Cybersecurity Professional based in Oslo, Norway.">
+  <meta name="keywords" content="Contact Kunal Vishwakarma, Network Technical Manager contact, Oslo network engineer, cybersecurity contact">
+
+  <meta property="og:title" content="Contact | Kunal Vishwakarma">
+  <meta property="og:description" content="Reach out for Network, Cloud, and Cybersecurity opportunities.">
+  <meta property="og:url" content="https://kunalv.me/contact.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Kunal Vishwakarma">
+  <meta name="twitter:description" content="Contact for Network, Cloud, and Cybersecurity roles.">
+
+  <style>
+    :root {
+      --primary: #0b5ed7;
+      --primary-dark: #084298;
+      --bg: #f5f7fb;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-left span {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .nav-right a {
+      margin-left: 1rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.25rem 2rem;
+    }
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    .contact-list li + li { margin-top: 0.4rem; }
+    .label {
+      font-weight: 600;
+      color: var(--muted);
+      margin-right: 0.25rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+    label {
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: 0.4rem;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .btn-primary {
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: #ffffff;
+      cursor: pointer;
+      width: fit-content;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+    .note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <span>Kunal Vishwakarma</span>
+      </div>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="awards.html">Awards</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<header>
-    <h1>Contact</h1>
-</header>
+  <main>
+    <h1 class="page-title">Contact</h1>
+    <p class="page-subtitle">
+      Open to roles in Network, Cloud, and Cybersecurity—especially techno‑functional or technical project manager
+      positions aligned with infrastructure and security.
+    </p>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="experience.html">Experience</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <section class="grid">
+      <article class="card">
+        <h2>Send a message</h2>
+        <p>
+          You can use this form as a template, or simply reach out via email or LinkedIn using the details on the right.
+        </p>
+        <!-- Static form (no backend) – you can later wire this to a service like Formspree -->
+        <form>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="your@email.com">
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" placeholder="Reason for contacting">
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message here"></textarea>
+          </div>
+          <button type="button" class="btn-primary">Send (placeholder)</button>
+          <p class="note">
+            This is a static portfolio site. You can also contact me directly using the email or LinkedIn details.
+          </p>
+        </form>
+      </article>
 
-<div class="container">
-    <h2>Get in Touch</h2>
-    <p>Email: <strong>vkunal@gmail.com</strong></p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    <p>GitHub: github.com/kunalvishwakarma</p>
-    <p>Location: Oslo, Norway</p>
-</div>
+      <aside class="card">
+        <h2>Direct contact</h2>
+        <p>
+          Prefer a direct channel? Use the details below to connect for opportunities, collaborations, or discussions.
+        </p>
+        <ul class="contact-list">
+          <li><span class="label">Location:</span>Oslo, Norway</li>
+          <li><span class="label">Role focus:</span>Network Technical Manager · Infrastructure Lead · Cybersecurity</li>
+          <li><span class="label">Email:</span><span>youremail@example.com</span></li>
+          <li><span class="label">LinkedIn:</span><a href="#" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+        </ul>
+        <p class="note" style="margin-top:0.75rem;">
+          Replace the email and LinkedIn link with your actual contact details in the HTML.
+        </p>
+      </aside>
+    </section>
+  </main>
 
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Kunal Vishwakarma</span>
+      <span>Open to global and remote opportunities</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
