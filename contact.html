@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact | Kunal Vishwakarma</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Contact | Kunal Vishwakarma – Network Technical Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="title" content="Contact | Kunal Vishwakarma">
-  <meta name="description" content="Get in touch with Kunal Vishwakarma – Network Technical Manager, Infrastructure Lead, and Cybersecurity Professional based in Oslo, Norway.">
-  <meta name="keywords" content="Contact Kunal Vishwakarma, Network Technical Manager contact, Oslo network engineer, cybersecurity contact">
+  <!-- Primary SEO -->
+  <meta name="title" content="Contact | Kunal Vishwakarma – Network Technical Manager" />
+  <meta name="description" content="Contact Kunal Vishwakarma for Network Infrastructure, Azure Migrate, Cloud Networking, and Cybersecurity opportunities." />
+  <meta name="keywords" content="Contact Kunal Vishwakarma, Network Technical Manager, Oslo, Infrastructure Lead, Azure Migrate, Cybersecurity" />
 
-  <meta property="og:title" content="Contact | Kunal Vishwakarma">
-  <meta property="og:description" content="Reach out for Network, Cloud, and Cybersecurity opportunities.">
-  <meta property="og:url" content="https://kunalv.me/contact.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Network Technical Manager" />
+  <meta property="og:description" content="Reach out for network, cloud, and infrastructure opportunities." />
+  <meta property="og:url" content="https://kunalv.me/contact.html" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact | Kunal Vishwakarma">
-  <meta name="twitter:description" content="Contact for Network, Cloud, and Cybersecurity roles.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Network Technical Manager" />
+  <meta name="twitter:description" content="Get in touch with Kunal Vishwakarma." />
 
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://kunalv.me/contact.html#contact",
+    "url": "https://kunalv.me/contact.html",
+    "name": "Contact – Kunal Vishwakarma",
+    "about": { "@id": "https://kunalv.me/#person" },
+    "isPartOf": { "@id": "https://kunalv.me/#website" }
+  }
+  </script>
+
+  <!-- Styles -->
   <style>
     :root {
       --primary: #0b5ed7;
@@ -27,7 +44,7 @@
       --card-bg: #ffffff;
       --border: #e5e7eb;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
@@ -49,8 +66,8 @@
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
     .nav-left span {
       font-weight: 700;
@@ -78,79 +95,27 @@
       margin-bottom: 1.5rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 1.5rem;
-    }
-    .card {
+    .contact-card {
       background: var(--card-bg);
       border-radius: 0.75rem;
-      padding: 1rem 1.1rem;
+      padding: 1.5rem 1.5rem;
       border: 1px solid var(--border);
+      max-width: 600px;
     }
-    .card h2 {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
+    .contact-item {
+      margin-bottom: 1rem;
     }
-    .card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .contact-list {
-      list-style: none;
-      font-size: 0.9rem;
-    }
-    .contact-list li + li { margin-top: 0.4rem; }
     .label {
-      font-weight: 600;
+      font-size: 0.85rem;
       color: var(--muted);
-      margin-right: 0.25rem;
-    }
-
-    form {
-      display: grid;
-      gap: 0.75rem;
-      font-size: 0.9rem;
-    }
-    label {
-      font-weight: 500;
-      margin-bottom: 0.15rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
       display: block;
     }
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem 0.6rem;
-      border-radius: 0.4rem;
-      border: 1px solid var(--border);
-      font-family: inherit;
-      font-size: 0.9rem;
-    }
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-    .btn-primary {
-      padding: 0.55rem 1.1rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: 1px solid var(--primary);
-      background: var(--primary);
-      color: #ffffff;
-      cursor: pointer;
-      width: fit-content;
-    }
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      border-color: var(--primary-dark);
-    }
-    .note {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.25rem;
+    .value {
+      font-size: 1rem;
+      font-weight: 500;
     }
 
     footer {
@@ -163,18 +128,13 @@
       max-width: 960px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 0.75rem;
-    }
-
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="nav">
@@ -194,68 +154,40 @@
   <main>
     <h1 class="page-title">Contact</h1>
     <p class="page-subtitle">
-      Open to roles in Network, Cloud, and Cybersecurity—especially techno‑functional or technical project manager
-      positions aligned with infrastructure and security.
+      Feel free to reach out for opportunities, collaboration, or professional discussions.
     </p>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Send a message</h2>
-        <p>
-          You can use this form as a template, or simply reach out via email or LinkedIn using the details on the right.
-        </p>
-        <!-- Static form (no backend) – you can later wire this to a service like Formspree -->
-        <form>
-          <div>
-            <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your name">
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="your@email.com">
-          </div>
-          <div>
-            <label for="subject">Subject</label>
-            <input id="subject" type="text" placeholder="Reason for contacting">
-          </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Write your message here"></textarea>
-          </div>
-          <button type="button" class="btn-primary">Send (placeholder)</button>
-          <p class="note">
-            This is a static portfolio site. You can also contact me directly using the email or LinkedIn details.
-          </p>
-        </form>
-      </article>
+    <div class="contact-card">
+      <div class="contact-item">
+        <span class="label">Email</span>
+        <span class="value">kunalvishwakarma@gmail.com</span>
+      </div>
 
-      <aside class="card">
-        <h2>Direct contact</h2>
-        <p>
-          Prefer a direct channel? Use the details below to connect for opportunities, collaborations, or discussions.
-        </p>
-        <ul class="contact-list">
-          <li><span class="label">Location:</span>Oslo, Norway</li>
-          <li><span class="label">Role focus:</span>Network Technical Manager · Infrastructure Lead · Cybersecurity</li>
-          <li><span class="label">Email:</span><span>youremail@example.com</span></li>
-          <li><span class="label">LinkedIn:</span><a href="#" target="_blank" rel="noopener">LinkedIn Profile</a></li>
-        </ul>
-        <p class="note" style="margin-top:0.75rem;">
-          Replace the email and LinkedIn link with your actual contact details in the HTML.
-        </p>
-      </aside>
-    </section>
+      <div class="contact-item">
+        <span class="label">LinkedIn</span>
+        <span class="value">
+          <a href="https://www.linkedin.com/in/kunalvishwakarma" target="_blank">
+            linkedin.com/in/kunalvishwakarma
+          </a>
+        </span>
+      </div>
+
+      <div class="contact-item">
+        <span class="label">Location</span>
+        <span class="value">Oslo, Norway</span>
+      </div>
+    </div>
   </main>
 
   <footer>
     <div class="footer-inner">
       <span>© <span id="year"></span> Kunal Vishwakarma</span>
-      <span>Open to global and remote opportunities</span>
+      <span>Let's Connect</span>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
