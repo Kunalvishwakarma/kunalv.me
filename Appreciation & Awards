@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Awards & Recognition | Kunal Vishwakarma</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="title" content="Awards & Recognition | Kunal Vishwakarma">
-  <meta name="description" content="Awards and recognition earned across Network Infrastructure, Azure Migrate, Cybersecurity, and leadership roles.">
-  <meta name="keywords" content="Awards, Recognition, Network excellence, Leadership awards, Kunal Vishwakarma">
+  <!-- Primary SEO -->
+  <meta name="title" content="Awards & Recognition | Kunal Vishwakarma" />
+  <meta name="description" content="Awards and recognitions received by Kunal Vishwakarma for excellence in Network Infrastructure, Azure Migrate, Cybersecurity, and Leadership." />
+  <meta name="keywords" content="Awards, Recognition, Best Performer, GEM Award, Innovation Award, Network SME, Kunal Vishwakarma" />
 
-  <meta property="og:title" content="Awards & Recognition | Kunal Vishwakarma">
-  <meta property="og:description" content="Professional awards in Network Infrastructure, Cloud, and Cybersecurity.">
-  <meta property="og:url" content="https://kunalv.me/awards.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Awards & Recognition | Kunal Vishwakarma" />
+  <meta property="og:description" content="Professional awards and recognitions in Network, Cloud, and Infrastructure leadership." />
+  <meta property="og:url" content="https://kunalv.me/awards.html" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Awards & Recognition | Kunal Vishwakarma">
-  <meta name="twitter:description" content="Professional recognition in Network and Cloud domains.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Awards & Recognition | Kunal Vishwakarma" />
+  <meta name="twitter:description" content="Professional awards and recognitions." />
 
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://kunalv.me/awards.html#awards",
+    "url": "https://kunalv.me/awards.html",
+    "name": "Awards & Recognition – Kunal Vishwakarma",
+    "about": { "@id": "https://kunalv.me/#person" },
+    "isPartOf": { "@id": "https://kunalv.me/#website" }
+  }
+  </script>
+
+  <!-- Styles -->
   <style>
     :root {
       --primary: #0b5ed7;
@@ -27,7 +44,7 @@
       --card-bg: #ffffff;
       --border: #e5e7eb;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
@@ -49,8 +66,8 @@
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
     .nav-left span {
       font-weight: 700;
@@ -75,128 +92,3 @@
     .page-subtitle {
       font-size: 0.95rem;
       color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .awards-list {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 1rem;
-    }
-    .award-card {
-      background: var(--card-bg);
-      border-radius: 0.75rem;
-      padding: 1rem 1.1rem;
-      border: 1px solid var(--border);
-    }
-    .award-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 0.75rem;
-      margin-bottom: 0.35rem;
-    }
-    .award-title {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .award-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-    .award-body {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1rem 1.25rem 1.5rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .footer-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav class="nav">
-      <div class="nav-left">
-        <span>Kunal Vishwakarma</span>
-      </div>
-      <div class="nav-right">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="awards.html">Awards</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <h1 class="page-title">Awards & Recognition</h1>
-    <p class="page-subtitle">
-      A selection of recognition received for technical excellence, reliability, and leadership in network and
-      infrastructure roles.
-    </p>
-
-    <section class="awards-list">
-
-      <article class="award-card">
-        <div class="award-header">
-          <h2 class="award-title">Outstanding Network SME & Incident Leader</h2>
-          <span class="award-meta">Cognizant · Year</span>
-        </div>
-        <p class="award-body">
-          Recognition for consistently leading complex network incidents, restoring services under pressure, and
-          providing clear communication to stakeholders.
-        </p>
-      </article>
-
-      <article class="award-card">
-        <div class="award-header">
-          <h2 class="award-title">Client Appreciation – Reliable Infrastructure Delivery</h2>
-          <span class="award-meta">Client · Year</span>
-        </div>
-        <p class="award-body">
-          Appreciation from a major enterprise client for delivering stable, secure, and well‑managed network
-          infrastructure supporting critical business operations.
-        </p>
-      </article>
-
-      <article class="award-card">
-        <div class="award-header">
-          <h2 class="award-title">Team Excellence & Mentorship</h2>
-          <span class="award-meta">Organization · Year</span>
-        </div>
-        <p class="award-body">
-          Recognition for mentoring engineers, improving processes, and fostering a culture of ownership and
-          continuous improvement in network operations.
-        </p>
-      </article>
-
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <span>© <span id="year"></span> Kunal Vishwakarma</span>
-      <span>Professional Awards & Recognition</span>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
