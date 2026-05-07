@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Projects | Kunal Vishwakarma – Network & Cloud Engineering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="title" content="Projects | Kunal Vishwakarma – Network & Cloud Engineering">
-  <meta name="description" content="Professional projects in Network Infrastructure, Azure Migrate, Cloud Networking, Automation, and Cybersecurity.">
-  <meta name="keywords" content="Network projects, Azure Migrate projects, Cloud engineering, Infrastructure automation, Cybersecurity projects, Kunal Vishwakarma">
+  <!-- Primary SEO -->
+  <meta name="title" content="Projects | Kunal Vishwakarma – Network & Cloud Engineering" />
+  <meta name="description" content="Professional projects in Network Infrastructure, Azure Migrate, Cloud Networking, Automation, and Cybersecurity." />
+  <meta name="keywords" content="Network projects, Azure Migrate projects, Cloud engineering, Infrastructure automation, Cybersecurity projects, Kunal Vishwakarma" />
 
-  <meta property="og:title" content="Projects | Network & Cloud Engineering">
-  <meta property="og:description" content="Explore Azure Migrate, Network Infrastructure, and Cybersecurity projects by Kunal Vishwakarma.">
-  <meta property="og:url" content="https://kunalv.me/projects.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects | Network & Cloud Engineering" />
+  <meta property="og:description" content="Explore Azure Migrate, Network Infrastructure, and Cybersecurity projects by Kunal Vishwakarma." />
+  <meta property="og:url" content="https://kunalv.me/projects.html" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Projects | Network & Cloud Engineering">
-  <meta name="twitter:description" content="Azure Migrate, Cloud Networking, and Infrastructure projects.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projects | Network & Cloud Engineering" />
+  <meta name="twitter:description" content="Azure Migrate, Cloud Networking, and Infrastructure projects." />
 
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://kunalv.me/projects.html#webpage",
+        "url": "https://kunalv.me/projects.html",
+        "name": "Projects – Kunal Vishwakarma",
+        "isPartOf": { "@id": "https://kunalv.me/#website" },
+        "about": { "@id": "https://kunalv.me/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Styles -->
   <style>
     :root {
       --primary: #0b5ed7;
@@ -27,262 +48,5 @@
       --card-bg: #ffffff;
       --border: #e5e7eb;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-left span {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-    .nav-right a {
-      margin-left: 1rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1.25rem 2rem;
-    }
-    .page-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-    .page-subtitle {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .project-list {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 1rem;
-    }
-    .project-card {
-      background: var(--card-bg);
-      border-radius: 0.75rem;
-      padding: 1rem 1.1rem;
-      border: 1px solid var(--border);
-    }
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 0.75rem;
-      margin-bottom: 0.35rem;
-    }
-    .project-title {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .project-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-    .project-body {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-bottom: 0.4rem;
-    }
-    .tag {
-      font-size: 0.78rem;
-      padding: 0.18rem 0.55rem;
-      border-radius: 999px;
-      background: #f3f4ff;
-      color: var(--primary-dark);
-    }
-    .project-impact {
-      font-size: 0.85rem;
-      color: var(--text);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1rem 1.25rem 1.5rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .footer-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav class="nav">
-      <div class="nav-left">
-        <span>Kunal Vishwakarma</span>
-      </div>
-      <div class="nav-right">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="awards.html">Awards</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <h1 class="page-title">Projects</h1>
-    <p class="page-subtitle">
-      Selected work across network infrastructure, cloud migration, automation, and cybersecurity—focused on
-      reliability, security, and business outcomes.
-    </p>
-
-    <section class="project-list">
-
-      <article class="project-card">
-        <div class="project-header">
-          <h2 class="project-title">Enterprise Network Modernization for Global Oil & Gas Client</h2>
-          <span class="project-meta">Network Infrastructure · Lead SME</span>
-        </div>
-        <p class="project-body">
-          Led the modernization of a multi‑site enterprise network, including core routing, switching, firewalls,
-          and load balancers, to improve resilience and security for business‑critical applications.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Routing & Switching</span>
-          <span class="tag">Firewalls</span>
-          <span class="tag">Load Balancers</span>
-          <span class="tag">High Availability</span>
-        </div>
-        <p class="project-impact">
-          <strong>Impact:</strong> Reduced major incidents, improved network uptime, and enabled secure connectivity
-          for distributed operations.
-        </p>
-      </article>
-
-      <article class="project-card">
-        <div class="project-header">
-          <h2 class="project-title">Azure Migrate – Hybrid Connectivity & Network Design</h2>
-          <span class="project-meta">Azure Migrate · Cloud Networking</span>
-        </div>
-        <p class="project-body">
-          Designed and implemented network connectivity for an Azure migration program, including ExpressRoute,
-          VPN, NSG/UDR policies, and segmentation for production and non‑production workloads.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Azure Migrate</span>
-          <span class="tag">ExpressRoute</span>
-          <span class="tag">VPN</span>
-          <span class="tag">NSG / UDR</span>
-        </div>
-        <p class="project-impact">
-          <strong>Impact:</strong> Enabled secure, scalable hybrid connectivity and reduced migration risk through
-          well‑defined network patterns.
-        </p>
-      </article>
-
-      <article class="project-card">
-        <div class="project-header">
-          <h2 class="project-title">Incident Command for High‑Severity Network Outages</h2>
-          <span class="project-meta">Incident Leadership · Operations</span>
-        </div>
-        <p class="project-body">
-          Acted as incident commander for high‑severity network and infrastructure outages, coordinating technical
-          teams, vendors, and business stakeholders to restore services quickly.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Major Incident Mgmt</span>
-          <span class="tag">RCA</span>
-          <span class="tag">Stakeholder Communication</span>
-        </div>
-        <p class="project-impact">
-          <strong>Impact:</strong> Reduced mean time to resolution (MTTR), improved communication transparency, and
-          strengthened post‑incident learning.
-        </p>
-      </article>
-
-      <article class="project-card">
-        <div class="project-header">
-          <h2 class="project-title">Network Automation & Operational Efficiency</h2>
-          <span class="project-meta">Automation · Process Improvement</span>
-        </div>
-        <p class="project-body">
-          Introduced automation and standardized procedures for recurring network operations tasks, monitoring,
-          and configuration validation to reduce manual effort and human error.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Automation</span>
-          <span class="tag">Python / Scripting</span>
-          <span class="tag">Monitoring</span>
-        </div>
-        <p class="project-impact">
-          <strong>Impact:</strong> Improved consistency, reduced operational toil, and freed up time for higher‑value
-          engineering work.
-        </p>
-      </article>
-
-      <article class="project-card">
-        <div class="project-header">
-          <h2 class="project-title">Security Hardening & Network Segmentation</h2>
-          <span class="project-meta">Cybersecurity · Network Design</span>
-        </div>
-        <p class="project-body">
-          Worked on strengthening security posture through network segmentation, secure remote access, and
-          alignment with cybersecurity best practices and governance requirements.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Cybersecurity</span>
-          <span class="tag">Segmentation</span>
-          <span class="tag">Zero‑trust mindset</span>
-        </div>
-        <p class="project-impact">
-          <strong>Impact:</strong> Reduced attack surface and improved compliance with internal and external
-          security expectations.
-        </p>
-      </article>
-
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <span>© <span id="year"></span> Kunal Vishwakarma</span>
-      <span>Network & Cloud Engineering Projects</span>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
