@@ -210,55 +210,6 @@
       margin-right: 0.25rem;
     }
 
-    .section {
-      max-width: 960px;
-      margin: 0 auto 2rem;
-      padding: 0 1.25rem;
-    }
-    .section-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-    .section-subtitle {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 0.75rem;
-      padding: 1rem 1.1rem;
-      border: 1px solid var(--border);
-    }
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-    }
-    .card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.5rem;
-    }
-    .pill {
-      font-size: 0.8rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      background: #f3f4ff;
-      color: var(--primary-dark);
-    }
-
     footer {
       border-top: 1px solid var(--border);
       margin-top: 2rem;
@@ -277,3 +228,61 @@
 
     @media (max-width: 768px) {
       .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="nav-left"><span>Kunal Vishwakarma</span></div>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="awards.html">Awards</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1 class="hero-title">Network Technical Manager & Infrastructure Lead</h1>
+      <p class="hero-subtitle">20+ years in Network Infrastructure, Azure Migrate, Cybersecurity & Incident Leadership</p>
+
+      <div class="hero-tags">
+        <span class="tag">Azure Migrate</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Cloud Networking</span>
+        <span class="tag">Incident Leadership</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="experience.html">View Experience</a>
+        <a class="btn-outline" href="projects.html">View Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>Quick Profile</h2>
+      <ul>
+        <li><span class="hero-label">Location:</span> Oslo, Norway</li>
+        <li><span class="hero-label">Experience:</span> 20+ Years</li>
+        <li><span class="hero-label">Specialization:</span> Network Infrastructure</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Kunal Vishwakarma</span>
+      <span>Network Technical Manager | Oslo, Norway</span>
+    </div>
+  </footer>
+
+</body>
+</html>
