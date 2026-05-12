@@ -2,288 +2,499 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Kunal Vishwakarma | Network Technical Manager & Infrastructure Lead</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunal Vishwakarma – Portfolio</title>
 
-  <!-- Primary SEO -->
-  <meta name="title" content="Kunal Vishwakarma | Network Technical Manager & Infrastructure Lead" />
-  <meta name="description" content="20+ years of expertise in Network Infrastructure, Azure Migrate, Cybersecurity, and Incident Leadership. Based in Oslo, Norway." />
-  <meta name="keywords" content="Kunal Vishwakarma, Network Technical Manager, Infrastructure Lead, Azure Migrate, Cybersecurity, Oslo, Cloud Networking, Datacenter SME" />
-  <meta name="author" content="Kunal Vishwakarma" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Kunal Vishwakarma | Network Technical Manager" />
-  <meta property="og:description" content="Network SME | Azure Migrate | Cybersecurity | Incident Leadership | Oslo, Norway" />
-  <meta property="og:url" content="https://kunalv.me" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kunal Vishwakarma | Network Technical Manager" />
-  <meta name="twitter:description" content="Network SME | Azure Migrate | Cybersecurity | Incident Leadership" />
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://kunalv.me/#website",
-        "url": "https://kunalv.me/",
-        "name": "Kunal Vishwakarma",
-        "description": "Network Technical Manager & Infrastructure Lead based in Oslo, Norway.",
-        "publisher": { "@id": "https://kunalv.me/#person" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://kunalv.me/#person",
-        "name": "Kunal Vishwakarma",
-        "jobTitle": "Network Technical Manager",
-        "description": "20+ years of experience in Network Infrastructure, Azure Migrate, Cybersecurity, and Incident Leadership.",
-        "url": "https://kunalv.me/",
-        "image": "https://kunalv.me/profile.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Oslo",
-          "addressCountry": "Norway"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/kunalvishwakarma"
-        ],
-        "knowsAbout": [
-          "Network Infrastructure",
-          "Azure Migrate",
-          "Cybersecurity",
-          "Incident Management",
-          "Cloud Networking",
-          "Routing & Switching",
-          "Firewalls",
-          "Load Balancers",
-          "SD-WAN"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://kunalv.me/#webpage",
-        "url": "https://kunalv.me/",
-        "name": "Home – Kunal Vishwakarma",
-        "isPartOf": { "@id": "https://kunalv.me/#website" },
-        "about": { "@id": "https://kunalv.me/#person" }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Styles -->
   <style>
     :root {
-      --primary: #0b5ed7;
-      --primary-dark: #084298;
-      --bg: #f5f7fb;
-      --text: #1f2933;
-      --muted: #6b7280;
+      --bg-color: #f5f7fb;
+      --text-color: #1f2933;
+      --accent-color: #2563eb;
       --card-bg: #ffffff;
-      --border: #e5e7eb;
+      --header-bg: linear-gradient(135deg, #e0ecff, #f5f7fb);
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body.dark {
+      --bg-color: #0b1120;
+      --text-color: #e5e7eb;
+      --accent-color: #38bdf8;
+      --card-bg: #020617;
+      --header-bg: linear-gradient(135deg, #020617, #0b1120);
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.7);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-left span {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-    .nav-right a {
-      margin-left: 1rem;
-      font-size: 0.95rem;
-      font-weight: 500;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
-    .hero {
-      max-width: 960px;
-      margin: 2.5rem auto 1.5rem;
-      padding: 1.5rem 1.25rem;
-      display: grid;
-      grid-template-columns: 2fr 1.5fr;
-      gap: 2rem;
-      align-items: center;
-    }
-    .hero-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .hero-subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-    .tag {
-      background: #e0ebff;
-      color: var(--primary-dark);
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .btn-primary, .btn-outline {
-      padding: 0.55rem 1.1rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      border-color: var(--primary-dark);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--primary-dark);
-      border-color: var(--primary);
-    }
-    .btn-outline:hover {
-      background: #e0ebff;
-    }
-
-    .hero-card {
+    /* Floating Sidebar Navigation */
+    .sidebar {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
       background: var(--card-bg);
-      border-radius: 0.75rem;
-      padding: 1.25rem 1.5rem;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      box-shadow: var(--shadow-soft);
+      border-radius: 999px;
+      padding: 10px 8px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    .hero-card h2 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
+
+    .sidebar a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
-    .hero-card ul {
-      list-style: none;
+
+    .sidebar a:hover {
+      background: rgba(37, 99, 235, 0.1);
+      transform: translateX(3px);
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--card-bg);
+      box-shadow: var(--shadow-soft);
+      border-radius: 999px;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
       font-size: 0.9rem;
+      z-index: 1000;
     }
-    .hero-card li + li { margin-top: 0.4rem; }
-    .hero-label {
+
+    .theme-toggle i {
+      color: var(--accent-color);
+    }
+
+    /* Header / Hero */
+    header {
+      padding: 90px 20px 70px;
+      text-align: center;
+      background: var(--header-bg);
+      transition: background 0.3s ease;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-bottom: 15px;
+    }
+
+    .typing {
+      font-size: 1rem;
+      color: var(--accent-color);
+      min-height: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: var(--accent-color);
+      margin: 0 10px;
+      font-size: 1.6rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      color: #1d4ed8;
+      transform: translateY(-3px);
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 0.98rem;
+      opacity: 0.8;
+    }
+
+    /* Cards */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 20px 18px;
+      width: 260px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.18);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 8px 14px;
+      background: var(--accent-color);
+      color: #ffffff;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.9rem;
       font-weight: 600;
-      color: var(--muted);
-      margin-right: 0.25rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .portfolio-item {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.18);
+    }
+
+    .portfolio-item h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .portfolio-item span {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .portfolio-item p {
+      font-size: 0.9rem;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* Contact */
+    .contact-info p {
+      text-align: center;
+      font-size: 0.98rem;
+      margin: 6px 0;
+    }
+
+    .contact-info a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-      padding: 1rem 1.25rem 1.5rem;
+      text-align: center;
+      padding: 25px 10px 30px;
       font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .footer-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
+      opacity: 0.7;
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
+      .sidebar {
+        display: none;
+      }
+
+      header {
+        padding-top: 80px;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="nav-left"><span>Kunal Vishwakarma</span></div>
-      <div class="nav-right">
-        <a href="index.html">Home</a>
-        <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="awards.html">Awards</a>
-        <a href="contact.html">Contact</a>
-        <a href="technical-stack.html">Technical Stack</a>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" id="themeToggle">
+    <i class="fas fa-sun" id="themeIcon"></i>
+    <span id="themeLabel">Light</span>
+  </div>
+
+  <!-- Floating Sidebar Navigation -->
+  <nav class="sidebar">
+    <a href="#hero" title="Top"><i class="fas fa-house"></i></a>
+    <a href="#technical-stuff" title="Technical Stuff"><i class="fas fa-microchip"></i></a>
+    <a href="#learning" title="IT Training"><i class="fas fa-graduation-cap"></i></a>
+    <a href="#portfolio" title="Projects"><i class="fas fa-briefcase"></i></a>
+    <a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-inner">
+      <h1>Kunal Vishwakarma</h1>
+      <p class="tagline">Network Technical Manager · Infrastructure Lead · Cybersecurity Enthusiast</p>
+      <div class="typing" id="typingText"></div>
+
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@Kkvishwa" target="_blank" aria-label="YouTube Kkvishwa"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.youtube.com/@ApnaNorway" target="_blank" aria-label="YouTube ApnaNorway"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/kunalkv" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/klohanshi" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
       </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div>
-      <h1 class="hero-title">Network Technical Manager & Infrastructure Lead</h1>
-      <p class="hero-subtitle">20+ years in Network Infrastructure, Azure Migrate, Cybersecurity & Incident Leadership</p>
-
-      <div class="hero-tags">
-        <span class="tag">Azure Migrate</span>
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">Cloud Networking</span>
-        <span class="tag">Incident Leadership</span>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn-primary" href="experience.html">View Experience</a>
-        <a class="btn-outline" href="projects.html">View Projects</a>
+  <!-- TECHNICAL STUFF -->
+  <section id="technical-stuff">
+    <div class="section-inner">
+      <h2>Technical Stuff</h2>
+      <p class="section-subtitle">
+        Curated tools, platforms, and resources I frequently explore for technology, productivity, and professional growth.
+      </p>
+      <div class="card-container">
+        <div class="card">
+          <h3>StackSocial – IT Deals</h3>
+          <p>Discover software bundles, productivity tools, and IT resources at great value.</p>
+          <a href="https://stacksocial.com" target="_blank" class="btn">Visit StackSocial</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="hero-card">
-      <h2>Quick Profile</h2>
-      <ul>
-        <li><span class="hero-label">Location:</span> Oslo, Norway</li>
-        <li><span class="hero-label">Experience:</span> 20+ Years</li>
-        <li><span class="hero-label">Specialization:</span> Network Infrastructure</li>
-      </ul>
+  <!-- IT TRAINING & LEARNING MATERIAL -->
+  <section id="learning">
+    <div class="section-inner">
+      <h2>IT Training & Learning Material</h2>
+      <p class="section-subtitle">
+        A focused list of cybersecurity and hands‑on learning platforms I use or recommend for continuous upskilling.
+      </p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Hacker101 CTF</h3>
+          <p>Capture‑the‑flag style challenges to learn web security fundamentals.</p>
+          <a href="https://ctf.hacker101.com" target="_blank" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>TryHackMe</h3>
+          <p>Guided, gamified labs for practical cybersecurity skills.</p>
+          <a href="https://tryhackme.com" target="_blank" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>OverTheWire</h3>
+          <p>Wargames to build Linux, networking, and security fundamentals.</p>
+          <a href="https://overthewire.org" target="_blank" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>PicoCTF</h3>
+          <p>Beginner‑friendly CTF platform created by security experts.</p>
+          <a href="https://picoctf.org" target="_blank" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>Root‑Me</h3>
+          <p>Large catalog of security challenges and realistic scenarios.</p>
+          <a href="https://www.root-me.org" target="_blank" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>PentesterLab</h3>
+          <p>Hands‑on labs to learn web application security and exploitation.</p>
+          <a href="https://pentesterlab.com" target="_blank" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT PORTFOLIO -->
+  <section id="portfolio">
+    <div class="section-inner">
+      <h2>Project Portfolio</h2>
+      <p class="section-subtitle">
+        A snapshot of selected initiatives across networking, infrastructure, and security that reflect how I work and deliver.
+      </p>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <h3>Global Network Modernization</h3>
+          <span>Network · SD‑WAN · Cloud Integration</span>
+          <p>Led the design and rollout of a modern SD‑WAN‑based network for multi‑region sites, improving reliability and performance.</p>
+        </div>
+        <div class="portfolio-item">
+          <h3>Secure Remote Access Platform</h3>
+          <span>Security · VPN · Zero Trust</span>
+          <p>Implemented a secure remote access solution with strong authentication and policy‑based access for distributed teams.</p>
+        </div>
+        <div class="portfolio-item">
+          <h3>Monitoring & Observability Upgrade</h3>
+          <span>Monitoring · Automation</span>
+          <p>Consolidated monitoring tools and dashboards to improve visibility, alerting, and incident response across infrastructure.</p>
+        </div>
+        <div class="portfolio-item">
+          <h3>Cloud Landing Zone</h3>
+          <span>Cloud · Governance</span>
+          <p>Contributed to a secure cloud landing zone with network, identity, and security baselines for scalable workloads.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:28px;">
+        <a href="technical-stack.html" class="btn">View My Technical Stack</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <h2>Contact</h2>
+      <p class="section-subtitle">
+        Open to conversations around infrastructure, cybersecurity, and technology leadership opportunities.
+      </p>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:kunalv@tutamail.com">kunalv@tutamail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kunalkv" target="_blank">linkedin.com/in/kunalkv</a></p>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-inner">
-      <span>© 2026 Kunal Vishwakarma</span>
-      <span>Network Technical Manager | Oslo, Norway</span>
-    </div>
+    © 2026 Kunal Vishwakarma — All Rights Reserved
   </footer>
 
+  <script>
+    // Theme toggle
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.add('dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeLabel.textContent = 'Dark';
+      } else {
+        body.classList.remove('dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeLabel.textContent = 'Light';
+      }
+      localStorage.setItem('theme', mode);
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const current = body.classList.contains('dark') ? 'dark' : 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Typing effect
+    const typingEl = document.getElementById('typingText');
+    const phrases = [
+      'Network Technical Manager · Infrastructure Lead',
+      'Exploring cybersecurity and hands‑on labs',
+      'Bridging operations, reliability, and security',
+      'Based in Oslo · Open to global opportunities'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeLoop() {
+      const currentPhrase = phrases[phraseIndex];
+      if (!deleting) {
+        typingEl.textContent = currentPhrase.slice(0, ++charIndex);
+        if (charIndex === currentPhrase.length) {
+          deleting = true;
+          setTimeout(typeLoop, 1400);
+          return;
+        }
+      } else {
+        typingEl.textContent = currentPhrase.slice(0, --charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+      }
+      setTimeout(typeLoop, deleting ? 50 : 90);
+    }
+    typeLoop();
+  </script>
 </body>
 </html>
