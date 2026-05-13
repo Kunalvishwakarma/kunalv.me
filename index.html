@@ -2,251 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Kunal Vishwakarma | Network Technical Manager & Infrastructure Lead</title>
+  <title>Enterprise Data Center SME | AI Critical Infrastructure | Technical Project Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
-  <meta name="title" content="Kunal Vishwakarma | Network Technical Manager & Infrastructure Lead" />
-  <meta name="description" content="20+ years of expertise in Network Infrastructure, Azure Migrate, Cybersecurity, and Incident Leadership. Based in Oslo, Norway." />
-  <meta name="keywords" content="Kunal Vishwakarma, Network Technical Manager, Infrastructure Lead, Azure Migrate, Cybersecurity, Oslo, Cloud Networking, Datacenter SME" />
-  <meta name="author" content="Kunal Vishwakarma" />
+  <!-- SEO -->
+  <meta name="title" content="Enterprise Data Center SME | AI Critical Infrastructure | Technical Project Manager" />
+  <meta name="description" content="20+ years of expertise in Enterprise Datacenter, MultiModel Cloud Infrastructure, ODC, GCC, and Technical Project Management. Based in Oslo, Norway." />
+  <meta name="keywords" content="Enterprise Datacenter, AI Critical Infrastructure, Technical Project Manager, MultiModel Cloud Infrastructure, ODC, GCC, Oslo, Cloud Migration, Cybersecurity" />
+  <link rel="canonical" href="https://kunalv.me/" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Styles -->
   <style>
-    :root {
-      --primary: #0b5ed7;
-      --primary-dark: #084298;
-      --bg: #f5f7fb;
-      --text: #1f2933;
-      --muted: #6b7280;
-      --card-bg: #ffffff;
-      --border: #e5e7eb;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
     }
 
-    /* Navigation */
     header {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 10;
-    }
-    .nav {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0.6rem 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-left span {
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.02em;
-    }
-    .nav-right a {
-      margin-left: 0.75rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--muted);
-    }
-    .nav-right a:hover {
-      color: var(--primary-dark);
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
 
-    /* Hero Section */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0077b5;
+    }
+
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
     .hero {
-      max-width: 960px;
-      margin: 2.5rem auto 1.5rem;
-      padding: 1.5rem 1.25rem;
-      display: grid;
-      grid-template-columns: 2fr 1.2fr;
-      gap: 2rem;
-      align-items: center;
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+      padding: 150px 20px;
     }
-    .hero-title {
+
+    .hero h1 {
       font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
+      margin-bottom: 10px;
     }
-    .hero-subtitle {
+
+    .hero p {
       font-size: 1.1rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
+      color: #555;
     }
 
-    /* Social Icons (subtle) */
-    .social-icons {
-      margin: 0.75rem 0 1.25rem;
-      display: flex;
-      gap: 0.75rem;
-    }
-    .social-icons a {
-      font-size: 1.1rem;
-      color: var(--muted);
-    }
-    .social-icons a:hover {
-      color: var(--primary);
+    .social-links {
+      margin-top: 20px;
     }
 
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-    .tag {
-      background: #e0ebff;
-      color: var(--primary-dark);
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 500;
+    .social-links a {
+      color: #333;
+      font-size: 1.8rem;
+      margin: 0 10px;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .btn-primary, .btn-outline {
-      padding: 0.55rem 1.1rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-    .btn-primary:hover {
-      background: var(--primary-dark);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--primary-dark);
-      border-color: var(--primary);
-    }
-    .btn-outline:hover {
-      background: #e0ebff;
-    }
-
-    /* Profile Card */
-    .hero-card {
-      background: var(--card-bg);
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
-    }
-    .hero-card h2 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-    .hero-card ul {
-      list-style: none;
-      font-size: 0.95rem;
-    }
-    .hero-card li + li { margin-top: 0.5rem; }
-    .hero-label {
-      font-weight: 600;
-      color: var(--muted);
-      margin-right: 0.25rem;
+    .social-links a:hover {
+      transform: scale(1.2);
+      color: #0077b5;
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-      padding: 1rem 1.25rem 1.5rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .footer-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ddd;
     }
   </style>
 </head>
 
 <body>
-
   <header>
-    <div class="nav">
-      <div class="nav-left"><span>Kunal Vishwakarma</span></div>
-      <div class="nav-right">
-        <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="awards.html">Awards</a>
-        <a href="contact.html">Contact</a>
-        <a href="technical-stack.html">Technical Stack</a>
-      </div>
-    </div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#profile-no">Profil (Norsk)</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div>
-      <h1 class="hero-title">Network Technical Manager & Infrastructure Lead</h1>
-      <p class="hero-subtitle">20+ years in Network Infrastructure, Azure Migrate, Cybersecurity & Incident Leadership</p>
+  <section id="home" class="hero">
+    <h1>🚀 Enterprise Data Center SME | AI Critical Infrastructure | Technical Project Manager</h1>
+    <p>20+ years of experience in Enterprise Network & Datacenter, MultiModel Cloud Infrastructure, ODC, and GCC — delivering secure, scalable, and intelligent transformation programs across Europe and APAC.</p>
 
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@Kkvishwa">YT1</a>
-        <a href="https://www.youtube.com/@ApnaNorway">YT2</a>
-        <a href="https://www.linkedin.com/in/kunalkv">IN</a>
-        <a href="https://x.com/klohanshi">X</a>
-      </div>
-
-      <div class="hero-tags">
-        <span class="tag">Azure Migrate</span>
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">Cloud Networking</span>
-        <span class="tag">Incident Leadership</span>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn-primary" href="experience.html">View Experience</a>
-        <a class="btn-outline" href="projects.html">View Projects</a>
-      </div>
-    </div>
-
-    <div class="hero-card">
-      <h2>Quick Profile</h2>
-      <ul>
-        <li><span class="hero-label">Location:</span> Oslo, Norway</li>
-        <li><span class="hero-label">Experience:</span> 20+ Years</li>
-        <li><span class="hero-label">Specialization:</span> Network Infrastructure</li>
-      </ul>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@Kkvishwa" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.youtube.com/@ApnaNorway" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/in/kunalkv" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/klohanshi" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://github.com/Kunalvishwakarma" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </section>
 
-  <footer>
-    <div class="footer-inner">
-      <span>© 2026 Kunal Vishwakarma</span>
-      <span>Network Technical Manager | Oslo, Norway</span>
-    </div>
-  </footer>
+  <!-- Norwegian Profile Section -->
+  <section id="profile-no">
+    <h2>Min Profil (Norsk)</h2>
+    <p>
+      Jeg er en erfaren Enterprise Datacenter‑spesialist og Technical Project Manager med over 20 års erfaring innen
+      datasenterdrift, MultiModel Cloud‑infrastruktur, ODC og GCC‑leveransemodeller.  
+      Jeg jobber med kritisk infrastruktur, moderne skyplattformer og tekniske transformasjonsprogrammer for store globale virksomheter.  
+      Basert i Oslo, Norge – med internasjonal erfaring fra Europa og Asia.
+    </p>
+  </section>
 
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Explore enterprise-scale modernization, cloud migration, and datacenter transformation initiatives.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>Leading technical programs across regulated industries — specializing in secure infrastructure delivery and AI-driven automation.</p>
+  </section>
+
+  <section id="awards">
+    <h2>Awards</h2>
+    <p>Recognized for excellence in cloud, datacenter, and cybersecurity transformation programs.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kunalv@tutamail.com">kunalv@tutamail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/kunalkv" target="_blank">linkedin.com/in/kunalkv</a></p>
+    <p>GitHub: <a href="https://github.com/Kunalvishwakarma" target="_blank">github.com/Kunalvishwakarma</a></p>
+    <p>Location: Oslo, Norway</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Kunal Vishwakarma</span> | <span>Enterprise Data Center SME | Oslo, Norway</span>
+  </footer>
 </body>
 </html>
