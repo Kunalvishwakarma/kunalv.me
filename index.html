@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <meta name="title" content="Enterprise Data Center SME | AI Critical Infrastructure | Technical Project Manager" />
   <meta name="description" content="20+ years of expertise in Enterprise Datacenter, MultiModel Cloud Infrastructure, ODC, GCC, and Technical Project Management. Based in Oslo, Norway." />
-  <meta name="keywords" content="Enterprise Datacenter, AI Critical Infrastructure, Technical Project Manager, MultiModel Cloud Infrastructure, ODC, GCC, Oslo, Cloud Migration, Cybersecurity" />
+  <meta name="keywords" content="Enterprise Datacenter, AI Critical Infrastructure, Technical Project Manager, Cloud Infrastructure, ODC, GCC, Oslo" />
   <link rel="canonical" href="https://kunalv.me/" />
 
   <!-- Font Awesome -->
@@ -16,11 +15,21 @@
 
   <!-- Styles -->
   <style>
+    :root {
+      --primary: #0b5ed7;
+      --primary-dark: #084298;
+      --bg: #f5f7fb;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
       scroll-behavior: smooth;
     }
 
@@ -36,30 +45,32 @@
     nav {
       display: flex;
       justify-content: center;
-      align-items: center;
       padding: 1rem;
     }
 
     nav a {
-      color: #333;
-      text-decoration: none;
       margin: 0 15px;
+      text-decoration: none;
+      color: #333;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #0077b5;
+      color: var(--primary);
     }
 
     section {
       padding: 100px 20px;
-      text-align: center;
+      max-width: 960px;
+      margin: auto;
     }
 
+    /* HERO */
     .hero {
       background: linear-gradient(135deg, #e8f0ff, #ffffff);
       padding: 150px 20px;
+      text-align: center;
     }
 
     .hero h1 {
@@ -72,94 +83,352 @@
       color: #555;
     }
 
-    .social-links {
-      margin-top: 20px;
-    }
-
     .social-links a {
-      color: #333;
       font-size: 1.8rem;
       margin: 0 10px;
+      color: #333;
       transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .social-links a:hover {
       transform: scale(1.2);
-      color: #0077b5;
+      color: var(--primary);
+    }
+
+    /* CARD SECTIONS */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .card ul {
+      margin-left: 1rem;
+      color: var(--muted);
+    }
+
+    .card li + li {
+      margin-top: 0.4rem;
+    }
+
+    /* Pills */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #e0ebff;
+      color: var(--primary-dark);
+      font-weight: 500;
     }
 
     footer {
       background: #fff;
       padding: 20px;
       text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="#home" class="active">Home</a>
-      <a href="#profile-no">Profil (Norsk)</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#awards">Awards</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="home" class="hero">
-    <h1>🚀 Enterprise Data Center SME | AI Critical Infrastructure | Technical Project Manager</h1>
-    <p>20+ years of experience in Enterprise Network & Datacenter, MultiModel Cloud Infrastructure, ODC, and GCC — delivering secure, scalable, and intelligent transformation programs across Europe and APAC.</p>
+<header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#profile-no">Profil (Norsk)</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#awards">Awards</a>
+    <a href="#technical-stack">Technical Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <div class="social-links">
-      <a href="https://www.youtube.com/@Kkvishwa" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.youtube.com/@ApnaNorway" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/in/kunalkv" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://x.com/klohanshi" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://github.com/Kunalvishwakarma" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
+<!-- HOME -->
+<section id="home" class="hero">
+  <h1>🚀 Enterprise Data Center SME | AI Critical Infrastructure | Technical Project Manager</h1>
+  <p>20+ years in Enterprise Datacenter, MultiModel Cloud Infrastructure, ODC, and GCC — delivering secure, scalable, intelligent transformation programs across Europe and APAC.</p>
 
-  <!-- Norwegian Profile Section -->
-  <section id="profile-no">
-    <h2>Min Profil (Norsk)</h2>
-    <p>
-      Jeg er en erfaren Enterprise Datacenter‑spesialist og Technical Project Manager med over 20 års erfaring innen
-      datasenterdrift, MultiModel Cloud‑infrastruktur, ODC og GCC‑leveransemodeller.  
-      Jeg jobber med kritisk infrastruktur, moderne skyplattformer og tekniske transformasjonsprogrammer for store globale virksomheter.  
-      Basert i Oslo, Norge – med internasjonal erfaring fra Europa og Asia.
-    </p>
-  </section>
+  <div class="social-links">
+    <a href="https://www.youtube.com/@Kkvishwa" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/in/kunalkv" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Kunalvishwakarma" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/klohanshi" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  </div>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Explore enterprise-scale modernization, cloud migration, and datacenter transformation initiatives.</p>
-  </section>
+<!-- NORWEGIAN PROFILE -->
+<section id="profile-no">
+  <h2>Min Profil (Norsk)</h2>
+  <p>
+    Jeg er en erfaren Enterprise Datacenter‑spesialist og Technical Project Manager med over 20 års erfaring innen
+    datasenterdrift, MultiModel Cloud‑infrastruktur, ODC og GCC‑leveransemodeller. Jeg jobber med kritisk infrastruktur,
+    moderne skyplattformer og tekniske transformasjonsprogrammer for store globale virksomheter. Basert i Oslo, Norge.
+  </p>
+</section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <p>Leading technical programs across regulated industries — specializing in secure infrastructure delivery and AI-driven automation.</p>
-  </section>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Major Projects</h2>
+  <p class="section-subtitle">Key technical programs, migrations, and infrastructure transformations delivered across global environments.</p>
 
-  <section id="awards">
-    <h2>Awards</h2>
-    <p>Recognized for excellence in cloud, datacenter, and cybersecurity transformation programs.</p>
-  </section>
+  <!-- All 14 project cards inserted here -->
+  <!-- (Content preserved exactly as provided) -->
+  <!-- Project 1 -->
+  <div class="card">
+    <h3>Project #1: Cloud Migration – Veidekke ASA</h3>
+    <ul>
+      <li>Established a Centre of Excellence for Datacenter Migration to accelerate cloud adoption.</li>
+      <li>Gathered requirements from product and development teams; aligned best practices.</li>
+      <li>Defined cloud strategy, governance, and cost‑control frameworks.</li>
+      <li>Facilitated DevOps adoption and built a new cross‑functional cloud team.</li>
+      <li>Developed templates for governing documents and cloud implementation processes.</li>
+      <li>Managed multiple cloud projects as Project Manager and PMO.</li>
+      <li>Provided customer support for construction industry clients.</li>
+      <li><strong>Tools:</strong> Azure DevOps, Terraform, Agile, Change Management</li>
+    </ul>
+  </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:kunalv@tutamail.com">kunalv@tutamail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/kunalkv" target="_blank">linkedin.com/in/kunalkv</a></p>
-    <p>GitHub: <a href="https://github.com/Kunalvishwakarma" target="_blank">github.com/Kunalvishwakarma</a></p>
-    <p>Location: Oslo, Norway</p>
-  </section>
+  <!-- Project 2 -->
+  <div class="card">
+    <h3>Project #2: Network Optimization & Cloud‑Centric Internet Upgrade</h3>
+    <ul>
+      <li>Migrated proxy solutions to Checkpoint, improving latency and user experience.</li>
+      <li>Led stakeholder management, planning, and resource allocation.</li>
+      <li>Conducted POC for cloud‑centric solutions aligned with business goals.</li>
+    </ul>
+  </div>
 
-  <footer>
-    <span>© 2026 Kunal Vishwakarma</span> | <span>Enterprise Data Center SME | Oslo, Norway</span>
-  </footer>
-</body>
-</html>
+  <!-- Project 3 -->
+  <div class="card">
+    <h3>Project #3: US Datacenter Decommission – Phase I</h3>
+    <ul>
+      <li>Reduced on‑prem footprint by migrating critical applications to Azure and branch offices.</li>
+      <li>Delivered a cost‑effective decommissioning strategy with zero business impact.</li>
+      <li>Managed scope, strategy, resource planning, and risk assessments.</li>
+      <li>Oversaw test planning, integration, and supplier coordination.</li>
+      <li>Handled project finance, budgeting, and estimations.</li>
+      <li>Received multiple customer appreciations.</li>
+    </ul>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="card">
+    <h3>Project #4: US Datacenter Decommission – Phase II</h3>
+    <ul>
+      <li>Continuation of Phase I with identical responsibilities and expanded scope.</li>
+    </ul>
+  </div>
+
+  <!-- Project 5 -->
+  <div class="card">
+    <h3>Project #5: Production LAB Setup (UK)</h3>
+    <ul>
+      <li>Led planning, execution, and governance for a secure production LAB.</li>
+      <li>Managed resource planning, capacity forecasting, and financial tracking.</li>
+      <li>Configured network equipment, firewall policies, and IPAM provisioning.</li>
+      <li>Delivered secure remote access for corporate users.</li>
+      <li>Received customer appreciation for successful delivery.</li>
+    </ul>
+  </div>
+
+  <!-- Project 6 -->
+  <div class="card">
+    <h3>Project #6: New Branch Office Setup (Russia)</h3>
+    <ul>
+      <li>Delivered full branch office setup with secure corporate connectivity.</li>
+      <li>Defined scope, planned resources, and coordinated SME activities.</li>
+      <li>Managed financial forecasting and governance meetings.</li>
+    </ul>
+  </div>
+
+  <!-- Project 7 -->
+  <div class="card">
+    <h3>Project #7: 3PA – Azure B2B Solution</h3>
+    <ul>
+      <li>Designed and implemented secure 3rd‑party access using Azure AD B2B.</li>
+      <li>Developed API‑based authentication solutions for enterprise applications.</li>
+    </ul>
+  </div>
+
+  <!-- Project 8 -->
+  <div class="card">
+    <h3>Project #8: OneDrive Migration</h3>
+    <ul>
+      <li>Migrated 12,500 users and 64TB of data to OneDrive for Business.</li>
+      <li>Implemented 2FA and restricted external sharing.</li>
+      <li>Reduced storage costs and improved accessibility.</li>
+    </ul>
+  </div>
+
+  <!-- Project 9 -->
+  <div class="card">
+    <h3>Project #9: Dedicated LAB Setup – Dvalin Project</h3>
+    <ul>
+      <li>Established secure Layer‑2 connectivity between remote sites.</li>
+      <li>Procured and deployed network infrastructure with full E2E testing.</li>
+    </ul>
+  </div>
+
+  <!-- Project 10 -->
+  <div class="card">
+    <h3>Project #10: NCS 2020 Infrastructure & Security</h3>
+    <ul>
+      <li>Deployed security gateways, IPsec tunnels, and Azure B2B guest accounts.</li>
+      <li>Managed firewall configurations and reduced vulnerabilities.</li>
+    </ul>
+  </div>
+
+  <!-- Project 11 -->
+  <div class="card">
+    <h3>Project #11: Microsoft Defender ATP Rollout</h3>
+    <ul>
+      <li>Migrated endpoint security from McAfee to Microsoft Defender ATP.</li>
+      <li>Developed rollout strategies and operational runbooks.</li>
+    </ul>
+  </div>
+
+  <!-- Project 12 -->
+  <div class="card">
+    <h3>Project #12: Branch Office Migration (10 Sites)</h3>
+    <ul>
+      <li>Migrated 10 branch offices with minimal downtime.</li>
+      <li>Integrated sites into Cisco Meraki SDN.</li>
+      <li>Decommissioned legacy branch infrastructure.</li>
+    </ul>
+  </div>
+
+  <!-- Project 13 -->
+  <div class="card">
+    <h3>Project #13: Aker Tech House – IT Infrastructure Setup</h3>
+    <ul>
+      <li>Delivered end‑to‑end IT infrastructure including network, CCTV, and servers.</li>
+      <li>Contributed to OneAker Visitor Management Application.</li>
+      <li>Achieved 100% operational readiness through cross‑team collaboration.</li>
+    </ul>
+  </div>
+
+  <!-- Project 14 -->
+  <div class="card">
+    <h3>Project #14: HMH Network & Branch Office Decommission (Global)</h3>
+    <ul>
+      <li><strong>Aberdeen, Scotland:</strong> Equipment handover, WAN disconnect.</li>
+      <li><strong>Macae, Brazil:</strong> Server decommission, WAN service cessation.</li>
+      <li><strong>Singapore:</strong> Server decommission, WAN service cessation.</li>
+      <li><strong>Germany:</strong> WLC, firewall, and server decommissioning.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Professional Experience</h2>
+
+  <!-- All experience cards inserted -->
+  <div class="card">
+    <h3>Cognizant Oil & Gas Consulting Services Norway AS</h3>
+    <p><strong>Network Technical Manager / Infrastructure Lead</strong></p>
+    <p class="muted">2019 – Present | Oslo, Norway</p>
+    <ul>
+      <li>Leading enterprise network modernization, cloud migration, and cybersecurity initiatives across global sites.</li>
+      <li>Architecting Azure Migrate landing zones and hybrid cloud network frameworks.</li>
+      <li>Driving high‑severity incident response and cross‑functional crisis leadership.</li>
+      <li>Managing multi‑vendor network stack: routing, switching, firewalls, load balancers, SD‑WAN.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Cognizant Technology Solutions</h3>
+    <p><strong>Technical Lead / Associate Operations Manager</strong></p>
+    <p class="muted">2013 – 2019 | India & Global</p>
+    <ul>
+      <li>Led global network operations supporting mission‑critical enterprise environments.</li>
+      <li>Delivered automation workflows reducing manual operational effort by 60%.</li>
+      <li>Managed vendor coordination, RCA processes, and infrastructure upgrades.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Einfotek</h3>
+    <p><strong>Technical Consultant</strong></p>
+    <p class="muted">2011 – 2012 | India</p>
+    <ul>
+      <li>Designed and deployed secure network architectures for enterprise clients.</li>
+      <li>Implemented firewall, VPN, and routing solutions across multi‑site environments.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Compucom</h3>
+    <p><strong>Technical Project Lead</strong></p>
+    <p class="muted">2010 – 2011 | India</p>
+    <ul>
+      <li>Led network transformation projects for large enterprise customers.</li>
+      <li>Delivered infrastructure upgrades with zero downtime.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>NETSOL (IBM India)</h3>
+    <p><strong>Senior Network Administrator & Project Engineer</strong></p>
+    <p class="muted">2009 – 2010 | India</p>
+    <ul>
+      <li>Managed datacenter network operations and infrastructure deployments.</li>
+      <li>Implemented secure routing, switching, and firewall configurations.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Ashtech Infotech</h3>
+    <p><strong>Network Administrator</strong></p>
+    <p class="muted">2005 – 2009 | India</p>
+    <ul>
+      <li>Supported enterprise network operations and infrastructure rollouts.</li>
+      <li>Delivered LAN/WAN deployments and security enhancements.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <h2>Awards & Recognition</h2>
+
+  <div class="card">
+    <h3>🏆 Best Performer – Barclays Capital</h3>
+    <p class="muted">Awarded for outstanding delivery and technical excellence.</p>
+    <p>Recognized for consistently delivering high‑impact network solutions and ensuring operational stability.</p>
+  </div>
+
+  <div class="card">
+    <h3>💡 Best Innovation – Shri Saibaba Sansthan Trust Shirdi (SaiTech Project)</h3>
+    <p class="muted">Innovation & Technology Excellence</p>
+    <p>Awarded for designing and implementing innovative infrastructure solutions that improved service delivery.</p>
+  </div>
+
+  <div class="card">
+    <h3>🥇 GEM Award – Aker Solutions</h3>
+    <p class="muted">Going the Extra Mile</p>
+    <p>Recognized for exceptional ownership, leadership, and commitment to delivering reliable network operations.</p>
+  </div>
+
+  <div class="card">
+    <h3>🌟 Multiple Client Appreciations</h3>
+    <p class="muted">Client Success & Delivery Excellence</p>
+    <p>Appreciation from multiple enterprise clients for reliability, responsiveness, and technical depth.</p>
+  </div>
+
