@@ -1,364 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kunal Vishwakarma – Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-<style>
-/* -----------------------------------------------------------
-   DARK MODE ONLY – GLOBAL COLORS
------------------------------------------------------------ */
-:root {
-  --bg-dark: #0d1117;
-  --bg-card: #161b22;
-  --text-dark: #e6edf3;
-  --accent: #58a6ff;
-  --border: #30363d;
-}
-
-/* -----------------------------------------------------------
-   GLOBAL RESET
------------------------------------------------------------ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: var(--bg-dark);
-  color: var(--text-dark);
-  font-family: "Segoe UI", sans-serif;
-  line-height: 1.6;
-}
-
-/* -----------------------------------------------------------
-   NAVBAR
------------------------------------------------------------ */
-nav {
-  width: 100%;
-  background: #0d1117;
-  border-bottom: 1px solid var(--border);
-  padding: 12px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-nav .logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--accent);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav ul li a {
-  color: var(--text-dark);
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-nav ul li a:hover {
-  color: var(--accent);
-}
-
-/* Language Dropdown */
-.language-dropdown {
-  position: relative;
-  cursor: pointer;
-  color: var(--text-dark);
-  font-size: 1rem;
-}
-
-.language-dropdown-menu {
-  position: absolute;
-  right: 0;
-  top: 35px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  display: none;
-  flex-direction: column;
-  min-width: 150px;
-  z-index: 1000;
-}
-
-.language-dropdown-menu div {
-  padding: 10px 15px;
-  cursor: pointer;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.language-dropdown-menu div:hover {
-  background: #1f242d;
-}
-
-/* -----------------------------------------------------------
-   SECTIONS
------------------------------------------------------------ */
-section {
-  padding: 50px 8%;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--accent);
-}
-
-.card {
-  background: var(--bg-card);
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  margin-bottom: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-}
-
-/* -----------------------------------------------------------
-   LANGUAGE VISIBILITY
------------------------------------------------------------ */
-.lang-section {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.lang-section.active {
-  display: block;
-  opacity: 1;
-}
-
-/* -----------------------------------------------------------
-   FOOTER
------------------------------------------------------------ */
-footer {
-  text-align: center;
-  padding: 30px;
-  border-top: 1px solid var(--border);
-  margin-top: 40px;
-  color: #8b949e;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal Vishwakarma | Migration & Cloud Transformation Lead</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e40af, transparent), radial-gradient(circle at bottom left, #7e22ce, transparent); }
+    </style>
 </head>
+<body class="bg-[#020617] text-slate-100 selection:bg-blue-500/30">
 
-<body>
+    <nav class="fixed w-full z-50 top-0 left-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tight">KUNAL<span class="text-blue-500">.V</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-slate-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#skills" class="hover:text-white transition">Tech Stack</a>
+                <a href="#certifications" class="hover:text-white transition">Certifications</a>
+            </div>
+            <a href="mailto:vkunal@gmail.com" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-full text-sm font-bold transition shadow-lg shadow-blue-500/20">Let's Talk</a>
+        </div>
+    </nav>
 
-<!-- -----------------------------------------------------------
-     NAVBAR WITH FLAG + TEXT DROPDOWN
------------------------------------------------------------ -->
-<nav>
-  <div class="logo">Kunal Vishwakarma</div>
+    <section id="about" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 hero-gradient opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-6 border border-blue-500/20 uppercase tracking-widest">Available for Cloud Strategy</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Cloud & Migration <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Lead.</span>
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+                    With over 20 years of experience , I specialize in leading large-scale cloud transformations, Datacenter modernizations, and complex hybrid infrastructure migrations[cite: 2, 5].
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <div class="flex items-center gap-2 text-slate-300"><i data-lucide="map-pin" class="w-4 h-4 text-blue-500"></i> Norway [cite: 3]</div>
+                    <div class="flex items-center gap-2 text-slate-300"><i data-lucide="mail" class="w-4 h-4 text-blue-500"></i> vkunal@gmail.com [cite: 3]</div>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="glass p-8 rounded-3xl relative">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-600/20 blur-3xl"></div>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400"><i data-lucide="cloud"></i></div>
+                            <div><div class="font-bold">Azure Expert</div><div class="text-xs text-slate-500 uppercase">Cloud Modernization [cite: 6]</div></div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400"><i data-lucide="shield-check"></i></div>
+                            <div><div class="font-bold">Governance</div><div class="text-xs text-slate-500 uppercase">Risk & Compliance [cite: 8]</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <ul>
-    <li><a href="#profile">Profile</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-  </ul>
+    <section class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Core Competencies [cite: 9]</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-6">
+            <div class="glass p-8 rounded-2xl hover:border-blue-500/50 transition">
+                <i data-lucide="database" class="text-blue-500 mb-4"></i>
+                <h3 class="font-bold mb-2">Datacenter Transformation [cite: 10]</h3>
+                <p class="text-sm text-slate-500">VMware, Hyper-V, and Linux/Windows infrastructure modernization[cite: 10].</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:border-blue-500/50 transition">
+                <i data-lucide="trending-up" class="text-blue-500 mb-4"></i>
+                <h3 class="font-bold mb-2">Migration Execution [cite: 10]</h3>
+                <p class="text-sm text-slate-500">End-to-end wave planning, dry-runs, and zero-defect cutovers[cite: 10, 26].</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:border-blue-500/50 transition">
+                <i data-lucide="users" class="text-blue-500 mb-4"></i>
+                <h3 class="font-bold mb-2">Stakeholder Leadership [cite: 12]</h3>
+                <p class="text-sm text-slate-500">Aligning cross-functional teams and managing OEM/Cloud partner relations[cite: 12, 22].</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:border-blue-500/50 transition">
+                <i data-lucide="terminal" class="text-blue-500 mb-4"></i>
+                <h3 class="font-bold mb-2">Automation [cite: 14]</h3>
+                <p class="text-sm text-slate-500">Infrastructure as Code using PowerShell and DevOps pipelines[cite: 14, 68].</p>
+            </div>
+        </div>
+    </section>
 
-  <div class="language-dropdown" id="langToggle">
-    🇳🇴 Norsk ▼
-    <div class="language-dropdown-menu" id="langMenu">
-      <div data-lang="no">🇳🇴 Norsk</div>
-      <div data-lang="en">🇬🇧 English</div>
-    </div>
-  </div>
-</nav>
+    <section id="experience" class="py-24 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 text-center">Professional Journey [cite: 15]</h2>
+            <div class="space-y-12 border-l-2 border-slate-800 ml-4 md:ml-0">
+                <div class="relative pl-12">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 bg-blue-600 rounded-full ring-4 ring-slate-950"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-xl font-bold">Technical Project Manager / Infrastructure Architect [cite: 16]</h3>
+                        <span class="text-blue-400 font-mono text-sm">2019 — Present [cite: 17]</span>
+                    </div>
+                    <p class="text-slate-300 font-semibold mb-3">Cognizant: Global Consulting [cite: 17]</p>
+                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                        <li>Directed cloud and Datacenter migration programs for global enterprise clients[cite: 18, 19].</li>
+                        <li>Delivered Windows and Linux migrations using Azure Migrate and ASR[cite: 24].</li>
+                        <li>Managed daily stand-ups and weekly executive governance reporting[cite: 32].</li>
+                    </ul>
+                </div>
+                <div class="relative pl-12">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-700 rounded-full ring-4 ring-slate-950"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-xl font-bold">Technical Lead: Infrastructure & Migration [cite: 35]</h3>
+                        <span class="text-slate-500 font-mono text-sm">2013 — 2019 [cite: 36]</span>
+                    </div>
+                    <p class="text-slate-300 font-semibold mb-3">Cognizant (Barclays Account) [cite: 36]</p>
+                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                        <li>Led infrastructure transitions for global banking workloads across US/EMEA/APAC[cite: 37, 39].</li>
+                        <li>Managed F5 load balancing, Bluecoat proxies, and Infoblox DNS/IPAM[cite: 38].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- -----------------------------------------------------------
-     NORWEGIAN VERSION (DEFAULT EXPANDED)
------------------------------------------------------------ -->
-<div id="lang-no" class="lang-section active">
+    <section id="skills" class="py-24 bg-slate-950/50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-2xl font-bold mb-8 flex items-center gap-2"><i data-lucide="cpu" class="text-blue-500"></i> Technical Stack [cite: 67]</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">Azure Migrate [cite: 68]</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">ASR [cite: 68]</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">PowerShell [cite: 68]</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">Hyper-V [cite: 68]</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">F5 Load Balancing [cite: 68]</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">Infoblox DNS/IPAM [cite: 68]</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">ARM/Bicep [cite: 68]</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm hover:text-blue-400 cursor-default transition">JIRA/Azure DevOps [cite: 68]</span>
+                </div>
+            </div>
+            <div id="certifications">
+                <h2 class="text-2xl font-bold mb-8 flex items-center gap-2"><i data-lucide="award" class="text-blue-500"></i> Certifications [cite: 57]</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-xs font-semibold uppercase tracking-wide">Azure Security Engineer [cite: 58]</div>
+                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-xs font-semibold uppercase tracking-wide">Azure Administrator [cite: 59]</div>
+                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-xs font-semibold uppercase tracking-wide">PRINCE2 Agile & ITIL [cite: 60, 61]</div>
+                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-xs font-semibold uppercase tracking-wide">Aviatrix Multi-Cloud [cite: 64]</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="profile">
-<h2>Profil (Norsk)</h2>
-<div class="card">
-<p>
-Jeg er en erfaren Enterprise Datacenter‑spesialist og Technical Project Manager med over 20 års internasjonal erfaring innen datasenterdrift, nettverksinfrastruktur, skytransformasjon, cybersikkerhet og teknisk prosjektledelse. Jeg har levert komplekse løsninger for norske og globale virksomheter, inkludert Veidekke, Aker Solutions og HMH.
-</p>
-<p>
-Min kompetanse omfatter Azure‑migreringer, hybrid skyarkitektur, sikkerhetsdesign, SD‑WAN, identitetsstyring (Entra ID), Zero Trust, datacenter‑avvikling, ODC/GCC‑modeller og etablering av robuste driftsstrukturer. Jeg kombinerer teknisk dybde med strukturert prosjektledelse, risikoanalyse og styring.
-</p>
-</div>
-</section>
+    <section class="py-24 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-12">Honors & Recognition [cite: 74]</h2>
+            <div class="flex flex-wrap justify-center gap-8 opacity-60">
+                <span class="font-bold uppercase tracking-widest italic">Best Performer (Barclays) [cite: 75]</span>
+                <span class="font-bold uppercase tracking-widest italic">Best Innovation (Gov Project) [cite: 76]</span>
+                <span class="font-bold uppercase tracking-widest italic">GEM Award (Kværner & HMH) [cite: 77]</span>
+            </div>
+        </div>
+    </section>
 
-<section id="projects">
-<h2>Prosjekter</h2>
+    <footer class="py-12 bg-slate-950 text-center border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-slate-500 text-sm mb-4 tracking-widest uppercase">© 2026 Kunal Vishwakarma | Leading the Future of Cloud[cite: 1, 5].</p>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="text-slate-400 hover:text-blue-500"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="text-slate-400 hover:text-blue-500"><i data-lucide="github"></i></a>
+            </div>
+        </div>
+    </footer>
 
-<div class="card">
-<h3>Azure Migrering – Global Kunde</h3>
-<p>Ansvarlig for planlegging, migrering og etablering av Azure Landing Zone, inkludert sikkerhetsarkitektur, IAM, nettverksdesign og governance.</p>
-</div>
-
-<div class="card">
-<h3>OneDrive Migrering – 12 500 brukere</h3>
-<p>Ledet global migrering fra lokale filservere til OneDrive, inkludert opplæring, automatisering og endringsledelse.</p>
-</div>
-
-<div class="card">
-<h3>Datacenter Avvikling</h3>
-<p>Full avvikling av fysisk datasenter, inkludert server‑inventar, migrering, sikker sletting, dokumentasjon og koordinering med leverandører.</p>
-</div>
-
-</section>
-
-<section id="experience">
-<h2>Erfaring</h2>
-
-<div class="card">
-<h3>Network Technical Manager – Cognizant Norway</h3>
-<p>Ansvar for nettverksmodernisering, skyprosjekter, sikkerhetsimplementering og teknisk ledelse for norske industrikunder.</p>
-</div>
-
-<div class="card">
-<h3>Infrastructure Lead – Global Enterprise</h3>
-<p>Ledet team innen datacenter, nettverk, sikkerhet og cloud‑transformasjon på tvers av Europa og APAC.</p>
-</div>
-
-</section>
-
-<section id="skills">
-<h2>Tekniske Ferdigheter</h2>
-
-<div class="card">
-<p><strong>Cloud:</strong> Azure, Azure AD/Entra, Landing Zones, Governance</p>
-<p><strong>Nettverk:</strong> Cisco, Fortinet, SD‑WAN, VPN, Routing/Switching</p>
-<p><strong>Sikkerhet:</strong> Defender ATP, Zero Trust, IAM, Conditional Access</p>
-<p><strong>DevOps:</strong> GitHub, CI/CD, YAML, Automation</p>
-<p><strong>Datacenter:</strong> VMware, Hyper‑V, Storage, Backup, DR</p>
-</div>
-
-</section>
-
-</div>
-
-<!-- -----------------------------------------------------------
-     ENGLISH VERSION (COLLAPSED BY DEFAULT)
------------------------------------------------------------ -->
-<div id="lang-en" class="lang-section">
-
-<section id="profile-en">
-<h2>Profile (English)</h2>
-<div class="card">
-<p>
-I am an experienced Enterprise Datacenter Specialist and Technical Project Manager with 20+ years of international experience across datacenter operations, network infrastructure, cloud transformation, cybersecurity, and technical program delivery.
-</p>
-<p>
-My expertise includes Azure migrations, hybrid cloud architecture, security design, SD‑WAN, identity management, Zero Trust, datacenter decommissioning, and enterprise governance frameworks.
-</p>
-</div>
-</section>
-
-<section id="projects-en">
-<h2>Projects</h2>
-
-<div class="card">
-<h3>Azure Migration – Global Client</h3>
-<p>Led Azure Landing Zone setup, IAM, security architecture, and cloud governance.</p>
-</div>
-
-<div class="card">
-<h3>OneDrive Migration – 12,500 Users</h3>
-<p>Directed global migration from on‑prem file servers to OneDrive with automation and training.</p>
-</div>
-
-<div class="card">
-<h3>Datacenter Decommissioning</h3>
-<p>Executed full physical datacenter shutdown including inventory, migration, secure wipe, and vendor coordination.</p>
-</div>
-
-</section>
-
-<section id="experience-en">
-<h2>Experience</h2>
-
-<div class="card">
-<h3>Network Technical Manager – Cognizant Norway</h3>
-<p>Responsible for network modernization, cloud programs, security implementation, and technical leadership.</p>
-</div>
-
-<div class="card">
-<h3>Infrastructure Lead – Global Enterprise</h3>
-<p>Led datacenter, network, security, and cloud transformation teams across Europe and APAC.</p>
-</div>
-
-</section>
-
-<section id="skills-en">
-<h2>Technical Skills</h2>
-
-<div class="card">
-<p><strong>Cloud:</strong> Azure, Azure AD/Entra, Landing Zones, Governance</p>
-<p><strong>Networking:</strong> Cisco, Fortinet, SD‑WAN, VPN, Routing/Switching</p>
-<p><strong>Security:</strong> Defender ATP, Zero Trust, IAM, Conditional Access</p>
-<p><strong>DevOps:</strong> GitHub, CI/CD, YAML, Automation</p>
-<p><strong>Datacenter:</strong> VMware, Hyper‑V, Storage, Backup, DR</p>
-</div>
-
-</section>
-
-</div>
-
-<!-- -----------------------------------------------------------
-     FOOTER
------------------------------------------------------------ -->
-<footer>
-© 2026 Kunal Vishwakarma – All Rights Reserved
-</footer>
-
-<!-- -----------------------------------------------------------
-     SCRIPT – LANGUAGE SWITCH
------------------------------------------------------------ -->
-<script>
-const langToggle = document.getElementById("langToggle");
-const langMenu = document.getElementById("langMenu");
-const sections = {
-  no: document.getElementById("lang-no"),
-  en: document.getElementById("lang-en")
-};
-
-langToggle.addEventListener("click", () => {
-  langMenu.style.display =
-    langMenu.style.display === "flex" ? "none" : "flex";
-});
-
-langMenu.querySelectorAll("div").forEach(item => {
-  item.addEventListener("click", () => {
-    const lang = item.getAttribute("data-lang");
-
-    // Collapse all
-    sections.no.classList.remove("active");
-    sections.en.classList.remove("active");
-
-    // Expand selected
-    sections[lang].classList.add("active");
-
-    // Update dropdown label
-    langToggle.innerHTML =
-      lang === "no" ? "🇳🇴 Norsk ▼" : "🇬🇧 English ▼";
-
-    langMenu.style.display = "none";
-  });
-});
-</script>
-
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
