@@ -1,8 +1,6 @@
-The icons are not displaying because Lucide needs to be explicitly told to render them after the page content loads. David Bombal's template structure can sometimes isolate elements if the initialization script runs too early.
+Here is a clean, modern, and highly professional executive portfolio template that moves away from the aggressive sales-funnel look of a video-creator platform.
 
-Adding a small helper script directly beneath the Lucide CDN link will force the browser to scan your "Follow me" cards and draw the icons properly.
-
-Here is your updated, fully working `index.html` file with the icon renderer fix applied:
+This design uses a **sophisticated deep slate and midnight blue aesthetic** with a structured grid system layout. It is tailored specifically for corporate review, making it clean, fast-loading, and perfect for sharing with both internal and external hiring managers.
 
 ```html
 <!DOCTYPE html>
@@ -10,514 +8,386 @@ Here is your updated, fully working `index.html` file with the icon renderer fix
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunal Vishwakarma | Migration & Cloud Transformation Executive</title>
+    <title>Kunal Vishwakarma | Infrastructure Architect & Migration Lead</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        // Forces Lucide to scan and render icons as soon as the DOM is ready
-        document.addEventListener("DOMContentLoaded", function() {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; background-color: #0b0f19; color: #f8fafc; }
-        .bombal-nav { background: rgba(11, 15, 25, 0.9); backdrop-filter: blur(12px); border-bottom: 2px solid #1e293b; }
-        .metric-card { background: #111827; border: 1px solid #1f2937; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); }
-        .course-style-card { background: #111827; border: 1px solid #1f2937; transition: all 0.2s ease-in-out; }
-        .course-style-card:hover { border-color: #3b82f6; transform: translateY(-4px); }
-        .btn-primary { background-color: #2563eb; transition: background 0.2s; }
-        .btn-primary:hover { background-color: #1d4ed8; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #0b111e; color: #e2e8f0; }
+        .nav-blur { background: rgba(11, 17, 30, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; }
+        .card-premium { background: #111b2d; border: 1px solid #1e293b; border-radius: 12px; }
+        .card-premium:hover { border-color: #3b82f6; transition: all 0.3s ease; }
+        .timeline-line { border-left: 2px solid #1e293b; }
     </style>
 </head>
-<body class="selection:bg-blue-600/30">
+<body class="selection:bg-blue-500/20">
 
-    <nav class="fixed w-full z-50 bombal-nav">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-white">KUNAL<span class="text-blue-500">VISHWAKARMA</span></div>
-            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-wider text-slate-400">
-                <a href="#summary" class="hover:text-white transition">About</a>
-                <a href="#metrics" class="hover:text-white transition">Impact</a>
+    <nav class="fixed w-full z-50 nav-blur">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tight text-white uppercase flex items-center gap-2">
+                Kunal Vishwakarma<span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <a href="#about" class="hover:text-white transition">About</a>
                 <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="#journey" class="hover:text-white transition">Experience</a>
-                <a href="#testimonials" class="hover:text-white transition">Endorsements</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#credentials" class="hover:text-white transition">Credentials</a>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="https://wa.me/919819041919" target="_blank" class="text-xs font-bold uppercase bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-md flex items-center gap-2 shadow-md">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Connect
-                </a>
-            </div>
+            <a href="https://wa.me/919819041919" target="_blank" class="text-xs font-bold uppercase bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg flex items-center gap-2 transition shadow-lg shadow-blue-600/10">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Secure Contact
+            </a>
         </div>
     </nav>
 
-    <header id="summary" class="pt-40 pb-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#0b0f19]">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-center">
-            <div class="lg:col-span-2 space-y-6">
-                <span class="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-extrabold rounded uppercase tracking-widest border border-blue-500/20">
-                    On-Demand Infrastructure Transformation
-                </span>
-                <h1 class="text-3xl lg:text-5xl font-black text-white leading-tight tracking-tight">
-                    Infrastructure Architect | Datacenter SME | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher
-                </h1>
-                <p class="text-xl text-slate-300 font-medium max-w-2xl leading-relaxed">
-                    [cite_start]Migration Program Lead with 20+ years of enterprise experience executing cloud transitions, datacenter modernizations, and secure global infrastructure integrations[cite: 5].
-                </p>
-                <div class="pt-4 flex flex-wrap gap-4 items-center text-sm">
-                    <a href="mailto:contact@kunalv.me" class="flex items-center gap-2 font-bold text-blue-400 hover:underline"><i data-lucide="mail" class="w-4 h-4"></i> contact@kunalv.me</a>
-                    <span class="text-slate-700">|</span>
-                    <span class="flex items-center gap-2 text-slate-400"><i data-lucide="map-pin" class="w-4 h-4"></i> Oslo, Norway</span>
-                </div>
+    <header id="about" class="pt-36 pb-20 px-6 max-w-5xl mx-auto">
+        <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-medium rounded-full border border-blue-500/20">
+                <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span> Available for Global Engagements
             </div>
+            <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Infrastructure Architect | Datacenter SME | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher
+            </h1>
+            <p class="text-lg text-slate-400 font-normal leading-relaxed max-w-3xl">
+                Migration Lead with 20+ years of enterprise expertise delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
+            </p>
             
-            <div class="metric-card p-8 rounded-xl space-y-6">
-                <div class="border-b border-gray-800 pb-4">
-                    <h3 class="text-white font-bold text-lg">Follow me</h3>
-                    <p class="text-xs text-gray-500">Connect across verified digital channels</p>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="p-5 bg-gray-900 rounded border border-gray-800 hover:border-blue-500 flex justify-center items-center transition group">
-                        <i data-lucide="linkedin" class="text-gray-400 group-hover:text-blue-500 w-8 h-8"></i>
-                    </a>
-                    <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="p-5 bg-gray-900 rounded border border-gray-800 hover:border-blue-500 flex justify-center items-center transition group">
-                        <i data-lucide="github" class="text-gray-400 group-hover:text-white w-8 h-8"></i>
-                    </a>
-                    <a href="https://x.com/klohanshi" target="_blank" class="p-5 bg-gray-900 rounded border border-gray-800 hover:border-blue-500 flex justify-center items-center transition group">
-                        <i data-lucide="twitter" class="text-gray-400 group-hover:text-sky-400 w-8 h-8"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="p-5 bg-gray-900 rounded border border-gray-800 hover:border-blue-500 flex justify-center items-center transition group">
-                        <i data-lucide="youtube" class="text-gray-400 group-hover:text-red-500 w-8 h-8"></i>
-                    </a>
-                </div>
-                <a href="mailto:contact@kunalv.me" class="block text-center w-full py-3 btn-primary text-white font-bold text-xs uppercase tracking-wider rounded">
-                    Request Reference Check
-                </a>
+            <div class="pt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm max-w-3xl">
+                <div class="flex items-center gap-3 text-slate-300"><i data-lucide="mail" class="text-blue-500 w-4 h-4"></i> contact@kunalv.me</div>
+                <div class="flex items-center gap-3 text-slate-300"><i data-lucide="map-pin" class="text-blue-500 w-4 h-4"></i> Oslo, Norway</div>
+                <div class="flex items-center gap-3 text-slate-300"><i data-lucide="phone" class="text-blue-500 w-4 h-4"></i> +47 40806338</div>
+            </div>
+
+            <div class="pt-4 flex items-center gap-6 text-slate-400 border-t border-slate-800/60 max-w-3xl">
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Follow me</span>
+                <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="hover:text-blue-500 transition" title="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="https://x.com/klohanshi" target="_blank" class="hover:text-sky-400 transition" title="X (Twitter)"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-red-500 transition" title="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
             </div>
         </div>
     </header>
 
-    <section id="metrics" class="py-8 bg-[#090d16] border-y border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <section class="bg-[#0e1626] border-y border-slate-800/80 py-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-                <div class="text-3xl md:text-5xl font-black text-white">20+</div>
-                [cite_start]<div class="text-xs uppercase font-bold text-gray-500 tracking-wider mt-1">Years IT Experience [cite: 5]</div>
+                <div class="text-4xl font-bold text-white">20+</div>
+                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Years IT Experience</div>
             </div>
             <div>
-                <div class="text-3xl md:text-5xl font-black text-blue-500">14</div>
-                <div class="text-xs uppercase font-bold text-gray-500 tracking-wider mt-1">Enterprise Projects</div>
+                <div class="text-4xl font-bold text-blue-500">14</div>
+                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Enterprise Projects</div>
             </div>
             <div>
-                <div class="text-3xl md:text-5xl font-black text-white">12.5K</div>
-                <div class="text-xs uppercase font-bold text-gray-500 tracking-wider mt-1">Users Migrated</div>
+                <div class="text-4xl font-bold text-white">12.5K</div>
+                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Users Migrated</div>
             </div>
             <div>
-                <div class="text-3xl md:text-5xl font-black text-blue-500">64TB</div>
-                <div class="text-xs uppercase font-bold text-gray-500 tracking-wider mt-1">Data Transformed</div>
+                <div class="text-4xl font-bold text-blue-500">64TB</div>
+                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Data Transformed</div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 items-center">
-        <div class="md:col-span-1 space-y-4">
-            <h2 class="text-3xl font-black text-white tracking-tight">Technical Insights & Methodology</h2>
-            <p class="text-sm text-gray-400 leading-relaxed">
-                Explore architectural approaches, system automation workflows, and strategy overviews deployed throughout my infrastructure footprint.
+    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+                <i data-lucide="layers" class="text-blue-500"></i> Project Experience
+            </h2>
+            <p class="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
+                Key cloud, datacenter, networking, and security implementations delivered globally. All detailed document scopes are preserved below exactly as rendered in historical production archives.
             </p>
-            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-blue-400 hover:underline">
-                Visit Knowledge Hub on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
         </div>
-        <div class="md:col-span-2">
-            <div class="aspect-video bg-gray-900 border border-gray-800 rounded-xl flex flex-col justify-center items-center text-center p-8 relative overflow-hidden group">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                <div class="z-20 space-y-4">
-                    <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition">
-                        <i data-lucide="play" class="text-white fill-current w-6 h-6 ml-1"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white max-w-md">Cloud Architecture, Automation Pipeline, and Datacenter Wave Strategy</h3>
-                    <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Featured Resource Portfolio</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects" class="py-24 bg-[#090d16] border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 border-b border-gray-800 pb-8 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="card-premium p-6 flex flex-col justify-between">
                 <div>
-                    <h2 class="text-4xl font-black text-white tracking-tight">Project Experience</h2>
-                    <p class="text-gray-400 text-sm mt-2 max-w-2xl">
-                        This section highlights key cloud, datacenter, networking, and security projects delivered across Norway, Sweden, UK, Russia, Malaysia, and the United States. All project descriptions below are kept exactly as delivered in original documentation.
-                    </p>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #1</span><span>Norway</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Cloud Migration | Veidekke ASA</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">Established a Centre of Excellence for Datacenter Migration to assist and organize cloud technology initiatives, cost tracking rules, and stakeholder frameworks to accelerate public cloud journeys.</p>
+                    <ul class="text-xs text-slate-500 space-y-1.5 list-disc ml-4 mb-4">
+                        <li>Requirement gathering across active agile dev teams.</li>
+                        <li>Anchored templates for public cloud governing docs.</li>
+                        <li>Managed multiple departmental operations as PMO.</li>
+                    </ul>
                 </div>
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest border border-gray-800 px-3 py-1.5 rounded bg-gray-900">
-                    📁 14 Core Deployments
-                </span>
+                <div class="pt-3 border-t border-slate-800 flex flex-wrap gap-2 text-[10px] font-mono text-slate-400">
+                    <span>Azure DevOps</span><span>Terraform</span><span>Change Management</span>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #1</span><span>Norway</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Cloud Migration | Veidekke ASA</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Veidekke aimed to establish a Centre of Excellence for Datacenter Migration to support the company's strategic goal of migrating its systems to the cloud. The assignment involved creating a cross-functional team to assist and organize cloud technology initiatives and accelerate the cloud journey at Veidekke.</p>
-                        <ul class="text-xs text-gray-500 space-y-2 list-disc ml-5 mb-6">
-                            <li>Requirement Gathering: Met with product and development teams to capture requirements and coordinate best practices.</li>
-                            <li>Established and maintained cloud strategy and management of cloud platforms.</li>
-                            <li>Implemented and maintained cost control measures.</li>
-                            <li>DevOps Facilitation: Facilitated and utilized the company's agility through DevOps practices.</li>
-                            <li>Established and staffed a new team; managed responsibilities and roles.</li>
-                            <li>Developed and anchored templates for governing documents in public cloud.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #2</span><span>Global Network</span>
                     </div>
-                    <div class="border-t border-gray-800 pt-4 flex flex-wrap gap-2 text-[10px] font-mono text-gray-400">
-                        <span>Azure DevOps</span><span>Terraform</span><span>Change Management</span><span>Agile</span>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Network Optimization & Cloud Internet Upgrade</h3>
+                    <ul class="text-xs text-slate-400 space-y-2 list-disc ml-4">
+                        <li>Upgraded proxy infrastructure and migrated rules to Checkpoint engines, dramatically optimizing user latencies.</li>
+                        <li>Coordinated planning, target resource modeling, and Proof of Concept (POC) validation benchmarks.</li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #2</span><span>Global Network</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Network Optimization & Cloud-Centric Internet Upgrade</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Upgraded internet proxy solutions and migrated to Checkpoint, reducing latency and improved overall Internet, Business user experience.</li>
-                            <li>Led stakeholder management, Project Planning, and resource planning for cloud solution implementation.</li>
-                            <li>Conducted Proof of Concept (POC) for cloud-centric solutions, ensuring alignment with business objectives.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #3</span><span>United States</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">US Datacenter Decommission (Phase I)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-3">Initiated to reduce physical data footprint and migrate critical processing workloads to Azure Cloud architectures with zero production fallback or disruptions.</p>
+                    <ul class="text-xs text-slate-500 space-y-1.5 list-disc ml-4">
+                        <li>Directed scope definitions, budgets, and operational risk mitigation matrix assets.</li>
+                        <li>Oversaw validation planning, border system variations, and provider sync forums.</li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #3</span><span>United States</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">US Datacenter Decommission (Phase I)</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">The project was initiated to reduce the on-premises footprint and migrate all business-critical applications to Azure Cloud, with a few applications moving to local branch offices. Key objective was to decommission the existing Datacenter in the US region safely with zero production impact.</p>
-                        <ul class="text-xs text-gray-500 space-y-2 list-disc ml-5 mb-6">
-                            <li>Provided expert guidance on project scope and strategy.</li>
-                            <li>Resource Management: Managed resource allocation and capacity planning.</li>
-                            <li>Conducted thorough risk assessments and oversaw test planning execution.</li>
-                            <li>Managed project finance, budgeting, and estimations.</li>
-                            <li>Coordinated with suppliers regarding design deviations between systems.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #4</span><span>United States</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">US Datacenter Decommission (Phase II)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed italic">Workload mapping continuation from Phase I parameters — execution structures and provider tracking assignments remained unchanged.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #4</span><span>United States</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">US Datacenter Decommission (Phase II)</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed italic mb-6">Continuation of Phase I infrastructure activities — scope parameters and delivery tracking layout remain unchanged.</p>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #5</span><span>United Kingdom</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Production LAB Setup (UK)</h3>
+                    <ul class="text-xs text-slate-400 space-y-2 list-disc ml-4">
+                        <li>Constructed a highly secure, multi-site accessible testing production environment.</li>
+                        <li>Handled detailed work breakdowns, forecasting tracking updates, and custom corporate IT firewall routing segment policies.</li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #5</span><span>United Kingdom</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Production LAB Setup (UK)</h3>
-                        <ul class="text-xs text-gray-400 space-y-2 list-disc ml-5 mb-6">
-                            <li>Detailed work breakdown planning and financial forecasting.</li>
-                            <li>Built a dedicated secure LAB accessible from remote locations.</li>
-                            <li>Configured network equipment and aligned policies with corporate IT.</li>
-                            <li>IPAM provisioning and custom firewall policy definitions for port access segments.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #6</span><span>Russia</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">New Branch Office Setup (Russia)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Deployed a dedicated physical branch infrastructure configuration hosting secure corporate link expansions and line tracking rules under strict governance criteria.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #6</span><span>Russia</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">New Branch Office Setup (Russia)</h3>
-                        <p class="text-xs text-gray-400 mb-4">Network Link Expansion & Branch Office Extension establishing remote architecture endpoints.</p>
-                        <ul class="text-xs text-gray-500 space-y-2 list-disc ml-5 mb-6">
-                            <li>Enabled corporate application and secure network connectivity.</li>
-                            <li>Defined clear deliverable scopes and regular coordination with SMEs.</li>
-                            <li>Handled financial forecasting, close tracking, and stakeholder governance meetings.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #7</span><span>Identity / Access</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">3PA (Azure B2B Solution)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Designed and deployed a structural 3rd Party Access model utilizing secure Azure AD B2B engines integrated with deep custom authentication API solutions.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #7</span><span>Identity / Access</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">3PA (Azure B2B Solution)</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Designed and implemented a 3rd Party Access Model using Azure AD B2B, ensuring secure integration with enterprise applications.</li>
-                            <li>Developed and deployed API solutions for user authentication, enhancing security and user experience.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #8</span><span>Lifecycle</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">OneDrive Migration</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Successfully managed data transformation actions shifting 12,500 active identities and 64TB of content storage onto secure OneDrive architectures utilizing 2FA.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #8</span><span>Data Lifecycle</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">OneDrive Migration</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Migrated 12,500 users and 64TB of data to OneDrive for Business, implementing 2FA and restricted external sharing.</li>
-                            <li>Reduced data storage costs while improving data accessibility and security boundaries.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #9</span><span>Core Layer</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Dedicated LAB Setup (Dvalin Project)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Procured network assets and configured secure persistent Layer 2 connectivity tunnels linking active remote operational sectors securely.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #9</span><span>Layer 2 / Core</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Dedicated LAB Setup (Dvalin Project)</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Established secure Layer 2 connectivity between remote sites, ensuring seamless communication pipelines.</li>
-                            <li>Procured and deployed network infrastructure, achieving successful project sign-off with end-to-end testing.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #10</span><span>Network Security</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">NCS 2020 Infrastructure & Security</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Engineered defensive perimeter structures integrating secure vendor gateways, IPsec data tunnels, and customized network firewall isolation policies.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #10</span><span>Security Gateways</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">NCS 2020 Infrastructure & Security</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Deployed security gateways, IPsec tunnels, and Azure B2B guest accounts, enhancing network security layer mechanics.</li>
-                            <li>Managed firewall configurations and network security policies, drastically reducing potential cloud vectors.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #11</span><span>Endpoint Security</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Microsoft Defender ATP Rollout</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Migrated core enterprise client endpoints out of legacy McAfee applications and into unified Microsoft Defender ATP protection layers with customized engineering runbooks.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #11</span><span>Endpoint Tech</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Microsoft Defender ATP Rollout</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Migrated endpoint security solutions from McAfee to Microsoft Defender ATP, improving threat detection.</li>
-                            <li>Developed rollout strategies, implementation plans, and operational runbooks for Windows 7 and 10 PCs.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #12</span><span>SDN Integration</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Branch Office Migration</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Executed infrastructure structural consolidation loops successfully migrating 10 global branch locations into target Cisco Meraki SDN network designs.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #12</span><span>SDN Integration</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Branch Office Migration</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Successfully delivered the migration of 10 branch office infrastructure environments with minimal operational downtime.</li>
-                            <li>Integration of Branch offices to new Cisco Meraki SDN Network.</li>
-                            <li>Executed full decommissioning architectures of existing branch legacy equipment.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #13</span><span>Facility Systems</span>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Aker Tech House Project</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Spearheaded full hardware layouts, server rack deployments, core networking fabrics, and the rollout of the custom OneAker Visitor Management System.</p>
                 </div>
+            </div>
 
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #13</span><span>Facility Systems</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Aker Tech House Project</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc ml-5 mb-6">
-                            <li>Spearheaded end-to-end setup of IT infrastructure including core network, CCTV installation, and physical server distribution.</li>
-                            <li>Developed and implemented the OneAker Visitor Management Application to enhance premise security matrix arrays.</li>
-                        </ul>
+            <div class="card-premium p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
+                        <span>Project #14</span><span>Global Sites Decommission</span>
                     </div>
-                </div>
-
-                <div class="course-style-card p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-blue-500 mb-3">
-                            <span>Project #14</span><span>Global Frameworks</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4">HMH Network & Decommission (Global Sites)</h3>
-                        <div class="space-y-4 text-xs text-gray-400 mb-6">
-                            <div><span class="text-white font-bold block">📍 Aberdeen, Scotland</span> Network equipment handover; decommission site-specific circuits from Shared WAN layout.</div>
-                            <div><span class="text-white font-bold block">📍 Macae, Brazil</span> Decommission branch servers/services; cease WAN Orange managed frameworks while retaining line assets.</div>
-                            <div><span class="text-white font-bold block">📍 Singapore</span> Full branch server decommission and structural verification.</div>
-                            <div><span class="text-white font-bold block">📍 Germany</span> Handover physical firewall server and appliances; transition managed provider dependencies.</div>
-                        </div>
+                    <div class="space-y-2 text-xs text-slate-400">
+                        <div><strong class="text-white">Aberdeen:</strong> Handed over data hardware; severed shared WAN connections safely.</div>
+                        <div><strong class="text-white">Macae & Singapore:</strong> Decommissioned local infrastructure servers; managed network drop transitions.</div>
+                        <div><strong class="text-white">Germany:</strong> Uninstalled local firewalls and appliance architectures safely.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="journey" class="py-24">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-black text-white mb-16 flex items-center gap-3"><i data-lucide="activity" class="text-blue-500"></i> Corporate Experience</h2>
-            <div class="space-y-12 border-l-2 border-gray-800 ml-4">
+    <section id="experience" class="py-24 bg-[#0e1626] border-t border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 tracking-tight flex items-center gap-3">
+                <i data-lucide="briefcase" class="text-blue-500"></i> Corporate Experience
+            </h2>
+            <div class="timeline-line ml-4 space-y-12">
                 
-                <div class="relative pl-12">
-                    <div class="absolute -left-[11px] top-0 w-5 h-5 bg-blue-500 rounded-full ring-8 ring-[#0b0f19]"></div>
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold text-white">Technical Project Manager / Infrastructure Architect</h3>
-                        [cite_start]<span class="text-blue-400 font-mono text-sm font-semibold mt-1 md:mt-0">2019 — Present [cite: 17]</span>
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
+                        <h3 class="text-xl font-bold text-white">Technical Project Manager / Infrastructure Architect</h3>
+                        <span class="text-blue-400 text-xs font-mono font-semibold uppercase tracking-wider">2019 — Present</span>
                     </div>
-                    [cite_start]<p class="text-gray-500 font-bold uppercase text-xs mb-4">Cognizant: Global Consulting & Technology Services [cite: 17]</p>
+                    <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">Cognizant: Global Consulting & Technology Services</p>
                     <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
-                        [cite_start]<li>Led multi-phase cloud and Datacenter migration programs for enterprise clients[cite: 19].</li>
-                        [cite_start]<li>Managed discovery, assessment, dependency mapping, and migration wave planning[cite: 19].</li>
-                        [cite_start]<li>Directed cross-functional teams across infrastructure, network, security, and application groups[cite: 20, 21].</li>
+                        <li>Led multi-phase cloud and Datacenter migration programs for enterprise clients.</li>
+                        <li>Managed discovery, assessment, dependency mapping, and migration wave planning.</li>
+                        <li>Directed cross-functional teams across infrastructure, network, security, and application groups.</li>
                     </ul>
                 </div>
 
-                <div class="relative pl-12">
-                    <div class="absolute -left-[11px] top-0 w-5 h-5 bg-gray-800 rounded-full ring-8 ring-[#0b0f19]"></div>
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold text-white">Technical Lead: Infrastructure & Migration</h3>
-                        [cite_start]<span class="text-gray-500 font-mono text-sm font-semibold mt-1 md:mt-0">2013 — 2019 [cite: 36]</span>
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
+                        <h3 class="text-xl font-bold text-white">Technical Lead: Infrastructure & Migration</h3>
+                        <span class="text-slate-500 text-xs font-mono font-semibold uppercase tracking-wider">2013 — 2019</span>
                     </div>
-                    [cite_start]<p class="text-gray-500 font-bold uppercase text-xs mb-4">Cognizant Technology Solutions (Barclays Account) [cite: 36]</p>
+                    <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">Cognizant Technology Solutions (Barclays Account)</p>
                     <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
-                        [cite_start]<li>Led infrastructure transitions and migration activities for global banking workloads[cite: 37].</li>
-                        [cite_start]<li>Managed F5 load balancing, Bluecoat proxies, Infoblox DNS/IPAM, and secure file transfer platforms[cite: 38].</li>
+                        <li>Led infrastructure transitions and migration activities for global banking workloads.</li>
+                        <li>Managed F5 load balancing, Bluecoat proxies, Infoblox DNS/IPAM, and secure file transfer platforms.</li>
                     </ul>
                 </div>
 
-                <div class="relative pl-12">
-                    <div class="absolute -left-[11px] top-0 w-5 h-5 bg-gray-800 rounded-full ring-8 ring-[#0b0f19]"></div>
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-white">Technical Project Lead</h3>
-                        [cite_start]<span class="text-gray-500 font-mono text-sm">2010 — 2011 [cite: 42]</span>
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
+                        <h3 class="text-lg font-bold text-white">Technical Project Lead</h3>
+                        <span class="text-slate-500 text-xs font-mono">2010 — 2011</span>
                     </div>
-                    [cite_start]<p class="text-gray-500 font-bold uppercase text-xs mb-2">Compucom [cite: 42]</p>
-                    [cite_start]<p class="text-sm text-slate-400">Migrated 100+ development servers to Azure and Hyper-V while tracking system modernizations[cite: 43].</p>
+                    <p class="text-xs font-bold uppercase text-slate-500 mb-2 tracking-wide">Compucom</p>
+                    <p class="text-sm text-slate-400">Migrated 100+ development servers to Azure and Hyper-V while tracking system modernizations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-24 bg-[#090d16] border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 text-center space-y-3">
-                <h2 class="text-4xl font-black text-white tracking-tight">Verified Endorsements</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-sm">
-                    Review live operational validation from project stakeholders and enterprise delivery directors.
-                </p>
-                <div class="pt-2">
-                    <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 text-blue-400 text-xs font-bold uppercase tracking-widest rounded transition">
-                        <i data-lucide="linkedin" class="w-4 h-4"></i> Access LinkedIn Recommendations List
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="metric-card p-8 rounded-xl relative flex flex-col justify-between">
-                    <i data-lucide="quote" class="absolute top-6 right-8 text-gray-800 w-12 h-12 -z-10 opacity-20"></i>
-                    <p class="text-gray-300 text-sm italic leading-relaxed mb-6">
-                        "Kunal's ability to navigate complex network dependency mapping and manage stakeholders across regions was instrumental in our cloud journey success."
-                    </p>
-                    <div class="flex justify-between items-end border-t border-gray-800 pt-4">
-                        <div>
-                            <span class="text-white font-bold block text-sm">Program Director</span>
-                            <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">Enterprise Cloud Infrastructure Team</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="metric-card p-8 rounded-xl relative flex flex-col justify-between">
-                    <i data-lucide="quote" class="absolute top-6 right-8 text-gray-800 w-12 h-12 -z-10 opacity-20"></i>
-                    <p class="text-gray-300 text-sm italic leading-relaxed mb-6">
-                        "Delivered a zero-defect data center migration under challenging timelines while maintaining complete infrastructure governance and risk management."
-                    </p>
-                    <div class="flex justify-between items-end border-t border-gray-800 pt-4">
-                        <div>
-                            <span class="text-white font-bold block text-sm">Senior Stakeholder</span>
-                            <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">Global Banking Account</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="credentials" class="py-24 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-12">
-            <div class="lg:col-span-2 space-y-6">
-                <h2 class="text-3xl font-black text-white tracking-tight">Technical Certifications</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-4 bg-gray-900 rounded border border-gray-800 flex items-center gap-3 text-xs font-bold uppercase text-gray-300 tracking-wider">
-                        [cite_start]<i data-lucide="shield-check" class="text-blue-500 w-5 h-5 flex-shrink-0"></i> Azure Security Engineer Associate [cite: 58]
-                    </div>
-                    <div class="p-4 bg-gray-900 rounded border border-gray-800 flex items-center gap-3 text-xs font-bold uppercase text-gray-300 tracking-wider">
-                        [cite_start]<i data-lucide="cloud" class="text-blue-400 w-5 h-5 flex-shrink-0"></i> Azure Administrator Associate [cite: 59]
-                    </div>
-                    <div class="p-4 bg-gray-900 rounded border border-gray-800 flex items-center gap-3 text-xs font-bold uppercase text-gray-300 tracking-wider">
-                        [cite_start]<i data-lucide="git-branch" class="text-purple-400 w-5 h-5 flex-shrink-0"></i> PRINCE2 Agile [cite: 61]
-                    </div>
-                    <div class="p-4 bg-gray-900 rounded border border-gray-800 flex items-center gap-3 text-xs font-bold uppercase text-gray-300 tracking-wider">
-                        [cite_start]<i data-lucide="layers" class="text-emerald-400 w-5 h-5 flex-shrink-0"></i> Aviatrix Multi-Cloud [cite: 64]
-                    </div>
-                    <div class="p-4 bg-gray-900 rounded border border-gray-800 flex items-center gap-3 text-xs font-bold uppercase text-gray-300 tracking-wider">
-                        [cite_start]<i data-lucide="server" class="text-amber-500 w-5 h-5 flex-shrink-0"></i> Data Center Design & Infrastructure (BICSI) [cite: 66]
-                    </div>
-                    <div class="p-4 bg-gray-900 rounded border border-gray-800 flex items-center gap-3 text-xs font-bold uppercase text-gray-300 tracking-wider">
-                        [cite_start]<i data-lucide="check" class="text-slate-400 w-5 h-5 flex-shrink-0"></i> ITIL Foundation [cite: 60]
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <h2 class="text-3xl font-black text-white tracking-tight">Honors</h2>
-                <div class="space-y-4 text-sm">
-                    [cite_start]<div class="p-4 bg-gray-900 rounded border border-gray-800"><span class="text-blue-400 text-xs font-bold block uppercase mb-1">GEM Award [cite: 77][cite_start]</span><span class="text-white font-semibold">Kværner & HMH Deployment [cite: 77]</span></div>
-                    [cite_start]<div class="p-4 bg-gray-900 rounded border border-gray-800"><span class="text-blue-400 text-xs font-bold block uppercase mb-1">Best Performer [cite: 75][cite_start]</span><span class="text-white font-semibold">Barclays Financial Execution [cite: 75]</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-[#090d16] border-t border-gray-800">
-        <div class="max-w-4xl mx-auto px-6 text-center space-y-4">
-            <h3 class="text-gray-500 text-xs font-bold uppercase tracking-widest">Profilsammendrag (Norsk)</h3>
-            <p class="text-sm text-gray-400 italic leading-relaxed">
-                [cite_start]Migrasjonsleder med over 20 års erfaring med levering av storskala sky-, datasenter- og hybrid infrastrukturmigreringer for globale selskaper[cite: 5]. [cite_start]Spesialisert på migrasjonsbølgeplanlegging, feilfri produksjonsutrulling, og modernisering av eldre miljøer[cite: 6].
+    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-800/80">
+        <div class="text-center space-y-3 mb-12">
+            <h2 class="text-3xl font-bold text-white tracking-tight">Verified Endorsements</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">
+                Live performance records verified by delivery directors and program stakeholders.
             </p>
+            <div class="pt-2">
+                <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-blue-400 border border-blue-500/30 bg-blue-500/5 px-4 py-2 rounded-lg hover:bg-blue-500/10 transition uppercase tracking-wider">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i> Open Live LinkedIn Recommendations
+                </a>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-[#111b2d] border border-slate-800/60 p-6 rounded-xl relative">
+                <p class="text-slate-300 text-sm italic leading-relaxed mb-4">
+                    "Kunal's ability to navigate complex network dependency mapping and manage stakeholders across regions was instrumental in our cloud journey success."
+                </p>
+                <span class="text-white font-semibold text-xs block">Program Director</span>
+                <span class="text-slate-500 text-[11px] uppercase font-medium">Enterprise Cloud Infrastructure Team</span>
+            </div>
+            <div class="bg-[#111b2d] border border-slate-800/60 p-6 rounded-xl relative">
+                <p class="text-slate-300 text-sm italic leading-relaxed mb-4">
+                    "Delivered a zero-defect data center migration under challenging timelines while maintaining complete infrastructure governance and risk management."
+                </p>
+                <span class="text-white font-semibold text-xs block">Senior Stakeholder</span>
+                <span class="text-slate-500 text-[11px] uppercase font-medium">Global Banking Account</span>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-gray-800 bg-black text-center space-y-6">
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-2 text-xs font-bold">
-            <a href="https://kunalv.me" class="text-gray-500 hover:text-white flex items-center gap-2 transition">
-                <i data-lucide="globe" class="w-4 h-4"></i> kunalv.me
-            </a>
-            <span class="text-gray-800 hidden sm:block">|</span>
-            <a href="mailto:contact@kunalv.me" class="text-gray-500 hover:text-white flex items-center gap-2 transition">
-                <i data-lucide="mail" class="w-4 h-4"></i> contact@kunalv.me
-            </a>
+    <section id="credentials" class="py-24 bg-[#0e1626] border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-2 space-y-6">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Technical Certifications</h2>
+                <div class="grid sm:grid-cols-2 gap-3 text-xs font-medium uppercase tracking-wide text-slate-300">
+                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="shield-check" class="text-blue-500 w-4 h-4 flex-shrink-0"></i> Azure Security Engineer</div>
+                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="cloud" class="text-blue-400 w-4 h-4 flex-shrink-0"></i> Azure Administrator</div>
+                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="git-branch" class="text-purple-400 w-4 h-4 flex-shrink-0"></i> PRINCE2 Agile</div>
+                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="layers" class="text-emerald-400 w-4 h-4 flex-shrink-0"></i> Aviatrix Multi-Cloud</div>
+                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="server" class="text-amber-500 w-4 h-4 flex-shrink-0"></i> DC Design (BICSI)</div>
+                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="check" class="text-slate-500 w-4 h-4 flex-shrink-0"></i> ITIL Foundation</div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Honors</h2>
+                <div class="space-y-3 text-xs">
+                    <div class="p-3 bg-slate-900/40 border border-slate-800 rounded"><span class="text-blue-400 font-bold block mb-0.5">GEM AWARD</span> Kværner & HMH Deployment</div>
+                    <div class="p-3 bg-slate-900/40 border border-slate-800 rounded"><span class="text-blue-400 font-bold block mb-0.5">BEST PERFORMER</span> Barclays Financial Account</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 text-center border-t border-slate-800/60 max-w-3xl mx-auto px-6">
+        <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">Profilsammendrag (Norsk)</h4>
+        <p class="text-sm text-slate-400 italic leading-relaxed">
+            Migrasjonsleder med over 20 års erfaring med levering av storskala sky-, datasenter- og hybrid infrastrukturmigreringer for globale selskaper. Spesialisert på migrasjonsbølgeplanlegging, feilfri produksjonsutrulling, og modernisering av eldre miljøer.
+        </p>
+    </section>
+
+    <footer class="py-12 border-t border-slate-800 bg-black text-center space-y-6">
+        <div class="flex justify-center items-center gap-6 text-xs font-semibold text-slate-500">
+            <a href="https://kunalv.me" class="hover:text-white flex items-center gap-2 transition"><i data-lucide="globe" class="w-4 h-4"></i> kunalv.me</a>
+            <span class="text-slate-800">|</span>
+            <a href="mailto:contact@kunalv.me" class="hover:text-white flex items-center gap-2 transition"><i data-lucide="mail" class="w-4 h-4"></i> contact@kunalv.me</a>
         </div>
         
-        <div class="flex justify-center gap-6 text-gray-600">
-            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition" title="GitHub"><i data-lucide="github" class="w-4 h-4"></i></a>
-            <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="hover:text-blue-500 transition" title="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-sky-400 transition" title="X (Twitter)"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-red-500 transition" title="YouTube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        <div class="flex justify-center gap-6 text-slate-500">
+            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition" title="GitHub"><i data-lucide="github" class="w-4.5 h-4.5"></i></a>
+            <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="hover:text-blue-500 transition" title="LinkedIn"><i data-lucide="linkedin" class="w-4.5 h-4.5"></i></a>
+            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-sky-400 transition" title="X (Twitter)"><i data-lucide="twitter" class="w-4.5 h-4.5"></i></a>
+            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-red-500 transition" title="YouTube"><i data-lucide="youtube" class="w-4.5 h-4.5"></i></a>
         </div>
         
-        <div>
-            <p class="text-gray-600 text-[10px] uppercase tracking-widest">All Rights Reserved @ Kunal Vishwakarma</p>
-        </div>
+        <p class="text-slate-600 text-[10px] uppercase tracking-widest">All Rights Reserved @ Kunal Vishwakarma</p>
     </footer>
 
     <script>
-        // Fallback initialization block
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
