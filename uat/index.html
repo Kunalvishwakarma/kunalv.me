@@ -8,26 +8,26 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #0b111e; color: #e2e8f0; }
-        .nav-blur { background: rgba(11, 17, 30, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; }
-        .card-premium { background: #111b2d; border: 1px solid #1e293b; border-radius: 12px; }
-        .card-premium:hover { border-color: #3b82f6; transform: translateY(-2px); transition: all 0.3s ease; }
-        .timeline-line { border-left: 2px solid #1e293b; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #ffffff; color: #1e293b; }
+        .nav-blur { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; }
+        .card-premium { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; }
+        .card-premium:hover { border-color: #2563eb; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        .timeline-line { border-left: 2px solid #e2e8f0; }
     </style>
 </head>
-<body class="selection:bg-blue-500/20">
+<body class="selection:bg-blue-500/10">
 
     <nav class="fixed w-full z-50 nav-blur">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tight text-white uppercase flex items-center gap-2">
-                Kunal Vishwakarma<span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+            <div class="text-xl font-bold tracking-tight text-slate-900 uppercase flex items-center gap-2">
+                Kunal Vishwakarma<span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
             </div>
-            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#skills" class="hover:text-white transition">Skills</a>
-                <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="#experience" class="hover:text-white transition">Experience</a>
-                <a href="#credentials" class="hover:text-white transition">Credentials</a>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#credentials" class="hover:text-blue-600 transition">Credentials</a>
             </div>
             <a href="https://wa.me/919819041919" target="_blank" class="text-xs font-bold uppercase bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg flex items-center gap-2 transition shadow-lg shadow-green-600/10">
                 <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Connect
@@ -38,30 +38,30 @@
     <header id="about" class="pt-36 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-medium rounded-full border border-blue-500/20">
-                    <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span> Available for Global Engagements
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> Available for Global Engagements
                 </div>
-                <h1 class="text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                <h1 class="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
                     Infrastructure Architect | Datacenter SME | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher
                 </h1>
-                <p class="text-base text-slate-400 font-normal leading-relaxed max-w-3xl">
+                <p class="text-base text-slate-600 font-normal leading-relaxed max-w-3xl">
                     Migration Lead with 20+ years of enterprise expertise delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
                 
-                <div class="pt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm max-w-3xl border-t border-slate-800/60">
-                    <div class="flex items-center gap-3 text-slate-300"><i data-lucide="mail" class="text-blue-500 w-4 h-4"></i> contact@kunalv.me</div>
-                    <div class="flex items-center gap-3 text-slate-300"><i data-lucide="map-pin" class="text-blue-500 w-4 h-4"></i> Oslo, Norway</div>
-                    <div class="flex items-center gap-3 text-slate-300"><i data-lucide="phone" class="text-blue-500 w-4 h-4"></i> +47 40806338</div>
+                <div class="pt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm max-w-3xl border-t border-slate-200">
+                    <div class="flex items-center gap-3 text-slate-700"><i data-lucide="mail" class="text-blue-600 w-4 h-4"></i> contact@kunalv.me</div>
+                    <div class="flex items-center gap-3 text-slate-700"><i data-lucide="map-pin" class="text-blue-600 w-4 h-4"></i> Oslo, Norway</div>
+                    <div class="flex items-center gap-3 text-slate-700"><i data-lucide="phone" class="text-blue-600 w-4 h-4"></i> +47 40806338</div>
                 </div>
             </div>
 
-            <div class="bg-[#111b2d] border border-slate-800 p-6 rounded-xl space-y-4 w-full shadow-xl">
-                <div class="border-b border-slate-800 pb-3">
-                    <h3 class="text-white font-bold text-base flex items-center gap-2">
-                        <i data-lucide="shield" class="text-blue-500 w-4 h-4"></i> Global Engagement
+            <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-4 w-full shadow-sm">
+                <div class="border-b border-slate-200 pb-3">
+                    <h3 class="text-slate-900 font-bold text-base flex items-center gap-2">
+                        <i data-lucide="shield" class="text-blue-600 w-4 h-4"></i> Global Engagement
                     </h3>
                 </div>
-                <p class="text-xs text-slate-400 leading-relaxed font-medium">
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
                     Trusted by world‑class clients across BFSI, Pharma, Oil & Gas, Energy, Telecom, specializing in Enterprise Datacenter, ODC, and GDC Infrastructure leadership.
                 </p>
                 <div class="pt-2">
@@ -73,218 +73,218 @@
         </div>
     </header>
 
-    <section class="bg-[#0e1626] border-y border-slate-800/80 py-10">
+    <section class="bg-slate-50 border-y border-slate-200 py-10">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-                <div class="text-4xl font-bold text-white">20+</div>
-                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Years IT Experience</div>
+                <div class="text-4xl font-bold text-slate-900">20+</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-1">Years IT Experience</div>
             </div>
             <div>
-                <div class="text-4xl font-bold text-blue-500">30+</div>
-                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Global Deliveries</div>
+                <div class="text-4xl font-bold text-blue-600">30+</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-1">Global Deliveries</div>
             </div>
             <div>
-                <div class="text-4xl font-bold text-white">12.5K</div>
-                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Users Migrated</div>
+                <div class="text-4xl font-bold text-slate-900">12.5K</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-1">Users Migrated</div>
             </div>
             <div>
-                <div class="text-4xl font-bold text-blue-500">64TB</div>
-                <div class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Data Transformed</div>
+                <div class="text-4xl font-bold text-blue-600">64TB</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-1">Data Transformed</div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800/40">
+    <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-200">
         <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                <i data-lucide="shield-check" class="text-blue-500"></i> Core Skills
+            <h2 class="text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-3">
+                <i data-lucide="shield-check" class="text-blue-600"></i> Core Skills
             </h2>
-            <p class="text-slate-400 text-sm mt-1">Foundational execution capabilities across mission-critical technical domains.</p>
+            <p class="text-slate-500 text-sm mt-1">Foundational execution capabilities across mission-critical technical domains.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="server" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Data Center Operations</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="server" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Data Center Operations</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="folder-kanban" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Project Management</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="folder-kanban" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Project Management</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="search" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Root Cause Analysis (RCA)</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="search" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Root Cause Analysis (RCA)</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="file-text" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Service Level Agreements (SLA)</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="file-text" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Service Level Agreements (SLA)</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="git-branch" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Infrastructure Projects</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="git-branch" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Infrastructure Projects</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="users" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Vendor Management</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="users" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Vendor Management</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="alert-triangle" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Risk Mitigation</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="alert-triangle" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Risk Mitigation</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="calendar" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Capacity Planning & Scheduling</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="calendar" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Capacity Planning & Scheduling</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="dollar-sign" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Budget Tracking</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="dollar-sign" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Budget Tracking</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="cpu" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Server Architecture</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="cpu" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Server Architecture</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="heart-pulse" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Occupational Health & Safety</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="heart-pulse" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Occupational Health & Safety</span>
             </div>
-            <div class="p-4 bg-[#111b2d] border border-slate-800 rounded-xl flex items-center gap-3">
-                <i data-lucide="hard-drive" class="text-blue-400 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Critical Data Center Operations</span>
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
+                <i data-lucide="hard-drive" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-700">Critical Data Center Operations</span>
             </div>
         </div>
     </section>
 
     <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
         <div class="mb-16">
-            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                <i data-lucide="layers" class="text-blue-500"></i> Key Projects
+            <h2 class="text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-3">
+                <i data-lucide="layers" class="text-blue-600"></i> Key Projects
             </h2>
-            <p class="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
+            <p class="text-slate-500 text-sm mt-2 max-w-2xl leading-relaxed">
                 Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.
             </p>
         </div>
 
-        <div class="card-premium p-8 space-y-6">
-            <ul class="space-y-4 text-sm text-slate-300 leading-relaxed">
+        <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl space-y-6 shadow-sm">
+            <ul class="space-y-4 text-sm text-slate-700 leading-relaxed">
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Led the setup of ODCs</strong> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Led the setup of ODCs</strong> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Network Optimization & Security Architecture:</strong> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Network Optimization & Security Architecture:</strong> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">HCC & HCD United States:</strong> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">HCC & HCD United States:</strong> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Product LAB Deployment:</strong> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Product LAB Deployment:</strong> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Russia LED Site:</strong> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Russia LED Site:</strong> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">3PA Cloud Solutions:</strong> Managed the design and end-to-end deployment of an Azure B2B solution architecture.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">3PA Cloud Solutions:</strong> Managed the design and end-to-end deployment of an Azure B2B solution architecture.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">OneDrive Migration:</strong> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">OneDrive Migration:</strong> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Dvalin Infrastructure Portfolio:</strong> Handled complex network delivery projects and physical branch office expansions.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Dvalin Infrastructure Portfolio:</strong> Handled complex network delivery projects and physical branch office expansions.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">NCS 2020:</strong> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">NCS 2020:</strong> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">MHWirth Network Integration:</strong> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">MHWirth Network Integration:</strong> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">MS Defender Enterprise Rollout:</strong> Spearheaded the legacy security decommission by migrating the global endpoint footprint from McAfee to MS Defender.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">MS Defender Enterprise Rollout:</strong> Spearheaded the legacy security decommission by migrating the global endpoint footprint from McAfee to MS Defender.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Veidekke Cloud Migration:</strong> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Veidekke Cloud Migration:</strong> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">MHWirth Unified Endpoint Management:</strong> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">MHWirth Unified Endpoint Management:</strong> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">MHWirth SAP Fiori Delivery:</strong> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">MHWirth SAP Fiori Delivery:</strong> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Norway Datacenter Decommission:</strong> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Norway Datacenter Decommission:</strong> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">KOP-IT Malaysia Tenants:</strong> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">KOP-IT Malaysia Tenants:</strong> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Enterprise Visitor System:</strong> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Enterprise Visitor System:</strong> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">AKER Tech House Security:</strong> Designed and implemented physical IT security infrastructure, network topologies, and access control environments.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">AKER Tech House Security:</strong> Designed and implemented physical IT security infrastructure, network topologies, and access control environments.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">Branch Office Decommissions:</strong> Program managed the logistical and technical decommissioning of 10 international branch office locations.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">Branch Office Decommissions:</strong> Program managed the logistical and technical decommissioning of 10 international branch office locations.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-blue-500 mt-1 font-bold">•</span>
-                    <div><strong class="text-white">HMH Global Expansion:</strong> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework.</div>
+                    <span class="text-blue-600 mt-1 font-bold">•</span>
+                    <div><strong class="text-slate-950">HMH Global Expansion:</strong> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework.</div>
                 </li>
             </ul>
         </div>
 
         <div class="mt-8 mb-4">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
                 <i data-lucide="archive" class="w-4 h-4"></i> Historical Core Infrastructure Deployments
             </h3>
         </div>
-        <div class="card-premium p-8 space-y-4">
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-400 leading-relaxed">
-                <li class="flex items-start gap-2">• Legacy Endpoint Security Upgrades: Successfully migrated corporate network endpoints to Symantec Antivirus (SAV 9.0) security architecture.</li>
-                <li class="flex items-start gap-2">• Nationwide Infrastructure Assessment: Conducted data center and network asset data collection across an entire nationwide operating footprint.</li>
-                <li class="flex items-start gap-2">• VSAT Infrastructure Modernization: Upgraded critical satellite VSAT network infrastructure across 33 high-importance sites.</li>
-                <li class="flex items-start gap-2">• Manufacturing Plant Network Hardening: Enhanced, segmented, and optimized physical network reliability for heavy industrial manufacturing plants.</li>
-                <li class="flex items-start gap-2">• Infrastructure Monitoring Implementation: Implemented enterprise-grade monitoring, traffic logging, and analysis tools (MRTG and NetFlow Analyzer).</li>
-                <li class="flex items-start gap-2">• Enterprise Architecture Documentation: Audited and created extensive network topology and data center dependency documentation.</li>
-                <li class="flex items-start gap-2">• Firewall & Security Operations: Managed large-scale network edge security, configuring and monitoring Nokia IP 220 appliances and over 350 Check Point firewalls.</li>
-                <li class="flex items-start gap-2">• LAN/WAN Microsoft Migrations: Conducted full-lifecycle LAN/WAN architecture implementations built on enterprise Microsoft platforms.</li>
-                <li class="flex items-start gap-2">• Clinical Research Operations: Managed IT operations, network uptime, and service desk compliance for Clinical Research Operations in Pune.</li>
-                <li class="flex items-start gap-2">• R&D Regional Network Expansion: Successfully expanded critical R&D networks in Goa and Pune, and drove end-to-end LAN/WAN infrastructure deployment projects to completion in Jammu.</li>
+        <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl shadow-sm">
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 leading-relaxed">
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">Legacy Endpoint Security Upgrades:</strong> Successfully migrated corporate network endpoints to Symantec Antivirus (SAV 9.0) security architecture.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">Nationwide Infrastructure Assessment:</strong> Conducted data center and network asset data collection across an entire nationwide operating footprint.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">VSAT Infrastructure Modernization:</strong> Upgraded critical satellite VSAT network infrastructure across 33 high-importance sites.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">Manufacturing Plant Network Hardening:</strong> Enhanced, segmented, and optimized physical network reliability for heavy industrial manufacturing plants.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">Infrastructure Monitoring Implementation:</strong> Implemented enterprise-grade monitoring, traffic logging, and analysis tools (MRTG and NetFlow Analyzer).</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">Enterprise Architecture Documentation:</strong> Audited and created extensive network topology and data center dependency documentation.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">Firewall & Security Operations:</strong> Managed large-scale network edge security, configuring and monitoring Nokia IP 220 appliances and over 350 Check Point firewalls.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">LAN/WAN Microsoft Migrations:</strong> Conducted full-lifecycle LAN/WAN architecture implementations built on enterprise Microsoft platforms.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">Clinical Research Operations:</strong> Managed IT operations, network uptime, and service desk compliance for Clinical Research Operations in Pune.</li>
+                <li class="flex items-start gap-2">• <strong class="text-slate-800">R&D Regional Network Expansion:</strong> Successfully expanded critical R&D networks in Goa and Pune, and drove end-to-end LAN/WAN infrastructure deployment projects to completion in Jammu.</li>
             </ul>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-[#0e1626] border-t border-slate-800/80">
+    <section id="experience" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-white mb-16 tracking-tight flex items-center gap-3">
-                <i data-lucide="briefcase" class="text-blue-500"></i> Corporate Experience
+            <h2 class="text-3xl font-bold text-slate-900 mb-16 tracking-tight flex items-center gap-3">
+                <i data-lucide="briefcase" class="text-blue-600"></i> Corporate Experience
             </h2>
             <div class="timeline-line ml-4 space-y-12">
                 
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-blue-600 rounded-full ring-4 ring-slate-50"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
-                        <h3 class="text-xl font-bold text-white">Datacenter Support SM / Infrastructure Architect</h3>
-                        <span class="text-blue-400 text-xs font-mono font-semibold uppercase tracking-wider">2019 — Present</span>
+                        <h3 class="text-xl font-bold text-slate-900">Datacenter Support SM / Infrastructure Architect</h3>
+                        <span class="text-blue-600 text-xs font-mono font-semibold uppercase tracking-wider">2019 — Present</span>
                     </div>
                     <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">Cognizant Oil & Gas Consulting Services Norway AS</p>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
-                        <li>Assist in complex Azure cloud migration programs utilizing Jira and Azure DevOps Boards.</li>
+                    <ul class="text-slate-600 text-sm space-y-2 list-disc ml-4">
+                        <li>With an active engineering baseline, I assist in complex Azure cloud migration programs utilizing Jira and Azure DevOps Boards.</li>
                         <li>Drive rigorous program governance: maintaining RAID logs, BCM/DR architectures, regulatory compliance standards, and systematic risk mitigation loops.</li>
                         <li>Coordinate deliverables and establish platform interoperations with key partners including Microsoft, Cisco, HP, and external cloud vendors.</li>
                         <li>Manage upstream demand intake lifecycles, structured datacenter financial cost estimations, and formal SoW/RFP evaluation processes.</li>
@@ -293,13 +293,13 @@
                 </div>
 
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-400 rounded-full ring-4 ring-slate-50"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
-                        <h3 class="text-xl font-bold text-white">Technical Line Lead / Associate Operations Manager</h3>
+                        <h3 class="text-xl font-bold text-slate-900">Technical Line Lead / Associate Operations Manager</h3>
                         <span class="text-slate-500 text-xs font-mono font-semibold uppercase tracking-wider">2013 — 2019</span>
                     </div>
                     <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">Cognizant Technology Solutions India | Pune</p>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                    <ul class="text-slate-600 text-sm space-y-2 list-disc ml-4">
                         <li>Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint in Pune.</li>
                         <li>Led Web Infrastructure and integration delivery tracks for Barclays Technology Solutions.</li>
                         <li>Acted as Subject Matter Expert managing core routing, access controls, and security appliances across F5 BIG-IP, Bluecoat proxies, Infoblox DNS/IPAM, Linux clusters, Tumbleweed secure file transfers, and Fix‑Gateways.</li>
@@ -309,13 +309,13 @@
                 </div>
 
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-400 rounded-full ring-4 ring-slate-50"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
-                        <h3 class="text-xl font-bold text-white">Technical Consultant</h3>
+                        <h3 class="text-xl font-bold text-slate-900">Technical Consultant</h3>
                         <span class="text-slate-500 text-xs font-mono font-semibold uppercase tracking-wider">2011 — 2012</span>
                     </div>
                     <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">Einfotek | Pune</p>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                    <ul class="text-slate-600 text-sm space-y-2 list-disc ml-4">
                         <li>Served as Web Infrastructure Lead for highly regulated banking domain client systems.</li>
                         <li>Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.</li>
                         <li>Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Tumbleweed, Infoblox, and Fixgateway communication boundaries.</li>
@@ -323,13 +323,13 @@
                 </div>
 
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-400 rounded-full ring-4 ring-slate-50"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
-                        <h3 class="text-lg font-bold text-white">Technical Project Lead</h3>
+                        <h3 class="text-lg font-bold text-slate-900">Technical Project Lead</h3>
                         <span class="text-slate-500 text-xs font-mono font-semibold uppercase tracking-wider">2010 — 2011</span>
                     </div>
                     <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">Compucom | Pune</p>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                    <ul class="text-slate-600 text-sm space-y-2 list-disc ml-4">
                         <li>Drove the strategic, multi-phase technical migration of 100+ production servers for Walmart systems.</li>
                         <li>Managed enterprise Microsoft Hyper-V private cloud operations and computing environments.</li>
                         <li>Led datacenter platform modernizations upgrading Windows Server footprints from legacy 2003/2008 sets to Windows Server 2012 platforms.</li>
@@ -338,13 +338,13 @@
                 </div>
 
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-400 rounded-full ring-4 ring-slate-50"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
-                        <h3 class="text-lg font-bold text-white">Senior Network Administrator & Project Engineer</h3>
+                        <h3 class="text-lg font-bold text-slate-900">Senior Network Administrator & Project Engineer</h3>
                         <span class="text-slate-500 text-xs font-mono font-semibold uppercase tracking-wider">2009 — 2010</span>
                     </div>
                     <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">NETSOL IBM India | Mumbai</p>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                    <ul class="text-slate-600 text-sm space-y-2 list-disc ml-4">
                         <li>Designed, mapped, and audited highly scalable LAN/WAN topologies and enterprise data routing architectures.</li>
                         <li>Implemented edge firewalls, persistent site-to-site VPN tunnels, and unified network data security baselines.</li>
                         <li>Managed strategic network hardware vendor contracts, warranties, and disaster recovery (DR) data center validation records.</li>
@@ -352,128 +352,129 @@
                 </div>
 
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-[#0e1626]"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-400 rounded-full ring-4 ring-slate-50"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
-                        <h3 class="text-lg font-bold text-white">Network Administrator</h3>
+                        <h3 class="text-lg font-bold text-slate-900">Network Administrator</h3>
                         <span class="text-slate-500 text-xs font-mono font-semibold uppercase tracking-wider">2005 — 2009</span>
                     </div>
                     <p class="text-xs font-bold uppercase text-slate-500 mb-3 tracking-wide">Ashtech Infotech | Mumbai</p>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                    <ul class="text-slate-600 text-sm space-y-2 list-disc ml-4">
                         <li>Designed and maintained scalable network solutions optimized for high-performance and business growth.</li>
                         <li>Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.</li>
                         <li>Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.</li>
                         <li>Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.</li>
                         <li>Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.</li>
+                        <li>Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-800/80">
+    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
         <div class="text-center space-y-3 mb-12">
-            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
-                <i data-lucide="award" class="text-blue-500"></i> Appreciation & Awards
+            <h2 class="text-3xl font-bold text-slate-900 tracking-tight flex items-center justify-center gap-3">
+                <i data-lucide="award" class="text-blue-600"></i> Appreciation & Awards
             </h2>
-            <p class="text-slate-400 text-sm max-w-2xl mx-auto">
+            <p class="text-slate-500 text-sm max-w-2xl mx-auto">
                 Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.
             </p>
             <div class="pt-2">
-                <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-blue-400 border border-blue-500/30 bg-blue-500/5 px-4 py-2 rounded-lg hover:bg-blue-500/10 transition uppercase tracking-wider">
+                <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-blue-600 border border-blue-200 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition uppercase tracking-wider">
                     <i data-lucide="linkedin" class="w-4 h-4"></i> Open Live LinkedIn Recommendations
                 </a>
             </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            <div class="bg-[#111b2d] border border-slate-800/60 p-5 rounded-xl flex items-start gap-4">
-                <div class="p-2 bg-amber-500/10 rounded-lg text-amber-500"><i data-lucide="trophy" class="w-5 h-5"></i></div>
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl flex items-start gap-4">
+                <div class="p-2 bg-amber-100 rounded-lg text-amber-600"><i data-lucide="trophy" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="text-sm font-bold text-white">Best Performer</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">Barclays Capital</p>
+                    <h4 class="text-sm font-bold text-slate-900">Best Performer</h4>
+                    <p class="text-xs text-slate-500 mt-0.5">Barclays Capital</p>
                 </div>
             </div>
-            <div class="bg-[#111b2d] border border-slate-800/60 p-5 rounded-xl flex items-start gap-4">
-                <div class="p-2 bg-blue-500/10 rounded-lg text-blue-500"><i data-lucide="star" class="w-5 h-5"></i></div>
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl flex items-start gap-4">
+                <div class="p-2 bg-blue-100 rounded-lg text-blue-600"><i data-lucide="star" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="text-sm font-bold text-white">Best Performer</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">Telenet Belgium</p>
+                    <h4 class="text-sm font-bold text-slate-900">Best Performer</h4>
+                    <p class="text-xs text-slate-500 mt-0.5">Telenet Belgium</p>
                 </div>
             </div>
-            <div class="bg-[#111b2d] border border-slate-800/60 p-5 rounded-xl flex items-start gap-4">
-                <div class="p-2 bg-purple-500/10 rounded-lg text-purple-500"><i data-lucide="lightbulb" class="w-5 h-5"></i></div>
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl flex items-start gap-4">
+                <div class="p-2 bg-purple-100 rounded-lg text-purple-600"><i data-lucide="lightbulb" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="text-sm font-bold text-white">Best Innovation</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">Shri Saibaba Sansthan Trust Shirdi - SaiTech Project</p>
+                    <h4 class="text-sm font-bold text-slate-900">Best Innovation</h4>
+                    <p class="text-xs text-slate-500 mt-0.5">Shri Saibaba Sansthan Trust Shirdi - SaiTech Project</p>
                 </div>
             </div>
-            <div class="bg-[#111b2d] border border-slate-800/60 p-5 rounded-xl flex items-start gap-4">
-                <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-500"><i data-lucide="medal" class="w-5 h-5"></i></div>
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl flex items-start gap-4">
+                <div class="p-2 bg-emerald-100 rounded-lg text-emerald-600"><i data-lucide="medal" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="text-sm font-bold text-white">GEM Award</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">Aker Solutions</p>
+                    <h4 class="text-sm font-bold text-slate-900">GEM Award</h4>
+                    <p class="text-xs text-slate-500 mt-0.5">Aker Solutions</p>
                 </div>
             </div>
-            <div class="bg-[#111b2d] border border-slate-800/60 p-5 rounded-xl flex items-start gap-4 md:col-span-2">
-                <div class="p-2 bg-teal-500/10 rounded-lg text-teal-500"><i data-lucide="message-square" class="w-5 h-5"></i></div>
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl flex items-start gap-4 md:col-span-2">
+                <div class="p-2 bg-teal-100 rounded-lg text-teal-600"><i data-lucide="message-square" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="text-sm font-bold text-white">Multiple Client Appreciations</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">Formal recognitions for complex multi-site deployment continuity.</p>
+                    <h4 class="text-sm font-bold text-slate-900">Multiple Client Appreciations</h4>
+                    <p class="text-xs text-slate-500 mt-0.5">Formal recognitions for complex multi-site deployment continuity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="credentials" class="py-24 bg-[#0e1626] border-t border-slate-800/80">
+    <section id="credentials" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div class="md:col-span-3 space-y-6">
-                <h2 class="text-2xl font-bold text-white tracking-tight">Technical Certifications</h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-300">
-                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="shield-check" class="text-blue-500 w-4 h-4 flex-shrink-0"></i> Azure Security Engineer</div>
-                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="cloud" class="text-blue-400 w-4 h-4 flex-shrink-0"></i> Azure Administrator</div>
-                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="git-branch" class="text-purple-400 w-4 h-4 flex-shrink-0"></i> PRINCE2 Agile</div>
-                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="layers" class="text-emerald-400 w-4 h-4 flex-shrink-0"></i> Aviatrix Multi-Cloud</div>
-                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="server" class="text-amber-500 w-4 h-4 flex-shrink-0"></i> DC Design (BICSI)</div>
-                    <div class="p-3 bg-slate-900/60 rounded border border-slate-800 flex items-center gap-3"><i data-lucide="check" class="text-slate-500 w-4 h-4 flex-shrink-0"></i> ITIL Foundation</div>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Technical Certifications</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-600">
+                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="shield-check" class="text-blue-600 w-4 h-4 flex-shrink-0"></i> Azure Security Engineer</div>
+                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="cloud" class="text-blue-500 w-4 h-4 flex-shrink-0"></i> Azure Administrator</div>
+                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="git-branch" class="text-purple-600 w-4 h-4 flex-shrink-0"></i> PRINCE2 Agile</div>
+                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="layers" class="text-emerald-600 w-4 h-4 flex-shrink-0"></i> Aviatrix Multi-Cloud</div>
+                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="server" class="text-amber-600 w-4 h-4 flex-shrink-0"></i> DC Design (BICSI)</div>
+                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="check" class="text-slate-500 w-4 h-4 flex-shrink-0"></i> ITIL Foundation</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 text-center border-t border-slate-800/60 max-w-3xl mx-auto px-6">
-        <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">Profilsammendrag (Norsk)</h4>
-        <p class="text-sm text-slate-400 italic leading-relaxed">
+    <section class="py-16 text-center border-t border-slate-200 max-w-3xl mx-auto px-6">
+        <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Profilsammendrag (Norsk)</h4>
+        <p class="text-sm text-slate-500 italic leading-relaxed">
             Migrasjonsleder med over 20 års erfaring med levering av storskala sky-, datasenter- og hybrid infrastrukturmigreringer for globale selskaper. Spesialisert på migrasjonsbølgeplanlegging, feilfri produksjonsutrulling, og modernisering av eldre miljøer.
         </p>
     </section>
 
-    <footer class="py-12 border-t border-slate-800 bg-black text-center space-y-6">
+    <footer class="py-12 border-t border-slate-200 bg-slate-50 text-center space-y-6">
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-2 text-xs font-bold">
-            <a href="https://kunalv.me" class="text-gray-500 hover:text-white flex items-center gap-2 transition">
+            <a href="https://kunalv.me" class="text-slate-500 hover:text-blue-600 flex items-center gap-2 transition">
                 <i data-lucide="globe" class="w-4 h-4"></i> kunalv.me
             </a>
-            <span class="text-gray-800 hidden sm:block">|</span>
-            <a href="mailto:contact@kunalv.me" class="text-gray-500 hover:text-white flex items-center gap-2 transition">
+            <span class="text-slate-300 hidden sm:block">|</span>
+            <a href="mailto:contact@kunalv.me" class="text-slate-500 hover:text-blue-600 flex items-center gap-2 transition">
                 <i data-lucide="mail" class="w-4 h-4"></i> contact@kunalv.me
             </a>
         </div>
         
-        <div class="flex justify-center gap-6 text-slate-600">
-            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition" title="GitHub">
+        <div class="flex justify-center gap-6 text-slate-400">
+            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-slate-900 transition" title="GitHub">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="hover:text-blue-500 transition" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="hover:text-[#0077b5] transition" title="LinkedIn">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-sky-400 transition" title="X (Twitter)">
+            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-slate-900 transition" title="X (Twitter)">
                 <svg class="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-red-500 transition" title="YouTube">
+            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-[#ff0000] transition" title="YouTube">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.163s-.232-1.63-.941-2.348c-.901-.943-1.911-.947-2.373-1.002-3.305-.24-8.255-.24-8.255-.24s-4.95 0-8.255.24c-.462.055-1.472.059-2.373 1.002-.709.718-.941 2.348-.941 2.348s-.237 1.93-.237 3.859v1.811c0 1.929.237 3.859.237 3.859s.232 1.63.941 2.348c.901.943 2.112.914 2.651 1.015 3.793.364 8.249.378 8.249.378s4.955-.007 8.26-.248c.462-.055 1.472-.059 2.373-1.002.709-.718.941-2.348.941-2.348s.237-1.931.237-3.859v-1.811c0-1.929-.237-3.859-.237-3.859zm-14.124 8.574V8.14l6.456 3.298-6.456 3.299z"/></svg>
             </a>
         </div>
         
-        <p class="text-slate-600 text-[10px] uppercase tracking-widest">All Rights Reserved @ Kunal Vishwakarma</p>
+        <p class="text-slate-400 text-[10px] uppercase tracking-widest">All Rights Reserved @ Kunal Vishwakarma</p>
     </footer>
 
     <script>
@@ -483,3 +484,5 @@
     </script>
 </body>
 </html>
+
+```
