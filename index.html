@@ -6,6 +6,7 @@
     <title>Kunal Vishwakarma | Infrastructure Architect & Migration Lead</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #ffffff; color: #1e293b; }
@@ -13,15 +14,21 @@
         .card-premium { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; }
         .card-premium:hover { border-color: #2563eb; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
         .timeline-line { border-left: 2px solid #e2e8f0; }
+        /* Hardened styling adjustment override to center the embedded LinkedIn script badge frame neatly */
+        .LI-profile-badge { margin: 0 auto !important; display: block !important; }
     </style>
 </head>
 <body class="selection:bg-blue-500/10">
 
     <nav class="fixed w-full z-50 nav-blur">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tight text-slate-900 uppercase flex items-center gap-2">
-                Kunal Vishwakarma<span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
-            </div>
+        <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+            
+            <a href="#about" class="group flex items-center gap-3 transition-all duration-200 hover:opacity-90">
+                <img src="logo.png" alt="KV Logo" class="h-10 w-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='kv.png'" />
+                <span class="text-lg font-extrabold tracking-tighter text-slate-900 uppercase">
+                    Kunal <span class="text-blue-600">V.</span>
+                </span>
+            </a>
             
             <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-500">
                 <a href="#about" data-i18n="nav-about" class="hover:text-blue-600 transition">About</a>
@@ -44,15 +51,15 @@
                     </div>
                 </div>
 
-                <a href="https://wa.me/919819041919" target="_blank" class="text-xs font-bold uppercase bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg flex items-center gap-2 transition shadow-lg shadow-green-600/10">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i> <span data-i18n="btn-contact">WhatsApp Connect</span>
+                <a href="https://wa.me/919819041919" target="_blank" class="p-2 bg-green-50 text-green-600 border border-green-200 hover:bg-green-600 hover:text-white hover:border-green-600 rounded-lg transition duration-200 shadow-md flex items-center justify-center" title="WhatsApp Secure Connect">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.292 1.493 4.81 1.494 5.428 0 9.847-4.416 9.849-9.846.002-2.63-1.02-5.101-2.877-6.96C16.516 1.982 14.05 1.01 11.416 1.01c-5.436 0-9.852 4.414-9.855 9.845-.001 1.77.475 3.5 1.376 4.996L1.87 20.354l4.777-1.2zm12.355-6.19c-.316-.157-1.872-.924-2.16-1.028-.287-.104-.497-.158-.707.157-.21.314-.813 1.027-.996 1.237-.183.21-.366.236-.682.079-.317-.157-1.336-.492-2.545-1.57-.94-.838-1.573-1.874-1.757-2.189-.183-.315-.02-.485.137-.642.142-.141.317-.367.475-.55.157-.185.21-.316.316-.525.105-.21.053-.394-.026-.55-.079-.158-.707-1.702-.97-2.333-.255-.615-.515-.532-.707-.542-.183-.01-.393-.011-.603-.011s-.553.079-.842.394c-.289.315-1.103 1.077-1.103 2.625s1.13 3.045 1.288 3.255c.158.21 2.222 3.393 5.381 4.757.752.324 1.339.518 1.797.663.755.24 1.442.206 1.984.125.604-.09 1.872-.765 2.134-1.47.263-.704.263-1.313.184-1.418-.079-.105-.289-.158-.605-.315z"/></svg>
                 </a>
             </div>
         </div>
     </nav>
 
     <header id="about" class="pt-36 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-3 gap-12 items-start">
+        <div class="grid lg:grid-cols-3 gap-12 items-center">
             <div class="lg:col-span-2 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">
                     <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
@@ -61,7 +68,7 @@
                     Infrastructure Architect | Datacenter SME | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher
                 </h1>
                 <p data-i18n="hero-desc" class="text-base text-slate-600 font-normal leading-relaxed max-w-3xl">
-                    Migration Lead with 20+ years of enterprise expertise delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
+                    Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
                 
                 <div class="pt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm max-w-3xl border-t border-slate-200">
@@ -71,17 +78,21 @@
                 </div>
             </div>
 
-            <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-4 w-full shadow-sm">
-                <div class="border-b border-slate-200 pb-3">
-                    <h3 data-i18n="trust-title" class="text-slate-900 font-bold text-base flex items-center gap-2">
-                        <i data-lucide="shield" class="text-blue-600 w-4 h-4"></i> Global Engagement
+            <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-4 w-full shadow-sm flex flex-col justify-center items-center">
+                <div class="border-b border-slate-200 pb-2 w-full text-center">
+                    <h3 data-i18n="trust-title" class="text-slate-900 font-bold text-sm inline-flex items-center gap-2 justify-center">
+                        <i data-lucide="shield" class="text-blue-600 w-4 h-4"></i> Verified Executive Profile
                     </h3>
                 </div>
-                <p data-i18n="trust-desc" class="text-xs text-slate-600 leading-relaxed font-medium">
-                    Trusted by world‑class clients across BFSI, Pharma, Oil & Gas, Energy, Telecom, specializing in Enterprise Datacenter, ODC, and GDC Infrastructure leadership.
-                </p>
-                <div class="pt-2">
-                    <a href="mailto:contact@kunalv.me" data-i18n="btn-ref" class="block text-center w-full py-2.5 text-white font-bold text-xs uppercase tracking-wider rounded-lg bg-blue-600 hover:bg-blue-700 transition">
+                
+                <div class="w-full flex justify-center py-2 overflow-hidden">
+                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="kunalkv" data-version="v1">
+                        <a class="badge-base__link LI-simple-link" href="https://no.linkedin.com/in/kunalkv/en?trk=profile-badge">Kunal V.</a>
+                    </div>
+                </div>
+
+                <div class="w-full pt-1">
+                    <a href="mailto:contact@kunalv.me" data-i18n="btn-ref" class="block text-center w-full py-2 text-white font-bold text-xs uppercase tracking-wider rounded-lg bg-blue-600 hover:bg-blue-700 transition">
                         Request Reference Check
                     </a>
                 </div>
@@ -128,11 +139,11 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="search" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-3" class="text-sm font-semibold text-slate-700">Root Cause Analysis (RCA)</span>
+                <span class="text-sm font-semibold text-slate-700">Root Cause Analysis (RCA)</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="file-text" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-4" class="text-sm font-semibold text-slate-700">Service Level Agreements (SLA)</span>
+                <span class="text-sm font-semibold text-slate-700">Service Level Agreements (SLA)</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="git-branch" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
@@ -140,7 +151,7 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="users" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-6" class="text-sm font-semibold text-slate-700">Vendor Management</span>
+                <span class="text-sm font-semibold text-slate-700">Vendor Management</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="alert-triangle" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
@@ -148,7 +159,7 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="calendar" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-7" class="text-sm font-semibold text-slate-700">Capacity Planning & Scheduling</span>
+                <span class="text-sm font-semibold text-slate-700">Capacity Planning & Scheduling</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="dollar-sign" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
@@ -156,23 +167,23 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="cpu" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-8" class="text-sm font-semibold text-slate-700">Server Architecture</span>
+                <span class="text-sm font-semibold text-slate-700">Server Architecture</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="heart-pulse" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-9" class="text-sm font-semibold text-slate-700">Occupational Health & Safety</span>
+                <span class="text-sm font-semibold text-slate-700">Occupational Health & Safety</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="hard-drive" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-10" class="text-sm font-semibold text-slate-700">Critical Data Center Operations</span>
+                <span class="text-sm font-semibold text-slate-700">Critical Data Center Operations</span>
             </div>
         </div>
     </section>
 
     <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
         <div class="mb-16">
-            <h2 data-i18n="proj-heading" class="text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-3">
-                <i data-lucide="layers" class="text-blue-600"></i> Key Projects
+            <h2 class="text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-3">
+                <i data-lucide="layers" class="text-blue-600"></i> <span data-i18n="proj-heading">Key Projects</span>
             </h2>
             <p data-i18n="proj-lead-desc" class="text-slate-500 text-sm mt-2 max-w-2xl leading-relaxed">
                 Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.
@@ -185,8 +196,8 @@
         </div>
 
         <div class="mt-8 mb-4">
-            <h3 data-i18n="hist-heading" class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                <i data-lucide="archive" class="w-4 h-4"></i> Historical Core Infrastructure Deployments
+            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
+                <i data-lucide="archive" class="w-4 h-4"></i> <span data-i18n="hist-heading">Historical Core Infrastructure Deployments</span>
             </h3>
         </div>
         <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl shadow-sm">
@@ -225,17 +236,11 @@
     </section>
 
     <section id="credentials" class="py-24 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div class="md:col-span-3 space-y-6">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="space-y-6">
                 <h2 data-i18n="cert-title" class="text-2xl font-bold text-slate-900 tracking-tight">Technical Certifications</h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-600">
-                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="shield-check" class="text-blue-600 w-4 h-4 flex-shrink-0"></i> <span data-i18n="cert-1">Azure Security Engineer</span></div>
-                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="cloud" class="text-blue-500 w-4 h-4 flex-shrink-0"></i> <span data-i18n="cert-2">Azure Administrator</span></div>
-                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="git-branch" class="text-purple-600 w-4 h-4 flex-shrink-0"></i> <span data-i18n="cert-3">PRINCE2 Agile</span></div>
-                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="layers" class="text-emerald-600 w-4 h-4 flex-shrink-0"></i> <span data-i18n="cert-4">Aviatrix Multi-Cloud</span></div>
-                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="server" class="text-amber-600 w-4 h-4 flex-shrink-0"></i> <span data-i18n="cert-5">DC Design (BICSI)</span></div>
-                    <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3"><i data-lucide="check" class="text-slate-500 w-4 h-4 flex-shrink-0"></i> <span data-i18n="cert-6">ITIL Foundation</span></div>
-                </div>
+                <div id="certifications-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-600">
+                    </div>
             </div>
         </div>
     </section>
@@ -251,22 +256,27 @@
             </a>
         </div>
         
-        <div class="flex justify-center gap-6 text-slate-400">
-            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-slate-900 transition" title="GitHub">
+        <div class="flex justify-center items-center gap-6 text-slate-400">
+            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-slate-900 transition flex items-center justify-center" title="GitHub">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="hover:text-[#0077b5] transition" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/kunalkv/" target="_blank" class="hover:text-[#0077b5] transition flex items-center justify-center" title="LinkedIn">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-slate-900 transition" title="X (Twitter)">
+            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-slate-900 transition flex items-center justify-center" title="X (Twitter)">
                 <svg class="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-[#ff0000] transition" title="YouTube">
+            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-[#ff0000] transition flex items-center justify-center" title="YouTube">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.163s-.232-1.63-.941-2.348c-.901-.943-1.911-.947-2.373-1.002-3.305-.24-8.255-.24-8.255-.24s-4.95 0-8.255.24c-.462.055-1.472.059-2.373 1.002-.709.718-.941 2.348-.941 2.348s-.237 1.93-.237 3.859v1.811c0 1.929.237 3.859.237 3.859s.232 1.63.941 2.348c.901.943 2.112.914 2.651 1.015 3.793.364 8.249.378 8.249.378s4.955-.007 8.26-.248c.462-.055 1.472-.059 2.373-1.002.709-.718.941-2.348.941-2.348s.237-1.931.237-3.859v-1.811c0-1.929-.237-3.859-.237-3.859zm-14.124 8.574V8.14l6.456 3.298-6.456 3.299z"/></svg>
             </a>
         </div>
         
-        <p class="text-slate-400 text-[10px] uppercase tracking-widest">All Rights Reserved @ Kunal Vishwakarma</p>
+        <div class="mt-4 opacity-75 text-[11px] font-bold uppercase tracking-wider flex justify-center items-center gap-2">
+            <span id="trafficLabel">Live Traffic Counter:</span>
+            <img src="https://visitor-counter.glitch.me/counter?page=kunalv.me_portfolio_master" alt="Visitor Metric" class="h-5" />
+        </div>
+
+        <p class="text-slate-400 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
     </footer>
 
     <script>
@@ -276,7 +286,7 @@
                 "btn-contact": "WhatsApp Connect", "availability": "Available for Global Engagements", "location": "Oslo, Norway",
                 "hero-title": "Infrastructure Architect | Datacenter SME | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher",
                 "hero-desc": "Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.",
-                "trust-title": "Global Engagement", "trust-desc": "Trusted by world‑class clients across BFSI, Pharma, Oil & Gas, Energy, Telecom, specializing in Enterprise Datacenter, ODC, and GDC Infrastructure leadership.",
+                "trust-title": "Verified Executive Profile", "trust-desc": "Trusted by world‑class clients across BFSI, Pharma, Oil & Gas, Energy, Telecom, specializing in Enterprise Datacenter, ODC, and GDC Infrastructure leadership.",
                 "btn-ref": "Request Reference Check",
                 "count-exp": "Years IT Experience", "count-del": "Global Deliveries", "count-usr": "Users Migrated", "count-dat": "Data Transformed",
                 "skills-title": "Core Skills", "skills-desc": "Foundational execution capabilities across mission-critical technical domains.",
@@ -285,23 +295,23 @@
                 "hist-heading": "Historical Core Infrastructure Deployments",
                 "exp-heading": "Corporate Experience", "awards-heading": "Appreciation & Awards", "awards-desc": "Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.",
                 "linkedin-rec": "Open Live LinkedIn Recommendations", "cert-title": "Technical Certifications",
-                "cert-1": "Azure Security Engineer", "cert-2": "Azure Administrator", "cert-3": "PRINCE2 Agile", "cert-4": "Aviatrix Multi-Cloud", "cert-5": "DC Design (BICSI)", "cert-6": "ITIL Foundation"
+                "traffic-text": "Live Traffic Counter:"
             },
             no: {
                 "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-credentials": "Sertifiseringer",
                 "btn-contact": "WhatsApp Kontakt", "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
                 "hero-title": "Infrastrukturarkitekt | Datasenter SME | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker | OSINT-Forsker",
-                "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkiturer innenfor strenge finans- og samsvarskrav.",
-                "trust-title": "Globalt Engasjement", "trust-desc": "Betrodd av kunder i verdensklasse innen bank/finans (BFSI), farmasi, olje og gass, energi og telekom. Spesialisert på infrastrukturledelse for datasentre, ODC og GDC.",
+                "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor strenge finans- og samsvarskrav.",
+                "trust-title": "Verifisert Lederprofil", "trust-desc": "Betrodd av kunder i verdensklasse innen bank/finans (BFSI), farmasi, olje og gass, energi og telekom. Spesialisert på infrastrukturledelse for datasentre, ODC og GDC.",
                 "btn-ref": "Be om referansesjekk",
                 "count-exp": "Års IT-erfaring", "count-del": "Globale leveranser", "count-usr": "Brukere migrert", "count-dat": "Data transformert",
                 "skills-title": "Kjernekompetanse", "skills-desc": "Grunnleggende gjennomføringsevne innenfor forretningskritiske tekniske domener.",
                 "skill-1": "Datasenterdrift (DC Ops)", "skill-2": "Prosjektledelse", "skill-3": "Feilsøking & Rotårsaksanalyse (RCA)", "skill-4": "Tjenestenivåavtaler (SLA)", "skill-5": "Infrastrukturprosjekter", "skill-6": "Leverandørstyring (Vendor Mgmt)", "skill-7": "Risikoavlastning & Reduksjon", "skill-8": "Kapasitetsplanlegging", "skill-9": "Budsjettsporing", "skill-10": "Serverarkitektur", "skill-11": "Helse, miljø og sikkerhet (HMS)", "skill-12": "Kritisk Datasenterdrift",
-                "proj-heading font-bold": "Hovedprosjekter", "proj-lead-desc": "Høydepunkter fra ende-til-ende skymigreringer, nettverksintegrasjoner, perimetre og datasenter-transformasjoner levert globalt.",
+                "proj-heading": "Hovedprosjekter", "proj-lead-desc": "Høydepunkter fra ende-til-ende skymigreringer, nettverksintegrasjoner, perimetre og datasenter-transformasjoner levert globalt.",
                 "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
                 "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
                 "linkedin-rec": "Åpne LinkedIn-anbefalinger", "cert-title": "Tekniske Sertifiseringer",
-                "cert-1": "Azure Security Engineer", "cert-2": "Azure Administrator", "cert-3": "PRINCE2 Agile", "cert-4": "Aviatrix Multi-Cloud", "cert-5": "DC Design (BICSI)", "cert-6": "ITIL Foundation"
+                "traffic-text": "Besøksstatistikk:"
             }
         };
 
@@ -445,7 +455,8 @@
                         "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.",
                         "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
                         "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
-                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting."
+                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
+                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
                     ]
                 }
             ],
@@ -502,7 +513,7 @@
                     bullets: [
                         "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
                         "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
-                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
+                        "Administrerte automatiserte, klausulerte maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
                     ]
                 },
                 {
@@ -514,7 +525,8 @@
                         "Overvåket bedriftens LAN, WAN og trådløse konfigurasjoner, samt feilsøking av kjernekomponenter (routere, switcher, brannmurer).",
                         "Implementerte sikkerhetstiltak som brannmurer, VPN-er og aktiv trusselovervåking for rask respons.",
                         "Ansvarlig for budsjettering, maskinvareanskaffelser, samt utarbeidelse av tekniske runbooks for katastrofegjenoppretting (DR).",
-                        "Ledet nettverksprosjekter til rettidig fullføring, sporet ytelseslogger og mentorerte junioringeniører."
+                        "Ledet nettverksprosjekter til rettidig fullføring, sporet ytelseslogger og mentorerte junioringeniører.",
+                        "Ervervet omfattende kontraktsstrukturer, programvarelisenser og garantihåndteringslogger innenfor begrensete økonomiske rammer."
                     ]
                 }
             ]
@@ -537,16 +549,55 @@
             ]
         };
 
+        const certificationsData = {
+            en: [
+                { icon: "shield", color: "orange", name: "Cyber Security – Government of India (NIELIT)" },
+                { icon: "cpu", color: "blue", name: "MCP – Microsoft Certified Professional" },
+                { icon: "globe", color: "blue", name: "MCP+I – Microsoft Certified Professional + Internet" },
+                { icon: "server", color: "blue", name: "MCSE – Microsoft Certified Systems Engineer" },
+                { icon: "lock", color: "indigo", name: "Microsoft Certified: Azure Security Engineer Associate" },
+                { icon: "cloud", color: "sky", name: "Microsoft Certified: Azure Administrator Associate" },
+                { icon: "check-square", color: "slate", name: "ITIL Foundation – EXIN" },
+                { icon: "git-branch", color: "purple", name: "PRINCE2 Agile®" },
+                { icon: "network", color: "emerald", name: "Cisco CCNA – Cisco Certified Network Associate" },
+                { icon: "database", color: "emerald", name: "Cisco CCNA Data" },
+                { icon: "terminal", color: "red", name: "DRDO – Cyber Security" },
+                { icon: "fingerprint", color: "red", name: "Certified Cybercrime Intervention Officer (CCIO)" },
+                { icon: "layers", color: "amber", name: "Alibaba Cloud Certification" },
+                { icon: "shuffle", color: "fuchsia", name: "Aviatrix Multi‑Cloud Certification" },
+                { icon: "building-2", color: "yellow", name: "BICSI Datacenter Design & Infrastructure" },
+                { icon: "shield-alert", color: "red", name: "CISM Training – ISACA" },
+                { icon: "file-check", color: "blue", name: "CISSP Training – ISC²" }
+            ],
+            no: [
+                { icon: "shield", color: "orange", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)" },
+                { icon: "cpu", color: "blue", name: "MCP – Microsoft Certified Professional" },
+                { icon: "globe", color: "blue", name: "MCP+I – Microsoft Certified Professional + Internett" },
+                { icon: "server", color: "blue", name: "MCSE – Microsoft Certified Systems Engineer" },
+                { icon: "lock", color: "indigo", name: "Microsoft Certified: Azure Security Engineer Associate" },
+                { icon: "cloud", color: "sky", name: "Microsoft Certified: Azure Administrator Associate" },
+                { icon: "check-square", color: "slate", name: "ITIL Foundation – EXIN" },
+                { icon: "git-branch", color: "purple", name: "PRINCE2 Agile®" },
+                { icon: "network", color: "emerald", name: "Cisco CCNA – Cisco Certified Network Associate" },
+                { icon: "database", color: "emerald", name: "Cisco CCNA Data" },
+                { icon: "terminal", color: "red", name: "DRDO – Kybersikkerhet" },
+                { icon: "fingerprint", color: "red", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)" },
+                { icon: "layers", color: "amber", name: "Alibaba Cloud Sertifisering" },
+                { icon: "shuffle", color: "fuchsia", name: "Aviatrix Multi‑Cloud Sertifisering" },
+                { icon: "building-2", color: "yellow", name: "BICSI Datasenterdesign & Infrastruktur" },
+                { icon: "shield-alert", color: "red", name: "CISM Opplæring – ISACA" },
+                { icon: "file-check", color: "blue", name: "CISSP Opplæring – ISC²" }
+            ]
+        };
+
         function toggleLangDropdown() {
             document.getElementById("langDropdown").classList.toggle("hidden");
         }
 
         function changeLanguage(lang) {
-            // Update dropdown label display
             document.getElementById("currentLang").innerText = lang === 'en' ? 'English' : 'Norsk';
             document.getElementById("langDropdown").classList.add("hidden");
             
-            // Translate static elements via attribute matrix mapping
             document.querySelectorAll("[data-i18n]").forEach(element => {
                 const key = element.getAttribute("data-i18n");
                 if (translations[lang][key]) {
@@ -554,12 +605,13 @@
                 }
             });
 
-            // Re-render Dynamic Loops
+            document.getElementById("trafficLabel").innerText = translations[lang]["traffic-text"];
+
             renderProjects(lang);
             renderExperience(lang);
             renderAwards(lang);
+            renderCertifications(lang);
 
-            // Trigger Lucide parsing to convert indicators
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
@@ -610,7 +662,16 @@
             `).join('');
         }
 
-        // Initialize view states cleanly on boot
+        function renderCertifications(lang) {
+            const grid = document.getElementById("certifications-grid");
+            grid.innerHTML = certificationsData[lang].map(c => `
+                <div class="p-3 bg-white rounded border border-slate-200 flex items-center gap-3">
+                    <div class="flex-shrink-0 text-slate-500"><i data-lucide="${c.icon}" class="w-4 h-4"></i></div>
+                    <span class="text-slate-700 tracking-wide font-semibold text-[11px]">${c.name}</span>
+                </div>
+            `).join('');
+        }
+
         window.onclick = function(event) {
             if (!event.target.matches('#langBtn') && !event.target.matches('#langBtn *')) {
                 document.getElementById("langDropdown").classList.add("hidden");
