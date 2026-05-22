@@ -14,6 +14,8 @@
         .card-premium { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; }
         .card-premium:hover { border-color: #2563eb; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
         .timeline-line { border-left: 2px solid #e2e8f0; }
+        /* Hardened styling adjustment override to center the embedded LinkedIn script badge frame neatly */
+        .LI-profile-badge { margin: 0 auto !important; display: block !important; }
     </style>
 </head>
 <body class="selection:bg-blue-500/10">
@@ -57,7 +59,7 @@
     </nav>
 
     <header id="about" class="pt-36 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-3 gap-12 items-start">
+        <div class="grid lg:grid-cols-3 gap-12 items-center">
             <div class="lg:col-span-2 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">
                     <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
@@ -76,17 +78,21 @@
                 </div>
             </div>
 
-            <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-4 w-full shadow-sm">
-                <div class="border-b border-slate-200 pb-3">
-                    <h3 data-i18n="trust-title" class="text-slate-900 font-bold text-base flex items-center gap-2">
-                        <i data-lucide="shield" class="text-blue-600 w-4 h-4"></i> Global Engagement
+            <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-4 w-full shadow-sm flex flex-col justify-center items-center">
+                <div class="border-b border-slate-200 pb-2 w-full text-center">
+                    <h3 data-i18n="trust-title" class="text-slate-900 font-bold text-sm inline-flex items-center gap-2 justify-center">
+                        <i data-lucide="shield" class="text-blue-600 w-4 h-4"></i> Verified Executive Profile
                     </h3>
                 </div>
-                <p data-i18n="trust-desc" class="text-xs text-slate-600 leading-relaxed font-medium">
-                    Trusted by world‑class clients across BFSI, Pharma, Oil & Gas, Energy, Telecom, specializing in Enterprise Datacenter, ODC, and GDC Infrastructure leadership.
-                </p>
-                <div class="pt-2">
-                    <a href="mailto:contact@kunalv.me" data-i18n="btn-ref" class="block text-center w-full py-2.5 text-white font-bold text-xs uppercase tracking-wider rounded-lg bg-blue-600 hover:bg-blue-700 transition">
+                
+                <div class="w-full flex justify-center py-2 overflow-hidden">
+                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="kunalkv" data-version="v1">
+                        <a class="badge-base__link LI-simple-link" href="https://no.linkedin.com/in/kunalkv/en?trk=profile-badge">Kunal V.</a>
+                    </div>
+                </div>
+
+                <div class="w-full pt-1">
+                    <a href="mailto:contact@kunalv.me" data-i18n="btn-ref" class="block text-center w-full py-2 text-white font-bold text-xs uppercase tracking-wider rounded-lg bg-blue-600 hover:bg-blue-700 transition">
                         Request Reference Check
                     </a>
                 </div>
@@ -280,7 +286,7 @@
                 "btn-contact": "WhatsApp Connect", "availability": "Available for Global Engagements", "location": "Oslo, Norway",
                 "hero-title": "Infrastructure Architect | Datacenter SME | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher",
                 "hero-desc": "Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.",
-                "trust-title": "Global Engagement", "trust-desc": "Trusted by world‑class clients across BFSI, Pharma, Oil & Gas, Energy, Telecom, specializing in Enterprise Datacenter, ODC, and GDC Infrastructure leadership.",
+                "trust-title": "Verified Executive Profile", "trust-desc": "Trusted by world‑class clients across BFSI, Pharma, Oil & Gas, Energy, Telecom, specializing in Enterprise Datacenter, ODC, and GDC Infrastructure leadership.",
                 "btn-ref": "Request Reference Check",
                 "count-exp": "Years IT Experience", "count-del": "Global Deliveries", "count-usr": "Users Migrated", "count-dat": "Data Transformed",
                 "skills-title": "Core Skills", "skills-desc": "Foundational execution capabilities across mission-critical technical domains.",
@@ -296,7 +302,7 @@
                 "btn-contact": "WhatsApp Kontakt", "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
                 "hero-title": "Infrastrukturarkitekt | Datasenter SME | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker | OSINT-Forsker",
                 "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor strenge finans- og samsvarskrav.",
-                "trust-title": "Globalt Engasjement", "trust-desc": "Betrodd av kunder i verdensklasse innen bank/finans (BFSI), farmasi, olje og gass, energi og telekom. Spesialisert på infrastrukturledelse for datasentre, ODC og GDC.",
+                "trust-title": "Verifisert Lederprofil", "trust-desc": "Betrodd av kunder i verdensklasse innen bank/finans (BFSI), farmasi, olje og gass, energi og telekom. Spesialisert på infrastrukturledelse for datasentre, ODC og GDC.",
                 "btn-ref": "Be om referansesjekk",
                 "count-exp": "Års IT-erfaring", "count-del": "Globale leveranser", "count-usr": "Brukere migrert", "count-dat": "Data transformert",
                 "skills-title": "Kjernekompetanse", "skills-desc": "Grunnleggende gjennomføringsevne innenfor forretningskritiske tekniske domener.",
@@ -507,7 +513,7 @@
                     bullets: [
                         "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
                         "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
-                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
+                        "Administrerte automatiserte, klausulerte maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
                     ]
                 },
                 {
