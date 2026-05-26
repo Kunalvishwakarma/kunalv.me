@@ -9,9 +9,9 @@
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #f4f7fa; color: #1e293b; }
-        .nav-blur { background: rgba(244, 247, 250, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; }
-        .card-premium { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #ffffff; color: #1e293b; }
+        .nav-blur { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; }
+        .card-premium { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; }
         .card-premium:hover { border-color: #2563eb; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
         .timeline-line { border-left: 2px solid #e2e8f0; }
     </style>
@@ -51,8 +51,7 @@
     </nav>
 
     <header id="about" class="pt-36 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-3 gap-8 items-start">
-            
+        <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">
                     <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
@@ -70,50 +69,26 @@
                 </div>
             </div>
 
-            <div class="space-y-6">
-                
-                <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm space-y-4">
-                    <div class="border-b border-slate-200 pb-2 flex items-center justify-between">
-                        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500" data-i18n="domain-title">Domain Experience</h3>
-                        <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="text-slate-400 hover:text-[#0077b5] transition" title="LinkedIn Connection Profile">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                    </div>
-                    <div class="space-y-1.5 text-xs font-semibold text-slate-700">
-                        <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Oil & Gas (Energy)</div>
-                        <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Banking & Financial Services</div>
-                        <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Pharmaceuticals</div>
-                        <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Datacenter Operations</div>
-                        <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
-                        <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Operational Technology (OT) Industries</div>
-                    </div>
+            <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-4 w-full">
+                <div class="border-b border-slate-200 pb-2 flex items-center justify-between">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500" data-i18n="domain-title">Domain Experience</h3>
+                    <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="text-slate-400 hover:text-[#0077b5] transition" title="LinkedIn Connection Profile">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
                 </div>
-
-                <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm space-y-4">
-                    <div class="border-b border-slate-200 pb-2">
-                        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 flex items-center gap-2">
-                            <i data-lucide="book-open" class="text-blue-600 w-4 h-4"></i> <span data-i18n="wp-heading">White Papers & Case Studies</span>
-                        </h3>
-                    </div>
-                    <div class="space-y-3 text-xs">
-                        <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl space-y-1">
-                            <span class="inline-flex px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-100 text-[9px] font-bold uppercase rounded-full">Cloud Core Blueprint</span>
-                            <h4 class="font-bold text-slate-900 text-[11px]">Zero-Defect Enterprise Cloud Migration Framework</h4>
-                            <p class="text-[10px] text-slate-500 font-normal leading-relaxed" data-i18n="wp-desc1">A practical execution runbook mapping large-scale resource discovery, multi-vertical perimeter segmentation, and cutover loop sequencing across BFSI boundaries.</p>
-                        </div>
-                        <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl space-y-1">
-                            <span class="inline-flex px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-100 text-[9px] font-bold uppercase rounded-full">Network Hardening</span>
-                            <h4 class="font-bold text-slate-900 text-[11px]">Industrial OT Network Hardening & Isolation Perimeters</h4>
-                            <p class="text-[10px] text-slate-500 font-normal leading-relaxed" data-i18n="wp-desc2">Analyzing physical security dependencies, multi-vendor VPN framework integrations, and active traffic analysis within heavy industrial manufacturing plants.</p>
-                        </div>
-                    </div>
+                <div class="space-y-2 text-xs font-semibold text-slate-700">
+                    <div class="p-2 bg-white border border-slate-200 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Oil & Gas (Energy)</div>
+                    <div class="p-2 bg-white border border-slate-200 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Banking & Financial Services</div>
+                    <div class="p-2 bg-white border border-slate-200 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Pharmaceuticals</div>
+                    <div class="p-2 bg-white border border-slate-200 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Datacenter Operations</div>
+                    <div class="p-2 bg-white border border-slate-200 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
+                    <div class="p-2 bg-white border border-slate-200 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Operational Technology (OT) Industries</div>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <section class="bg-white border-y border-slate-200 py-10">
+    <section class="bg-slate-50 border-y border-slate-200 py-10">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
                 <div class="text-4xl font-bold text-slate-900">20+</div>
@@ -142,53 +117,53 @@
             <p data-i18n="skills-desc" class="text-slate-500 text-sm mt-1">Foundational execution capabilities across mission-critical technical domains.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="server" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-1" class="text-sm font-semibold text-slate-700">Data Center Operations</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="folder-kanban" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-2" class="text-sm font-semibold text-slate-700">Project Management</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="search" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-3" class="text-sm font-semibold text-slate-700">Root Cause Analysis (RCA)</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="file-text" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-4" class="text-sm font-semibold text-slate-700">Service Level Agreements (SLA)</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="git-branch" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-5" class="text-sm font-semibold text-slate-700">Infrastructure Projects</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="users" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Vendor Management</span>
+                <span data-i18n="skill-6" class="text-sm font-semibold text-slate-700">Vendor Management</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="alert-triangle" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Risk Mitigation</span>
+                <span data-i18n="skill-7" class="text-sm font-semibold text-slate-700">Risk Mitigation</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="calendar" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-7" class="text-sm font-semibold text-slate-700">Capacity Planning & Scheduling</span>
+                <span data-i18n="skill-8" class="text-sm font-semibold text-slate-700">Capacity Planning & Scheduling</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="dollar-sign" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Budget Tracking</span>
+                <span data-i18n="skill-9" class="text-sm font-semibold text-slate-700">Budget Tracking</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="cpu" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Server Architecture</span>
+                <span data-i18n="skill-10" class="text-sm font-semibold text-slate-700">Server Architecture</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="heart-pulse" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Occupational Health & Safety</span>
+                <span data-i18n="skill-11" class="text-sm font-semibold text-slate-700">Occupational Health & Safety</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
+            <div class="p-4 card-premium flex items-center gap-3 bg-slate-50">
                 <i data-lucide="hard-drive" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Critical Data Center Operations</span>
+                <span data-i18n="skill-12" class="text-sm font-semibold text-slate-700">Critical Data Center Operations</span>
             </div>
         </div>
     </section>
@@ -203,7 +178,7 @@
             </p>
         </div>
 
-        <div class="bg-white border border-slate-200 p-8 rounded-xl space-y-6 shadow-sm">
+        <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl space-y-6 shadow-sm">
             <ul id="main-project-list" class="space-y-4 text-sm text-slate-700 leading-relaxed">
                 </ul>
         </div>
@@ -213,13 +188,13 @@
                 <i data-lucide="archive" class="w-4 h-4"></i> <span data-i18n="hist-heading">Historical Core Infrastructure Deployments</span>
             </h3>
         </div>
-        <div class="bg-white border border-slate-200 p-8 rounded-xl shadow-sm">
+        <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl shadow-sm">
             <ul id="historical-project-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 leading-relaxed">
                 </ul>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-white border-t border-slate-200">
+    <section id="experience" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="max-w-4xl mx-auto px-6">
             <h2 data-i18n="exp-heading" class="text-3xl font-bold text-slate-900 mb-16 tracking-tight flex items-center gap-3">
                 <i data-lucide="briefcase" class="text-blue-600"></i> Corporate Experience
@@ -243,19 +218,17 @@
             </div>
     </section>
 
-    <section id="credentials" class="py-24 bg-white border-t border-slate-200">
+    <section id="credentials" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="max-w-6xl mx-auto px-6">
             <div class="space-y-6">
-                <h2 data-i18n="cert-title" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-                    <i data-lucide="shield-check" class="text-blue-600 w-5 h-5"></i> Technical Certifications
-                </h2>
+                <h2 data-i18n="cert-title" class="text-2xl font-bold text-slate-900 tracking-tight">Technical Certifications</h2>
                 <div id="certifications-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-600">
                     </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-200 bg-slate-50 text-center space-y-4">
+    <footer class="py-12 border-t border-slate-200 bg-slate-50 text-center space-y-6">
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-2 text-xs font-bold">
             <a href="https://kunalv.me" class="text-slate-500 hover:text-blue-600 flex items-center gap-2 transition">
                 <i data-lucide="globe" class="w-4 h-4"></i> kunalv.me
@@ -281,9 +254,9 @@
             </a>
         </div>
         
-        <div class="mt-2 text-[11px] font-bold uppercase tracking-wider flex justify-center items-center gap-2 text-slate-400">
+        <div class="mt-4 opacity-75 text-[11px] font-bold uppercase tracking-wider flex justify-center items-center gap-2">
             <span id="trafficLabel">Live Traffic Counter:</span>
-            <span id="localSessionCounterNode" class="px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-100 rounded font-mono text-xs">1,482</span>
+            <img src="https://komarev.com/badgecounter/badge.svg?id=kunalv.me_portfolio_master&color=blue&style=flat-square" alt="Visitor Metric" class="h-5" />
         </div>
 
         <p class="text-slate-400 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
@@ -304,9 +277,6 @@
                 "hist-heading": "Historical Core Infrastructure Deployments",
                 "exp-heading": "Corporate Experience", "awards-heading": "Appreciation & Awards", "awards-desc": "Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.",
                 "linkedin-rec": "Open LinkedIn Profile", "cert-title": "Technical Certifications",
-                "wp-heading": "White Papers & Case Studies",
-                "wp-desc1": "A practical execution runbook mapping large-scale resource discovery, multi-vertical perimeter segmentation, and cutover loop sequencing across BFSI boundaries.",
-                "wp-desc2": "Analyzing physical security dependencies, multi-vendor VPN framework integrations, and active traffic analysis within heavy industrial manufacturing plants.",
                 "traffic-text": "Live Traffic Counter:"
             },
             no: {
@@ -322,9 +292,6 @@
                 "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
                 "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
                 "linkedin-rec": "Åpne LinkedIn-profil", "cert-title": "Tekniske Sertifiseringer",
-                "wp-heading": "Hvitbøker & Kasusstudier",
-                "wp-desc1": "En praktisk kjørebok som kartlegger storskala ressurskartlegging, perimetersentering og migreringssekvenser under strenge bankkrav.",
-                "wp-desc2": "Analyse av fysiske sikkerhetsavhengigheter, VPN-integrasjoner mellom flere leverandører og aktiv trafikkanalyse i tunge produksjonsanlegg.",
                 "traffic-text": "Besøksstatistikk:"
             }
         };
@@ -366,7 +333,7 @@
                 "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee til MS Defender.",
                 "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud under det strategiske <strong>Multi-Region (US, APAC, EU)</strong> rammeverket.",
                 "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
-                "<strong>MHWirth SAP Fiori:</strong> Leder den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
+                "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
                 "<strong>Datasenter-utfasing i Norge:</strong> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.",
                 "<strong>KOP-IT Malaysia:</strong> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.",
                 "<strong>Besøkssystem for bedrifter:</strong> Implementerte automatiserte, kioskbaserte fysiske besøksløsninger på tvers av primære hovedkontorer.",
@@ -527,7 +494,7 @@
                     bullets: [
                         "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
                         "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
-                        "Administrerte automatiserte, klausulerte maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
+                        "Administrerte automatiske, klausulerte maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
                     ]
                 },
                 {
@@ -543,6 +510,23 @@
                         "Ervervet omfattende kontraktsstrukturer, programvarelisenser og garantihåndteringslogger innenfor begrensete økonomiske rammer."
                     ]
                 }
+            ]
+        };
+
+        const awardsData = {
+            en: [
+                { type: "trophy", color: "amber", title: "Best Performer", desc: "Barclays Capital" },
+                { type: "star", color: "blue", title: "Best Performer", desc: "Telenet Belgium" },
+                { type: "lightbulb", color: "purple", title: "Best Innovation", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Project" },
+                { type: "medal", color: "emerald", title: "GEM Award", desc: "Aker Solutions" },
+                { type: "message-square", color: "teal", title: "Multiple Client Appreciations", desc: "Formal recognitions for complex multi-site deployment continuity." }
+            ],
+            no: [
+                { type: "trophy", color: "amber", title: "Beste Yter (Best Performer)", desc: "Barclays Capital" },
+                { type: "star", color: "blue", title: "Beste Yter (Best Performer)", desc: "Telenet Belgium" },
+                { type: "lightbulb", color: "purple", title: "Beste Innovasjon", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Prosjekt" },
+                { type: "medal", color: "emerald", title: "GEM Award (Utmerket Innsats)", desc: "Aker Solutions" },
+                { type: "message-square", color: "teal", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger." }
             ]
         };
 
@@ -633,7 +617,7 @@
             const container = document.getElementById("experience-timeline");
             container.innerHTML = corporateExperience[lang].map((job, idx) => `
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 ${idx === 0 ? 'bg-blue-600' : 'bg-slate-400'} rounded-full ring-4 ring-[#f4f7fa]"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 ${idx === 0 ? 'bg-blue-600' : 'bg-slate-400'} rounded-full ring-4 ring-slate-50"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
                         <h3 class="text-xl font-bold text-slate-900">${job.title}</h3>
                         <span class="text-blue-600 text-xs font-mono font-semibold uppercase tracking-wider">${job.period}</span>
@@ -649,7 +633,7 @@
         function renderAwards(lang) {
             const grid = document.getElementById("awards-grid");
             grid.innerHTML = awardsData[lang].map((a, idx) => `
-                <div class="bg-white border border-slate-200 p-5 rounded-xl flex items-start gap-4 ${idx === 4 ? 'md:col-span-2' : ''}">
+                <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl flex items-start gap-4 ${idx === 4 ? 'md:col-span-2' : ''}">
                     <div class="p-2 bg-${a.color}-100 rounded-lg text-${a.color}-600"><i data-lucide="${a.type}" class="w-5 h-5"></i></div>
                     <div>
                         <h4 class="text-sm font-bold text-slate-900">${a.title}</h4>
@@ -672,18 +656,6 @@
             `).join('');
         }
 
-        // Lightweight Private Storage API Counter Logic Engine Loop
-        function handleLocalTrafficAnalyticsLog() {
-            let trackerValue = localStorage.getItem('kunalv_me_synthetic_vctr');
-            if(!trackerValue) {
-                trackerValue = Math.floor(Math.random() * (1580 - 1420 + 1)) + 1420;
-            } else {
-                trackerValue = parseInt(trackerValue) + 1;
-            }
-            localStorage.setItem('kunalv_me_synthetic_vctr', trackerValue);
-            document.getElementById('localSessionCounterNode').innerText = Number(trackerValue).toLocaleString();
-        }
-
         window.onclick = function(event) {
             if (!event.target.matches('#langBtn') && !event.target.matches('#langBtn *')) {
                 document.getElementById("langDropdown").classList.add("hidden");
@@ -692,7 +664,6 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             changeLanguage('en');
-            handleLocalTrafficAnalyticsLog();
         });
     </script>
 </body>
