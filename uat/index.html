@@ -134,7 +134,7 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="search" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-3" class="text-sm font-semibold text-slate-700">Root Cause Analysis (RCA)</span>
+                <span class="text-sm font-semibold text-slate-700">Root Cause Analysis (RCA)</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="file-text" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
@@ -146,7 +146,7 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="users" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Vendor Management</span>
+                <span data-i18n="skill-6" class="text-sm font-semibold text-slate-700">Vendor Management</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="alert-triangle" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
@@ -158,7 +158,7 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="dollar-sign" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-700">Budget Tracking</span>
+                <span data-i18n="skill-9" class="text-sm font-semibold text-slate-700">Budget Tracking</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="cpu" class="text-blue-600 w-5 h-5 flex-shrink-0"></i>
@@ -226,33 +226,12 @@
     </section>
 
     <section id="credentials" class="py-24 bg-white border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
-            
-            <div class="space-y-6">
-                <h2 class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-                    <i data-lucide="shield-check" class="text-blue-600 w-5 h-5"></i> <span data-i18n="cert-title">Technical Certifications</span>
-                </h2>
-                <div id="certifications-grid" class="grid grid-cols-1 gap-2 text-xs font-medium uppercase tracking-wide text-slate-600">
-                    </div>
-            </div>
-
-            <div class="space-y-6">
-                <h2 class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-                    <i data-lucide="book-open" class="text-blue-600 w-5 h-5"></i> <span data-i18n="wp-heading">White Papers & Case Studies</span>
-                </h2>
-                <div class="space-y-3 text-sm text-slate-700">
-                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2 shadow-sm">
-                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-100 text-[10px] font-bold uppercase rounded-full">Architecture Blueprint</span>
-                        <h4 class="font-bold text-slate-900 text-sm">Zero-Defect Enterprise Cloud Migration Framework</h4>
-                        <p class="text-xs text-slate-500 font-normal leading-relaxed" data-i18n="wp-desc1">A practical execution runbook mapping large-scale resource discovery, multi-vertical perimeter segmentation, and cutover loop sequencing across BFSI boundaries.</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2 shadow-sm">
-                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-100 text-[10px] font-bold uppercase rounded-full">Security Blueprint</span>
-                        <h4 class="font-bold text-slate-900 text-sm">Industrial OT Network Hardening & Isolation Perimeters</h4>
-                        <p class="text-xs text-slate-500 font-normal leading-relaxed" data-i18n="wp-desc2">Analyzing physical security dependencies, multi-vendor VPN framework integrations, and active traffic analysis within heavy industrial manufacturing plants.</p>
-                    </div>
+        <div class="max-w-6xl mx-auto px-6 space-y-6">
+            <h2 class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <i data-lucide="shield-check" class="text-blue-600 w-5 h-5"></i> <span data-i18n="cert-title">Technical Certifications</span>
+            </h2>
+            <div id="certifications-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-600">
                 </div>
-            </div>
         </div>
     </section>
 
@@ -305,9 +284,6 @@
                 "hist-heading": "Historical Core Infrastructure Deployments",
                 "exp-heading": "Corporate Experience", "awards-heading": "Appreciation & Awards", "awards-desc": "Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.",
                 "cert-title": "Technical Certifications",
-                "wp-heading": "White Papers & Case Studies",
-                "wp-desc1": "A practical execution runbook mapping large-scale resource discovery, multi-vertical perimeter segmentation, and cutover loop sequencing across BFSI boundaries.",
-                "wp-desc2": "Analyzing physical security dependencies, multi-vendor VPN framework integrations, and active traffic analysis within heavy industrial manufacturing plants.",
                 "traffic-text": "Live Traffic Counter:"
             },
             no: {
@@ -323,9 +299,6 @@
                 "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
                 "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
                 "cert-title": "Tekniske Sertifiseringer",
-                "wp-heading": "Hvitbøker & Kasusstudier",
-                "wp-desc1": "En praktisk kjørebok som kartlegger storskala ressurskartlegging, perimetersentering og migreringssekvenser under strenge bankkrav.",
-                "wp-desc2": "Analyse av fysiske sikkerhetsavhengigheter, VPN-integrasjoner mellom flere leverandører og aktiv trafikkanalyse i tunge produksjonsanlegg.",
                 "traffic-text": "Besøksstatistikk:"
             }
         };
@@ -364,7 +337,7 @@
                 "<strong>Dvalin infrastrukturportefølje:</strong> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.",
                 "<strong>NCS 2020:</strong> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.",
                 "<strong>MHWirth nettverksintegrasjon:</strong> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
-                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee til MS Defender.",
+                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket från McAfee til MS Defender.",
                 "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud under det strategiske <strong>Multi-Region (US, APAC, EU)</strong> rammeverket.",
                 "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
                 "<strong>MHWirth SAP Fiori:</strong> Leder den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
@@ -507,7 +480,7 @@
                     bullets: [
                         "Fungerte som leder for webinfrastruktur for strengt regulerte klientsystemer innen bank og finans.",
                         "Var kjerne-teknisk overføringsleder (Transition Lead) for Barclays Capital India.",
-                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Tumbleweed, Infoblox og Fixgateway."
+                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Tumbleweed, Infoblox og Fixgateway boundaries."
                     ]
                 },
                 {
@@ -522,13 +495,13 @@
                     ]
                 },
                 {
-                    title: "Senior Nettverksadministrator & Prosjektingeniør",
+                    title: "Senior Network Administrator & Project Engineer",
                     company: "NETSOL IBM India | Mumbai",
                     period: "2009 — 2010",
                     bullets: [
                         "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
                         "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
-                        "Administrerte automatiske, klausulerte maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
+                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
                     ]
                 },
                 {
@@ -537,11 +510,11 @@
                     period: "2005 — 2009",
                     bullets: [
                         "Design og vedlikehold av skalerbare nettverksløsninger optimalisert for høy ytelse og forretningsvekst.",
-                        "Overvåket bedriftens LAN, WAN og trådløse konfigurasjoner, samt feilsøking av kjernekomponenter (routere, switcher, brannmurer).",
-                        "Implementerte sikkerhetstiltak som brannmurer, VPN-er og aktiv trusselovervåking for rask respons.",
-                        "Ansvarlig for budsjettering, maskinvareanskaffelser, samt utarbeidelse av tekniske runbooks for katastrofegjenoppretting (DR).",
-                        "Ledet nettverksprosjekter til rettidig fullføring, sporet ytelseslogger og mentorerte junioringeniører.",
-                        "Ervervet omfattende kontraktsstrukturer, programvarelisenser og garantihåndteringslogger innenfor begrensete økonomiske rammer."
+                        "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.",
+                        "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
+                        "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
+                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
+                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
                     ]
                 }
             ]
