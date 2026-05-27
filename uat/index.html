@@ -47,11 +47,12 @@
                 </div>
             </div>
             
-            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <div class="hidden md:flex space-x-6 text-xs font-semibold uppercase tracking-wider text-slate-400">
                 <a href="#about" data-i18n="nav-about" class="hover:text-blue-500 transition">About</a>
                 <a href="#skills" data-i18n="nav-skills" class="hover:text-blue-500 transition">Skills</a>
                 <a href="#projects" data-i18n="nav-projects" class="hover:text-blue-500 transition">Projects</a>
                 <a href="#experience" data-i18n="nav-experience" class="hover:text-blue-500 transition">Experience</a>
+                <a href="#whitepapers" data-i18n="nav-whitepapers" class="hover:text-blue-500 transition">White Paper</a>
                 <a href="#credentials" data-i18n="nav-credentials" class="hover:text-blue-500 transition">Credentials</a>
             </div>
 
@@ -219,8 +220,29 @@
         </div>
     </section>
 
+    <!-- White Papers & Case Studies Layout Block Area -->
+    <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 space-y-8">
+            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+                <i data-lucide="book-open" class="text-blue-500"></i> <span data-i18n="wp-heading">White Papers & Case Studies</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-3 shadow-md">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-blue-950/40 text-blue-400 border border-blue-900/60 text-[10px] font-bold uppercase rounded-full">Architecture Handbook</span>
+                    <h4 class="font-bold text-white text-base">Zero-Defect Enterprise Cloud Migration Framework</h4>
+                    <p class="text-xs text-slate-400 font-normal leading-relaxed" data-i18n="wp-desc1">A practical execution runbook mapping large-scale resource discovery, multi-vertical perimeter segmentation, and cutover loop sequencing across BFSI boundaries.</p>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-3 shadow-md">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-950/40 text-red-400 border border-red-900/60 text-[10px] font-bold uppercase rounded-full">Security Case Study</span>
+                    <h4 class="font-bold text-white text-base">Industrial OT Network Hardening & Isolation Perimeters</h4>
+                    <p class="text-xs text-slate-400 font-normal leading-relaxed" data-i18n="wp-desc2">Analyzing physical security dependencies, multi-vendor VPN framework integrations, and active traffic analysis within heavy industrial manufacturing plants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Appreciation & Awards Section -->
-    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-800">
+    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
         <div class="text-center space-y-3 mb-12">
             <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
                 <i data-lucide="award" class="text-blue-500"></i> Appreciation & Awards
@@ -232,7 +254,7 @@
         <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
     </section>
 
-    <!-- Credentials & Certifications Full Width Layout Section -->
+    <!-- Credentials & Certifications Layout Section -->
     <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="space-y-6">
@@ -279,11 +301,11 @@
         <p class="text-slate-600 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
     </footer>
 
-    <!-- Dynamic Translation Matrix Core Script Arrays -->
+    <!-- Script Translation Matrices Area Loops -->
     <script>
         const translations = {
             en: {
-                "nav-about": "About", "nav-skills": "Skills", "nav-projects": "Projects", "nav-experience": "Experience", "nav-credentials": "Credentials",
+                "nav-about": "About", "nav-skills": "Skills", "nav-projects": "Projects", "nav-experience": "Experience", "nav-whitepapers": "White Paper", "nav-credentials": "Credentials",
                 "availability": "Available for Global Engagements", "location": "Oslo, Norway",
                 "hero-title": "Infrastructure Architect | Datacenter SME | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher",
                 "hero-desc": "Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.",
@@ -295,10 +317,13 @@
                 "hist-heading": "Historical Core Infrastructure Deployments",
                 "exp-heading": "Corporate Experience", "awards-heading": "Appreciation & Awards", "awards-desc": "Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.",
                 "cert-title": "Technical Certifications",
+                "wp-heading": "White Papers & Case Studies",
+                "wp-desc1": "A practical execution runbook mapping large-scale resource discovery, multi-vertical perimeter segmentation, and cutover loop sequencing across BFSI boundaries.",
+                "wp-desc2": "Analyzing physical security dependencies, multi-vendor VPN framework integrations, and active traffic analysis within heavy industrial manufacturing plants.",
                 "traffic-text": "Live Traffic Counter:"
             },
             no: {
-                "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-credentials": "Sertifiseringer",
+                "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-whitepapers": "Hvitbøker", "nav-credentials": "Sertifiseringer",
                 "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
                 "hero-title": "Infrastrukturarkitekt | Datasenter SME | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker | OSINT-Forsker",
                 "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor strenge finans- og samsvarskrav.",
@@ -310,6 +335,9 @@
                 "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
                 "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
                 "cert-title": "Tekniske Sertifiseringer",
+                "wp-heading": "Hvitbøker & Kasusstudier",
+                "wp-desc1": "En praktisk kjørebok som kartlegger storskala ressurskartlegging, perimetersentering og migreringssekvenser under strenge bankkrav.",
+                "wp-desc2": "Analyse av fysiske sikkerhetsavhengigheter, VPN-integrasjoner mellom flere leverandører og aktiv trafikkanalyse i tunge produksjonsanlegg.",
                 "traffic-text": "Besøksstatistikk:"
             }
         };
@@ -452,10 +480,10 @@
                     bullets: [
                         "Design and maintain scalable network solutions optimized for high-performance and business growth.",
                         "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.",
-                        "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
-                        "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
-                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
-                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
+                        "Implemented defensive edge-paramere inkludert brannmurer, site-VPN-er og aktive nettverkstrussel-loggmonitorer for rask respons.",
+                        "Overvåket utstyrsbudsjetter, administrerte maskinvareinnkjøp og forfattet runbooks for katastrofegjenoppretting (DR).",
+                        "Ledet strukturelle nettverksleveranseprosjekter og ga teknisk veiledning for ledelsesrapportering.",
+                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor begrensete økonomiske rammer."
                     ]
                 }
             ],
@@ -525,7 +553,7 @@
                         "Implementerte defensive edge-paramere inkludert brannmurer, site-VPN-er og aktive nettverkstrussel-loggmonitorer for rask respons.",
                         "Overvåket utstyrsbudsjetter, administrerte maskinvareinnkjøp og forfattet runbooks for katastrofegjenoppretting (DR).",
                         "Ledet strukturelle nettverksleveranseprosjekter og ga teknisk veiledning for ledelsesrapportering.",
-                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor begrensete økonomiske rammer."
+                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor herdede økonomiske rammer."
                     ]
                 }
             ]
@@ -695,5 +723,3 @@
     </script>
 </body>
 </html>
-
-```
