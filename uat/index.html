@@ -14,6 +14,12 @@
         .card-premium { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; }
         .card-premium:hover { border-color: #3b82f6; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1); }
         .timeline-line { border-left: 2px solid #1e293b; }
+        
+        /* Chatbot Custom Animation Styles */
+        .chat-popup { transform: scale(0.9); opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+        .chat-popup.active { transform: scale(1); opacity: 1; pointer-events: auto; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="selection:bg-blue-500/20">
@@ -49,6 +55,8 @@
                 <a href="#projects" data-i18n="nav-projects" class="hover:text-blue-500 transition">Projects</a>
                 <a href="#experience" data-i18n="nav-experience" class="hover:text-blue-500 transition">Experience</a>
                 <a href="#whitepapers" data-i18n="nav-whitepapers" class="hover:text-blue-500 transition">White Paper</a>
+                <!-- Added Appreciation & Awards Section To Heading -->
+                <a href="#testimonials" data-i18n="nav-awards" class="hover:text-blue-500 transition">Awards</a>
                 <a href="#credentials" data-i18n="nav-credentials" class="hover:text-blue-500 transition">Credentials</a>
             </div>
 
@@ -302,7 +310,7 @@
             </a>
         </div>
         
-        <div class="mt-4 opacity-75 text-[11px] font-bold uppercase tracking-wider flex justify-center items-center gap-2 text-slate-500">
+        <div class="flex justify-center items-center gap-6 text-slate-500">
             <span id="trafficLabel">Live Traffic Counter:</span>
             <span id="localSessionCounterNode" class="px-2 py-0.5 bg-slate-900 text-blue-400 border border-slate-800 rounded font-mono text-xs">1,482</span>
         </div>
@@ -310,10 +318,60 @@
         <p class="text-slate-600 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
     </footer>
 
+    <!-- ========================================== -->
+    <!-- VISHWA AI CHATBOT INTERFACE (ADDED CODE) -->
+    <!-- ========================================== -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Bubble Button -->
+        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none">
+            <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Chat Window Window Context -->
+        <div id="vishwa-chat-box" class="chat-popup absolute bottom-20 right-0 w-80 sm:w-96 h-[480px] bg-slate-900 border border-slate-800 rounded-2xl flex flex-col shadow-2xl overflow-hidden">
+            <!-- Header Layout -->
+            <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="relative">
+                        <div class="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center border border-blue-500/30">
+                            <i data-lucide="bot" class="w-4 h-4 text-blue-500"></i>
+                        </div>
+                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-slate-950 rounded-full"></span>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white tracking-tight">Vishwa AI</h3>
+                        <p class="text-[10px] text-slate-400 font-medium">Powered by Gemini Architecture</p>
+                    </div>
+                </div>
+                <button onclick="toggleVishwaChat()" class="text-slate-400 hover:text-white transition">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Messages Stream -->
+            <div id="chat-messages-container" class="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-hide text-xs">
+                <div class="flex items-start gap-2.5">
+                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
+                        Hello! My name is <span class="text-blue-400 font-bold">Vishwa</span>. Ask me anything about Kunal's cloud integrations, datacenter background, or generic queries!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Bottom Input Console -->
+            <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
+                <input type="text" id="chat-user-input" onkeydown="if(event.key === 'Enter') sendQueryToVishwa()" placeholder="Ask Vishwa a question..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+                <button onclick="sendQueryToVishwa()" class="px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         const translations = {
             en: {
-                "nav-about": "About", "nav-skills": "Skills", "nav-projects": "Projects", "nav-experience": "Experience", "nav-whitepapers": "White Paper", "nav-credentials": "Credentials",
+                "nav-about": "About", "nav-skills": "Skills", "nav-projects": "Projects", "nav-experience": "Experience", "nav-whitepapers": "White Paper", "nav-awards": "Awards", "nav-credentials": "Credentials",
                 "availability": "Available for Global Engagements", "location": "Oslo, Norway",
                 "hero-title": "Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher",
                 "hero-desc": "Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.",
@@ -365,7 +423,7 @@
                 `
             },
             no: {
-                "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-whitepapers": "Hvitbøker", "nav-credentials": "Sertifiseringer",
+                "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-whitepapers": "Hvitbøker", "nav-awards": "Anerkjennelse", "nav-credentials": "Sertifiseringer",
                 "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
                 "hero-title": "Datasenter SME & Infrastrukturarkitekt | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker | OSINT-Forsker",
                 "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor strenge finans- og samsvarskrav.",
@@ -479,7 +537,7 @@
                 "• <strong>R&D Regional Network Expansion:</strong> Successfully expanded critical R&D networks in Goa and Pune, and drove end-to-end LAN/WAN infrastructure deployment projects to completion in Jammu."
             ],
             no: [
-                "• <strong>Eldre endepunktssikkerhet:</strong> Vellykket migrering av bedriftens nettverksendepunkter til Symantec Antivirus (SAV 9.0) sikkerhetsarkitektur.",
+                "• <strong>Eldre endepunktssikkerhet:</strong> Vellykket migrering av bedriftens nettverksendepunkter to Symantec Antivirus (SAV 9.0) sikkerhetsarkitektur.",
                 "• <strong>Landsomfattende infrastrukturvurdering:</strong> Gjennomførte datainnsamling av datasenter- og nettverksmidler på tvers av et helt landsomfattende driftsfelt.",
                 "• <strong>VSAT modernisering:</strong> Oppgraderte kritisk satellitt-VSAT-nettverksinfrastruktur på tvers av 33 høyprioriterte lokasjoner.",
                 "• <strong>Nettverksherding for produksjonsanlegg:</strong> Forbedret, segmenterte og optimaliserte fysisk nettverkspålitelighet for tunge industrielle produksjonsanlegg.",
@@ -784,6 +842,99 @@
                     <span class="text-slate-200 tracking-wide font-semibold text-[11px]">${c.name}</span>
                 </div>
             `).join('');
+        }
+
+        /* ========================================== */
+        /* CHATBOT FUNCTIONAL LOGIC ACTIONS (ADDED)   */
+        /* ========================================== */
+        function toggleVishwaChat() {
+            const chatBox = document.getElementById('vishwa-chat-box');
+            const chatIcon = document.getElementById('chat-icon');
+            chatBox.classList.toggle('active');
+            
+            if (chatBox.classList.contains('active')) {
+                chatIcon.setAttribute('data-lucide', 'chevron-down');
+            } else {
+                chatIcon.setAttribute('data-lucide', 'message-square');
+            }
+            lucide.createIcons();
+        }
+
+        async function sendQueryToVishwa() {
+            const inputField = document.getElementById('chat-user-input');
+            const messageText = inputField.value.trim();
+            if (!messageText) return;
+
+            const container = document.getElementById('chat-messages-container');
+
+            // Render User Bubble
+            const userBubble = document.createElement('div');
+            userBubble.className = 'flex items-start gap-2.5 justify-end';
+            userBubble.innerHTML = `
+                <div class="p-3 bg-blue-600 text-white rounded-xl rounded-tr-none max-w-[80%] leading-relaxed break-words">
+                    ${messageText}
+                </div>
+            `;
+            container.appendChild(userBubble);
+            inputField.value = '';
+            container.scrollTop = container.scrollHeight;
+
+            // Render Vishwa Loading Indicator Placeholder
+            const loadingBubble = document.createElement('div');
+            loadingBubble.className = 'flex items-start gap-2.5';
+            loadingBubble.id = 'vishwa-loading-node';
+            loadingBubble.innerHTML = `
+                <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                <div class="p-3 bg-slate-950 border border-slate-800 text-slate-400 rounded-xl rounded-tl-none max-w-[80%] italic animate-pulse">
+                    Vishwa is thinking...
+                </div>
+            `;
+            container.appendChild(loadingBubble);
+            lucide.createIcons();
+            container.scrollTop = container.scrollHeight;
+
+            try {
+                // =========================================================================
+                // SECURITY NOTE FOR REVENUE PRODUCTION RULES:
+                // To safely prevent leaking Gemini API credentials to visitors, point this
+                // 'fetch' loop to a secure serverless cloud function (Vercel, AWS Lambda, 
+                // ChatPlayground API webhook webhook, etc.) acting as your hidden backend pipeline.
+                // =========================================================================
+                
+                /* SAMPLE BACKEND ROUTE CODE INSTEAD OF LOCAL EXPOSURE:
+                const response = await fetch('https://your-api-gateway.com/vishwa', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: messageText })
+                });
+                const data = await response.json();
+                const reply = data.text;
+                */
+
+                // Simulated fallback local mockup response engine (Replace with production API hook)
+                await new Promise(resolve => setTimeout(resolve, 1200)); 
+                const reply = "I received your query regarding '" + messageText + "'. To activate live production outputs across global models via Gemini or ChatPlayground, securely link your API keys behind your server dashboard routing layer.";
+
+                // Remove loading element
+                document.getElementById('vishwa-loading-node').remove();
+
+                // Append Vishwa response text bubble
+                const botBubble = document.createElement('div');
+                botBubble.className = 'flex items-start gap-2.5';
+                botBubble.innerHTML = `
+                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
+                        ${reply}
+                    </div>
+                `;
+                container.appendChild(botBubble);
+                lucide.createIcons();
+                container.scrollTop = container.scrollHeight;
+
+            } catch (error) {
+                document.getElementById('vishwa-loading-node').remove();
+                console.error("Vishwa Error Details:", error);
+            }
         }
 
         window.onclick = function(event) {
