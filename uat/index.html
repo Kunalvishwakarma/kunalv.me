@@ -21,11 +21,38 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Print Media Style to isolate the 1-Page CV structure cleanly */
+        /* FIXED PRINT STYLES TO ELIMINATE BLANK SCREENS AND OVERLAYS */
         @media print {
-            body * { display: none !important; }
-            #printableCV, #printableCV * { display: block !important; }
-            #printableCV { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; padding: 0; background: white; color: #0f172a; }
+            /* 1. Hide every single screen element inside the body except the printable CV */
+            body > :not(#printableCV) { 
+                display: none !important; 
+            }
+            
+            /* 2. Completely eliminate background blurs, dark overlays, and animations */
+            html, body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+            }
+
+            /* 3. Force ONLY the target printable CV layout to display crisply */
+            #printableCV, #printableCV * { 
+                display: block !important; 
+            }
+            
+            #printableCV { 
+                position: absolute !important; 
+                left: 0 !important; 
+                top: 0 !important; 
+                width: 100% !important; 
+                box-shadow: none !important; 
+                padding: 0 !important; 
+                margin: 0 !important;
+                background: #ffffff !important;
+                color: #0f172a !important;
+            }
+
             #printableCV .text-blue-700 { color: #1d4ed8 !important; }
             #printableCV .bg-slate-100 { background-color: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
@@ -364,7 +391,7 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- REVISED REFRESHED ONE-PAGE PRINT-READY CV LAYOUT -->
+    <!-- REVISED ONE-PAGE PRINT-READY CV LAYOUT -->
     <!-- ========================================== -->
     <div id="printableCV" class="hidden fixed bg-white text-slate-900 p-8 w-[210mm] min-h-[297mm] shadow-2xl text-[11px] font-sans leading-tight">
         <!-- Header -->
@@ -555,7 +582,7 @@
                     <p><strong class="text-blue-400">Business Challenge:</strong> The client operated two primary data centers located 5 km apart. Rising operational costs and an expiring facility lease required consolidation of the secondary data center’s extension room inside a strict 4-month deadline window. Handled relocation of ~10 tons of aging hardware with no OEM assurance and mandatory zero-downtime demands for active SAP, NAS, and PKI services.</p>
                     <p><strong class="text-blue-400">Infrastructure Landscape:</strong> Managed migration parameters across critical hosted workloads including SAP Mission-Critical Block Storage, Primary NAS File Services for ~5,000 daily users, PKI Security Infrastructure, Video Conferencing Systems, and Backup Environments (Tape Library + Disk Backup).</p>
                     <p><strong class="text-blue-400">Approach & Methodology:</strong> Executed breakdown steps into clean tasks with a mandatory four-eye review process for all change workflows. Designed specific temporary Disaster Recovery (DR) mode parameters to safeguard uninterrupted availability blocks.</p>
-                    <p><strong class="text-blue-400">Execution Highlights:</strong> Maintained zero business outage loops during storage block migrations. Successfully coordinated logistical secure tracks shifting <strong>14 HPE Enclosures, 50 Servers, 3 Large ESL Tape Libraries, 10 Full Storage Racks, and 2 Racks of Network Equipment</strong>.</p>
+                    <p><strong class="text-blue-400">Execution Highlights:</strong> Mainviered zero business outage loops during storage block migrations. Successfully coordinated logistical secure tracks shifting <strong>14 HPE Enclosures, 50 Servers, 3 Large ESL Tape Libraries, 10 Full Storage Racks, and 2 Racks of Network Equipment</strong>.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Business Impact: ~$300K Annual Savings & Optimized Rack Utilization</span></div>
                 `,
 
@@ -1137,9 +1164,17 @@
                 console.warn("Analytics engine fall-through.", err);
             }
 
+            // FIXED SEQUENCE: Close modal first to explicitly strip screen overlay states
             closeDownloadModal();
-            // Trigger clean single page printing architecture layout
-            window.print();
+            
+            // Re-trigger layout translation safety check
+            const currentLang = document.getElementById("currentLang").innerText === 'Norsk' ? 'no' : 'en';
+            changeLanguage(currentLang);
+
+            // Give the window 300ms to clear out backdrop animation loops completely before capturing the page state
+            setTimeout(() => {
+                window.print();
+            }, 300);
         }
 
         window.onclick = function(event) {
