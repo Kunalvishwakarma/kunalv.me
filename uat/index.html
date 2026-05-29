@@ -20,6 +20,15 @@
         .chat-popup.active { transform: scale(1); opacity: 1; pointer-events: auto; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Print Media Style to isolate the 1-Page CV structure cleanly */
+        @media print {
+            body * { display: none !important; }
+            #printableCV, #printableCV * { display: block !important; }
+            #printableCV { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; padding: 0; background: white; color: #0f172a; }
+            #printableCV .text-blue-700 { color: #1d4ed8 !important; }
+            #printableCV .bg-slate-100 { background-color: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
     </style>
 </head>
 <body class="selection:bg-blue-500/20">
@@ -54,7 +63,7 @@
                 </div>
             </div>
             
-            <div class="hidden md:flex space-x-6 text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <div class="hidden md:flex space-x-6 text-xs font-semibold uppercase tracking-wider text-slate-400 items-center">
                 <a href="#about" data-i18n="nav-about" class="hover:text-blue-500 transition">About</a>
                 <a href="#skills" data-i18n="nav-skills" class="hover:text-blue-500 transition">Skills</a>
                 <a href="#projects" data-i18n="nav-projects" class="hover:text-blue-500 transition">Projects</a>
@@ -62,6 +71,11 @@
                 <a href="#whitepapers" data-i18n="nav-whitepapers" class="hover:text-blue-500 transition">White Paper</a>
                 <a href="#testimonials" data-i18n="nav-awards" class="hover:text-blue-500 transition">Awards</a>
                 <a href="#credentials" data-i18n="nav-credentials" class="hover:text-blue-500 transition">Credentials</a>
+                
+                <!-- GATED CV DOWNLOAD TRIGGER TAB -->
+                <button onclick="openDownloadModal()" class="text-blue-500 hover:text-blue-400 transition flex items-center gap-1.5 border border-blue-500/30 px-2.5 py-1 rounded bg-blue-500/10 text-[11px] font-bold uppercase tracking-wider">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i> CV
+                </button>
             </div>
 
             <div class="relative inline-block text-left">
@@ -78,6 +92,7 @@
         </div>
     </nav>
 
+    <!-- Header Section -->
     <header id="about" class="pt-44 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
@@ -108,6 +123,7 @@
         </div>
     </header>
 
+    <!-- Stats Counter Section -->
     <section class="bg-slate-950 border-y border-slate-800 py-10">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -129,6 +145,7 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800">
         <div class="mb-12">
             <h2 data-i18n="skills-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -188,6 +205,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
         <div class="mb-16">
             <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -212,6 +230,7 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-6">
             <h2 data-i18n="exp-heading" class="text-3xl font-bold text-white mb-16 tracking-tight flex items-center gap-3">
@@ -221,6 +240,7 @@
         </div>
     </section>
 
+    <!-- Whitepapers Section -->
     <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6 space-y-8">
             <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -265,6 +285,7 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
         <div class="text-center space-y-3 mb-12">
             <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
@@ -277,6 +298,7 @@
         <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
     </section>
 
+    <!-- Credentials Section -->
     <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="space-y-6">
@@ -304,7 +326,6 @@
             <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="hover:text-[#0077b5] transition flex items-center justify-center" title="LinkedIn">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <!-- Adjusted layout utilities here to w-5 and h-5 explicitly -->
             <a href="https://x.com/klohanshi" target="_blank" class="hover:text-white transition flex items-center justify-center" title="X (Twitter)">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
@@ -322,8 +343,155 @@
     </footer>
 
     <!-- ========================================== -->
-    <!-- VISHWA AI CHATBOT INTERFACE -->
+    <!-- EMAIL-GATED DOWNLOAD MODAL -->
     <!-- ========================================== -->
+    <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-filter blur-sm p-4">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 shadow-2xl relative">
+            <button onclick="closeDownloadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="text-center space-y-2 mb-6">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/30 mx-auto text-blue-500">
+                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white tracking-tight">Download Professional CV</h3>
+                <p class="text-xs text-slate-400">Please provide your email address to download Kunal's 1-page profile summary.</p>
+            </div>
+
+            <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Email Address</label>
+                    <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm py-2.5 rounded-lg transition flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-4 h-4"></i> Access Resume / Download PDF
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- REVISED REFRESHED ONE-PAGE PRINT-READY CV LAYOUT -->
+    <!-- ========================================== -->
+    <div id="printableCV" class="hidden fixed bg-white text-slate-900 p-8 w-[210mm] min-h-[297mm] shadow-2xl text-[11px] font-sans leading-tight">
+        <!-- Header -->
+        <div class="border-b-2 border-slate-800 pb-3 flex justify-between items-end">
+            <div>
+                <h1 class="text-2xl font-black tracking-tight text-slate-950 uppercase">Kunal Vishwakarma</h1>
+                <p class="text-xs font-bold text-blue-700 uppercase tracking-wide mt-0.5">Datacenter SME & Infrastructure Architect</p>
+            </div>
+            <div class="text-right text-[10px] space-y-0.5 text-slate-600 font-medium">
+                <div><strong class="text-slate-900">Email:</strong> contact@kunalv.me | <strong class="text-slate-900">Web:</strong> kunalv.me</div>
+                <div><strong class="text-slate-900">Location:</strong> Oslo, Norway (Available for Global Engagements)</div>
+                <div><strong class="text-slate-900">LinkedIn:</strong> linkedin.com/in/kunalkv/en</div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="my-3">
+            <p class="text-slate-700 text-justify">
+                Migration Lead and Infrastructure Architect with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries. Proven track record managing multi-million dollar asset movements, industrial OT network hardening, and zero-downtime consolidations across the Energy, Banking, and Pharmaceutical sectors.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+            <!-- Left Side: Experience & Projects -->
+            <div class="col-span-2 space-y-4">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-2">Corporate Experience</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between font-bold text-slate-950">
+                                <span>Datacenter SME / Infrastructure Architect</span>
+                                <span class="text-[10px] text-slate-500">2019 — Present</span>
+                            </div>
+                            <div class="text-[10px] font-semibold text-slate-600">Cognizant Oil & Gas Consulting Services | Oslo, Norway</div>
+                            <ul class="list-disc ml-3 mt-1 space-y-0.5 text-slate-700">
+                                <li>Steer Azure hybrid cloud adoption pipelines and multi-tenant technical alignments within Jira and DevOps environments.</li>
+                                <li>Enforce strict framework governance, managing runbooks, RAID logs, and business continuity/DR architectures.</li>
+                                <li>Audit regional scoping plans, calculate hardware cost metrics, and validate complex technical Statements of Work (SoW).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-bold text-slate-950">
+                                <span>Technical Line Lead / Assoc. Operations Manager</span>
+                                <span class="text-[10px] text-slate-500">2013 — 2019</span>
+                            </div>
+                            <div class="text-[10px] font-semibold text-slate-600">Cognizant Technology Solutions | Pune, India</div>
+                            <ul class="list-disc ml-3 mt-1 space-y-0.5 text-slate-700">
+                                <li>Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint across India.</li>
+                                <li>Served as global Web Infrastructure SME managing routing, access controls, F5 BIG-IP, Bluecoat proxies, and Infoblox.</li>
+                                <li>Directed a 20-member engineering team delivering BAU, transition support, and L1/L2 incident support.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-bold text-slate-950">
+                                <span>Technical Consultant / Project Lead</span>
+                                <span class="text-[10px] text-slate-500">2005 — 2012</span>
+                            </div>
+                            <div class="text-[10px] font-semibold text-slate-600">Einfotek, Compucom & Ashtech Infotech | International</div>
+                            <ul class="list-disc ml-3 mt-1 space-y-0.5 text-slate-700">
+                                <li>Managed the strategic, multi-phase technical migration of 100+ production servers for Walmart networks.</li>
+                                <li>Oversaw equipment lifecycle budgeting, software licenses, procurement contracts, and DR runbooks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-2">Key Project Highlights</h2>
+                    <ul class="space-y-1.5 text-slate-700 text-justify">
+                        <li>• <strong class="text-slate-900">Data Center Optimization (Oslo Site):</strong> Orchestrated zero-downtime facility consolidation under a strict 4-month lease expiry constraint. Safely relocated ~10 tons of aging hardware (14 HPE Enclosures, 50 Servers, 3 ESL Tape Libraries, 12 Racks) delivering <strong class="text-slate-900">$300K in annual cost savings</strong>.</li>
+                        <li>• <strong class="text-slate-900">US-2 Datacenter Decommissioning:</strong> Led four-stage strategic hybrid migration of 10PB core architectures and critical application stacks, yielding a <strong class="text-slate-900">33% direct saving</strong> over infrastructure gear profiles.</li>
+                        <li>• <strong class="text-slate-900">Industrial OT Network Hardening:</strong> Remediated lateral vulnerability points across connected manufacturing assemblies by designing localized multi-vendor VPN integrations and hard-segmented perimeter barriers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Skills & Certifications -->
+            <div class="space-y-4">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1.5">Core Competencies</h2>
+                    <div class="flex flex-wrap gap-1 font-semibold text-[9px]">
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">Critical DC Operations</span>
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">Project Management</span>
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">Capacity Planning</span>
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">Root Cause Analysis</span>
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">Vendor Management</span>
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">Server Architecture</span>
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">Risk Mitigation</span>
+                        <span class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">SLA Tracking</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1.5">Technical Certifications</h2>
+                    <ul class="space-y-1 font-bold text-[9px] text-slate-700 uppercase">
+                        <li class="flex items-center gap-1"><span class="text-blue-600">■</span> Azure Security Engineer Associate</li>
+                        <li class="flex items-center gap-1"><span class="text-blue-600">■</span> Azure Administrator Associate</li>
+                        <li class="flex items-center gap-1"><span class="text-blue-600">■</span> MCSE / MCP+I / MCP Professional</li>
+                        <li class="flex items-center gap-1"><span class="text-blue-600">■</span> Cisco CCNA Data Center / CCNA</li>
+                        <li class="flex items-center gap-1"><span class="text-blue-600">■</span> PRINCE2 Agile® / ITIL Foundation</li>
+                        <li class="flex items-center gap-1"><span class="text-blue-600">■</span> Cyber Security - Gov of India</li>
+                        <li class="flex items-center gap-1"><span class="text-blue-600">■</span> BICSI Data Center Infrastructure</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1.5">Key Awards</h2>
+                    <ul class="space-y-1 text-slate-700 font-semibold text-[10px]">
+                        <li>• <strong class="text-slate-900">GEM Award</strong> - Aker Solutions</li>
+                        <li>• <strong class="text-slate-900">Best Performer</strong> - Barclays Capital</li>
+                        <li>• <strong class="text-slate-900">Best Performer</strong> - Telenet Belgium</li>
+                        <li>• <strong class="text-slate-900">Best Innovation</strong> - SaiTech Project</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vishwa AI Chatbot -->
     <div class="fixed bottom-6 right-6 z-50">
         <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none">
             <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
@@ -384,7 +552,7 @@
                 "wp-heading": "White Papers & Case Studies",
                 "traffic-text": "Live Traffic Counter:",
                 
-                // Case Study 1 English (Updated content layout structure)
+                // Case Study 1 English
                 "cs1-tag": "Energy Enterprise", "cs1-loc": "Norway Site",
                 "cs1-title": "Data Center Optimization Case Study",
                 "cs1-sub": "Zero‑Downtime Consolidation Delivering $300K Annual Savings",
@@ -442,7 +610,7 @@
                     <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjengelighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
                     <p>Initiativet ga ~$300K i årlige besparelser, optimaliserte det fysiske fotavtrykket og ble fullført uten avbrudd for virksomheten.</p>
                     <p><strong class="text-blue-400">Min rolle:</strong> Kombinert <strong>Datasenter-SME</strong> (In-situ validering av infrastruktur, kabling, rack-utforming, avhengighetskartlegging og fysisk oppfølging) og <strong>Teknisk prosjektleder</strong> (Ende-til-ende programstyring, utarbeidelse av kjøreplaner/runbooks og koordinering på tvers av lagrings-, nettverks-, og sikkerhetsteam).</p>
-                    <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebiblioteker, 10 fulle lagringsracks og 2 nettverksracks.</p>
+                    <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebibliotek, 10 fulle lagringsracks og 2 nettverksracks.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Gevinst: ~$300 000 i årlige driftsbesparelser og optimalisert rack-utnyttelse</span></div>
                 `,
 
@@ -501,7 +669,7 @@
                 "<strong>Dvalin infrastrukturportefølje:</strong> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.",
                 "<strong>NCS 2020:</strong> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.",
                 "<strong>MHWirth nettverksintegrasjon:</strong> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
-                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee til MS Defender.",
+                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee to MS Defender.",
                 "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
                 "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
                 "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
@@ -945,6 +1113,41 @@
                 }
                 console.error("Vishwa Error Details:", error);
             }
+        }
+
+        // CONTROL HANDLERS FOR EMAIL-GATE MODAL AND PRINTING
+        function openDownloadModal() {
+            document.getElementById('downloadModal').classList.remove('hidden');
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').classList.add('hidden');
+        }
+
+        async function handleCVDownload(event) {
+            event.preventDefault();
+            const email = document.getElementById('viewerEmail').value;
+            if(!email) return;
+
+            // Submit lead to an endpoint tracker like Web3Forms or Formspree
+            try {
+                await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: "YOUR-WEB3FORMS-KEY-HERE", // Replace with your free key to track download leads
+                        subject: "Alert: CV Profile Downloaded",
+                        email: email,
+                        message: `An entry from email [ ${email} ] just downloaded your CV profile.`
+                    })
+                });
+            } catch (err) {
+                console.warn("Analytics engine fall-through.", err);
+            }
+
+            closeDownloadModal();
+            // Trigger clean single page printing architecture layout
+            window.print();
         }
 
         window.onclick = function(event) {
