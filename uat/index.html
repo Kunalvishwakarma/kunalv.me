@@ -21,14 +21,14 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* FIXED PRINT STYLES TO ELIMINATE BLANK SCREENS AND OVERLAYS */
+        /* REVISED PRINT STYLES TO ELIMINATE BLANK SCREENS, BLURS, AND OVERLAYS */
         @media print {
-            /* 1. Hide every single screen element inside the body except the printable CV */
+            /* Hide every single screen element inside the body except the printable CV */
             body > :not(#printableCV) { 
                 display: none !important; 
             }
             
-            /* 2. Completely eliminate background blurs, dark overlays, and animations */
+            /* Completely eliminate background blurs, dark overlays, and animations */
             html, body {
                 background: #ffffff !important;
                 color: #000000 !important;
@@ -36,13 +36,11 @@
                 -webkit-backdrop-filter: none !important;
             }
 
-            /* 3. Force ONLY the target printable CV layout to display crisply */
-            #printableCV, #printableCV * { 
-                display: block !important; 
-            }
-            
+            /* Force ONLY the target printable CV layout to display crisply */
             #printableCV { 
-                position: absolute !important; 
+                display: block !important; 
+                visibility: visible !important;
+                position: relative !important;
                 left: 0 !important; 
                 top: 0 !important; 
                 width: 100% !important; 
@@ -393,7 +391,7 @@
     <!-- ========================================== -->
     <!-- REVISED ONE-PAGE PRINT-READY CV LAYOUT -->
     <!-- ========================================== -->
-    <div id="printableCV" class="hidden fixed bg-white text-slate-900 p-8 w-[210mm] min-h-[297mm] shadow-2xl text-[11px] font-sans leading-tight">
+    <div id="printableCV" class="print:block hidden bg-white text-slate-900 p-8 w-[210mm] min-h-[297mm] text-[11px] font-sans leading-tight">
         <!-- Header -->
         <div class="border-b-2 border-slate-800 pb-3 flex justify-between items-end">
             <div>
@@ -1148,13 +1146,12 @@
             const email = document.getElementById('viewerEmail').value;
             if(!email) return;
 
-            // Submit lead to an endpoint tracker like Web3Forms or Formspree
             try {
                 await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify({
-                        access_key: "YOUR-WEB3FORMS-KEY-HERE", // Replace with your free key to track download leads
+                        access_key: "YOUR-WEB3FORMS-KEY-HERE", 
                         subject: "Alert: CV Profile Downloaded",
                         email: email,
                         message: `An entry from email [ ${email} ] just downloaded your CV profile.`
@@ -1164,17 +1161,17 @@
                 console.warn("Analytics engine fall-through.", err);
             }
 
-            // FIXED SEQUENCE: Close modal first to explicitly strip screen overlay states
+            // Close modal first to strip layout dependencies
             closeDownloadModal();
             
-            // Re-trigger layout translation safety check
+            // Re-trigger language safety render loop
             const currentLang = document.getElementById("currentLang").innerText === 'Norsk' ? 'no' : 'en';
             changeLanguage(currentLang);
 
-            // Give the window 300ms to clear out backdrop animation loops completely before capturing the page state
+            // Give the browser window 450ms to completely finish all backdrop overlay layout shifts before print execution loops trigger
             setTimeout(() => {
                 window.print();
-            }, 300);
+            }, 450);
         }
 
         window.onclick = function(event) {
