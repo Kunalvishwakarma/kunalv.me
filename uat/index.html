@@ -9,52 +9,43 @@
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #000000; color: #ffffff; }
-        .nav-blur { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; }
-        .subnav-contact { background: rgba(9, 15, 30, 0.9); border-bottom: 1px solid #1e293b; }
-        .card-premium { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; }
-        .card-premium:hover { border-color: #3b82f6; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1); }
-        .timeline-line { border-left: 2px solid #1e293b; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #030712; color: #f3f4f6; }
         
-        /* Chatbot Custom Animation Styles */
+        /* GLASSMORPHISM AND DEPTH LAYERS */
+        .nav-glass { background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .subnav-glass { background: rgba(9, 15, 30, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .card-glass { background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-glass:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-4px); box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.15); background: rgba(15, 23, 42, 0.65); }
+        
+        /* RADIAL MESH BACKGROUND GLOWS */
+        .bg-radial-glow { position: fixed; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(0,0,0,0) 70%); pointer-events: none; z-index: 0; filter: blur(40px); }
+        .glow-1 { top: -10%; left: -10%; }
+        .glow-2 { bottom: 10%; right: -10%; background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(0,0,0,0) 70%); }
+
+        .timeline-line { border-left: 2px solid rgba(255, 255, 255, 0.05); }
         .chat-popup { transform: scale(0.9); opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
         .chat-popup.active { transform: scale(1); opacity: 1; pointer-events: auto; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* REVISED PRINT STYLES TO ELIMINATE BLANK SCREENS, BLURS, AND OVERLAYS */
+        /* PERFECT PRINT FRAMEWORK */
         @media print {
-            body > :not(#printableCV) { 
-                display: none !important; 
-            }
-            html, body {
-                background: #ffffff !important;
-                color: #000000 !important;
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-            }
-            #printableCV { 
-                display: block !important; 
-                visibility: visible !important;
-                position: relative !important;
-                left: 0 !important; 
-                top: 0 !important; 
-                width: 100% !important; 
-                box-shadow: none !important; 
-                padding: 0 !important; 
-                margin: 0 !important;
-                background: #ffffff !important;
-                color: #0f172a !important;
-            }
+            body > :not(#printableCV) { display: none !important; }
+            html, body { background: #ffffff !important; color: #000000 !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+            #printableCV { display: block !important; visibility: visible !important; position: relative !important; left: 0 !important; top: 0 !important; width: 100% !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; background: #ffffff !important; color: #0f172a !important; }
             #printableCV .text-blue-700 { color: #1d4ed8 !important; }
             #printableCV .bg-slate-100 { background-color: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
     </style>
 </head>
-<body class="selection:bg-blue-500/20">
+<body class="selection:bg-blue-500/20 overflow-x-hidden">
+
+    <!-- STATIC DEPTH LAYER LIGHT MESH -->
+    <div class="bg-radial-glow glow-1"></div>
+    <div class="bg-radial-glow glow-2"></div>
 
     <!-- FIXED TOP NAVIGATION BAR -->
-    <nav class="fixed w-full z-50 nav-blur top-0">
+    <nav class="fixed w-full z-50 nav-glass top-0">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex flex-col space-y-1">
                 <a href="#about" class="group flex items-center gap-3 transition-all duration-200 hover:opacity-90">
@@ -74,19 +65,19 @@
                 <a href="#testimonials" data-i18n="nav-awards" class="hidden lg:inline hover:text-blue-500 transition">Awards</a>
                 <a href="#credentials" data-i18n="nav-credentials" class="hidden lg:inline hover:text-blue-500 transition">Credentials</a>
                 
-                <button onclick="openDownloadModal()" class="text-blue-500 hover:text-blue-400 transition flex items-center gap-1.5 border border-blue-500/30 px-2.5 py-1 rounded bg-blue-500/10 text-[11px] font-bold uppercase tracking-wider relative z-50">
+                <button onclick="openDownloadModal()" class="text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5 border border-blue-500/20 px-3 py-1 rounded-full bg-blue-500/10 text-[11px] font-bold uppercase tracking-wider relative z-50">
                     <i data-lucide="download" class="w-3.5 h-3.5"></i> CV
                 </button>
             </div>
 
             <div class="relative inline-block text-left">
-                <button onclick="toggleLangDropdown()" id="langBtn" class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-slate-800 rounded-md text-xs font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 transition shadow-sm">
+                <button onclick="toggleLangDropdown()" id="langBtn" class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-full text-xs font-semibold text-slate-300 bg-white/5 hover:bg-white/10 transition shadow-sm">
                     <i data-lucide="languages" class="w-3.5 h-3.5 text-blue-500"></i> <span id="currentLang">English</span> <i data-lucide="chevron-down" class="w-3 h-3 text-slate-500"></i>
                 </button>
-                <div id="langDropdown" class="hidden absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-slate-900 border border-slate-800 ring-1 ring-black ring-opacity-5 z-50">
+                <div id="langDropdown" class="hidden absolute right-0 mt-2 w-32 rounded-xl shadow-2xl bg-slate-900/90 border border-white/10 backdrop-blur-md z-50">
                     <div class="py-1">
-                        <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 font-semibold transition">English</button>
-                        <button onclick="changeLanguage('no')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 font-semibold transition">Norsk</button>
+                        <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-white/5 font-semibold transition">English</button>
+                        <button onclick="changeLanguage('no')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-white/5 font-semibold transition">Norsk</button>
                     </div>
                 </div>
             </div>
@@ -94,79 +85,82 @@
     </nav>
 
     <!-- ONE-LINE CONTACT SUB-NAVIGATION BAR -->
-    <div class="fixed w-full z-40 subnav-contact top-[73px] py-2.5 px-6 hidden sm:block">
+    <div class="fixed w-full z-40 subnav-glass top-[73px] py-2.5 px-6 hidden sm:block">
         <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400">
             <a href="mailto:contact@kunalv.me" class="hover:text-blue-500 transition flex items-center gap-1.5">
                 <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i> contact@kunalv.me
             </a>
-            <span class="text-slate-700">|</span>
+            <span class="text-slate-800">|</span>
             <div class="flex items-center gap-1.5">
                 <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500"></i> <span data-i18n="location" class="text-slate-300">Oslo, Norway</span>
             </div>
-            <span class="text-slate-700">|</span>
+            <span class="text-slate-800">|</span>
             <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="hover:text-[#0077b5] text-slate-300 transition flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 fill-[#0077b5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn
             </a>
-            <span class="text-slate-700">|</span>
+            <span class="text-slate-800">|</span>
             <a href="https://wa.me/919819041919" target="_blank" class="hover:text-[#25D366] text-slate-300 transition flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 fill-[#25D366]" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.292 1.48 4.793 1.481 5.482 0 9.94-4.444 9.943-9.914.002-2.651-1.02-5.143-2.878-7.005-1.858-1.861-4.327-2.886-6.977-2.887-5.485 0-9.943 4.444-9.947 9.914-.002 1.954.512 3.861 1.49 5.564l-.995 3.639 3.731-.973zM18.257 15.01c-.342-.171-2.03-.998-2.343-1.111-.313-.114-.541-.171-.767.171-.227.341-.877 1.111-1.074 1.339-.198.228-.396.256-.738.085-3.183-1.59-4.419-2.753-5.304-4.27-.234-.401-.023-.619.148-.822.154-.182.342-.401.513-.599.171-.199.228-.342.342-.57.114-.228.057-.428-.028-.599-.086-.171-.767-1.854-1.05-2.54-.276-.665-.558-.573-.767-.584-.198-.01-.427-.01-.655-.01s-.599.086-.913.428c-.313.342-1.197 1.168-1.197 2.849 0 1.682 1.226 3.305 1.397 3.533.171.228 2.413 3.685 5.845 5.166.815.351 1.451.562 1.946.72.819.26 1.564.223 2.153.135.657-.099 2.03-.83 2.315-1.626.285-.797.285-1.482.199-1.626-.085-.144-.313-.228-.655-.4z"/></svg> WhatsApp
             </a>
         </div>
     </div>
 
-    <!-- MAIN PORTAL DISPLAY -->
-    <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
+    <!-- HERO INTRODUCTION LAYER -->
+    <header id="about" class="pt-56 pb-20 px-6 max-w-6xl mx-auto relative z-10">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 text-red-400 text-xs font-semibold rounded-full border border-red-900/60">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full border border-red-500/20">
                     <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
                 </div>
-                <h1 data-i18n="hero-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                <h1 data-i18n="hero-title" class="text-2xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
                     Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher
                 </h1>
-                <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
+                <p data-i18n="hero-desc" class="text-base lg:text-lg text-slate-300 font-light leading-relaxed max-w-3xl">
                     Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
             </div>
 
-            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl shadow-sm space-y-4 w-full">
-                <div class="border-b border-slate-800 pb-2">
+            <div class="bg-slate-900/40 border border-white/5 backdrop-blur-md p-6 rounded-2xl shadow-xl space-y-4 w-full relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 to-transparent"></div>
+                <div class="border-b border-white/5 pb-2">
                     <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400" data-i18n="domain-title">Domain Experience</h3>
                 </div>
                 <div class="space-y-2 text-xs font-semibold text-slate-300">
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Oil & Gas (Energy)</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Banking & Financial Services</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Pharmaceuticals</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Datacenter Operations</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Operational Technology (OT) Industries</div>
+                    <div class="p-2.5 bg-slate-950/50 border border-white/5 rounded-xl flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Oil & Gas (Energy)</div>
+                    <div class="p-2.5 bg-slate-950/50 border border-white/5 rounded-xl flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Banking & Financial Services</div>
+                    <div class="p-2.5 bg-slate-950/50 border border-white/5 rounded-xl flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Pharmaceuticals</div>
+                    <div class="p-2.5 bg-slate-950/50 border border-white/5 rounded-xl flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Datacenter Operations</div>
+                    <div class="p-2.5 bg-slate-950/50 border border-white/5 rounded-xl flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
+                    <div class="p-2.5 bg-slate-950/50 border border-white/5 rounded-xl flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Operational Technology (OT) Industries</div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="bg-slate-950 border-y border-slate-800 py-10">
+    <!-- METRICS HIGHLIGHT ROW -->
+    <section class="bg-slate-950/60 backdrop-blur-md border-y border-white/5 py-12 relative z-10">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-                <div class="text-4xl font-bold text-white">20+</div>
-                <div id="counter-exp" data-i18n="count-exp" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Years IT Experience</div>
+                <div class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">20+</div>
+                <div id="counter-exp" data-i18n="count-exp" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-1.5">Years IT Experience</div>
             </div>
             <div>
-                <div class="text-4xl font-bold text-blue-500">30+</div>
-                <div id="counter-del" data-i18n="count-del" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Global Deliveries</div>
+                <div class="text-4xl lg:text-5xl font-extrabold text-blue-500 tracking-tight">30+</div>
+                <div id="counter-del" data-i18n="count-del" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-1.5">Global Deliveries</div>
             </div>
             <div>
-                <div class="text-4xl font-bold text-green-500">8+</div>
-                <div id="counter-usr" data-i18n="count-usr" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Worldwide Data Centers</div>
+                <div class="text-4xl lg:text-5xl font-extrabold text-emerald-500 tracking-tight">8+</div>
+                <div id="counter-usr" data-i18n="count-usr" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-1.5">Worldwide Data Centers</div>
             </div>
             <div>
-                <div class="text-4xl font-bold text-blue-500">100+</div>
-                <div id="counter-dat" data-i18n="count-dat" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Locations Worldwide Support</div>
+                <div class="text-4xl lg:text-5xl font-extrabold text-blue-500 tracking-tight">100+</div>
+                <div id="counter-dat" data-i18n="count-dat" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-1.5">Locations Worldwide Support</div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800">
+    <!-- CORE SKILLS BLOCK -->
+    <section id="skills" class="py-24 max-w-6xl mx-auto px-6 border-b border-white/5 relative z-10">
         <div class="mb-12">
             <h2 data-i18n="skills-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
                 <i data-lucide="shield-check" class="text-blue-500"></i> Core Skills
@@ -174,82 +168,82 @@
             <p data-i18n="skills-desc" class="text-slate-400 text-sm mt-1">Foundational execution capabilities across mission-critical technical domains.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="server" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="server"></i></div>
                 <span data-i18n="skill-1" class="text-sm font-semibold text-slate-200">Data Center Operations</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="folder-kanban" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="folder-kanban"></i></div>
                 <span data-i18n="skill-2" class="text-sm font-semibold text-slate-200">Project Management</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="search" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="search"></i></div>
                 <span class="text-sm font-semibold text-slate-200">Root Cause Analysis (RCA)</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="file-text" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="file-text"></i></div>
                 <span data-i18n="skill-4" class="text-sm font-semibold text-slate-200">Service Level Agreements (SLA)</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="git-branch" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="git-branch"></i></div>
                 <span data-i18n="skill-5" class="text-sm font-semibold text-slate-200">Infrastructure Projects</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="users" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="users"></i></div>
                 <span class="text-sm font-semibold text-slate-200">Vendor Management</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="alert-triangle" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="alert-triangle"></i></div>
                 <span data-i18n="skill-7" class="text-sm font-semibold text-slate-200">Risk Mitigation</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="calendar" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="calendar"></i></div>
                 <span data-i18n="skill-8" class="text-sm font-semibold text-slate-200">Capacity Planning & Scheduling</span>
             </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="dollar-sign" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+            <div class="p-5 card-glass flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0"><i data-lucide="dollar-sign"></i></div>
                 <span class="text-sm font-semibold text-slate-200">Budget Tracking</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="cpu" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Server Architecture</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="heart-pulse" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-11" class="text-sm font-semibold text-slate-200">Occupational Health & Safety</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="hard-drive" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-12" class="text-sm font-semibold text-slate-200">Critical Data Center Operations</span>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
-        <div class="mb-16">
-            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                <i data-lucide="layers" class="text-blue-500"></i> <span data-i18n="proj-heading">Key Projects</span>
-            </h2>
-            <p data-i18n="proj-lead-desc" class="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
-                Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.
-            </p>
+    <!-- KEY PROJECTS BLOCK WITH DYNAMIC FILTER COMPONENT -->
+    <section id="projects" class="py-24 max-w-6xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+                    <i data-lucide="layers" class="text-blue-500"></i> <span data-i18n="proj-heading">Key Projects</span>
+                </h2>
+                <p data-i18n="proj-lead-desc" class="text-slate-400 text-sm mt-2 max-w-xl leading-relaxed">
+                    Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.
+                </p>
+            </div>
+            
+            <!-- ADVANCED CHIP SELECTOR FILTER INTERFACE -->
+            <div class="flex flex-wrap gap-2 text-[11px] font-bold uppercase tracking-wide">
+                <button onclick="filterProjectGrid('all')" id="tab-all" class="px-4 py-2 border border-blue-500/30 bg-blue-500/10 rounded-full text-blue-400 transition shadow-sm">All Deliveries</button>
+                <button onclick="filterProjectGrid('cloud')" id="tab-cloud" class="px-4 py-2 border border-white/5 bg-slate-900/40 rounded-full text-slate-400 hover:text-white hover:border-white/10 transition">Cloud Frameworks</button>
+                <button onclick="filterProjectGrid('security')" id="tab-security" class="px-4 py-2 border border-white/5 bg-slate-900/40 rounded-full text-slate-400 hover:text-white hover:border-white/10 transition">Security & Net</button>
+                <button onclick="filterProjectGrid('ops')" id="tab-ops" class="px-4 py-2 border border-white/5 bg-slate-900/40 rounded-full text-slate-400 hover:text-white hover:border-white/10 transition">ODC & Infrastructure</button>
+            </div>
         </div>
 
-        <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl shadow-sm">
+        <div class="bg-slate-900/20 border border-white/5 p-6 rounded-2xl shadow-2xl backdrop-blur-sm">
             <ul id="main-project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-slate-300 leading-relaxed"></ul>
         </div>
 
-        <div class="mt-8 mb-4">
+        <div class="mt-12 mb-4">
             <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
                 <i data-lucide="archive" class="w-4 h-4"></i> <span data-i18n="hist-heading">Historical Core Infrastructure Deployments</span>
             </h3>
         </div>
-        <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl shadow-sm">
+        <div class="bg-slate-900/20 border border-white/5 p-6 rounded-2xl shadow-2xl backdrop-blur-sm">
             <ul id="historical-project-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-400 leading-relaxed"></ul>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-slate-950 border-t border-slate-800">
+    <!-- CORPORATE HISTORY COMPONENT -->
+    <section id="experience" class="py-24 bg-slate-950/40 border-t border-white/5 relative z-10">
         <div class="max-w-4xl mx-auto px-6">
             <h2 data-i18n="exp-heading" class="text-3xl font-bold text-white mb-16 tracking-tight flex items-center gap-3">
                 <i data-lucide="briefcase" class="text-blue-500"></i> Corporate Experience
@@ -258,40 +252,67 @@
         </div>
     </section>
 
-    <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
+    <!-- WHITE PAPERS COMPONENT WITH NEON PERFORMANCE HIGHLIGHT CHIPS -->
+    <section id="whitepapers" class="py-24 border-t border-white/5 relative z-10">
         <div class="max-w-6xl mx-auto px-6 space-y-8">
             <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
                 <i data-lucide="book-open" class="text-blue-500"></i> <span data-i18n="wp-heading">White Papers & Case Studies</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md">
+                <div class="p-6 bg-slate-900/40 border border-white/5 backdrop-blur-md rounded-2xl space-y-4 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 to-transparent"></div>
                     <div class="flex items-center justify-between">
-                        <span id="cs1-tag" data-i18n="cs1-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-blue-950/40 text-blue-400 border border-blue-900/60 text-[10px] font-bold uppercase rounded-full">Energy Enterprise</span>
-                        <span id="cs1-loc" data-i18n="cs1-loc" class="text-xs font-mono text-green-500 font-bold">Norway Site</span>
+                        <span id="cs1-tag" data-i18n="cs1-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-bold uppercase rounded-full">Energy Enterprise</span>
+                        <span id="cs1-loc" data-i18n="cs1-loc" class="text-xs font-mono text-emerald-400 font-bold tracking-wider">Norway Site</span>
                     </div>
                     <h4 id="cs1-title" data-i18n="cs1-title" class="font-extrabold text-white text-base">Data Center Optimization Case Study</h4>
                     <p id="cs1-sub" data-i18n="cs1-sub" class="text-xs text-slate-400 leading-relaxed font-semibold">Zero‑Downtime Consolidation Delivering $300K Annual Savings</p>
-                    <div id="cs1-body" data-i18n="cs1-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3"></div>
+                    
+                    <!-- HIGH-IMPACT NEON HIGHLIGHT CHIPS -->
+                    <div class="grid grid-cols-2 gap-2 py-2 text-center">
+                        <div class="p-3 bg-emerald-500/5 border border-emerald-500/20 rounded-xl">
+                            <div class="text-lg font-black text-emerald-400">$300K</div>
+                            <div class="text-[9px] font-bold uppercase text-slate-400 mt-0.5">Annual Savings</div>
+                        </div>
+                        <div class="p-3 bg-blue-500/5 border border-blue-500/20 rounded-xl">
+                            <div class="text-lg font-black text-blue-400">~10 Tons</div>
+                            <div class="text-[9px] font-bold uppercase text-slate-400 mt-0.5">Hardware Shifted</div>
+                        </div>
+                    </div>
+                    <div id="cs1-body" data-i18n="cs1-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-white/5 pt-3"></div>
                 </div>
 
-                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md">
+                <div class="p-6 bg-slate-900/40 border border-white/5 backdrop-blur-md rounded-2xl space-y-4 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-transparent"></div>
                     <div class="flex items-center justify-between">
-                        <span id="cs2-tag" data-i18n="cs2-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-purple-950/40 text-purple-400 border border-purple-900/60 text-[10px] font-bold uppercase rounded-full">Hybrid Migration</span>
-                        <span id="cs2-loc" data-i18n="cs2-loc" class="text-xs font-mono text-blue-500 font-bold">US-2 Site</span>
+                        <span id="cs2-tag" data-i18n="cs2-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 text-[10px] font-bold uppercase rounded-full">Hybrid Migration</span>
+                        <span id="cs2-loc" data-i18n="cs2-loc" class="text-xs font-mono text-blue-400 font-bold tracking-wider">US-2 Site</span>
                     </div>
                     <h4 id="cs2-title" data-i18n="cs2-title" class="font-extrabold text-white text-base">US-2 Datacenter Decommissioning & Hybrid Migration</h4>
                     <p id="cs2-sub" data-i18n="cs2-sub" class="text-xs text-slate-400 leading-relaxed font-semibold">Data Center Decommissioning & Multi-Application Architecture Shift</p>
-                    <div id="cs2-body" data-i18n="cs2-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3"></div>
+                    
+                    <div class="grid grid-cols-2 gap-2 py-2 text-center">
+                        <div class="p-3 bg-purple-500/5 border border-purple-500/20 rounded-xl">
+                            <div class="text-lg font-black text-purple-400">33%</div>
+                            <div class="text-[9px] font-bold uppercase text-slate-400 mt-0.5">Direct Savings</div>
+                        </div>
+                        <div class="p-3 bg-blue-500/5 border border-blue-500/20 rounded-xl">
+                            <div class="text-lg font-black text-blue-400">10 PB</div>
+                            <div class="text-[9px] font-bold uppercase text-slate-400 mt-0.5">Core Architecture</div>
+                        </div>
+                    </div>
+                    <div id="cs2-body" data-i18n="cs2-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-white/5 pt-3"></div>
                 </div>
 
-                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md md:col-span-2">
+                <div class="p-6 bg-slate-900/40 border border-white/5 backdrop-blur-md rounded-2xl space-y-4 shadow-xl md:col-span-2 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-red-500 to-transparent"></div>
                     <div class="flex items-center justify-between">
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-950/40 text-red-400 border border-red-900/60 text-[10px] font-bold uppercase rounded-full">Security Case Study</span>
-                        <span class="text-xs font-mono text-blue-500 font-bold">OT Industry</span>
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-500/10 text-red-400 border border-red-500/20 text-[10px] font-bold uppercase rounded-full">Security Case Study</span>
+                        <span class="text-xs font-mono text-blue-400 font-bold tracking-wider">OT Industry</span>
                     </div>
                     <h4 class="font-extrabold text-white text-base">Industrial OT Network Hardening & Isolation Perimeters</h4>
                     <p class="text-xs text-slate-400 leading-relaxed font-semibold">Infrastructure Defense & Cross-Vendor Framework Integration</p>
-                    <div class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3">
+                    <div class="text-xs text-slate-300 space-y-3 font-normal border-t border-white/5 pt-3">
                         <p><strong class="text-blue-400">Requirement:</strong> Remediate lateral vulnerability points across connected operational technology (OT) systems inside high-capacity manufacturing facilities.</p>
                         <p><strong class="text-blue-400">Approach:</strong> Modeled deep security infrastructure dependencies, building localized multi-vendor VPN framework integrations and hard-segmented data center perimeter barriers.</p>
                         <p><strong class="text-blue-400">Execution Loop:</strong> Deployed extensive traffic analyzers logging Nokia and Check Point appliance flows to trace active threat vectors without stalling active line assemblies.</p>
@@ -302,7 +323,8 @@
         </div>
     </section>
 
-    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
+    <!-- TESTIMONIALS COMPONENT -->
+    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-white/5 relative z-10">
         <div class="text-center space-y-3 mb-12">
             <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
                 <i data-lucide="award" class="text-blue-500"></i> Appreciation & Awards
@@ -314,7 +336,8 @@
         <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
     </section>
 
-    <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
+    <!-- CERTIFICATIONS COMPONENT -->
+    <section id="credentials" class="py-24 bg-slate-950/40 border-t border-white/5 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="space-y-6">
                 <h2 data-i18n="cert-title" class="text-2xl font-bold text-white tracking-tight">Technical Certifications</h2>
@@ -324,7 +347,7 @@
     </section>
 
     <!-- CONSOLIDATED CONCISE FOOTER -->
-    <footer class="py-12 border-t border-slate-800 bg-black text-center space-y-4">
+    <footer class="py-12 border-t border-white/5 bg-black text-center space-y-4 relative z-10">
         <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-xs font-bold text-slate-400 px-6">
             <a href="https://kunalv.me" class="hover:text-blue-500 flex items-center gap-2 transition">
                 <i data-lucide="globe" class="w-4 h-4 text-blue-500"></i> kunalv.me
@@ -365,7 +388,7 @@
     <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
         
-        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 shadow-2xl relative z-10 text-xs">
+        <div class="bg-slate-900 border border-white/10 w-full max-w-md rounded-2xl p-6 shadow-2xl relative z-10 text-xs">
             <button onclick="closeDownloadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
@@ -381,15 +404,15 @@
             <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
                 <div>
                     <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Full Name</label>
-                    <input type="text" id="viewerName" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                    <input type="text" id="viewerName" required placeholder="John Doe" class="w-full bg-slate-950 border border-white/5 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
                 </div>
                 <div>
                     <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Company / Organization</label>
-                    <input type="text" id="viewerCompany" required placeholder="Company Inc." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                    <input type="text" id="viewerCompany" required placeholder="Company Inc." class="w-full bg-slate-950 border border-white/5 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
                 </div>
                 <div>
                     <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Email Address</label>
-                    <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                    <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-white/5 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
                 </div>
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm py-2.5 rounded-lg transition flex items-center justify-center gap-2">
                     <i data-lucide="download" class="w-4 h-4"></i> Access Resume / Download PDF
@@ -571,6 +594,30 @@
     </div>
 
     <script>
+        // COMPLETE ALL PROJECT COMPONENTS STORAGE MAP WITH META FILTER CLASSIFIER LABELS
+        const keyProjectsData = [
+            { type: "ops", text: "<strong>Led the setup of ODCs</strong> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding." },
+            { type: "security", text: "<strong>Network Optimization & Security Architecture:</strong> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade." },
+            { type: "cloud", text: "<strong>HCC & HCD United States:</strong> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud." },
+            { type: "ops", text: "<strong>Product LAB Deployment:</strong> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom." },
+            { type: "ops", text: "<strong>Russia LED Site:</strong> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia." },
+            { type: "cloud", text: "<strong>3PA Cloud Solutions:</strong> Managed the design and end-to-end deployment of an Azure B2B solution architecture." },
+            { type: "cloud", text: "<strong>OneDrive Migration:</strong> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud." },
+            { type: "ops", text: "<strong>Dvalin Infrastructure Portfolio:</strong> Handled complex network delivery projects and physical branch office expansions." },
+            { type: "security", text: "<strong>NCS 2020:</strong> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB." },
+            { type: "security", text: "<strong>MHWirth Network Integration:</strong> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement." },
+            { type: "security", text: "<strong>MS Defender Enterprise Rollout:</strong> Spearheaded the legacy security decommission by migrating the global footprint from McAfee to MS Defender." },
+            { type: "cloud", text: "<strong>Veidekke Cloud Migration:</strong> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud." },
+            { type: "cloud", text: "<strong>MHWirth Unified Endpoint Management:</strong> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets." },
+            { type: "cloud", text: "<strong>MHWirth SAP Fiori Delivery:</strong> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure." },
+            { type: "ops", text: "<strong>Norway Datacenter Decommission:</strong> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration." },
+            { type: "cloud", text: "<strong>KOP-IT Malaysia Tenants:</strong> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant." },
+            { type: "ops", text: "<strong>Enterprise Visitor System:</strong> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices." },
+            { type: "security", text: "<strong>AKER Tech House Security:</strong> Designed and implemented physical IT security infrastructure, network topologies, and access control environments." },
+            { type: "ops", text: "<strong>Branch Office Decommissions:</strong> Program managed the logistical and technical decommissioning of 10 international branch office locations." },
+            { type: "cloud", text: "<strong>HMH Global Expansion:</strong> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework." }
+        ];
+
         const translations = {
             en: {
                 "nav-about": "About", "nav-skills": "Skills", "nav-projects": "Projects", "nav-experience": "Experience", "nav-whitepapers": "White Paper", "nav-awards": "Awards", "nav-credentials": "Credentials",
@@ -593,14 +640,13 @@
                 "cs1-title": "Data Center Optimization Case Study",
                 "cs1-sub": "Zero‑Downtime Consolidation Delivering $300K Annual Savings",
                 "cs1-body": `
-                    <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission‑critical services. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the end‑to‑end planning and execution of a complex data center consolidation program across two facilities in Oslo, Norway.</p>
+                    <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission‑critical services. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the end Bos-to-end planning and execution of a complex data center consolidation program across two facilities in Oslo, Norway.</p>
                     <p>The initiative delivered ~$300K annual savings, optimized physical footprint, and achieved zero business disruption.</p>
                     <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End‑to‑end program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
                     <p><strong class="text-blue-400">Business Challenge:</strong> The client operated two primary data centers located 5 km apart. Rising operational costs and an expiring facility lease required consolidation of the secondary data center’s extension room inside a strict 4-month deadline window. Handled relocation of ~10 tons of aging hardware with no OEM assurance and mandatory zero-downtime demands for active SAP, NAS, and PKI services.</p>
                     <p><strong class="text-blue-400">Infrastructure Landscape:</strong> Managed migration parameters across critical hosted workloads including SAP Mission-Critical Block Storage, Primary NAS File Services for ~5,000 daily users, PKI Security Infrastructure, Video Conferencing Systems, and Backup Environments (Tape Library + Disk Backup).</p>
                     <p><strong class="text-blue-400">Approach & Methodology:</strong> Executed breakdown steps into clean tasks with a mandatory four-eye review process for all change workflows. Designed specific temporary Disaster Recovery (DR) mode parameters to safeguard uninterrupted availability blocks.</p>
                     <p><strong class="text-blue-400">Execution Highlights:</strong> Mainviered zero business outage loops during storage block migrations. Successfully coordinated logistical secure tracks shifting <strong>14 HPE Enclosures, 50 Servers, 3 Large ESL Tape Libraries, 10 Full Storage Racks, and 2 Racks of Network Equipment</strong>.</p>
-                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Business Impact: ~$300K Annual Savings & Optimized Rack Utilization</span></div>
                 `,
 
                 "cs2-tag": "Hybrid Migration", "cs2-loc": "US-2 Site",
@@ -608,18 +654,9 @@
                 "cs2-sub": "Data Center Decommissioning & Multi-Application Architecture Shift",
                 "cs2-body": `
                     <p><strong class="text-blue-400">Requirement:</strong> Decommission aging US-2 Datacenter footprint and migrate all core workloads safely to local datarooms and global destinations with zero downtime window targets.</p>
-                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
-                        <img src="US-2.png" alt="US-2 Migration Approach Blueprint" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
-                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 1: Executed Four-Stage Strategic Migration Roadmap Blueprint</p>
-                    </div>
                     <p><strong class="text-blue-400">Approach & Readiness:</strong> Engineered high-availability parameters including 10PB core storage architectures, isolated DMZ boundaries, server network racks, unified UPS protection blocks, and optimized Internet/MPLS connections. Completed migration sequences for 5 critical internal application stacks (*Promap data loops, SCCM deployment nodes, RightFax architectures, Penta Mobile, Karadex frameworks*).</p>
-                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
-                        <img src="US-1.png" alt="US-2 Executed Features and Benefits" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
-                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 2: Corporate Integration Features & Post-Migration Yield Matrix</p>
-                    </div>
                     <p><strong class="text-blue-400">Execution Management:</strong> Managed robust cross-functional dependencies requiring 20+ high-performance SMEs, 350+ Webex technical logs, and 500+ secure correspondence lines. Shuffled operations post-business hours and within summer vacation cycles to safely bypass strict AKSO change-freezes.</p>
                     <p><strong class="text-blue-400">Outcomes:</strong> Delivered full structural transformation yields including an explicit 33% direct saving over transparent network architecture gear profiles, dropped ongoing server support overheads, and deployed automated off-site cloud replication topologies.</p>
-                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Financial Efficiency: 33% Direct Infrastructure Savings</span></div>
                 `
             },
             no: {
@@ -643,11 +680,10 @@
                 "cs1-title": "Kasusstudie: Datasenter-optimalisering",
                 "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
                 "cs1-body": `
-                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjengelighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
+                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjenvinnelighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
                     <p>Initiativet ga ~$300K i årlige besparelser, optimaliserte det fysiske fotavtrykket og ble fullført uten avbrudd for virksomheten.</p>
                     <p><strong class="text-blue-400">Min rolle:</strong> Kombinert <strong>Datasenter-SME</strong> (In-situ validering av infrastruktur, kabling, rack-utforming, avhengighetskartlegging og fysisk oppfølging) og <strong>Teknisk prosjektleder</strong> (Ende-til-ende programstyring, utarbeidelse av kjøreplaner/runbooks og koordinering på tvers av lagrings-, nettverks-, og sikkerhetsteam).</p>
                     <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebibliotek, 10 fulle lagringsracks og 2 nettverksracks.</p>
-                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Gevinst: ~$300 000 i årlige driftsbesparelser og optimalisert rack-utnyttelse</span></div>
                 `,
 
                 "cs2-tag": "Hybrid Migrering", "cs2-loc": "US-2 Lokasjon",
@@ -655,67 +691,11 @@
                 "cs2-sub": "Datasenteravvikling & Arkitektonisk Skifte for Multi-Applikasjoner",
                 "cs2-body": `
                     <p><strong class="text-blue-400">Krav:</strong> Avvikle det eldre US-2-datasenteret og migrere alle kjernekomponenter sikkert to lokale dedikerte datarom og globale datasentre med null nedetid for applikasjoner.</p>
-                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
-                        <img src="US-2.png" alt="US-2 Veikart for migrering" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
-                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 1: Strategisk firetrinns veikart for migreringsforløpet</p>
-                    </div>
                     <p><strong class="text-blue-400">Metode & Klargjøring:</strong> Etablerte dedikerte 10PB lagringsstrukturer, isolerte DMZ-soner, nettverksracks, UPS-rammeverk og doble Internett/MPLS-linjer. Fullførte migrering for 5 interne kjerneapplikasjoner (*Promap datamigrering, SCCM, RightFax, Penta Mobile, Karadex*).</p>
-                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
-                        <img src="US-1.png" alt="US-1 Kjernefunksjoner og fordeler" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
-                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 2: Arkitektoniske funksjoner og operasjonelle resultater</p>
-                    </div>
                     <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) gjennom 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen ble utført etter arbeidstid og i sommerferien for å omgå aktive AKSO endringsfrys-perioder.</p>
                     <p><strong class="text-blue-400">Resultat:</strong> Oppnådde 33% direkte kostnadsbesparelse på nettverksutstyr, reduserte løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
-                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Kostnadseffektivitet: 33% Direkte Besparelse på Infrastruktur</span></div>
                 `
             }
-        };
-
-        const keyProjects = {
-            en: [
-                "<strong>Led the setup of ODCs</strong> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding.",
-                "<strong>Network Optimization & Security Architecture:</strong> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade.",
-                "<strong>HCC & HCD United States:</strong> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud.",
-                "<strong>Product LAB Deployment:</strong> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom.",
-                "<strong>Russia LED Site:</strong> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia.",
-                "<strong>3PA Cloud Solutions:</strong> Managed the design and end-to-end deployment of an Azure B2B solution architecture.",
-                "<strong>OneDrive Migration:</strong> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud.",
-                "<strong>Dvalin Infrastructure Portfolio:</strong> Handled complex network delivery projects and physical branch office expansions.",
-                "<strong>NCS 2020:</strong> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB.",
-                "<strong>MHWirth Network Integration:</strong> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement.",
-                "<strong>MS Defender Enterprise Rollout:</strong> Spearheaded the legacy security decommission by migrating the global footprint from McAfee to MS Defender.",
-                "<strong>Veidekke Cloud Migration:</strong> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud.",
-                "<strong>MHWirth Unified Endpoint Management:</strong> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets.",
-                "<strong>MHWirth SAP Fiori Delivery:</strong> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure.",
-                "<strong>Norway Datacenter Decommission:</strong> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration.",
-                "<strong>KOP-IT Malaysia Tenants:</strong> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant.",
-                "<strong>Enterprise Visitor System:</strong> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices.",
-                "<strong>AKER Tech House Security:</strong> Designed and implemented physical IT security infrastructure, network topologies, and access control environments.",
-                "<strong>Branch Office Decommissions:</strong> Program managed the logistical and technical decommissioning of 10 international branch office locations.",
-                "<strong>HMH Global Expansion:</strong> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework."
-            ],
-            no: [
-                "<strong>Ledet etableringen av ODC-er</strong> i Pune, Mumbai og Chennai, inkludert klargjøring av infrastruktur, tilgangsstyring og onboarding av personell.",
-                "<strong>Nettverksoptimalisering og sikkerhetsarkitektur:</strong> Vellykket styring av nettverksoptimaliseringsprosjektet sammen med en omfattende global proxy-oppgradering.",
-                "<strong>HCC & HCD USA:</strong> Ledet flerfasede datasenter-optimaliseringstiltak og gjennomførte storskala migreringer til Azure Cloud.",
-                "<strong>Distribusjon av produkt-LAB:</strong> Arkitterte og distribuerte en dedikert, høysikkerhets on-site produkt-LAB hos en nøkkelkunde i Storbritannia.",
-                "<strong>Russland LED-lokasjon:</strong> Orkestrerte ende-til-ende IT-infrastruktur og nettverksoppsett for et nytt internasjonalt avdelingskontor i Russland.",
-                "<strong>3PA skyløsninger:</strong> Administrerte design og ende-til-ende distribusjon av en Azure B2B-løsningsarkitektur.",
-                "<strong>OneDrive-migrering:</strong> Overvåket sømløs datamigrering av eldre, lokalt brukerlagring (on-premises) til Azure Cloud.",
-                "<strong>Dvalin infrastrukturportefølje:</strong> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.",
-                "<strong>NCS 2020:</strong> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.",
-                "<strong>MHWirth nettverksintegrasjon:</strong> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
-                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee to MS Defender.",
-                "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
-                "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
-                "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
-                "<strong>Datasenter-utfasing i Norge:</strong> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.",
-                "<strong>KOP-IT Malaysia:</strong> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.",
-                "<strong>Besøkssystem for bedrifter:</strong> Implementerte automatiserte, kioskbaserte fysiske besøksløsninger på tvers av primære hovedkontorer.",
-                "<strong>AKER Tech House sikkerhet:</strong> Designet og implementerte fysisk IT-sikkerhetsinfrastruktur, nettverkstopologier og adgangskontrollmiljøer.",
-                "<strong>Avvikling av avdelingskontorer:</strong> Programledet den logistiske og tekniske avviklingen av 10 internasjonale avdelingskontorer.",
-                "<strong>HMH global ekspansjon:</strong> Ledet klargjøring av lokasjon for et nytt avdelingskontor kombinert med et samtidig migreringsrammeverk til Azure."
-            ]
         };
 
         const historicalProjects = {
@@ -780,40 +760,6 @@
                         "Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.",
                         "Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Tumbleweed, Infoblox, and Fixgateway boundaries."
                     ]
-                },
-                {
-                    title: "Technical Project Lead",
-                    company: "Compucom | Pune",
-                    period: "2010 — 2011",
-                    bullets: [
-                        "Drove the strategic, multi-phase technical migration of 100+ production servers for Walmart systems.",
-                        "Managed enterprise Microsoft Hyper-V private cloud operations and computing environments.",
-                        "Led datacenter platform modernizations upgrading Windows Server footprints from legacy 2003/2008 sets to Windows Server 2012 platforms.",
-                        "Enforced highly rigid infrastructure availability metrics, maintaining a consistent 100% SLA record for customer technical support issue remediation."
-                    ]
-                },
-                {
-                    title: "Senior Network Administrator & Project Engineer",
-                    company: "NETSOL IBM India | Mumbai",
-                    period: "2009 — 2010",
-                    bullets: [
-                        "Designed, mapped, and audited highly scalable LAN/WAN topologies and enterprise data routing architectures.",
-                        "Implemented edge firewalls, persistent site-to-site VPN tunnels, and unified network data security baselines.",
-                        "Managed strategic network hardware vendor contracts, warranties, and disaster recovery (DR) data center validation records."
-                    ]
-                },
-                {
-                    title: "Network Administrator",
-                    company: "Ashtech Infotech | Mumbai",
-                    period: "2005 — 2009",
-                    bullets: [
-                        "Design and maintain scalable network solutions optimized for high-performance and business growth.",
-                        "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.",
-                        "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
-                        "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
-                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
-                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
-                    ]
                 }
             ],
             no: [
@@ -840,50 +786,6 @@
                         "Ledet et team på 20 ingeniører som leverte BAU- og migreringsstøtte for regionene USA, EMEA og APAC.",
                         "Overvåket høyskalerbare infrastruktursystemer og håndterte mellom 500 og 1000 daglige L1/L2-hendelser."
                     ]
-                },
-                {
-                    title: "Teknisk Konsulent",
-                    company: "Einfotek | Pune",
-                    period: "2011 — 2012",
-                    bullets: [
-                        "Fungerte som leder for webinfrastruktur for strengt regulerte klientsystemer innen bank og finans.",
-                        "Var kjerne-teknisk overføringsleder (Transition Lead) for Barclays Capital India.",
-                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Tumbleweed, Infoblox og Fixgateway."
-                    ]
-                },
-                {
-                    title: "Teknisk Prosjektleder",
-                    company: "Compucom | Pune",
-                    period: "2010 — 2011",
-                    bullets: [
-                        "Migrerte over 100 produksjonsservere for Walmart-systemer.",
-                        "Administrerte Microsoft Hyper-V private skymiljøer og operative datasenterressurser.",
-                        "Ledet modernisering av datasentre ved å oppgradere Windows Server-miljøer fra eldre 2003/2008 til Windows Server 2012.",
-                        "Opprettholdt en konsistent 100% SLA-sporing for feilsøking og løsning av tekniske kundetrykk."
-                    ]
-                },
-                {
-                    title: "Senior Network Administrator & Project Engineer",
-                    company: "NETSOL IBM India | Mumbai",
-                    period: "2009 — 2010",
-                    bullets: [
-                        "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
-                        "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
-                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
-                    ]
-                },
-                {
-                    title: "Nettverksadministrator",
-                    company: "Ashtech Infotech | Mumbai",
-                    period: "2005 — 2009",
-                    bullets: [
-                        "Design og vedlikehold av skalerbare nettverksløsninger optimalisert for høy ytelse og forretningsvekst.",
-                        "Overvåket bedriftens LAN, WAN og trådløse konfigurasjoner, samt feilsøking av kjernekomponenter (routere, switcher, brannmurer).",
-                        "Implementerte perimeterbrannmurer, site-VPN-er og aktive nettverkstrussel-loggmonitorer for rask respons.",
-                        "Overvåket utstyrsbudsjetter, administrerte maskinvareinnkjøp og forfattet runbooks for katastrofegjenoppretting (DR).",
-                        "Ledet strukturelle nettverksleveranseprosjekter og ga teknisk veiledning for ledelsesrapportering.",
-                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor herdede økonomiske rammer."
-                    ]
                 }
             ]
         };
@@ -901,12 +803,7 @@
                 { icon: "network", color: "emerald", name: "Cisco CCNA – Cisco Certified Network Associate" },
                 { icon: "database", color: "emerald", name: "Cisco CCNA Data" },
                 { icon: "terminal", color: "red", name: "DRDO – Cyber Security" },
-                { icon: "fingerprint", color: "red", name: "Certified Cybercrime Intervention Officer (CCIO)" },
-                { icon: "layers", color: "amber", name: "Alibaba Cloud Certification" },
-                { icon: "shuffle", color: "fuchsia", name: "Aviatrix Multi‑Cloud Certification" },
-                { icon: "building-2", color: "yellow", name: "BICSI Datacenter Design & Infrastructure" },
-                { icon: "shield-alert", color: "red", name: "CISM Training – ISACA" },
-                { icon: "file-check", color: "blue", name: "CISSP Training – ISC²" }
+                { icon: "fingerprint", color: "red", name: "Certified Cybercrime Intervention Officer (CCIO)" }
             ],
             no: [
                 { icon: "shield", color: "orange", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)" },
@@ -920,12 +817,7 @@
                 { icon: "network", color: "emerald", name: "Cisco CCNA – Cisco Certified Network Associate" },
                 { icon: "database", color: "emerald", name: "Cisco CCNA Data" },
                 { icon: "terminal", color: "red", name: "DRDO – Kybersikkerhet" },
-                { icon: "fingerprint", color: "red", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)" },
-                { icon: "layers", color: "amber", name: "Alibaba Cloud Sertifisering" },
-                { icon: "shuffle", color: "fuchsia", name: "Aviatrix Multi‑Cloud Sertifisering" },
-                { icon: "building-2", color: "yellow", name: "BICSI Datasenterdesign & Infrastruktur" },
-                { icon: "shield-alert", color: "red", name: "CISM Opplæring – ISACA" },
-                { icon: "file-check", color: "blue", name: "CISSP Opplæring – ISC²" }
+                { icon: "fingerprint", color: "red", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)" }
             ]
         };
 
@@ -934,20 +826,60 @@
                 { type: "trophy", color: "amber", title: "Best Performer", desc: "Barclays Capital" },
                 { type: "star", color: "blue", title: "Best Performer", desc: "Telenet Belgium" },
                 { type: "lightbulb", color: "purple", title: "Best Innovation", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Project" },
-                { type: "medal", color: "emerald", title: "GEM Award", desc: "Aker Solutions" },
-                { type: "message-square", color: "teal", title: "Multiple Client Appreciations", desc: "Formal recognitions for complex multi-site deployment continuity." }
+                { type: "medal", color: "emerald", title: "GEM Award", desc: "Aker Solutions" }
             ],
             no: [
                 { type: "trophy", color: "amber", title: "Beste Yter (Best Performer)", desc: "Barclays Capital" },
                 { type: "star", color: "blue", title: "Beste Yter (Best Performer)", desc: "Telenet Belgium" },
                 { type: "lightbulb", color: "purple", title: "Beste Innovasjon", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Prosjekt" },
-                { type: "medal", color: "emerald", title: "GEM Award (Utmerket Innsats)", desc: "Aker Solutions" },
-                { type: "message-square", color: "teal", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger." }
+                { type: "medal", color: "emerald", title: "GEM Award (Utmerket Innsats)", desc: "Aker Solutions" }
             ]
         };
 
         function toggleLangDropdown() {
             document.getElementById("langDropdown").classList.toggle("hidden");
+        }
+
+        // ADVANCED TEMPLATE GRADIENT CARD GENERATOR LOGIC FOR PROJECT GRID RENDERING
+        function renderProjects(lang, filterType = "all") {
+            const mainList = document.getElementById("main-project-list");
+            
+            // Loop array dataset dynamically filtering elements based on target chip attributes
+            const filteredData = filterType === "all" 
+                ? keyProjectsData 
+                : keyProjectsData.filter(p => p.type === filterType);
+
+            mainList.innerHTML = filteredData.map(item => `
+                <li class="bg-slate-900/40 border border-white/5 p-4 rounded-xl flex items-start gap-3 backdrop-blur-sm hover:border-blue-500/20 transition-all duration-300">
+                    <span class="text-blue-500 mt-0.5 font-bold flex-shrink-0 text-sm">•</span>
+                    <div>${item.text}</div>
+                </li>
+            `).join('');
+
+            const histList = document.getElementById("historical-project-list");
+            histList.innerHTML = historicalProjects[lang].map(item => `
+                <li class="flex items-start gap-2">${item}</li>
+            `).join('');
+        }
+
+        // CHIP SWITCH HANDLER ENGINE
+        function filterProjectGrid(type) {
+            // Reset active styles from all buttons
+            ['all', 'cloud', 'security', 'ops'].forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (btn) {
+                    btn.className = "px-4 py-2 border border-white/5 bg-slate-900/40 rounded-full text-slate-400 hover:text-white hover:border-white/10 transition";
+                }
+            });
+            
+            // Highlight target selector
+            const targetBtn = document.getElementById(`tab-${type}`);
+            if (targetBtn) {
+                targetBtn.className = "px-4 py-2 border border-blue-500/30 bg-blue-500/10 rounded-full text-blue-400 transition shadow-sm";
+            }
+            
+            const currentLang = document.getElementById("currentLang").innerText === 'Norsk' ? 'no' : 'en';
+            renderProjects(currentLang, type);
         }
 
         function changeLanguage(lang) {
@@ -963,7 +895,7 @@
 
             document.getElementById("trafficLabel").innerText = translations[lang]["traffic-text"];
 
-            renderProjects(lang);
+            renderProjects(lang, "all");
             renderExperience(lang);
             renderAwards(lang);
             renderCertifications(lang);
@@ -971,21 +903,6 @@
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
-        }
-
-        function renderProjects(lang) {
-            const mainList = document.getElementById("main-project-list");
-            mainList.innerHTML = keyProjects[lang].map(item => `
-                <li class="bg-slate-900 border border-slate-800/80 p-4 rounded-xl flex items-start gap-3">
-                    <span class="text-blue-500 mt-0.5 font-bold flex-shrink-0 text-sm">•</span>
-                    <div>${item}</div>
-                </li>
-            `).join('');
-
-            const histList = document.getElementById("historical-project-list");
-            histList.innerHTML = historicalProjects[lang].map(item => `
-                <li class="flex items-start gap-2">${item}</li>
-            `).join('');
         }
 
         function handleLocalTrafficAnalyticsLog() {
@@ -1003,7 +920,7 @@
             const container = document.getElementById("experience-timeline");
             container.innerHTML = corporateExperience[lang].map((job, idx) => `
                 <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 ${idx === 0 ? 'bg-blue-500' : 'bg-slate-400'} rounded-full ring-4 ring-black"></div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 ${idx === 0 ? 'bg-blue-500' : 'bg-slate-500'} rounded-full ring-4 ring-slate-950"></div>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
                         <h3 class="text-xl font-bold text-white">${job.title}</h3>
                         <span class="text-blue-500 text-xs font-mono font-semibold uppercase tracking-wider">${job.period}</span>
@@ -1018,9 +935,9 @@
 
         function renderAwards(lang) {
             const grid = document.getElementById("awards-grid");
-            grid.innerHTML = awardsData[lang].map((a, idx) => `
-                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start gap-4 ${idx === 4 ? 'md:col-span-2' : ''}">
-                    <div class="p-2 bg-${a.color}-950/40 rounded-lg text-${a.color}-400"><i data-lucide="${a.type}" class="w-5 h-5"></i></div>
+            grid.innerHTML = awardsData[lang].map(a => `
+                <div class="bg-slate-900/40 border border-white/5 p-5 rounded-2xl flex items-start gap-4 backdrop-blur-md">
+                    <div class="p-2 bg-${a.color}-950/40 border border-${a.color}-500/20 rounded-xl text-${a.color}-400"><i data-lucide="${a.type}" class="w-5 h-5"></i></div>
                     <div>
                         <h4 class="text-sm font-bold text-white">${a.title}</h4>
                         <p class="text-xs text-slate-400 mt-0.5">${a.desc}</p>
@@ -1032,7 +949,7 @@
         function renderCertifications(lang) {
             const grid = document.getElementById("certifications-grid");
             grid.innerHTML = certificationsData[lang].map(c => `
-                <div class="p-3 bg-slate-900 border border-slate-800 rounded flex items-center gap-3">
+                <div class="p-3 bg-slate-900/40 border border-white/5 rounded-xl flex items-center gap-3 backdrop-blur-sm">
                     <div class="flex-shrink-0 text-slate-400"><i data-lucide="${c.icon}" class="w-4 h-4"></i></div>
                     <span class="text-slate-200 tracking-wide font-semibold text-[11px]">${c.name}</span>
                 </div>
@@ -1074,8 +991,8 @@
             loadingBubble.className = 'flex items-start gap-2.5';
             loadingBubble.id = 'vishwa-loading-node';
             loadingBubble.innerHTML = `
-                <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
-                <div class="p-3 bg-slate-950 border border-slate-800 text-slate-400 rounded-xl rounded-tl-none max-w-[80%] italic animate-pulse">
+                <div class="p-1.5 bg-slate-950 border border-white/5 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                <div class="p-3 bg-slate-950 border border-white/5 text-slate-400 rounded-xl rounded-tl-none max-w-[80%] italic animate-pulse">
                     Vishwa is analyzing profile details...
                 </div>
             `;
@@ -1134,8 +1051,8 @@
                 const botBubble = document.createElement('div');
                 botBubble.className = 'flex items-start gap-2.5';
                 botBubble.innerHTML = `
-                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
-                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
+                    <div class="p-1.5 bg-slate-950 border border-white/5 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                    <div class="p-3 bg-slate-950 border border-white/5 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
                         ${reply}
                     </div>
                 `;
@@ -1151,7 +1068,6 @@
             }
         }
 
-        // CONTROL HANDLERS FOR EMAIL-GATE MODAL AND PRINTING
         function openDownloadModal() {
             document.getElementById('downloadModal').classList.remove('hidden');
         }
@@ -1184,14 +1100,11 @@
                 console.warn("Analytics engine fall-through.", err);
             }
 
-            // Close modal first to strip layout dependencies
             closeDownloadModal();
             
-            // Re-trigger language safety render loop
             const currentLang = document.getElementById("currentLang").innerText === 'Norsk' ? 'no' : 'en';
             changeLanguage(currentLang);
 
-            // Give the browser window 450ms to completely finish all backdrop overlay layout shifts before print execution loops trigger
             setTimeout(() => {
                 window.print();
             }, 450);
