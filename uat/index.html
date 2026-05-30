@@ -360,10 +360,14 @@
     </footer>
 
     <!-- ========================================== -->
-    <!-- EMAIL-GATED DOWNLOAD MODAL -->
+    <!-- EMAIL-GATED DOWNLOAD MODAL (FIXED BLUR) -->
     <!-- ========================================== -->
-    <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-filter blur-sm p-4">
-        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 shadow-2xl relative">
+    <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <!-- Separate absolute background tint box to safeguard text contrast and remove filter-inheritance anomalies -->
+        <div class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
+        
+        <!-- Independent rendering box to keep input text fields completely crisp and readable -->
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 shadow-2xl relative z-10">
             <button onclick="closeDownloadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
