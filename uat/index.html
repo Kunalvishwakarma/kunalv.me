@@ -377,10 +377,18 @@
                     <i data-lucide="file-text" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-lg font-bold text-white tracking-tight">Download Professional CV</h3>
-                <p class="text-xs text-slate-400">Please provide your email address to download Kunal's 1-page profile summary.</p>
+                <p class="text-xs text-slate-400">Please provide your details below to download Kunal's 1-page profile summary.</p>
             </div>
 
             <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Full Name</label>
+                    <input type="text" id="viewerName" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Company / Organization</label>
+                    <input type="text" id="viewerCompany" required placeholder="Company Inc." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                </div>
                 <div>
                     <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Email Address</label>
                     <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
@@ -1147,18 +1155,22 @@
 
         async function handleCVDownload(event) {
             event.preventDefault();
+            const name = document.getElementById('viewerName').value;
+            const company = document.getElementById('viewerCompany').value;
             const email = document.getElementById('viewerEmail').value;
-            if(!email) return;
+            if(!email || !name || !company) return;
 
             try {
                 await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify({
-                        access_key: "YOUR-WEB3FORMS-KEY-HERE", 
+                        access_key: "59d95c34-e1c4-44e6-80fd-11ecd7e58ae9", 
                         subject: "Alert: CV Profile Downloaded",
+                        name: name,
+                        company: company,
                         email: email,
-                        message: `An entry from email [ ${email} ] just downloaded your CV profile.`
+                        message: `Kunal, an entry has just downloaded your CV profile summary.\n\nViewer Details:\nName: ${name}\nCompany: ${company}\nEmail: ${email}`
                     })
                 });
             } catch (err) {
