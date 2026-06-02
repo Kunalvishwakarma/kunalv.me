@@ -1,1 +1,142 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kunal Vishwakarma | Infrastructure Architect</title>
+
+  <!-- Basic CSP (GitHub Pages limitation fallback) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; script-src 'self' https://formspree.io; style-src 'self' 'unsafe-inline'">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light dark">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: #ffffff;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    a {
+      color: #0078d4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    form input, form button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+    }
+    button {
+      background: #0078d4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .note {
+      font-size: 0.9em;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Profile -->
+  <h1>Kunal Vishwakarma</h1>
+  <p>Infrastructure Architect | Datacenter SME</p>
+
+  <!-- Secure external links -->
+  <p>
+    <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+    <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </p>
+
+  <!-- Summary -->
+  <p>
+    Experienced Infrastructure Architect with global delivery experience across cloud migrations,
+    datacenter modernization, and enterprise platforms.
+  </p>
+
+  <!-- Download CV -->
+  <h2>Download CV</h2>
+
+  <!-- Replace YOUR_FORM_ID -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="cvForm">
+
+    <input type="text" name="name" placeholder="Full Name"
+           maxlength="100" required>
+
+    <input type="text" name="company" placeholder="Company"
+           maxlength="150" required>
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <label>
+      <input type="checkbox" name="consent" required>
+      I consent to processing my data (see Privacy Policy)
+    </label>
+
+    <!-- Honeypot (anti-bot protection) -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next"
+           value="https://YOUR_GITHUB_USERNAME.github.io/thanks.html">
+
+    <button type="submit">Request CV</button>
+
+    <p class="note">
+      Your data is used only for CV download tracking. No marketing usage.
+    </p>
+  </form>
+
+  <!-- Privacy -->
+  <h2>Privacy Policy</h2>
+  <p>
+    We collect your name, company, and email solely to track CV download requests.
+    Data is retained for up to 30 days and never shared.
+  </p>
+  <p>
+    You may request data deletion anytime via LinkedIn contact.
+  </p>
+
+</div>
+
+<!-- Lightweight validation -->
+<script>
+document.getElementById("cvForm").addEventListener("submit", function(e) {
+  const email = document.querySelector("input[name=email]").value;
+  const name = document.querySelector("input[name=name]").value;
+
+  if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+    alert("Invalid email address");
+    e.preventDefault();
+  }
+
+  if (name.trim().length < 2) {
+    alert("Name is too short");
+    e.preventDefault();
+  }
+});
+</script>
+
+</body>
+</html>
