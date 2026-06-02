@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kunal Vishwakarma | Datacenter SME & Infrastructure Architect</title>
     
+    <!-- PRIMARY SEO IDENTIFIERS -->
     <meta name="description" content="Professional portfolio of Kunal Vishwakarma - Enterprise Datacenter SME & Infrastructure Architect based in Oslo, Norway. 20+ years of global migrations, cloud adoptions, and custom automation engineering.">
     <meta name="keywords" content="Datacenter SME, Infrastructure Architect, Azure Cloud Migration, Technical Project Manager, Oslo IT Consultant, Kunal Vishwakarma, Prompt Engineering">
     <meta name="author" content="Kunal Vishwakarma">
     <meta name="robots" content="index, follow">
 
+    <!-- OPEN GRAPH / LINKEDIN SOCIAL GRAPH CARDS -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kunalv.me">
     <meta property="og:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
     <meta property="og:description" content="20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures.">
     <meta property="og:image" content="https://kunalv.me/logo.png">
 
+    <!-- TWITTER/X SOCIAL GRAPH CARDS -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kunalv.me">
     <meta property="twitter:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
@@ -25,7 +28,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap');
@@ -42,7 +44,21 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* INTENSE MEDIA PRINT COMPRESSION SPECIFICATIONS PREVENTING PAGE OVERFLOW BLEEDS */
+        /* Tooltip speech bubble arrow custom layout */
+        .speech-arrow::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            background-color: #ffffff;
+            border-right: 1px solid #e2e8f0;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* MAXIMUM OVERRIDE ENTERPRISE PRINT CONSTRAINTS LOCKING DATA UNTO A STANDALONE SINGLE PAGE */
         @media print {
             body > :not(#printableCV) { 
                 display: none !important; 
@@ -76,41 +92,15 @@
             #printableCV .bg-slate-100 { background-color: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kunal Vishwakarma",
-      "jobTitle": "Datacenter SME & Infrastructure Architect",
-      "url": "https://kunalv.me",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Oslo",
-        "addressCountry": "Norway"
-      },
-      "sameAs": [
-        "https://no.linkedin.com/in/kunalkv/en",
-        "https://github.com/Kunalvishwakarma/kunal"
-      ],
-      "knowsAbout": [
-        "Data Center Operations",
-        "Infrastructure Projects",
-        "Cloud Migration",
-        "Azure Architecture",
-        "Project Management",
-        "Prompt Engineering"
-      ]
-    }
-    </script>
 </head>
 <body class="selection:bg-blue-500/20">
 
+    <!-- FIXED TOP NAVIGATION BAR -->
     <nav class="fixed w-full z-50 nav-blur top-0">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex flex-col space-y-1">
                 <a href="#about" class="group flex items-center gap-3 transition-all duration-200 hover:opacity-90">
-                    <img src="logo.png" alt="KV Logo" class="h-10 w-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='kv.png'" />
+                    <img src="logo.png" alt="Kunal Vishwakarma - Datacenter SME & Infrastructure Architect Logo" class="h-10 w-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='kv.png'" />
                     <span class="text-lg font-extrabold tracking-tighter text-white uppercase">
                         Kunal <span class="text-blue-500">V.</span>
                     </span>
@@ -145,11 +135,12 @@
         </div>
     </nav>
 
+    <!-- ONE-LINE CONTACT SUB-NAVIGATION BAR -->
     <div class="fixed w-full z-40 subnav-contact top-[73px] py-2.5 px-6 hidden sm:block">
-        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400">
-            <a href="mailto:contact@kunalv.me" class="hover:text-blue-500 transition flex items-center gap-1.5">
-                <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i> contact@kunalv.me
-            </a>
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400">
+            <span class="email-container hover:text-blue-500 transition flex items-center gap-1.5">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
+            </span>
             <span class="text-slate-700">|</span>
             <div class="flex items-center gap-1.5">
                 <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500"></i> <span data-i18n="location" class="text-slate-300">Oslo, Norway</span>
@@ -158,13 +149,10 @@
             <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="hover:text-[#0077b5] text-slate-300 transition flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 fill-[#0077b5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn
             </a>
-            <span class="text-slate-700">|</span>
-            <a href="https://wa.me/919819041919" target="_blank" class="hover:text-[#25D366] text-slate-300 transition flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 fill-[#25D366]" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.292 1.48 4.793 1.481 5.482 0 9.94-4.444 9.943-9.914.002-2.651-1.02-5.143-2.878-7.005-1.858-1.861-4.327-2.886-6.977-2.887-5.485 0-9.943 4.444-9.947 9.914-.002 1.954.512 3.861 1.49 5.564l-.995 3.639 3.731-.973zM18.257 15.01c-.342-.171-2.03-.998-2.343-1.111-.313-.114-.541-.171-.767.171-.227.341-.877 1.111-1.074 1.339-.198.228-.396.256-.738.085-3.183-1.59-4.419-2.753-5.304-4.27-.234-.401-.023-.619.148-.822.154-.182.342-.401.513-.599.171-.199.228-.342.342-.57.114-.228.057-.428-.028-.599-.086-.171-.767-1.854-1.05-2.54-.276-.665-.558-.573-.767-.584-.198-.01-.427-.01-.655-.01s-.599.086-.913.428c-.313.342-1.197 1.168-1.197 2.849 0 1.682 1.226 3.305 1.397 3.533.171.228 2.413 3.685 5.845 5.166.815.351 1.451.562 1.946.72.819.26 1.564.223 2.153.135.657-.099 2.03-.83 2.315-1.626.285-.797.285-1.482.199-1.626-.085-.144-.313-.228-.655-.4z"/></svg> WhatsApp
-            </a>
         </div>
     </div>
 
+    <!-- MAIN PORTAL DISPLAY -->
     <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
@@ -178,7 +166,7 @@
                     Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
                 <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
-                    <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts in various LLMs, having own AI LAB (Chatplayground.AI, 1minAI) MultiAI Model Practitioner.
+                    <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.
                 </div>
             </div>
 
@@ -219,6 +207,7 @@
         </div>
     </section>
 
+    <!-- CORE SKILLS CONTAINER -->
     <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800">
         <div class="mb-12">
             <h2 data-i18n="skills-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -237,7 +226,7 @@
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="search" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Root Cause Analysis (RCA)</span>
+                <span data-i18n="skill-3" class="text-sm font-semibold text-slate-200">Root Cause Analysis (RCA)</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="terminal" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
@@ -311,6 +300,7 @@
         </div>
     </section>
 
+    <!-- WHITE PAPERS AND CASE STUDIES -->
     <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6 space-y-8">
             <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -335,21 +325,6 @@
                     <h4 id="cs2-title" data-i18n="cs2-title" class="font-extrabold text-white text-base">US-2 Datacenter Decommissioning & Hybrid Migration</h4>
                     <p id="cs2-sub" data-i18n="cs2-sub" class="text-xs text-slate-400 leading-relaxed font-semibold">Data Center Decommissioning & Multi-Application Architecture Shift</p>
                     <div id="cs2-body" data-i18n="cs2-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3"></div>
-                </div>
-
-                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md md:col-span-2">
-                    <div class="flex items-center justify-between">
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-950/40 text-red-400 border border-red-900/60 text-[10px] font-bold uppercase rounded-full">Security Case Study</span>
-                        <span class="text-xs font-mono text-blue-500 font-bold">OT Industry</span>
-                    </div>
-                    <h4 class="font-extrabold text-white text-base">Industrial OT Network Hardening & Isolation Perimeters</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed font-semibold">Infrastructure Defense & Cross-Vendor Framework Integration</p>
-                    <div class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3">
-                        <p><strong class="text-blue-400">Requirement:</strong> Remediate lateral vulnerability points across connected operational technology (OT) systems inside high-capacity manufacturing facilities.</p>
-                        <p><strong class="text-blue-400">Approach:</strong> Modeled deep security infrastructure dependencies, building localized multi-vendor VPN framework integrations and hard-segmented data center perimeter barriers.</p>
-                        <p><strong class="text-blue-400">Execution Loop:</strong> Deployed extensive traffic analyzers logging Nokia and Check Point appliance flows to trace active threat vectors without stalling active line assemblies.</p>
-                        <p><strong class="text-blue-400">Outcomes:</strong> Enhanced overall infrastructure reliability metrics while provisioning fully compliant audit frameworks across strict security borders.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -376,15 +351,16 @@
         </div>
     </section>
 
+    <!-- CONSOLIDATED CONCISE FOOTER -->
     <footer class="py-12 border-t border-slate-800 bg-black text-center space-y-4">
         <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-xs font-bold text-slate-400 px-6">
             <a href="https://kunalv.me" class="hover:text-blue-500 flex items-center gap-2 transition">
                 <i data-lucide="globe" class="w-4 h-4 text-blue-500"></i> kunalv.me
             </a>
             <span class="text-slate-800 hidden md:block">|</span>
-            <a href="mailto:contact@kunalv.me" class="hover:text-blue-500 flex items-center gap-2 transition">
-                <i data-lucide="mail" class="w-4 h-4 text-blue-500"></i> contact@kunalv.me
-            </a>
+            <span class="email-container hover:text-blue-500 flex items-center gap-2 transition">
+                <i data-lucide="mail" class="w-4 h-4 text-blue-500"></i>
+            </span>
             <span class="text-slate-800 hidden md:block">|</span>
             <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition flex items-center gap-2" title="GitHub">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
@@ -408,9 +384,10 @@
             <span id="localSessionCounterNode" class="px-2 py-0.5 bg-slate-900 text-blue-400 border border-slate-800 rounded font-mono text-xs">1,482</span>
         </div>
 
-        <p class="text-slate-600 text-[10px] uppercase tracking-widest pt-2">© 2026 Kunal Vishwakarma | kunalv.me | All rights reserved</p>
+        <p class="text-slate-600 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
     </footer>
 
+    <!-- EMAIL-GATED DOWNLOAD MODAL -->
     <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
         
@@ -428,6 +405,9 @@
             </div>
 
             <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
+                <!-- INVISIBLE HONEYPOT SPAM FIELD (Web3Forms Native Free Feature) -->
+                <input type="text" name="from_name" class="hidden" style="display:none">
+
                 <div>
                     <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Full Name</label>
                     <input type="text" id="viewerName" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
@@ -441,10 +421,7 @@
                     <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
                 </div>
 
-                <div class="flex justify-center my-2">
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADdfV2n2j0I-EeAE" data-theme="dark"></div>
-                </div>
-
+                <!-- GDPR USER OPT-IN COMPLIANCE -->
                 <div class="flex items-start gap-2 my-2">
                     <input type="checkbox" id="gdprConsent" required class="mt-1 cursor-pointer">
                     <label for="gdprConsent" class="text-[10px] text-slate-400 select-none cursor-pointer">I consent to having my business contact details processed to log this CV file download request in accordance with EU privacy rules.</label>
@@ -457,7 +434,11 @@
         </div>
     </div>
 
+    <!-- ========================================== -->
+    <!-- COMPRESSED PRINT LAYOUT SPECIFICATIONS -->
+    <!-- ========================================== -->
     <div id="printableCV" class="print:block hidden bg-white text-slate-900 p-2 w-full text-[8.2px] font-sans leading-tight">
+        <!-- Header -->
         <div class="border-b-[1.5px] border-slate-800 pb-0.5 flex justify-between items-end">
             <div>
                 <h1 class="text-[14px] font-black tracking-tighter text-slate-950 uppercase leading-none">Kunal Vishwakarma</h1>
@@ -465,8 +446,9 @@
             </div>
         </div>
 
+        <!-- Clean Consolidated Contact Bar -->
         <div class="py-1 border-b border-slate-200 text-[8px] font-semibold text-slate-600 flex justify-between items-center flex-wrap gap-1">
-            <div>✉ contact@kunalv.me</div>
+            <div class="print-email-node">✉ </div>
             <div class="text-slate-300">|</div>
             <div>📍 Oslo, Norway</div>
             <div class="text-slate-300">|</div>
@@ -475,6 +457,7 @@
             <div>🌐 kunalv.me</div>
         </div>
 
+        <!-- Summary -->
         <div class="my-1.5">
             <p class="text-slate-700 text-justify text-[8.2px] leading-normal">
                 Migration Lead and Infrastructure Architect with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial boundaries. Proven track record managing multi-million dollar asset movements, industrial OT network hardening, and zero-downtime consolidations across Energy, Banking, and Pharmaceutical fields. Skilled in context-aware prompt designs across multiple LLMs to enable automated infrastructure flows.
@@ -482,6 +465,7 @@
         </div>
 
         <div class="grid grid-cols-3 gap-3 items-start">
+            <!-- Left Side: Experience & Projects -->
             <div class="col-span-2 space-y-2">
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Corporate Experience</h2>
@@ -529,11 +513,11 @@
                     <ul class="space-y-1 text-slate-700 text-justify text-[8px] leading-tight">
                         <li>• <strong class="text-slate-900">Data Center Optimization (Oslo Site):</strong> Relocated ~10 tons of hardware dependencies (14 HPE Enclosures, 50 Servers, 12 Racks) with zero disruption blocks, delivering <strong class="text-slate-900">$300K in annual cost savings</strong>.</li>
                         <li>• <strong class="text-slate-900">US-2 Datacenter Decommissioning:</strong> Directed four-stage blueprint migration processing 10PB core data volumes, scoring a documented <strong class="text-slate-900">33% direct saving</strong>.</li>
-                        <li>• <strong class="text-slate-900">Industrial OT Network Hardening:</strong> Built isolated DMZ parameters and cross-vendor VPN isolation barriers to secure lateral endpoints across manufacturing lines.</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Right Side: Skills & Certifications -->
             <div class="space-y-2">
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Core Competencies</h2>
@@ -575,8 +559,14 @@
         </div>
     </div>
 
-    <div class="fixed bottom-6 right-6 z-50">
-        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none">
+    <!-- Vishwa AI Chatbot -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <!-- FLOATING SPEECH BUBBLE TOOLTIP (Matches image_8cd5fc.png perfectly) -->
+        <div id="vishwa-tooltip" class="speech-arrow relative bg-white text-slate-900 px-4 py-2.5 rounded-xl font-medium text-xs shadow-xl flex items-center gap-1.5 whitespace-nowrap transition-all duration-300 transform opacity-100 translate-x-0 border border-slate-200">
+            <span class="text-blue-600 font-bold text-sm">✨</span> Hello, how can I help?
+        </div>
+
+        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none shrink-0 relative">
             <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
         </button>
 
@@ -603,7 +593,7 @@
                 <div class="flex items-start gap-2.5">
                     <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
                     <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
-                        Hello! My name is <span class="text-blue-400 font-bold">Vishwa</span>. I am specifically trained to assist you with queries related to Kunal's profile, data center milestones, project history, or tech stack!
+                        Welcome! My name is <span class="text-blue-400 font-bold">Vishwa</span>. I am specifically trained to assist you with queries related to Kunal's profile, datacenter milestones, project history, or tech stack!
                     </div>
                 </div>
             </div>
@@ -641,13 +631,14 @@
                 "cs1-title": "Data Center Optimization Case Study",
                 "cs1-sub": "Zero‑Downtime Consolidation Delivering $300K Annual Savings",
                 "cs1-body": `
-                    <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission‑critical services. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the end‑to‑end planning and execution of a complex data center consolidation program across two facilities in Oslo, Norway.</p>
+                    <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission‑critical services. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the consolidation program across two facilities in Oslo, Norway.</p>
                     <p>The initiative delivered ~$300K annual savings, optimized physical footprint, and achieved zero business disruption.</p>
-                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End‑to‑end program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
+                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End-'to‑end program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
                     <p><strong class="text-blue-400">Business Challenge:</strong> The client operated two primary data centers located 5 km apart. Rising operational costs and an expiring facility lease required consolidation of the secondary data center’s extension room inside a strict 4-month deadline window. Handled relocation of ~10 tons of aging hardware with no OEM assurance and mandatory zero-downtime demands for active SAP, NAS, and PKI services.</p>
                     <p><strong class="text-blue-400">Infrastructure Landscape:</strong> Managed migration parameters across critical hosted workloads including SAP Mission-Critical Block Storage, Primary NAS File Services for ~5,000 daily users, PKI Security Infrastructure, Video Conferencing Systems, and Backup Environments (Tape Library + Disk Backup).</p>
                     <p><strong class="text-blue-400">Approach & Methodology:</strong> Executed breakdown steps into clean tasks with a mandatory four-eye review process for all change workflows. Designed specific temporary Disaster Recovery (DR) mode parameters to safeguard uninterrupted availability blocks.</p>
-                    <p><strong class="text-blue-400">Execution Highlights:</strong> Mainviered zero business outage loops during storage block migrations. Successfully coordinated logistical secure tracks shifting <strong>14 HPE Enclosures, 50 Servers, 3 Large ESL Tape Libraries, 10 Full Storage Racks, and 2 Racks of Network Equipment</strong>.</p>
+                    <p><strong class="text-blue-400">Execution Highlights:</strong> Maintained zero business outage loops during storage block migrations. Successfully coordinated logistical secure tracks shifting <strong>14 HPE Enclosures, 50 Servers, 3 Large ESL Tape Libraries, 10 Full Storage Racks, and 2 Racks of Network Equipment</strong>.</p>
+                    <p><strong class="text-blue-400">Outcomes:</strong> Full structural transformation yields including dropped ongoing server support overheads and deployed automated off-site cloud replication topologies.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Business Impact: ~$300K Annual Savings & Optimized Rack Utilization</span></div>
                 `,
 
@@ -660,31 +651,22 @@
                         <img src="US-2.png" alt="US-2 Migration Approach Blueprint" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
                         <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 1: Executed Four-Stage Strategic Migration Roadmap Blueprint</p>
                     </div>
-                    <p><strong class="text-blue-400">Approach & Readiness:</strong> Engineered high-availability parameters including 10PB core storage architectures, isolated DMZ boundaries, server network racks, unified UPS protection blocks, and optimized Internet/MPLS connections. Completed migration sequences for 5 critical internal application stacks (*Promap data loops, SCCM deployment nodes, RightFax architectures, Penta Mobile, Karadex frameworks*).</p>
+                    <p><strong class="text-blue-400">Approach & Readiness:</strong> Engineered high-availability parameters including 10PB core storage architectures, isolated DMZ boundaries, server network racks, unified UPS protection blocks, and optimized Internet/MPLS connections. Completed migration sequences for 5 critical internal application stacks.</p>
                     <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
                         <img src="US-1.png" alt="US-2 Executed Features and Benefits" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
                         <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 2: Corporate Integration Features & Post-Migration Yield Matrix</p>
                     </div>
-                    <p><strong class="text-blue-400">Execution Management:</strong> Managed robust cross-functional dependencies requiring 20+ high-performance SMEs, 350+ Webex technical logs, and 500+ secure correspondence lines. Shuffled operations post-business hours and within summer vacation cycles to safely bypass strict AKSO change-freezes.</p>
+                    <p><strong class="text-blue-400">Execution Management:</strong> Managed robust cross-functional dependencies requiring 20+ high-performance SMEs, 350+ Webex technical logs, and 500+ secure correspondence lines. Shuffled operations post-business hours and within summer vacation cycles to safely bypass strict change-freezes.</p>
                     <p><strong class="text-blue-400">Outcomes:</strong> Delivered full structural transformation yields including an explicit 33% direct saving over transparent network architecture gear profiles, dropped ongoing server support overheads, and deployed automated off-site cloud replication topologies.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Financial Efficiency: 33% Direct Infrastructure Savings</span></div>
-                `,
-
-                "cs3-tag": "Security Case Study", "cs3-loc": "OT Industry",
-                "cs3-title": "Industrial OT Network Hardening & Isolation Perimeters",
-                "cs3-sub": "Infrastructure Defense & Cross-Vendor Framework Integration",
-                "cs3-body": `
-                    <p><strong class="text-blue-400">Requirement:</strong> Remediate lateral vulnerability points across connected operational technology (OT) systems inside high-capacity manufacturing facilities.</p>
-                    <p><strong class="text-blue-400">Approach:</strong> Modeled deep security infrastructure dependencies, building localized multi-vendor VPN framework integrations and hard-segmented data center perimeter barriers.</p>
-                    <p><strong class="text-blue-400">Execution Loop:</strong> Deployed extensive traffic analyzers logging Nokia and Check Point appliance flows to trace active threat vectors without stalling active line assemblies.</p>
-                    <p><strong class="text-blue-400">Outcomes:</strong> Enhanced overall infrastructure reliability metrics while provisioning fully compliant audit frameworks across strict security borders.</p>`
+                `
             },
             no: {
                 "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-whitepapers": "Hvitbøker", "nav-awards": "Anerkjennelse", "nav-credentials": "Sertifiseringer",
                 "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
                 "hero-title": "Datasenter SME & Infrastrukturarkitekt | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker | OSINT-Forsker",
-                "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor strenge finans- og samsvarskrav.",
-                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Kompetent i å designe strukturerte, kontekstbevisste ledetekster (prompts) på tvers av ulike LLMer. Multi‑AI Model Practitioner som administrerer en dedikert, personlig AI LAB (Chatplayground.ai, 1minAI) for å drive automatisering og infrastrukturarbeid.`,
+                "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor begrensete finans- og samsvarskrav.",
+                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Kompetent i å designe strukturerte, kontekstbevisste ledetekster (prompts) på tvers av ulike LLMer. Multi‑AI Model Practitioner som administrerer en dedikert, personal AI LAB (Chatplayground.ai, 1minAI) for å drive automatisering og infrastrukturarbeid.`,
                 "count-exp": "Års IT-erfaring", "count-del": "Globale leveranser", "count-usr": "Globale Datasentre", "count-dat": "Lokasjoner Global Support",
                 "domain-title": "Bransjeerfaring",
                 "skills-title": "Kjernekompetanse", "skills-desc": "Grunnleggende gjennomføringsevne innenfor forretningskritiske tekniske domener.",
@@ -693,16 +675,19 @@
                 "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
                 "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
                 "cert-title": "Tekniske Sertifiseringer",
-                "wp-heading": "Hvitbøker & Kasusstudier",
+                "wp-heading": "White Papers & Case Studies",
                 "traffic-text": "Besøksstatistikk:",
                 
                 // Case Study 1 Norwegian
-                "cs1-tag": "Energibedrift", "cs1-loc": "Norge Lokasjon", "cs1-title": "Kasusstudie: Datasenter-optimalisering", "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
+                "cs1-tag": "Energibedrift", "cs1-loc": "Norge Lokasjon",
+                "cs1-title": "Kasusstudie: Datasenter-optimalisering",
+                "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
                 "cs1-body": `
-                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjengelighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
+                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjenvighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
                     <p>Initiativet ga ~$300K i årlige besparelser, optimaliserte det fysiske fotavtrykket og ble fullført uten avbrudd for virksomheten.</p>
                     <p><strong class="text-blue-400">Min rolle:</strong> Kombinert <strong>Datasenter-SME</strong> (In-situ validering av infrastruktur, kabling, rack-utforming, avhengighetskartlegging og fysisk oppfølging) og <strong>Teknisk prosjektleder</strong> (Ende-til-ende programstyring, utarbeidelse av kjøreplaner/runbooks og koordinering på tvers av lagrings-, nettverks-, og sikkerhetsteam).</p>
                     <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebibliotek, 10 fulle lagringsracks og 2 nettverksracks.</p>
+                    <p><strong class="text-blue-400">Resultat:</strong> Fullførte transformasjonen med redusert løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Gevinst: ~$300 000 i årlige driftsbesparelser og optimalisert rack-utnyttelse</span></div>
                 `,
 
@@ -715,12 +700,12 @@
                         <img src="US-2.png" alt="US-2 Veikart for migrering" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
                         <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 1: Strategisk firetrinns veikart for migreringsforløpet</p>
                     </div>
-                    <p><strong class="text-blue-400">Metode & Klargjøring:</strong> Etablerte dedikerte 10PB lagringsstrukturer, isolerte DMZ-soner, nettverksracks, UPS-rammeverk og doble Internett/MPLS-linjer. Fullførte migrering for 5 interne kjerneapplikasjoner (*Promap datamigrering, SCCM, RightFax, Penta Mobile, Karadex*).</p>
+                    <p><strong class="text-blue-400">Metode & Klargjøring:</strong> Etablerte dedikerte 10PB lagringsstrukturer, isolerte DMZ-soner, nettverksracks, UPS-rammeverk og doble Internett/MPLS-linjer. Fullførte migrering for 5 interne kjerneapplikasjoner.</p>
                     <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
                         <img src="US-1.png" alt="US-1 Kjernefunksjoner og fordeler" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
                         <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 2: Arkitektoniske funksjoner og operasjonelle resultater</p>
                     </div>
-                    <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) gjennom 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen blev utført etter arbeidstid og i sommerferien for å omgå aktive AKSO endringsfrys-perioder.</p>
+                    <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) gjennom 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen ble utført etter arbeidstid og i sommerferien for å omgå aktive endringsfrys-perioder.</p>
                     <p><strong class="text-blue-400">Resultat:</strong> Oppnådde 33% direkte kostnadsbesparelse på nettverksutstyr, reduserte løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Kostnadseffektivitet: 33% Direkte Besparelse på Infrastruktur</span></div>
                 `
@@ -761,7 +746,7 @@
                 "<strong>Dvalin infrastrukturportefølje:</strong> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.",
                 "<strong>NCS 2020:</strong> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.",
                 "<strong>MHWirth nettverksintegrasjon:</strong> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
-                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket från McAfee til MS Defender.",
+                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee to MS Defender.",
                 "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
                 "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
                 "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
@@ -785,7 +770,7 @@
                 "• <strong>Firewall & Security Operations:</strong> Managed large-scale network edge security, configuring and monitoring Nokia IP 220 appliances and over 350 Check Point firewalls.",
                 "• <strong>LAN/WAN Microsoft Migrations:</strong> Conducted full-lifecycle LAN/WAN architecture implementations built on enterprise Microsoft platforms.",
                 "• <strong>Clinical Research Operations:</strong> Managed IT operations, network uptime, and service desk compliance for Clinical Research Operations in Pune.",
-                "• <strong>R&D Regional Network Expansion:</strong> Successfully expanded critical R&D networks in Goa and Pune, and completed infrastructure deployment projects in Jammu."
+                "• <strong>R&D Regional Network Expansion:</strong> Successfully expanded critical R&D networks in Goa and Pune, and drove end-to-end LAN/WAN infrastructure deployment projects to completion."
             ],
             no: [
                 "• <strong>Eldre endepunktssikkerhet:</strong> Vellykket migrering av bedriftens nettverksendepunkter to Symantec Antivirus (SAV 9.0) sikkerhetsarkitektur.",
@@ -797,7 +782,7 @@
                 "• <strong>Brannmur- og sikkerhetsdrift:</strong> Administrerte storskala nettverksperimetersikkerhet, konfigurasjon og overvåking av Nokia IP 220-enheter og over 350 Check Point-brannmurer.",
                 "• <strong>LAN/WAN Microsoft-migreringer:</strong> Gjennomførte fullstendige LAN/WAN-arkitekturimplementeringer bygget på Microsoft-plattformer.",
                 "• <strong>Klinisk forskningsdrift:</strong> Administrerte IT-drift, nettverksoppetid og samsvar for klinisk forskningsdrift i Pune.",
-                "• <strong>Regional nettverksutvidelse:</strong> Vellykket utvidelse av kritiske FoU-nettverk i Goa og Pune, og utplassering av LAN/WAN-infrastruktur i Jammu."
+                "• <strong>Regional nettverksutvidelse:</strong> Vellykket utvidelse av kritiske FoU-nettverk i Goa og Pune, og utplassering av LAN/WAN-infrastruktur."
             ]
         };
 
@@ -822,7 +807,7 @@
                     bullets: [
                         "Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint in Pune.",
                         "Led Web Infrastructure and integration delivery tracks for Barclays Technology Solutions.",
-                        "Acted as Subject Matter Expert managing core routing, access controls, and security appliances across F5 BIG-IP, Bluecoat proxies, Infoblox DNS/IPAM, Linux clusters, Tumbleweed secure file transfers, and Fix‑Gateways.",
+                        "Acted as Subject Matter Expert managing core routing, access controls, and security appliances across F5 BIG-IP, Bluecoat proxies, Infoblox DNS/IPAM, Linux clusters, secure file transfers, and Fix‑Gateways.",
                         "Directed a 20-member high-performing engineering and technical team delivering BAU and transition support across US, EMEA, and APAC sectors.",
                         "Oversaw highly scalable infrastructure support systems, resolving between 500 to 1,000 daily L1/L2 incident interactions."
                     ]
@@ -834,7 +819,7 @@
                     bullets: [
                         "Served as Web Infrastructure Lead for highly regulated banking domain client systems.",
                         "Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.",
-                        "Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Tumbleweed, Infoblox, and Fixgateway boundaries."
+                        "Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Infoblox, and Fixgateway boundaries."
                     ]
                 },
                 {
@@ -892,7 +877,7 @@
                     bullets: [
                         "Etablerte og skalerte Barclays' primære Offshore Development Center (ODC) i Pune.",
                         "Ledet webinfrastruktur og integrasjonsleveranser for Barclays Technology Solutions.",
-                        "Fungerte som fagspesialist (SME) med ansvar for kjerne-routing, tilgangskontroll og sikkerhetsenheter på tvers av F5 BIG-IP, Bluecoat-proxies, Infoblox DNS/IPAM, Linux-klynger, Tumbleweed sikker filoverføring og Fix-Gateways.",
+                        "Fungerte som fagspesialist (SME) med ansvar for kjerne-routing, tilgangskontroll og sikkerhetsenheter på tvers av F5 BIG-IP, Bluecoat-proxies, Infoblox DNS/IPAM, Linux-klynger, sikker filoverføring og Fix-Gateways.",
                         "Ledet et team på 20 ingeniører som leverte BAU- og migreringsstøtte for regionene USA, EMEA og APAC.",
                         "Overvåket høyskalerbare infrastruktursystemer og håndterte mellom 500 og 1000 daglige L1/L2-hendelser."
                     ]
@@ -904,7 +889,7 @@
                     bullets: [
                         "Fungerte som leder for webinfrastruktur for strengt regulerte klientsystemer innen bank og finans.",
                         "Var kjerne-teknisk overføringsleder (Transition Lead) for Barclays Capital India.",
-                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Tumbleweed, Infoblox og Fixgateway."
+                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Infoblox og Fixgateway."
                     ]
                 },
                 {
@@ -997,6 +982,19 @@
                 { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger." }
             ]
         };
+
+        // SAFETY GATE OBFUSCATION ENGINE
+        function setupEmailObfuscation() {
+            const userVector = "contact";
+            const serverVector = "kunalv.me";
+            const combinedString = `${userVector}@${serverVector}`;
+            
+            document.querySelectorAll(".email-container").forEach(node => {
+                node.innerHTML = `<i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i> ${combinedString}`;
+            });
+            const printNode = document.querySelector(".print-email-node");
+            if (printNode) printNode.innerText = `✉ ${combinedString}`;
+        }
 
         function toggleLangDropdown() {
             document.getElementById("langDropdown").classList.toggle("hidden");
@@ -1094,16 +1092,22 @@
         function toggleVishwaChat() {
             const chatBox = document.getElementById('vishwa-chat-box');
             const chatIcon = document.getElementById('chat-icon');
+            const tooltip = document.getElementById('vishwa-tooltip');
+            
             chatBox.classList.toggle('active');
             
             if (chatBox.classList.contains('active')) {
                 chatIcon.setAttribute('data-lucide', 'chevron-down');
+                if(tooltip) tooltip.classList.add('hidden'); // Hide simple tooltip when open
             } else {
                 chatIcon.setAttribute('data-lucide', 'message-square');
+                if(tooltip) tooltip.classList.remove('hidden');
             }
             lucide.createIcons();
+            setTimeout(() => { setupEmailObfuscation(); }, 50);
         }
 
+        // TRAINED MODEL RETRIEVAL LOGIC
         async function sendQueryToVishwa() {
             const inputField = document.getElementById('chat-user-input');
             const messageText = inputField.value.trim();
@@ -1139,32 +1143,47 @@
             try {
                 await new Promise(resolve => setTimeout(resolve, 800)); 
                 
-                const lowercaseQuery = messageText.toLowerCase();
+                const query = messageText.toLowerCase();
                 let reply = "";
 
-                if (lowercaseQuery.includes("prompt") || lowercaseQuery.includes("engineering") || lowercaseQuery.includes("ai") || lowercaseQuery.includes("lab")) {
-                    reply = "Kunal is a certified Multi-AI Model Practitioner skilled at running optimized context-aware prompts in a personal AI LAB setup leveraging platforms like <strong>Chatplayground.ai and 1minAI</strong> to orchestrate cloud operations.";
+                if (query.includes("about") || query.includes("summary") || query.includes("profile") || query.includes("who is")) {
+                    reply = "Kunal Vishwakarma is an expert <strong>Datacenter SME & Infrastructure Architect</strong> with 20+ years of high-value technical delivery across Energy, Banking, and Pharmaceutical fields.";
                 }
-                else if (lowercaseQuery.includes("who is") || lowercaseQuery.includes("summary") || lowercaseQuery.includes("profile") || lowercaseQuery.includes("kunal")) {
-                    reply = "Kunal Vishwakarma is an expert <strong>Datacenter SME & Infrastructure Architect</strong> and Technical Project Manager with over 20 years of robust experience steering enterprise-level cloud migrations, infrastructure modernizations, and global operations.";
+                else if (query.includes("skills") || query.includes("expertise") || query.includes("competencies") || query.includes("tech stack")) {
+                    reply = "His foundational competencies map across <strong>Data Center Operations, Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Coordination, and Server Architecture</strong>.";
                 }
-                else if (lowercaseQuery.includes("contact") || lowercaseQuery.includes("email") || lowercaseQuery.includes("reach") || lowercaseQuery.includes("mail")) {
-                    reply = "You can officially contact Kunal via email at <a href='mailto:contact@kunalv.me' class='text-blue-400 underline'><strong>contact@kunalv.me</strong></a>.";
+                else if (query.includes("projects") || query.includes("milestones") || query.includes("deliveries")) {
+                    reply = "Key architecture achievements include over **30 global production line executions**, such as setting up primary Offshore Development Centers (ODCs) for Barclays and engineering multi-phase private cloud deployments.";
                 }
-                else if (lowercaseQuery.includes("whatsapp") || lowercaseQuery.includes("phone") || lowercaseQuery.includes("number") || lowercaseQuery.includes("mobile")) {
-                    reply = "You can instant-chat or reach Kunal directly over WhatsApp at <a href='https://wa.me/919819041919' target='_blank' class='text-green-400 underline'><strong>+91 98190 41919</strong></a> for urgent business engagements.";
+                else if (query.includes("experience") || query.includes("work history") || query.includes("corporation") || query.includes("cognizant") || query.includes("barclays")) {
+                    reply = "Kunal offers 20+ years of enterprise mastery. He currently leads execution as a Datacenter SME and Infrastructure Architect at **Cognizant Oil & Gas Consulting Services Norway** in Oslo, following high-level infrastructure leadership positions at Barclays Technology Solutions.";
                 }
-                else if (lowercaseQuery.includes("skills") || lowercaseQuery.includes("expertise") || lowercaseQuery.includes("expert in") || lowercaseQuery.includes("tech stack")) {
-                    reply = "Kunal's core execution capabilities include <strong>Data Center Operations, Infrastructure Projects, Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Management, and Server Architecture</strong>.";
+                else if (query.includes("white paper") || query.includes("case study") || query.includes("consolidation") || query.includes("savings")) {
+                    reply = "Kunal has authored extensive infrastructure cases, including a **Data Center Optimization program in Oslo** that moved 10 tons of physical hardware dependency with zero downtime, producing **$300K in annual operational savings**, and a 10PB datacenter decommissioning project that secured **33% direct efficiency gains**.";
                 }
-                else if (lowercaseQuery.includes("location") || lowercaseQuery.includes("live") || lowercaseQuery.includes("norway") || lowercaseQuery.includes("oslo")) {
-                    reply = "Kunal is currently based in <strong>Oslo, Norway</strong>, managing multi-datacenter transformations and hybrid cloud strategies.";
+                else if (query.includes("awards") || query.includes("appreciation") || query.includes("recognition")) {
+                    reply = "He has been highly recognized globally, holding the prestigious **GEM Award from Aker Solutions**, along with concurrent **Best Performer distinctions from Barclays Capital and Telenet Belgium**.";
                 }
-                else if (lowercaseQuery.includes("experience") || lowercaseQuery.includes("years") || lowercaseQuery.includes("work history") || lowercaseQuery.includes("cognizant") || lowercaseQuery.includes("barclays")) {
-                    reply = "He brings <strong>20+ years of IT excellence</strong> across highly regulated domains (Energy, Finance, Pharmaceuticals). He is currently a Datacenter SME / Infrastructure Architect at <strong>Cognizant Oil & Gas Consulting Services Norway</strong> (Oslo, Norway) and was previously a Technical Line Lead at <strong>Barclays Technology Solutions</strong> (Pune, India).";
+                else if (query.includes("credentials") || query.includes("certifications") || query.includes("certified")) {
+                    reply = "Kunal's technical credentials include **Azure Security Engineer Associate, Azure Administrator Associate, MCSE, MCP+I, and PRINCE2 Agile / ITIL validation parameters**.";
+                }
+                else if (query.includes("cv") || query.includes("resume") || query.includes("download") || query.includes("pdf")) {
+                    reply = "You can instantly access and generate Kunal's complete professional layout profile summary by clicking the **CV** action module located at the right side of the main navigation bar.";
+                }
+                else if (query.includes("contact") || query.includes("email") || query.includes("reach") || query.includes("mail")) {
+                    reply = "You can officially communicate with Kunal for enterprise consulting or global infrastructure engagements via his direct professional inbox channel at **contact@kunalv.me**.";
+                }
+                else if (query.includes("location") || query.includes("live") || query.includes("norway") || query.includes("oslo")) {
+                    reply = "Kunal is currently based permanently in **Oslo, Norway**, leading regional cloud integrations, datacenter expansions, and local consulting pipelines.";
+                }
+                else if (query.includes("linkedin")) {
+                    reply = "You can view Kunal's live corporate connection grid and check endorsement histories by accessing his direct network profile loop at **linkedin.com/in/kunalkv/en**.";
+                }
+                else if (query.includes("domain") || query.includes("industry") || query.includes("oil") || query.includes("gas") || query.includes("finance")) {
+                    reply = "His architecture deployment background spans highly regulated critical operations landscapes, specifically **Oil & Gas (Energy portfolios), Banking & Financial Services, and Global Pharmaceuticals**.";
                 }
                 else {
-                    reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's professional portfolio, background, and tech stack. Please ask me about his skills, projects, experience, or contact information!";
+                    reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's background. Try asking about his **About summary, Skills, Projects, Experience, White Papers, Awards, Credentials, CV, Contact parameters, Location, or LinkedIn profile**.";
                 }
 
                 document.getElementById('vishwa-loading-node').remove();
@@ -1204,20 +1223,13 @@
             const company = document.getElementById('viewerCompany').value;
             const email = document.getElementById('viewerEmail').value;
             
-            // ANTI-BOT INTERCEPT HANDSHAKE VALIDATION HANDLER
-            const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]').value;
-            if (!turnstileResponse) {
-                alert("Security Verification Required: Please complete the Cloudflare validation check before continuing.");
-                return;
-            }
-
             if(!email || !name || !company) return;
 
             // IMMEDIATE STYLING FEEDBACK ACTION LUX INTERFACES
             document.getElementById('cvTrackingForm').innerHTML = `
                 <div class="text-center py-6 space-y-2">
-                    <div class="text-green-500 font-bold text-sm">✓ Verification Successful</div>
-                    <p class="text-xs text-slate-400">Your secure transmission handshake has been logged. Preparing your print-ready document streams automatically...</p>
+                    <div class="text-green-500 font-bold text-sm">✓ Processing Request</div>
+                    <p class="text-xs text-slate-400">Downloading your single-page profile summary file automatically...</p>
                 </div>`;
 
             try {
@@ -1230,7 +1242,6 @@
                         name: name,
                         company: company,
                         email: email,
-                        "cf-turnstile-response": turnstileResponse,
                         message: `Kunal, an entry has just downloaded your CV profile summary.\n\nViewer Details:\nName: ${name}\nCompany: ${company}\nEmail: ${email}`
                     })
                 });
@@ -1238,14 +1249,16 @@
                 console.warn("Analytics engine fall-through.", err);
             }
 
-            closeDownloadModal();
-            const currentLang = document.getElementById("currentLang").innerText === 'Norsk' ? 'no' : 'en';
-            changeLanguage(currentLang);
-
-            // Left 450ms safety allocation context to let browser reset UI masks before layout render fires
+            // Closes modal and triggers a clean, hidden direct element download stream
             setTimeout(() => {
-                window.print();
-            }, 450);
+                closeDownloadModal();
+                const downloadLink = document.createElement('a');
+                downloadLink.href = 'Kunal_Vishwakarma_CV.pdf'; // Make sure your real PDF matches this exact filename in your web root directory!
+                downloadLink.download = 'Kunal_Vishwakarma_CV.pdf';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }, 1200);
         }
 
         window.onclick = function(event) {
@@ -1256,6 +1269,7 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             changeLanguage('en');
+            setupEmailObfuscation();
             handleLocalTrafficAnalyticsLog();
         });
     </script>
