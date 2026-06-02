@@ -25,11 +25,10 @@
     <meta property="twitter:description" content="20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter adoptions, and secure global hybrid architectures.">
     <meta property="twitter:image" content="https://kunalv.me/logo.png">
 
-    <!-- CORE PLATFORM SCRIPT INJECTIONS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <!-- Cloudflare Turnstile CAPTCHA Endpoint Interface Script -->
+    <!-- Cloudflare Turnstile CAPTCHA Validation Endpoint Script -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <style>
@@ -41,12 +40,13 @@
         .card-premium:hover { border-color: #3b82f6; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1); }
         .timeline-line { border-left: 2px solid #1e293b; }
         
+        /* Chatbot Custom Animation Styles */
         .chat-popup { transform: scale(0.9); opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
         .chat-popup.active { transform: scale(1); opacity: 1; pointer-events: auto; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* INTENSE MEDIA PRINT COMPRESSION SPECIFICATIONS PREVENTING PAGE OVERFLOW BYLIPS */
+        /* MAXIMUM OVERRIDE ENTERPRISE PRINT CONSTRAINTS LOCKING DATA UNTO A STANDALONE SINGLE PAGE */
         @media print {
             body > :not(#printableCV) { 
                 display: none !important; 
@@ -61,7 +61,7 @@
             }
             @page {
                 size: A4 portrait;
-                margin: 6mm 8mm 6mm 8mm !important;
+                margin: 5mm 6mm 5mm 6mm !important;
             }
             #printableCV { 
                 display: block !important; 
@@ -81,7 +81,7 @@
         }
     </style>
 
-    <!-- JSON-LD PROFESSIONAL PROFILE STRUCTURED DATA FOR GOOGLE INDEX ENGINE -->
+    <!-- JSON-LD PROFESSIONAL PROFILE STRUCTURED SCHEMA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -172,7 +172,7 @@
         </div>
     </div>
 
-    <!-- MAIN HERO VIEWPORT MODULE -->
+    <!-- MAIN PORTAL DISPLAY -->
     <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
@@ -185,8 +185,8 @@
                 <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
                     Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
-                <!-- RE-FRAMED REVISED PROMPT ENGINEERING PHRASE INJECTED HERE[cite: 3] -->
-                <div data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
+                <!-- RE-FRAMED REVISED PROMPT ENGINEERING PHRASE INJECTED HERE -->
+                <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
                     <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.
                 </div>
             </div>
@@ -228,7 +228,7 @@
         </div>
     </section>
 
-    <!-- CORE SKILLS SECTION (OH&S AND SLA COMPLETELY REMOVED)[cite: 3] -->
+    <!-- CORE SKILLS CONTAINER -->
     <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800">
         <div class="mb-12">
             <h2 data-i18n="skills-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -248,6 +248,10 @@
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="search" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-3" class="text-sm font-semibold text-slate-200">Root Cause Analysis (RCA)</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="terminal" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-4" class="text-sm font-semibold text-slate-200">Multi-AI Model Practitioner</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="git-branch" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
@@ -274,13 +278,16 @@
                 <span class="text-sm font-semibold text-slate-200">Server Architecture</span>
             </div>
             <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="database" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-11" class="text-sm font-semibold text-slate-200">AI LAB Architecture</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="hard-drive" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-12" class="text-sm font-semibold text-slate-200">Critical Data Center Operations</span>
             </div>
         </div>
     </section>
 
-    <!-- KEY PROJECTS SECTION -->
     <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
         <div class="mb-16">
             <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -290,9 +297,11 @@
                 Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.
             </p>
         </div>
+
         <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl shadow-sm">
             <ul id="main-project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-slate-300 leading-relaxed"></ul>
         </div>
+
         <div class="mt-8 mb-4">
             <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
                 <i data-lucide="archive" class="w-4 h-4"></i> <span data-i18n="hist-heading">Historical Core Infrastructure Deployments</span>
@@ -303,7 +312,6 @@
         </div>
     </section>
 
-    <!-- CORPORATE EXPERIENCE TIMELINE SECTION -->
     <section id="experience" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-6">
             <h2 data-i18n="exp-heading" class="text-3xl font-bold text-white mb-16 tracking-tight flex items-center gap-3">
@@ -313,7 +321,7 @@
         </div>
     </section>
 
-    <!-- CASE STUDIES AND TRANSLATION TARGET WRAPPERS -->
+    <!-- WHITE PAPERS AND CASE STUDIES (FULLY TRANSLATED MODULE TARGETS) -->
     <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6 space-y-8">
             <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -353,7 +361,6 @@
         </div>
     </section>
 
-    <!-- APPRECIATION GRID -->
     <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
         <div class="text-center space-y-3 mb-12">
             <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
@@ -366,7 +373,6 @@
         <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
     </section>
 
-    <!-- CREDENTIALS GRID -->
     <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="space-y-6">
@@ -443,12 +449,12 @@
                     <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
                 </div>
 
-                <!-- CLOUDFLARE SECURITY CHALLENGE API WIDGET -->
+                <!-- CLOUDFLARE TURNSTILE CAPTCHA CONTAINER -->
                 <div class="flex justify-center my-2">
-                    <div class="cf-turnstile" data-sitekey="YOUR_LIVE_CLOUDFLARE_SITE_KEY_HERE" data-theme="dark"></div>
+                    <div class="cf-turnstile" data-sitekey="YOUR_LIVE_CLOUDFLARE_PUBLIC_KEY" data-theme="dark"></div>
                 </div>
 
-                <!-- GDPR MANDATORY COMPLIANCE OPT-IN CHECKBOX -->
+                <!-- GDPR USER OPT-IN COMPLIANCE -->
                 <div class="flex items-start gap-2 my-2">
                     <input type="checkbox" id="gdprConsent" required class="mt-1 cursor-pointer">
                     <label for="gdprConsent" class="text-[10px] text-slate-400 select-none cursor-pointer">I consent to having my business contact details processed to log this CV file download request in accordance with EU privacy rules.</label>
@@ -462,20 +468,19 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- MATHEMATICALLY CRUSHED HARD CONSTRAINED 1-PAGE A4 RESUME LAYOUT -->
+    <!-- COMPRESSED PRINT LAYOUT SPECIFICATIONS TRAPPING TEXT INTO ONE STANDALONE PAGE -->
     <!-- ========================================== -->
-    <div id="printableCV" class="print:block hidden bg-white text-slate-900 text-[8px] font-sans leading-[1.15]">
+    <div id="printableCV" class="print:block hidden bg-white text-slate-900 p-2 w-full text-[8.2px] font-sans leading-tight">
         <!-- Header -->
         <div class="border-b-[1.5px] border-slate-800 pb-0.5 flex justify-between items-end">
             <div>
-                <h1 class="text-[15px] font-black tracking-tighter text-slate-950 uppercase leading-none">Kunal Vishwakarma</h1>
-                <p class="text-[9.5px] font-bold text-blue-700 uppercase tracking-wide mt-0.5">Datacenter SME & Infrastructure Architect</p>
+                <h1 class="text-[14px] font-black tracking-tighter text-slate-950 uppercase leading-none">Kunal Vishwakarma</h1>
+                <p class="text-[9px] font-bold text-blue-700 uppercase tracking-wide mt-0.5">Datacenter SME & Infrastructure Architect</p>
             </div>
-            <div class="text-[7.5px] font-extrabold text-slate-400 tracking-widest uppercase pb-0.5">Profile Summary</div>
         </div>
 
-        <!-- Contact details row -->
-        <div class="py-1 border-b border-slate-200 text-[8px] font-semibold text-slate-600 flex justify-between items-center">
+        <!-- Clean Consolidated Contact Bar -->
+        <div class="py-1 border-b border-slate-200 text-[8px] font-semibold text-slate-600 flex justify-between items-center flex-wrap gap-1">
             <div>✉ contact@kunalv.me</div>
             <div class="text-slate-300">|</div>
             <div>📍 Oslo, Norway</div>
@@ -485,15 +490,15 @@
             <div>🌐 kunalv.me</div>
         </div>
 
-        <!-- Profile summary prose block -->
+        <!-- Summary -->
         <div class="my-1.5">
             <p class="text-slate-700 text-justify text-[8.2px] leading-normal">
-                Migration Lead and Infrastructure Architect with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial boundaries[cite: 3]. Proven track record managing multi-million dollar asset movements, industrial OT network hardening, and zero-downtime consolidations across Energy, Banking, and Pharmaceutical fields[cite: 3]. Expert at engineering context-aware prompts across various LLMs within a private AI LAB deployment loop to optimize operational support frameworks.
+                Migration Lead and Infrastructure Architect with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial boundaries. Proven track record managing multi-million dollar asset movements, industrial OT network hardening, and zero-downtime consolidations across Energy, Banking, and Pharmaceutical fields. Skilled in context-aware prompt designs across multiple LLMs to enable automated infrastructure flows.
             </p>
         </div>
 
         <div class="grid grid-cols-3 gap-3 items-start">
-            <!-- Left Grid Layout Pillar: Intact Restored Timeline Profiles[cite: 3] -->
+            <!-- Left Side: Experience & Projects -->
             <div class="col-span-2 space-y-2">
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Corporate Experience</h2>
@@ -503,23 +508,23 @@
                                 <span class="text-[8.5px]">Datacenter SME / Infrastructure Architect</span>
                                 <span class="text-[7.5px] text-slate-400 font-medium">2019 — Present</span>
                             </div>
-                            <div class="text-[7.5px] font-bold text-slate-500 uppercase tracking-tight mt-0.5">Cognizant Oil & Gas Consulting Services | Oslo, Norway[cite: 3]</div>
+                            <div class="text-[7.5px] font-bold text-slate-500 uppercase mt-0.5">Cognizant Oil & Gas Consulting Services | Oslo, Norway</div>
                             <ul class="list-none ml-1 mt-0.5 text-slate-700 text-[8px] space-y-0.5">
-                                <li>• Drive Azure hybrid cloud adoption roadmaps and multi-tenant structural alignments inside DevOps dashboards[cite: 3].</li>
-                                <li>• Govern migration tracking blocks, author infrastructure runbooks, and manage enterprise RAID logs[cite: 3].</li>
-                                <li>• Audit regional scoping footprints, evaluate computing asset architectures, and validate technical SoW metrics[cite: 3].</li>
+                                <li>• Steer Azure hybrid cloud adoption pipelines and multi-tenant alignments inside DevOps dashboards.</li>
+                                <li>• Govern migration tracking blocks, author infrastructure runbooks, and manage enterprise RAID logs.</li>
+                                <li>• Audit regional scoping footprints, evaluate hardware cost metrics, and validate technical SoW parameters.</li>
                             </ul>
                         </div>
                         <div>
                             <div class="flex justify-between font-bold text-slate-950 leading-none">
-                                <span class="text-[8.5px]">Technical Line Lead / Associate Operations Manager</span>
+                                <span class="text-[8.5px]">Technical Line Lead / Assoc. Operations Manager</span>
                                 <span class="text-[7.5px] text-slate-400 font-medium">2013 — 2019</span>
                             </div>
-                            <div class="text-[7.5px] font-bold text-slate-500 uppercase tracking-tight mt-0.5">Cognizant Technology Solutions | Pune, India[cite: 3]</div>
+                            <div class="text-[7.5px] font-bold text-slate-500 uppercase mt-0.5">Cognizant Technology Solutions | Pune, India</div>
                             <ul class="list-none ml-1 mt-0.5 text-slate-700 text-[8px] space-y-0.5">
-                                <li>• Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint in Pune[cite: 3].</li>
-                                <li>• Web Infrastructure SME managing core global routing matrices, F5 BIG-IP lines, and secure proxy clusters[cite: 3].</li>
-                                <li>• Supervised engineering squads across international sectors, mitigating critical infrastructure incident blocks[cite: 3].</li>
+                                <li>• Successfully established and scaled Barclays' primary Offshore Development Center footprint in India.</li>
+                                <li>• Served as global Web Infrastructure SME managing routing, access controls, F5 BIG-IP, and proxy clusters.</li>
+                                <li>• Directed engineering squads delivering core transition operations and critical L1/L2 incident remediation tracks.</li>
                             </ul>
                         </div>
                         <div>
@@ -527,11 +532,10 @@
                                 <span class="text-[8.5px]">Technical Consultant & Project Lead</span>
                                 <span class="text-[7.5px] text-slate-400 font-medium">2005 — 2012</span>
                             </div>
-                            <div class="text-[7.5px] font-bold text-slate-500 uppercase tracking-tight mt-0.5">Einfotek, Compucom & Ashtech Infotech | International[cite: 3]</div>
+                            <div class="text-[7.5px] font-bold text-slate-500 uppercase mt-0.5">Einfotek, Compucom & Ashtech Infotech | International</div>
                             <ul class="list-none ml-1 mt-0.5 text-slate-700 text-[8px] space-y-0.5">
-                                <li>• Managed strategic, multi-phase server migrations processing 100+ active production profiles for Walmart[cite: 3].</li>
-                                <li>• Supervised banking network transition support boundaries across secure application fix-gateways[cite: 3].</li>
-                                <li>• Tracked asset equipment procurement accounts, licensing frameworks, and edge threat logging monitors[cite: 3].</li>
+                                <li>• Managed multi-phase tactical server migration blocks processing 100+ active production profiles for Walmart.</li>
+                                <li>• Tracked asset equipment procurements, lifecycle budget lines, software licenses, and perimeter firewall setups.</li>
                             </ul>
                         </div>
                     </div>
@@ -540,14 +544,14 @@
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Key Project Highlights</h2>
                     <ul class="space-y-1 text-slate-700 text-justify text-[8px] leading-tight">
-                        <li>• <strong class="text-slate-900">Data Center Optimization (Oslo Site):</strong> Shifted ~10 tons of hardware dependencies (14 HPE Enclosures, 50 Servers, 12 Racks) with absolute zero disruption blocks, delivering <strong class="text-slate-900">$300K in annual cost savings</strong>[cite: 3].</li>
-                        <li>• <strong class="text-slate-900">US-2 Datacenter Decommissioning:</strong> Directed four-stage blueprint migration processing 10PB storage volumes, scoring a documented <strong class="text-slate-900">33% direct savings asset yield</strong>[cite: 3].</li>
-                        <li>• <strong class="text-slate-900">Industrial OT Network Hardening:</strong> Built isolated DMZ parameters and cross-vendor VPN isolation barriers to secure lateral endpoints across manufacturing lines[cite: 3].</li>
+                        <li>• <strong class="text-slate-900">Data Center Optimization (Oslo Site):</strong> Relocated ~10 tons of hardware dependencies (14 HPE Enclosures, 50 Servers, 12 Racks) with zero disruption blocks, delivering <strong class="text-slate-900">$300K in annual cost savings</strong>.</li>
+                        <li>• <strong class="text-slate-900">US-2 Datacenter Decommissioning:</strong> Directed four-stage blueprint migration processing 10PB core data volumes, scoring a documented <strong class="text-slate-900">33% direct saving</strong>.</li>
+                        <li>• <strong class="text-slate-900">Industrial OT Network Hardening:</strong> Built isolated DMZ parameters and cross-vendor VPN isolation barriers to secure lateral endpoints across manufacturing lines.</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Right Side Grid Pillar: Core Competency Badges & Credentials List -->
+            <!-- Right Side: Skills & Certifications -->
             <div class="space-y-2">
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Core Competencies</h2>
@@ -563,34 +567,33 @@
                     </div>
                 </div>
 
-                <!-- ALL CISCO CCNA AND REGIONAL NETWORKING CODES PERMANENTLY SCRUBBED[cite: 3] -->
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Technical Credentials</h2>
                     <ul class="space-y-0.5 font-bold text-[7.5px] text-slate-700 uppercase tracking-tight">
-                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> Azure Security Engineer[cite: 3]</li>
-                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> Azure Administrator[cite: 3]</li>
-                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> MCSE / MCP+I / MCP[cite: 3]</li>
-                        <li class="flex items-center gap-1"><span class="text-[#5b21b6] text-[6px]">■</span> PRINCE2 Agile® / ITIL[cite: 3]</li>
-                        <li class="flex items-center gap-1"><span class="text-[#cc0000] text-[6px]">■</span> Cyber Security - Gov of India[cite: 3]</li>
-                        <li class="flex items-center gap-1"><span class="text-[#eab308] text-[6px]">■</span> BICSI Data Center Infra[cite: 3]</li>
-                        <li class="flex items-center gap-1"><span class="text-[#64748b] text-[6px]">■</span> CISM / CISSP Training[cite: 3]</li>
+                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> Azure Security Engineer</li>
+                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> Azure Administrator</li>
+                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> MCSE / MCP+I / MCP</li>
+                        <li class="flex items-center gap-1"><span class="text-[#5b21b6] text-[6px]">■</span> PRINCE2 Agile® / ITIL</li>
+                        <li class="flex items-center gap-1"><span class="text-[#cc0000] text-[6px]">■</span> Cyber Security - Gov of India</li>
+                        <li class="flex items-center gap-1"><span class="text-[#eab308] text-[6px]">■</span> BICSI Data Center Infra</li>
+                        <li class="flex items-center gap-1"><span class="text-[#64748b] text-[6px]">■</span> CISM / CISSP Training</li>
                     </ul>
                 </div>
 
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Key Awards</h2>
                     <ul class="space-y-0.5 text-slate-700 font-bold text-[7.8px] leading-tight">
-                        <li>🏆 <strong class="text-slate-900">GEM Award</strong> - Aker Solutions[cite: 3]</li>
-                        <li>⭐ <strong class="text-slate-900">Best Performer</strong> - Barclays Capital[cite: 3]</li>
-                        <li>🌟 <strong class="text-slate-900">Best Performer</strong> - Telenet Belgium[cite: 3]</li>
-                        <li>💡 <strong class="text-slate-900">Best Innovation</strong> - SaiTech Project[cite: 3]</li>
+                        <li>🏆 <strong class="text-slate-900">GEM Award</strong> - Aker Solutions</li>
+                        <li>⭐ <strong class="text-slate-900">Best Performer</strong> - Barclays Capital</li>
+                        <li>🌟 <strong class="text-slate-900">Best Performer</strong> - Telenet Belgium</li>
+                        <li>💡 <strong class="text-slate-900">Best Innovation</strong> - SaiTech Project</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- VISHWA AI CONVERSATIONAL PLATFORM -->
+    <!-- Vishwa AI Chatbot -->
     <div class="fixed bottom-6 right-6 z-50">
         <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none">
             <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
@@ -610,7 +613,9 @@
                         <p class="text-[10px] text-slate-400 font-medium">Profile Assistant Bot</p>
                     </div>
                 </div>
-                <button onclick="toggleVishwaChat()" class="text-slate-400 hover:text-white transition"><i data-lucide="x" class="w-4 h-4"></i></button>
+                <button onclick="toggleVishwaChat()" class="text-slate-400 hover:text-white transition">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
             </div>
 
             <div id="chat-messages-container" class="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-hide text-xs">
@@ -631,7 +636,6 @@
         </div>
     </div>
 
-    <!-- CORE LOCALIZATION DICTIONARY AND INTERACTIVE HANDLERS -->
     <script>
         const translations = {
             en: {
@@ -643,7 +647,7 @@
                 "count-exp": "Years IT Experience", "count-del": "Global Deliveries", "count-usr": "Worldwide Data Centers", "count-dat": "Locations Worldwide Support",
                 "domain-title": "Domain Experience",
                 "skills-title": "Core Skills", "skills-desc": "Foundational execution capabilities across mission-critical technical domains.",
-                "skill-1": "Data Center Operations", "skill-2": "Project Management", "skill-3": "Root Cause Analysis (RCA)", "skill-5": "Infrastructure Projects", "skill-6": "Vendor Management", "skill-7": "Risk Mitigation", "skill-8": "Capacity Planning & Scheduling", "skill-9": "Budget Tracking", "skill-10": "Server Architecture", "skill-12": "Critical Data Center Operations",
+                "skill-1": "Data Center Operations", "skill-2": "Project Management", "skill-3": "Root Cause Analysis (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastructure Projects", "skill-6": "Vendor Management", "skill-7": "Risk Mitigation", "skill-8": "Capacity Planning & Scheduling", "skill-9": "Budget Tracking", "skill-10": "Server Architecture", "skill-11": "AI LAB Architecture", "skill-12": "Critical Data Center Operations",
                 "proj-heading": "Key Projects", "proj-lead-desc": "Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.",
                 "hist-heading": "Historical Core Infrastructure Deployments",
                 "exp-heading": "Corporate Experience", "awards-heading": "Appreciation & Awards", "awards-desc": "Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.",
@@ -651,13 +655,39 @@
                 "wp-heading": "White Papers & Case Studies",
                 "traffic-text": "Live Traffic Counter:",
                 
-                "cs1-tag": "Energy Enterprise", "cs1-loc": "Norway Site", "cs1-title": "Data Center Optimization Case Study", "cs1-sub": "Zero‑Downtime Consolidation Delivering $300K Annual Savings",
-                "cs1-body": `<p><strong class="text-blue-400">Overview:</strong> Strategic compression of IT baseline costs across two Oslo data center modules inside an explicit 4-month deadline window. Overseered clean relocation tracks for ~10 tons of hardware with zero disruption blocks to active SAP operations.</p>`,
+                // Case Study 1 English
+                "cs1-tag": "Energy Enterprise", "cs1-loc": "Norway Site",
+                "cs1-title": "Data Center Optimization Case Study",
+                "cs1-sub": "Zero‑Downtime Consolidation Delivering $300K Annual Savings",
+                "cs1-body": `
+                    <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission‑critical services. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the end Grandma program across two facilities in Oslo, Norway.</p>
+                    <p>The initiative delivered ~$300K annual savings, optimized physical footprint, and achieved zero business disruption.</p>
+                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End‑to‑end program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
+                    <p><strong class="text-blue-400">Business Challenge:</strong> The client operated two primary data centers located 5 km apart. Rising operational costs and an expiring facility lease required consolidation of the secondary data center’s extension room inside a strict 4-month deadline window. Handled relocation of ~10 tons of aging hardware with no OEM assurance and mandatory zero-downtime demands for active SAP, NAS, and PKI services.</p>
+                    <p><strong class="text-blue-400">Infrastructure Landscape:</strong> Managed migration parameters across critical hosted workloads including SAP Mission-Critical Block Storage, Primary NAS File Services for ~5,000 daily users, PKI Security Infrastructure, Video Conferencing Systems, and Backup Environments (Tape Library + Disk Backup).</p>
+                    <p><strong class="text-blue-400">Approach & Methodology:</strong> Executed breakdown steps into clean tasks with a mandatory four-eye review process for all change workflows. Designed specific temporary Disaster Recovery (DR) mode parameters to safeguard uninterrupted availability blocks.</p>
+                    <p><strong class="text-blue-400">Execution Highlights:</strong> Mainviered zero business outage loops during storage block migrations. Successfully coordinated logistical secure tracks shifting <strong>14 HPE Enclosures, 50 Servers, 3 Large ESL Tape Libraries, 10 Full Storage Racks, and 2 Racks of Network Equipment</strong>.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Business Impact: ~$300K Annual Savings & Optimized Rack Utilization</span></div>
+                `,
 
                 "cs2-tag": "Hybrid Migration", "cs2-loc": "US-2 Site",
                 "cs2-title": "US-2 Datacenter Decommissioning & Hybrid Migration",
                 "cs2-sub": "Data Center Decommissioning & Multi-Application Architecture Shift",
-                "cs2-body": `<p><strong class="text-blue-400">Requirement:</strong> Systematically decommission aging US-2 Datacenter infrastructure and manage structured live migration tracks for 10PB core storage architectures to targeted hybrid clouds with zero visibility outages.</p>`,
+                "cs2-body": `
+                    <p><strong class="text-blue-400">Requirement:</strong> Decommission aging US-2 Datacenter footprint and migrate all core workloads safely to local datarooms and global destinations with zero downtime window targets.</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-2.png" alt="US-2 Migration Approach Blueprint" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 1: Executed Four-Stage Strategic Migration Roadmap Blueprint</p>
+                    </div>
+                    <p><strong class="text-blue-400">Approach & Readiness:</strong> Engineered high-availability parameters including 10PB core storage architectures, isolated DMZ boundaries, server network racks, unified UPS protection blocks, and optimized Internet/MPLS connections. Completed migration sequences for 5 critical internal application stacks (*Promap data loops, SCCM deployment nodes, RightFax architectures, Penta Mobile, Karadex frameworks*).</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-1.png" alt="US-2 Executed Features and Benefits" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 2: Corporate Integration Features & Post-Migration Yield Matrix</p>
+                    </div>
+                    <p><strong class="text-blue-400">Execution Management:</strong> Managed robust cross-functional dependencies requiring 20+ high-performance SMEs, 350+ Webex technical logs, and 500+ secure correspondence lines. Shuffled operations post-business hours and within summer vacation cycles to safely bypass strict AKSO change-freezes.</p>
+                    <p><strong class="text-blue-400">Outcomes:</strong> Delivered full structural transformation yields including an explicit 33% direct saving over transparent network architecture gear profiles, dropped ongoing server support overheads, and deployed automated off-site cloud replication topologies.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Financial Efficiency: 33% Direct Infrastructure Savings</span></div>
+                `,
 
                 "cs3-tag": "Security Case Study", "cs3-loc": "OT Industry",
                 "cs3-title": "Industrial OT Network Hardening & Isolation Perimeters",
@@ -665,6 +695,7 @@
                 "cs3-body": `
                     <p><strong class="text-blue-400">Requirement:</strong> Remediate lateral vulnerability points across connected operational technology (OT) systems inside high-capacity manufacturing facilities.</p>
                     <p><strong class="text-blue-400">Approach:</strong> Modeled deep security infrastructure dependencies, building localized multi-vendor VPN framework integrations and hard-segmented data center perimeter barriers.</p>
+                    <p><strong class="text-blue-400">Execution Loop:</strong> Deployed extensive traffic analyzers logging Nokia and Check Point appliance flows to trace active threat vectors without stalling active line assemblies.</p>
                     <p><strong class="text-blue-400">Outcomes:</strong> Enhanced overall infrastructure reliability metrics while provisioning fully compliant audit frameworks across strict security borders.</p>`
             },
             no: {
@@ -676,23 +707,48 @@
                 "count-exp": "Års IT-erfaring", "count-del": "Globale leveranser", "count-usr": "Globale Datasentre", "count-dat": "Lokasjoner Global Support",
                 "domain-title": "Bransjeerfaring",
                 "skills-title": "Kjernekompetanse", "skills-desc": "Grunnleggende gjennomføringsevne innenfor forretningskritiske tekniske domener.",
-                "skill-1": "Datasenterdrift (DC Ops)", "skill-2": "Prosjektledelse", "skill-3": "Feilsøking & Rotårsaksanalyse (RCA)", "skill-5": "Infrastrukturprosjekter", "skill-6": "Leverandørstyring (Vendor Mgmt)", "skill-7": "Risikoavlastning & Reduksjon", "skill-8": "Kapasitetsplanlegging", "skill-9": "Budsjettsporing", "skill-10": "Serverarkitektur", "skill-12": "Kritisk Datasenterdrift",
+                "skill-1": "Datasenterdrift (DC Ops)", "skill-2": "Prosjektledelse", "skill-3": "Feilsøking & Rotårsaksanalyse (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastrukturprosjekter", "skill-6": "Leverandørstyring (Vendor Mgmt)", "skill-7": "Risikoavlastning & Reduksjon", "skill-8": "Kapasitetsplanlegging", "skill-9": "Budsjettsporing", "skill-10": "Serverarkitektur", "skill-11": "AI LAB Architecture", "skill-12": "Kritisk Datasenterdrift",
                 "proj-heading": "Hovedprosjekter", "proj-lead-desc": "Høydepunkter fra ende-til-ende skymigreringer, nettverksintegrasjoner, perimetre og datasenter-transformasjoner levert globalt.",
                 "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
                 "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
                 "cert-title": "Tekniske Sertifiseringer",
-                "wp-heading": "Hvitbøker & Kasusstudier",
+                "wp-heading": "White Papers & Case Studies",
                 "traffic-text": "Besøksstatistikk:",
                 
-                "cs1-tag": "Energibedrift", "cs1-loc": "Norge Lokasjon", "cs1-title": "Kasusstudie: Datasenter-optimalisering", "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
-                "cs1-body": `<p><strong class="text-blue-400">Oversikt:</strong> Strategisk reduksjon i IT-driftskostnader for to datasentre i Oslo, utført uten avbrudd for forretningskritiske SAP-tjenester under en streng 4-måneders tidsfrist. Coordinated flytting av 10 tonn maskinvare.</p>`,
+                // Case Study 1 Norwegian
+                "cs1-tag": "Energibedrift", "cs1-loc": "Norge Lokasjon",
+                "cs1-title": "Kasusstudie: Datasenter-optimalisering",
+                "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
+                "cs1-body": `
+                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjengelighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
+                    <p>Initiativet ga ~$300K i årlige besparelser, optimaliserte det fysiske fotavtrykket og ble fullført uten avbrudd for virksomheten.</p>
+                    <p><strong class="text-blue-400">Min rolle:</strong> Kombinert <strong>Datasenter-SME</strong> (In-situ validering av infrastruktur, kabling, rack-utforming, avhengighetskartlegging og fysisk oppfølging) og <strong>Teknisk prosjektleder</strong> (Ende-til-ende programstyring, utarbeidelse av kjøreplaner/runbooks og koordinering på tvers av lagrings-, nettverks-, og sikkerhetsteam).</p>
+                    <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebibliotek, 10 fulle lagringsracks og 2 nettverksracks.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Gevinst: ~$300 000 i årlige driftsbesparelser og optimalisert rack-utnyttelse</span></div>
+                `,
 
-                "cs2-tag": "Hybrid Migrering", "cs2-loc": "US-2 Lokasjon", "cs2-title": "US-2 Datasenter Avvikling & Hybrid Migrering",
+                "cs2-tag": "Hybrid Migrering", "cs2-loc": "US-2 Lokasjon",
+                "cs2-title": "US-2 Datasenter Avvikling & Hybrid Migrering",
                 "cs2-sub": "Datasenteravvikling & Arkitektonisk Skifte for Multi-Applikasjoner",
-                "cs2-body": `<p><strong class="text-blue-400">Krav:</strong> Avvikle det eldre US-2-datasenteret og migrere 10PB kjerneinfrastruktur og komplekse applikasjonsstabler sikkert til skyen med null nedetid.</p>`,
-
-                "cs3-tag": "Sikkerhet Studie", "cs3-loc": "OT Industri", "cs3-title": "Industriell OT Nettverksherding & Isolasjon",
-                "cs3-sub": "Infrastrukturforsvar & Tverrleverandørintegrasjon",
+                "cs2-body": `
+                    <p><strong class="text-blue-400">Krav:</strong> Avvikle det eldre US-2-datasenteret og migrere alle kjernekomponenter sikkert to lokale dedikerte datarom og globale datasentre med null nedetid for applikasjoner.</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-2.png" alt="US-2 Veikart for migrering" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 1: Strategisk firetrinns veikart for migreringsforløpet</p>
+                    </div>
+                    <p><strong class="text-blue-400">Metode & Klargjøring:</strong> Etablerte dedikerte 10PB lagringsstrukturer, isolerte DMZ-soner, nettverksracks, UPS-rammeverk og doble Internett/MPLS-linjer. Fullførte migrering for 5 interne kjerneapplikasjoner (*Promap datamigrering, SCCM, RightFax, Penta Mobile, Karadex*).</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-1.png" alt="US-1 Kjernefunksjoner og fordeler" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 2: Arkitektoniske funksjoner og operasjonelle resultater</p>
+                    </div>
+                    <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) gjennom 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen ble utført etter arbeidstid og i sommerferien for å omgå aktive AKSO endringsfrys-perioder.</p>
+                    <p><strong class="text-blue-400">Resultat:</strong> Oppnådde 33% direkte kostnadsbesparelse på nettverksutstyr, reduserte løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Kostnadseffektivitet: 33% Direkte Besparelse på Infrastruktur</span></div>
+                `,
+                
+                "cs3-tag": "Sikkerhetsstudie", "cs3-loc": "OT-Industri",
+                "cs3-title": "Industriell OT-nettverksherding og isolasjonsperimeter",
+                "cs3-sub": "Infrastrukturforsvar og tverrleverandørintegrasjon",
                 "cs3-body": `
                     <p><strong class="text-blue-400">Krav:</strong> Utbedre laterale sårbarheter i tilkoblede operasjonelle teknologisystemer (OT) i produksjonsanlegg.</p>
                     <p><strong class="text-blue-400">Metode:</strong> Modellerte dype avhengigheter og etablerte herdede, segmenterte perimetre og VPN-rammeverk.</p>
@@ -702,75 +758,75 @@
 
         const keyProjects = {
             en: [
-                "<strong>Led the setup of ODCs</strong> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding.[cite: 3]",
-                "<strong>Network Optimization & Security Architecture:</strong> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade.[cite: 3]",
-                "<strong>HCC & HCD United States:</strong> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud.[cite: 3]",
-                "<strong>Product LAB Deployment:</strong> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom.[cite: 3]",
-                "<strong>Russia LED Site:</strong> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia.[cite: 3]",
-                "<strong>3PA Cloud Solutions:</strong> Managed the design and end-to-end deployment of an Azure B2B solution architecture.[cite: 3]",
-                "<strong>OneDrive Migration:</strong> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud.[cite: 3]",
-                "<strong>Dvalin Infrastructure Portfolio:</strong> Handled complex network delivery projects and physical branch office expansions.[cite: 3]",
-                "<strong>NCS 2020:</strong> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB.[cite: 3]",
-                "<strong>MHWirth Network Integration:</strong> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement.[cite: 3]",
-                "<strong>MS Defender Enterprise Rollout:</strong> Spearheaded the legacy security decommission by migrating the global footprint from McAfee to MS Defender.[cite: 3]",
-                "<strong>Veidekke Cloud Migration:</strong> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud.[cite: 3]",
-                "<strong>MHWirth Unified Endpoint Management:</strong> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets.[cite: 3]",
-                "<strong>MHWirth SAP Fiori Delivery:</strong> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure.[cite: 3]",
-                "<strong>Norway Datacenter Decommission:</strong> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration.[cite: 3]",
-                "<strong>KOP-IT Malaysia Tenants:</strong> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant.[cite: 3]",
-                "<strong>Enterprise Visitor System:</strong> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices.[cite: 3]",
-                "<strong>AKER Tech House Security:</strong> Designed and implemented physical IT security infrastructure, network topologies, and access control environments.[cite: 3]",
-                "<strong>Branch Office Decommissions:</strong> Program managed the logistical and technical decommissioning of 10 international branch office locations.[cite: 3]",
-                "<strong>HMH Global Expansion:</strong> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework.[cite: 3]"
+                "<strong>Led the setup of ODCs</strong> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding.",
+                "<strong>Network Optimization & Security Architecture:</strong> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade.",
+                "<strong>HCC & HCD United States:</strong> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud.",
+                "<strong>Product LAB Deployment:</strong> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom.",
+                "<strong>Russia LED Site:</strong> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia.",
+                "<strong>3PA Cloud Solutions:</strong> Managed the design and end-to-end deployment of an Azure B2B solution architecture.",
+                "<strong>OneDrive Migration:</strong> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud.",
+                "<strong>Dvalin Infrastructure Portfolio:</strong> Handled complex network delivery projects and physical branch office expansions.",
+                "<strong>NCS 2020:</strong> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB.",
+                "<strong>MHWirth Network Integration:</strong> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement.",
+                "<strong>MS Defender Enterprise Rollout:</strong> Spearheaded the legacy security decommission by migrating the global footprint from McAfee to MS Defender.",
+                "<strong>Veidekke Cloud Migration:</strong> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud.",
+                "<strong>MHWirth Unified Endpoint Management:</strong> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets.",
+                "<strong>MHWirth SAP Fiori Delivery:</strong> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure.",
+                "<strong>Norway Datacenter Decommission:</strong> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration.",
+                "<strong>KOP-IT Malaysia Tenants:</strong> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant.",
+                "<strong>Enterprise Visitor System:</strong> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices.",
+                "<strong>AKER Tech House Security:</strong> Designed and implemented physical IT security infrastructure, network topologies, and access control environments.",
+                "<strong>Branch Office Decommissions:</strong> Program managed the logistical and technical decommissioning of 10 international branch office locations.",
+                "<strong>HMH Global Expansion:</strong> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework."
             ],
             no: [
-                "<strong>Ledet etableringen av ODC-er</strong> i Pune, Mumbai og Chennai, inkludert klargjøring av infrastruktur, tilgangsstyring og onboarding av personell.[cite: 3]",
-                "<strong>Nettverksoptimalisering og sikkerhetsarkitektur:</strong> Vellykket styring av nettverksoptimaliseringsprosjektet sammen med en omfattende global proxy-oppgradering.[cite: 3]",
-                "<strong>HCC & HCD USA:</strong> Ledet flerfasede datasenter-optimaliseringstiltak og gjennomførte storskala migreringer til Azure Cloud.[cite: 3]",
-                "<strong>Distribusjon av produkt-LAB:</strong> Arkitterte og distribuerte en dedikert, høysikkerhets on-site produkt-LAB hos en nøkkelkunde i Storbritannia.[cite: 3]",
-                "<strong>Russland LED-lokasjon:</strong> Orkestrerte ende-til-ende IT-infrastruktur og nettverksoppsett for et nytt internasjonalt avdelingskontor i Russland.[cite: 3]",
-                "<strong>3PA skyløsninger:</strong> Administrerte design og ende-til-ende distribusjon av en Azure B2B-løsningsarkitektur.[cite: 3]",
-                "<strong>OneDrive-migrering:</strong> Overvåket sømløs datamigrering av eldre, lokalt brukerlagring (on-premises) til Azure Cloud.[cite: 3]",
-                "<strong>Dvalin infrastrukturportefølje:</strong> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.[cite: 3]",
-                "<strong>NCS 2020:</strong> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.[cite: 3]",
-                "<strong>MHWirth nettverksintegrasjon:</strong> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.[cite: 3]",
-                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket från McAfee til MS Defender.[cite: 3]",
-                "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.[cite: 3]",
-                "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.[cite: 3]",
-                "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.[cite: 3]",
-                "<strong>Datasenter-utfasing i Norge:</strong> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.[cite: 3]",
-                "<strong>KOP-IT Malaysia:</strong> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.[cite: 3]",
-                "<strong>Besøkssystem for bedrifter:</strong> Implementerte automatiserte, kioskbaserte fysiske besøksløsninger på tvers av primære hovedkontorer.[cite: 3]",
-                "<strong>AKER Tech House sikkerhet:</strong> Designet og implementerte fysisk IT-sikkerhetsinfrastruktur, nettverkstopologier og adgangskontrollmiljøer.[cite: 3]",
-                "<strong>Avvikling av avdelingskontorer:</strong> Programledet den logistiske og tekniske avviklingen av 10 internasjonale avdelingskontorer.[cite: 3]",
-                "<strong>HMH global ekspansjon:</strong> Ledet klargjøring av lokasjon for et nytt avdelingskontor kombinert med et samtidig migreringsrammeverk til Azure.[cite: 3]"
+                "<strong>Ledet etableringen av ODC-er</strong> i Pune, Mumbai og Chennai, inkludert klargjøring av infrastruktur, tilgangsstyring og onboarding av personell.",
+                "<strong>Nettverksoptimalisering og sikkerhetsarkitektur:</strong> Vellykket styring av nettverksoptimaliseringsprosjektet sammen med en omfattende global proxy-oppgradering.",
+                "<strong>HCC & HCD USA:</strong> Ledet flerfasede datasenter-optimaliseringstiltak og gjennomførte storskala migreringer til Azure Cloud.",
+                "<strong>Distribusjon av produkt-LAB:</strong> Arkitterte og distribuerte en dedikert, høysikkerhets on-site produkt-LAB hos en nøkkelkunde i Storbritannia.",
+                "<strong>Russland LED-lokasjon:</strong> Orkestrerte ende-til-ende IT-infrastruktur og nettverksoppsett for et nytt internasjonalt avdelingskontor i Russland.",
+                "<strong>3PA skyløsninger:</strong> Administrerte design og ende-til-ende distribusjon av en Azure B2B-løsningsarkitektur.",
+                "<strong>OneDrive-migrering:</strong> Overvåket sømløs datamigrering av eldre, lokalt brukerlagring (on-premises) til Azure Cloud.",
+                "<strong>Dvalin infrastrukturportefølje:</strong> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.",
+                "<strong>NCS 2020:</strong> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.",
+                "<strong>MHWirth nettverksintegrasjon:</strong> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
+                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee to MS Defender.",
+                "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
+                "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
+                "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
+                "<strong>Datasenter-utfasing i Norge:</strong> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.",
+                "<strong>KOP-IT Malaysia:</strong> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.",
+                "<strong>Besøkssystem for bedrifter:</strong> Implementerte automatiserte, kioskbaserte fysiske besøksløsninger på tvers av primære hovedkontorer.",
+                "<strong>AKER Tech House sikkerhet:</strong> Designet og implementerte fysisk IT-sikkerhetsinfrastruktur, nettverkstopologier og adgangskontrollmiljøer.",
+                "<strong>Avvikling av avdelingskontorer:</strong> Programledet den logistiske og tekniske avviklingen av 10 internasjonale avdelingskontorer.",
+                "<strong>HMH global ekspansjon:</strong> Ledet klargjøring av lokasjon for et nytt avdelingskontor kombinert med et samtidig migreringsrammeverk til Azure."
             ]
         };
 
         const historicalProjects = {
             en: [
-                "• <strong>Legacy Endpoint Security Upgrades:</strong> Successfully migrated corporate network endpoints to Symantec Antivirus (SAV 9.0) security architecture.[cite: 3]",
-                "• <strong>Nationwide Infrastructure Assessment:</strong> Conducted data center and network asset data collection across an entire operating footprint.[cite: 3]",
-                "• <strong>VSAT Infrastructure Modernization:</strong> Upgraded critical satellite VSAT network infrastructure across 33 high-importance sites.[cite: 3]",
-                "• <strong>Manufacturing Plant Network Hardening:</strong> Enhanced, segmented, and optimized physical network reliability for heavy industrial manufacturing plants.[cite: 3]",
-                "• <strong>Infrastructure Monitoring Implementation:</strong> Implemented enterprise monitoring, traffic logging, and analysis tools (MRTG and NetFlow Analyzer).[cite: 3]",
-                "• <strong>Enterprise Architecture Documentation:</strong> Audited and created extensive network topology and data center dependency documentation.[cite: 3]",
-                "• <strong>Firewall & Security Operations:</strong> Managed large-scale network edge security, configuring and monitoring Nokia IP 220 appliances and Check Point firewalls.[cite: 3]",
-                "• <strong>LAN/WAN Microsoft Migrations:</strong> Conducted full-lifecycle LAN/WAN architecture implementations built on enterprise Microsoft platforms.[cite: 3]",
-                "• <strong>Clinical Research Operations:</strong> Managed IT operations, network uptime, and service desk compliance for Clinical Research Operations in Pune.[cite: 3]",
-                "• <strong>R&D Regional Network Expansion:</strong> Successfully expanded critical R&D networks in Goa and Pune, and completed infrastructure deployment projects in Jammu.[cite: 3]"
+                "• <strong>Legacy Endpoint Security Upgrades:</strong> Successfully migrated corporate network endpoints to Symantec Antivirus (SAV 9.0) security architecture.",
+                "• <strong>Nationwide Infrastructure Assessment:</strong> Conducted data center and network asset data collection across an entire nationwide operating footprint.",
+                "• <strong>VSAT Infrastructure Modernization:</strong> Upgraded critical satellite VSAT network infrastructure across 33 high-importance sites.",
+                "• <strong>Manufacturing Plant Network Hardening:</strong> Enhanced, segmented, and optimized physical network reliability for heavy industrial manufacturing plants.",
+                "• <strong>Infrastructure Monitoring Implementation:</strong> Implemented enterprise-grade monitoring, traffic logging, and analysis tools (MRTG and NetFlow Analyzer).",
+                "• <strong>Enterprise Architecture Documentation:</strong> Audited and created extensive network topology and data center dependency documentation.",
+                "• <strong>Firewall & Security Operations:</strong> Managed large-scale network edge security, configuring and monitoring Nokia IP 220 appliances and over 350 Check Point firewalls.",
+                "• <strong>LAN/WAN Microsoft Migrations:</strong> Conducted full-lifecycle LAN/WAN architecture implementations built on enterprise Microsoft platforms.",
+                "• <strong>Clinical Research Operations:</strong> Managed IT operations, network uptime, and service desk compliance for Clinical Research Operations in Pune.",
+                "• <strong>R&D Regional Network Expansion:</strong> Successfully expanded critical R&D networks in Goa and Pune, and drove end-to-end LAN/WAN infrastructure deployment projects to completion in Jammu."
             ],
             no: [
-                "• <strong>Eldre endepunktssikkerhet:</strong> Vellykket migrering av bedriftens nettverksendepunkter to Symantec Antivirus (SAV 9.0) sikkerhetsarkitektur.[cite: 3]",
-                "• <strong>Landsomfattende infrastrukturvurdering:</strong> Gjennomførte datainnsamling av datasenter- og nettverksmidler på tvers av et helt landsomfattende driftsfelt.[cite: 3]",
-                "• <strong>VSAT modernisering:</strong> Oppgraderte kritisk satellitt-VSAT-nettverksinfrastruktur på tvers av 33 høyprioriterte lokasjoner.[cite: 3]",
-                "• <strong>Nettverksherding for produksjonsanlegg:</strong> Forbedret, segmenterte og optimaliserte fysisk nettverkspålitelighet for tunge industrielle produksjonsanlegg.[cite: 3]",
-                "• <strong>Implementering av overvåkingsverktøy:</strong> Implementerte overvåking, trafikkingenting og analysevektøy i bedriftsklassen (MRTG og NetFlow Analyzer).[cite: 3]",
-                "• <strong>Dokumentasjon av arkitektur:</strong> Auditerte og opprettet omfattende nettverkstopologi- og datasenteravhengighetsdokumentasjon.[cite: 3]",
-                "• <strong>Brannmur- og sikkerhetsdrift:</strong> Administrerte storskala nettverksperimetersikkerhet, konfigurasjon og overvåking av Nokia IP 220-enheter og over 350 Check Point-brannmurer.[cite: 3]",
-                "• <strong>LAN/WAN Microsoft-migreringer:</strong> Gjennomførte fullstendige LAN/WAN-arkitekturimplementeringer bygget på Microsoft-plattformer.[cite: 3]",
-                "• <strong>Klinisk forskningsdrift:</strong> Administrerte IT-drift, nettverksoppetid og samsvar for klinisk forskningsdrift i Pune.[cite: 3]",
-                "• <strong>Regional nettverksutvidelse:</strong> Vellykket utvidelse av kritiske FoU-nettverk i Goa og Pune, og utplassering av LAN/WAN-infrastruktur i Jammu.[cite: 3]"
+                "• <strong>Eldre endepunktssikkerhet:</strong> Vellykket migrering av bedriftens nettverksendepunkter to Symantec Antivirus (SAV 9.0) sikkerhetsarkitektur.",
+                "• <strong>Landsomfattende infrastrukturvurdering:</strong> Gjennomførte datainnsamling av datasenter- og nettverksmidler på tvers av et helt landsomfattende driftsfelt.",
+                "• <strong>VSAT modernisering:</strong> Oppgraderte kritisk satellitt-VSAT-nettverksinfrastruktur på tvers av 33 høyprioriterte lokasjoner.",
+                "• <strong>Nettverksherding for produksjonsanlegg:</strong> Forbedret, segmenterte og optimaliserte fysisk nettverkspålitelighet for tunge industrielle produksjonsanlegg.",
+                "• <strong>Implementering av overvåkingsverktøy:</strong> Implementerte overvåking, trafikkingenting og analysevektøy i bedriftsklassen (MRTG og NetFlow Analyzer).",
+                "• <strong>Dokumentasjon av arkitektur:</strong> Auditerte og opprettet omfattende nettverkstopologi- og datasenteravhengighetsdokumentasjon.",
+                "• <strong>Brannmur- og sikkerhetsdrift:</strong> Administrerte storskala nettverksperimetersikkerhet, konfigurasjon og overvåking av Nokia IP 220-enheter og over 350 Check Point-brannmurer.",
+                "• <strong>LAN/WAN Microsoft-migreringer:</strong> Gjennomførte fullstendige LAN/WAN-arkitekturimplementeringer bygget på Microsoft-plattformer.",
+                "• <strong>Klinisk forskningsdrift:</strong> Administrerte IT-drift, nettverksoppetid og samsvar for klinisk forskningsdrift i Pune.",
+                "• <strong>Regional nettverksutvidelse:</strong> Vellykket utvidelse av kritiske FoU-nettverk i Goa og Pune, og utplassering av LAN/WAN-infrastruktur i Jammu."
             ]
         };
 
@@ -779,137 +835,139 @@
                 {
                     title: "Datacenter SME / Infrastructure Architect",
                     company: "Cognizant Oil & Gas Consulting Services Norway AS",
-                    period: "2019 — Present | Oslo, Norway[cite: 3]",
+                    period: "2019 — Present | Oslo, Norway",
                     bullets: [
-                        "Recover dependencies and drive Azure cloud adoption pipelines inside Jira / DevOps dashboards.[cite: 3]",
-                        "Enforce strict framework governance: detailing RAID logs, business continuity architectures, and audit loops.[cite: 3]",
-                        "Scale performance thresholds alongside technology leaders from Microsoft, HP, and Cisco hardware lines.[cite: 3]",
-                        "Audit regional scoping plans, calculate server cost metrics, and validate technical SoW parameters.[cite: 3]",
-                        "Coordinate core multi-tenant technical alignments across business divisions and isolated network borders.[cite: 3]"
+                        "Recover dependencies and drive Azure cloud adoption pipelines inside Jira / DevOps dashboards.",
+                        "Enforce strict framework governance: detailing RAID logs, business continuity architectures, and audit loops.",
+                        "Scale performance thresholds alongside technology leaders from Microsoft, HP, and Cisco hardware lines.",
+                        "Audit regional scoping plans, calculate server cost metrics, and validate technical SoW parameters.",
+                        "Coordinate core multi-tenant technical alignments across business divisions and isolated network borders."
                     ]
                 },
                 {
                     title: "Technical Line Lead / Associate Operations Manager",
-                    company: "Cognizant Technology Solutions India | Pune, India[cite: 3]",
+                    company: "Cognizant Technology Solutions India | Pune, India",
                     period: "2013 — 2019",
                     bullets: [
-                        "Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint in Pune.[cite: 3]",
-                        "Led Web Infrastructure and integration delivery tracks for Barclays Technology Solutions.[cite: 3]",
-                        "Acted as Subject Matter Expert managing core routing, access controls, and security appliances across F5 BIG-IP, Bluecoat proxies, Infoblox DNS/IPAM, Linux clusters, Tumbleweed secure file transfers, and Fix‑Gateways.[cite: 3]",
-                        "Directed a 20-member high-performing engineering and technical team delivering BAU and transition support across US, EMEA, and APAC sectors.[cite: 3]",
-                        "Oversaw highly scalable infrastructure support systems, resolving between 500 to 1,000 daily L1/L2 incident interactions.[cite: 3]"
+                        "Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint in Pune.",
+                        "Led Web Infrastructure and integration delivery tracks for Barclays Technology Solutions.",
+                        "Acted as Subject Matter Expert managing core routing, access controls, and security appliances across F5 BIG-IP, Bluecoat proxies, Infoblox DNS/IPAM, Linux clusters, Tumbleweed secure file transfers, and Fix‑Gateways.",
+                        "Directed a 20-member high-performing engineering and technical team delivering BAU and transition support across US, EMEA, and APAC sectors.",
+                        "Oversaw highly scalable infrastructure support systems, resolving between 500 to 1,000 daily L1/L2 incident interactions."
                     ]
                 },
                 {
                     title: "Technical Consultant",
-                    company: "Einfotek | Pune[cite: 3]",
+                    company: "Einfotek | Pune",
                     period: "2011 — 2012",
                     bullets: [
-                        "Served as Web Infrastructure Lead for highly regulated banking domain client systems.[cite: 3]",
-                        "Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.[cite: 3]",
-                        "Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Tumbleweed, Infoblox, and Fixgateway boundaries.[cite: 3]"
+                        "Served as Web Infrastructure Lead for highly regulated banking domain client systems.",
+                        "Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.",
+                        "Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Tumbleweed, Infoblox, and Fixgateway boundaries."
                     ]
                 },
                 {
                     title: "Technical Project Lead",
-                    company: "Compucom | Pune[cite: 3]",
+                    company: "Compucom | Pune",
                     period: "2010 — 2011",
                     bullets: [
-                        "Drove the strategic, multi-phase technical migration of 100+ production servers for Walmart systems.[cite: 3]",
-                        "Managed enterprise Microsoft Hyper-V private cloud operations and computing environments.[cite: 3]",
-                        "Led datacenter platform modernizations upgrading Windows Server footprints from legacy 2003/2008 sets to Windows Server 2012 platforms.[cite: 3]"
+                        "Drove the strategic, multi-phase technical migration of 100+ production servers for Walmart systems.",
+                        "Managed enterprise Microsoft Hyper-V private cloud operations and computing environments.",
+                        "Led datacenter platform modernizations upgrading Windows Server footprints from legacy 2003/2008 sets to Windows Server 2012 platforms.",
+                        "Enforced highly rigid infrastructure availability metrics, maintaining a consistent 100% SLA record for customer technical support issue remediation."
                     ]
                 },
                 {
                     title: "Senior Network Administrator & Project Engineer",
-                    company: "NETSOL IBM India | Mumbai[cite: 3]",
+                    company: "NETSOL IBM India | Mumbai",
                     period: "2009 — 2010",
                     bullets: [
-                        "Designed, mapped, and audited highly scalable LAN/WAN topologies and enterprise data routing architectures.[cite: 3]",
-                        "Implemented edge firewalls, persistent site-to-site VPN tunnels, and unified network data security baselines.[cite: 3]",
-                        "Managed strategic network hardware vendor contracts, warranties, and disaster recovery (DR) data center validation records.[cite: 3]"
+                        "Designed, mapped, and audited highly scalable LAN/WAN topologies and enterprise data routing architectures.",
+                        "Implemented edge firewalls, persistent site-to-site VPN tunnels, and unified network data security baselines.",
+                        "Managed strategic network hardware vendor contracts, warranties, and disaster recovery (DR) data center validation records."
                     ]
                 },
                 {
                     title: "Network Administrator",
-                    company: "Ashtech Infotech | Mumbai[cite: 3]",
+                    company: "Ashtech Infotech | Mumbai",
                     period: "2005 — 2009",
                     bullets: [
-                        "Design and maintain scalable network solutions optimized for high-performance and business growth.[cite: 3]",
-                        "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.[cite: 3]",
-                        "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.[cite: 3]",
-                        "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.[cite: 3]",
-                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.[cite: 3]",
-                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints.[cite: 3]"
+                        "Design and maintain scalable network solutions optimized for high-performance and business growth.",
+                        "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.",
+                        "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
+                        "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
+                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
+                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
                     ]
                 }
             ],
             no: [
                 {
                     title: "Datasenter SME / Infrastrukturarkitekt",
-                    company: "Cognizant Oil & Gas Consulting Services Norway AS[cite: 3]",
-                    period: "2019 — Nåtid | Oslo, Norge[cite: 3]",
+                    company: "Cognizant Oil & Gas Consulting Services Norway AS",
+                    period: "2019 — Nåtid | Oslo, Norge",
                     bullets: [
-                        "Bistår i komplekse Azure skymigreringsprogrammer ved bruk av Jira og Azure DevOps Boards.[cite: 3]",
-                        "Driver streng programstyring: vedlikehold av RAID-logger, BCM/DR-arkitekturer, regulatoriske samsvarsstandarder og systematiske risikoreduksjonsforløp.[cite: 3]",
-                        "Koordinerer leveranser og etablerer plattformsamarbeid med nøkkelpartnere som Microsoft, Cisco, HP og eksterne skyleverandører.[cite: 3]",
-                        "Administrerer oppdragsinntak (demand intake), strukturerte økonomiske kostnadsestimater for datasentre og formelle SoW/RFP-evalueringsprosesser.[cite: 3]",
-                        "Samordner forretningsinteressenter, kjerneinfrastruktur og perimetersikkerhetsteam gjennom hele leveransens livssyklus.[cite: 3]"
+                        "Bistår i komplekse Azure skymigreringsprogrammer ved bruk av Jira og Azure DevOps Boards.",
+                        "Driver streng programstyring: vedlikehold av RAID-logger, BCM/DR-arkitekturer, regulatoriske samsvarsstandarder og systematiske risikoreduksjonsforløp.",
+                        "Koordinerer leveranser og etablerer plattformsamarbeid med nøkkelpartnere som Microsoft, Cisco, HP og eksterne skyleverandører.",
+                        "Administrerer oppdragsinntak (demand intake), strukturerte økonomiske kostnadsestimater for datasentre og formelle SoW/RFP-evalueringsprosesser.",
+                        "Samordner forretningsinteressenter, kjerneinfrastruktur og perimetersikkerhetsteam gjennom hele leveransens livssyklus."
                     ]
                 },
                 {
                     title: "Teknisk Leder / Associate Operations Manager",
-                    company: "Cognizant Technology Solutions India | Pune, India[cite: 3]",
+                    company: "Cognizant Technology Solutions India | Pune, India",
                     period: "2013 — 2019",
                     bullets: [
-                        "Etablerte og skalerte Barclays' primære Offshore Development Center (ODC) i Pune.[cite: 3]",
-                        "Ledet webinfrastruktur og integrasjonsleveranser for Barclays Technology Solutions.[cite: 3]",
-                        "Fungerte som fagspesialist (SME) med ansvar for kjerne-routing, tilgangskontroll og sikkerhetsenheter på tvers av F5 BIG-IP, Bluecoat-proxies, Infoblox DNS/IPAM, Linux-klynger, Tumbleweed sikker filoverføring og Fix-Gateways.[cite: 3]",
-                        "Ledet et team på 20 ingeniører som leverte BAU- og migreringsstøtte for regionene USA, EMEA og APAC.[cite: 3]",
-                        "Overvåket høyskalerbare infrastruktursystemer og håndterte mellom 500 og 1000 daglige L1/L2-hendelser.[cite: 3]"
+                        "Etablerte og skalerte Barclays' primære Offshore Development Center (ODC) i Pune.",
+                        "Ledet webinfrastruktur og integrasjonsleveranser for Barclays Technology Solutions.",
+                        "Fungerte som fagspesialist (SME) med ansvar for kjerne-routing, tilgangskontroll og sikkerhetsenheter på tvers av F5 BIG-IP, Bluecoat-proxies, Infoblox DNS/IPAM, Linux-klynger, Tumbleweed sikker filoverføring og Fix-Gateways.",
+                        "Ledet et team på 20 ingeniører som leverte BAU- og migreringsstøtte for regionene USA, EMEA og APAC.",
+                        "Overvåket høyskalerbare infrastruktursystemer og håndterte mellom 500 og 1000 daglige L1/L2-hendelser."
                     ]
                 },
                 {
                     title: "Teknisk Konsulent",
-                    company: "Einfotek | Pune[cite: 3]",
+                    company: "Einfotek | Pune",
                     period: "2011 — 2012",
                     bullets: [
-                        "Fungerte som leder for webinfrastruktur for strengt regulerte klientsystemer innen bank og finans.[cite: 3]",
-                        "Var kjerne-teknisk overføringsleder (Transition Lead) for Barclays Capital India.[cite: 3]",
-                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Tumbleweed, Infoblox og Fixgateway.[cite: 3]"
+                        "Fungerte som leder for webinfrastruktur for strengt regulerte klientsystemer innen bank og finans.",
+                        "Var kjerne-teknisk overføringsleder (Transition Lead) for Barclays Capital India.",
+                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Tumbleweed, Infoblox og Fixgateway."
                     ]
                 },
                 {
                     title: "Teknisk Prosjektleder",
-                    company: "Compucom | Pune[cite: 3]",
+                    company: "Compucom | Pune",
                     period: "2010 — 2011",
                     bullets: [
-                        "Migrerte over 100 produksjonsservere for Walmart-systemer.[cite: 3]",
-                        "Administrerte Microsoft Hyper-V private skymiljøer og operative datasenterressurser.[cite: 3]",
-                        "Ledet modernisering av datasentre ved å oppgradere Windows Server-miljøer fra eldre til Windows Server 2012.[cite: 3]"
+                        "Migrerte over 100 produksjonsservere for Walmart-systemer.",
+                        "Administrerte Microsoft Hyper-V private skymiljøer og operative datasenterressurser.",
+                        "Ledet modernisering av datasentre ved å oppgradere Windows Server-miljøer fra eldre 2003/2008 til Windows Server 2012.",
+                        "Opprettholdt en konsistent 100% SLA-sporing for feilsøking og løsning av tekniske kundetrykk."
                     ]
                 },
                 {
                     title: "Senior Network Administrator & Project Engineer",
-                    company: "NETSOL IBM India | Mumbai[cite: 3]",
+                    company: "NETSOL IBM India | Mumbai",
                     period: "2009 — 2010",
                     bullets: [
-                        "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.[cite: 3]",
-                        "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.[cite: 3]",
-                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR).[cite: 3]"
+                        "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
+                        "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
+                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
                     ]
                 },
                 {
                     title: "Nettverksadministrator",
-                    company: "Ashtech Infotech | Mumbai[cite: 3]",
+                    company: "Ashtech Infotech | Mumbai",
                     period: "2005 — 2009",
                     bullets: [
-                        "Design og vedlikehold av skalerbare nettverksløsninger optimalisert for høy ytelse og forretningsvekst.[cite: 3]",
-                        "Overvåket bedriftens LAN, WAN og trådløse konfigurasjoner, samt feilsøking av kjernekomponenter (routerer, switcher, brannmurer).[cite: 3]",
-                        "Implementerte perimeterbrannmurer, site-VPN-er og aktive nettverkstrussel-loggmonitorer for rask respons.[cite: 3]",
-                        "Overvåket utstyrsbudsjetter, administrerte maskinvareinnkjøp og forfattet runbooks for katastrofegjenoppretting (DR).[cite: 3]",
-                        "Ledet strukturelle nettverksleveranseprosjekter og ga teknisk veiledning for ledelsesrapportering.[cite: 3]",
-                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor herdede økonomiske rammer.[cite: 3]"
+                        "Design og vedlikehold av skalerbare nettverksløsninger optimalisert for høy ytelse og forretningsvekst.",
+                        "Overvåket bedriftens LAN, WAN og trådløse konfigurasjoner, samt feilsøking av kjernekomponenter (routere, switcher, brannmurer).",
+                        "Implementerte perimeterbrannmurer, site-VPN-er og aktive nettverkstrussel-loggmonitorer for rask respons.",
+                        "Overvåket utstyrsbudsjetter, administrerte maskinvareinnkjøp og forfattet runbooks for katastrofegjenoppretting (DR).",
+                        "Ledet strukturelle nettverksleveranseprosjekter og ga teknisk veiledning for ledelsesrapportering.",
+                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor herdede økonomiske rammer."
                     ]
                 }
             ]
@@ -917,56 +975,55 @@
 
         const certificationsData = {
             en: [
-                { icon: "shield", name: "Cyber Security – Government of India (NIELIT)[cite: 3]" },
-                { icon: "cpu", name: "MCP – Microsoft Certified Professional[cite: 3]" },
-                { icon: "globe", name: "MCP+I – Microsoft Certified Professional + Internet[cite: 3]" },
-                { icon: "server", name: "MCSE – Microsoft Certified Systems Engineer[cite: 3]" },
-                { icon: "lock", name: "Microsoft Certified: Azure Security Engineer Associate[cite: 3]" },
-                { icon: "cloud", name: "Microsoft Certified: Azure Administrator Associate[cite: 3]" },
-                { icon: "check-square", name: "ITIL Foundation – EXIN[cite: 3]" },
-                { icon: "git-branch", name: "PRINCE2 Agile®[cite: 3]" },
-                { icon: "terminal", name: "DRDO – Cyber Security[cite: 3]" },
-                { icon: "fingerprint", name: "Certified Cybercrime Intervention Officer (CCIO)[cite: 3]" },
-                { icon: "layers", name: "Alibaba Cloud Certification[cite: 3]" },
-                { icon: "shuffle", name: "Aviatrix Multi‑Cloud Certification[cite: 3]" },
-                { icon: "building-2", name: "BICSI Datacenter Design & Infrastructure[cite: 3]" },
-                { icon: "shield-alert", name: "CISM Training – ISACA[cite: 3]" },
-                { icon: "file-check", name: "CISSP Training – ISC²[cite: 3]" }
+                { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Cyber Security – Government of India (NIELIT)" },
+                { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
+                { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internet" },
+                { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
+                { icon: "lock", styling: "bg-indigo-950/40 text-indigo-400", name: "Microsoft Certified: Azure Security Engineer Associate" },
+                { icon: "cloud", styling: "bg-sky-950/40 text-sky-400", name: "Microsoft Certified: Azure Administrator Associate" },
+                { icon: "check-square", styling: "bg-slate-950/40 text-slate-400", name: "ITIL Foundation – EXIN" },
+                { icon: "git-branch", styling: "bg-purple-950/40 text-purple-400", name: "PRINCE2 Agile®" },
+                { icon: "terminal", styling: "bg-red-950/40 text-red-400", name: "DRDO – Cyber Security" },
+                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Certified Cybercrime Intervention Officer (CCIO)" },
+                { icon: "layers", styling: "bg-amber-950/40 text-amber-400", name: "Alibaba Cloud Certification" },
+                { icon: "shuffle", styling: "bg-fuchsia-950/40 text-fuchsia-400", name: "Aviatrix Multi Multi‑Cloud Certification" },
+                { icon: "building-2", styling: "bg-yellow-950/40 text-yellow-400", name: "BICSI Datacenter Design & Infrastructure" },
+                { icon: "shield-alert", styling: "bg-red-950/40 text-red-400", name: "CISM Training – ISACA" },
+                { icon: "file-check", styling: "bg-blue-950/40 text-blue-400", name: "CISSP Training – ISC²" }
             ],
             no: [
-                { icon: "shield", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)[cite: 3]" },
-                { icon: "cpu", name: "MCP – Microsoft Certified Professional[cite: 3]" },
-                { icon: "globe", name: "MCP+I – Microsoft Certified Professional + Internett[cite: 3]" },
-                { icon: "server", name: "MCSE – Microsoft Certified Systems Engineer[cite: 3]" },
-                { icon: "lock", name: "Microsoft Certified: Azure Security Engineer Associate[cite: 3]" },
-                { icon: "cloud", name: "Microsoft Certified: Azure Administrator Associate[cite: 3]" },
-                { icon: "check-square", name: "ITIL Foundation – EXIN[cite: 3]" },
-                { icon: "git-branch", name: "PRINCE2 Agile®[cite: 3]" },
-                { icon: "terminal", name: "DRDO – Kybersikkerhet[cite: 3]" },
-                { icon: "fingerprint", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)[cite: 3]" },
-                { icon: "layers", name: "Alibaba Cloud Sertifisering[cite: 3]" },
-                { icon: "shuffle", name: "Aviatrix Multi‑Cloud Sertifisering[cite: 3]" },
-                { icon: "building-2", name: "BICSI Datasenterdesign & Infrastruktur[cite: 3]" },
-                { icon: "shield-alert", name: "CISM Opplæring – ISACA[cite: 3]" },
-                { icon: "file-check", name: "CISSP Opplæring – ISC²[cite: 3]" }
+                { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)" },
+                { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
+                { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internett" },
+                { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
+                { icon: "lock", styling: "bg-indigo-950/40 text-indigo-400", name: "Microsoft Certified: Azure Security Engineer Associate" },
+                { icon: "cloud", styling: "bg-sky-950/40 text-sky-400", name: "Microsoft Certified: Azure Administrator Associate" },
+                { icon: "check-square", styling: "bg-slate-950/40 text-slate-400", name: "ITIL Foundation – EXIN" },
+                { icon: "git-branch", styling: "bg-purple-950/40 text-purple-400", name: "PRINCE2 Agile®" },
+                { icon: "terminal", styling: "bg-red-950/40 text-red-400", name: "DRDO – Kybersikkerhet" },
+                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)" },
+                { icon: "layers", styling: "bg-amber-950/40 text-amber-400", name: "Alibaba Cloud Sertifisering" },
+                { icon: "shuffle", styling: "bg-fuchsia-950/40 text-fuchsia-400", name: "Aviatrix Multi Multi‑Cloud Sertifisering" },
+                { icon: "building-2", styling: "bg-yellow-950/40 text-yellow-400", name: "BICSI Datasenterdesign & Infrastruktur" },
+                { icon: "shield-alert", styling: "bg-red-950/40 text-red-400", name: "CISM Opplæring – ISACA" },
+                { icon: "file-check", styling: "bg-blue-950/40 text-blue-400", name: "CISSP Opplæring – ISC²" }
             ]
         };
 
-        // INTEGRATED EXPLICIT STATIC TAILWIND COLORS[cite: 3]
         const awardsData = {
             en: [
-                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Best Performer", desc: "Barclays Capital[cite: 3]" },
-                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Best Performer", desc: "Telenet Belgium[cite: 3]" },
-                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Best Innovation", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Project[cite: 3]" },
-                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award", desc: "Aker Solutions[cite: 3]" },
-                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Multiple Client Appreciations", desc: "Formal recognitions for complex multi-site deployment continuity.[cite: 3]" }
+                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Best Performer", desc: "Barclays Capital" },
+                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Best Performer", desc: "Telenet Belgium" },
+                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Best Innovation", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Project" },
+                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award", desc: "Aker Solutions" },
+                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Multiple Client Appreciations", desc: "Formal recognitions for complex multi-site deployment continuity." }
             ],
             no: [
-                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Beste Yter (Best Performer)", desc: "Barclays Capital[cite: 3]" },
-                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Beste Yter (Best Performer)", desc: "Telenet Belgium[cite: 3]" },
-                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Beste Innovasjon", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Prosjekt[cite: 3]" },
-                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award (Utmerket Innsats)", desc: "Aker Solutions[cite: 3]" },
-                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger.[cite: 3]" }
+                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Beste Yter (Best Performer)", desc: "Barclays Capital" },
+                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Beste Yter (Best Performer)", desc: "Telenet Belgium" },
+                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Beste Innovasjon", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Prosjekt" },
+                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award (Utmerket Innsats)", desc: "Aker Solutions" },
+                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger." }
             ]
         };
 
@@ -1057,7 +1114,7 @@
             const grid = document.getElementById("certifications-grid");
             grid.innerHTML = certificationsData[lang].map(c => `
                 <div class="p-3 bg-slate-900 border border-slate-800 rounded flex items-center gap-3">
-                    <div class="flex-shrink-0 text-slate-400"><i data-lucide="${c.icon}" class="w-4 h-4"></i></div>
+                    <div class="flex-shrink-0 ${c.styling} p-1 rounded-md"><i data-lucide="${c.icon}" class="w-4 h-4"></i></div>
                     <span class="text-slate-200 tracking-wide font-semibold text-[11px]">${c.name}</span>
                 </div>
             `).join('');
@@ -1085,7 +1142,11 @@
 
             const userBubble = document.createElement('div');
             userBubble.className = 'flex items-start gap-2.5 justify-end';
-            userBubble.innerHTML = `<div class="p-3 bg-blue-600 text-white rounded-xl rounded-tr-none max-w-[80%] leading-relaxed break-words">${messageText}</div>`;
+            userBubble.innerHTML = `
+                <div class="p-3 bg-blue-600 text-white rounded-xl rounded-tr-none max-w-[80%] leading-relaxed break-words">
+                    ${messageText}
+                </div>
+            `;
             container.appendChild(userBubble);
             inputField.value = '';
             
@@ -1098,30 +1159,41 @@
                 <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
                 <div class="p-3 bg-slate-950 border border-slate-800 text-slate-400 rounded-xl rounded-tl-none max-w-[80%] italic animate-pulse">
                     Vishwa is analyzing profile details...
-                </div>`;
+                </div>
+            `;
             container.appendChild(loadingBubble);
             lucide.createIcons();
             setTimeout(() => { container.scrollTop = container.scrollHeight; }, 20);
 
             try {
                 await new Promise(resolve => setTimeout(resolve, 800)); 
+                
                 const lowercaseQuery = messageText.toLowerCase();
                 let reply = "";
 
                 if (lowercaseQuery.includes("prompt") || lowercaseQuery.includes("engineering") || lowercaseQuery.includes("ai") || lowercaseQuery.includes("lab")) {
                     reply = "Kunal is a certified Multi-AI Model Practitioner skilled at running optimized context-aware prompts in a personal AI LAB setup leveraging platforms like <strong>Chatplayground.ai and 1minAI</strong> to orchestrate cloud operations.";
                 }
-                else if (lowercaseQuery.includes("who is") || lowercaseQuery.includes("summary") || lowercaseQuery.includes("kunal")) {
-                    reply = "Kunal Vishwakarma is an expert <strong>Datacenter SME & Infrastructure Architect</strong> and Technical Project Manager with over 20 years of robust experience steering enterprise cloud modernizations and global operations[cite: 3].";
+                else if (lowercaseQuery.includes("who is") || lowercaseQuery.includes("summary") || lowercaseQuery.includes("profile") || lowercaseQuery.includes("kunal")) {
+                    reply = "Kunal Vishwakarma is an expert <strong>Datacenter SME & Infrastructure Architect</strong> and Technical Project Manager with over 20 years of robust experience steering enterprise-level cloud migrations, infrastructure modernizations, and global operations.";
                 }
-                else if (lowercaseQuery.includes("contact") || lowercaseQuery.includes("email")) {
+                else if (lowercaseQuery.includes("contact") || lowercaseQuery.includes("email") || lowercaseQuery.includes("reach") || lowercaseQuery.includes("mail")) {
                     reply = "You can officially contact Kunal via email at <a href='mailto:contact@kunalv.me' class='text-blue-400 underline'><strong>contact@kunalv.me</strong></a>.";
                 }
-                else if (lowercaseQuery.includes("experience") || lowercaseQuery.includes("cognizant") || lowercaseQuery.includes("barclays")) {
-                    reply = "He brings <strong>20+ years of IT excellence</strong>[cite: 3]. He is currently a Datacenter SME at <strong>Cognizant Oil & Gas Consulting Services Norway</strong>[cite: 3] and was previously a Technical Line Lead at <strong>Barclays Technology Solutions</strong>[cite: 3].";
+                else if (lowercaseQuery.includes("whatsapp") || lowercaseQuery.includes("phone") || lowercaseQuery.includes("number") || lowercaseQuery.includes("mobile")) {
+                    reply = "You can instant-chat or reach Kunal directly over WhatsApp at <a href='https://wa.me/919819041919' target='_blank' class='text-green-400 underline'><strong>+91 98190 41919</strong></a> for urgent business engagements.";
+                }
+                else if (lowercaseQuery.includes("skills") || lowercaseQuery.includes("expertise") || lowercaseQuery.includes("expert in") || lowercaseQuery.includes("tech stack")) {
+                    reply = "Kunal's core execution capabilities include <strong>Data Center Operations, Infrastructure Projects, Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Management, and Server Architecture</strong>.";
+                }
+                else if (lowercaseQuery.includes("location") || lowercaseQuery.includes("live") || lowercaseQuery.includes("norway") || lowercaseQuery.includes("oslo")) {
+                    reply = "Kunal is currently based in <strong>Oslo, Norway</strong>, managing multi-datacenter transformations and hybrid cloud strategies.";
+                }
+                else if (lowercaseQuery.includes("experience") || lowercaseQuery.includes("years") || lowercaseQuery.includes("work history") || lowercaseQuery.includes("cognizant") || lowercaseQuery.includes("barclays")) {
+                    reply = "He brings <strong>20+ years of IT excellence</strong> across highly regulated domains (Energy, Finance, Pharmaceuticals). He is currently a Datacenter SME / Infrastructure Architect at <strong>Cognizant Oil & Gas Consulting Services Norway</strong> (Oslo, Norway) and was previously a Technical Line Lead at <strong>Barclays Technology Solutions</strong> (Pune, India).";
                 }
                 else {
-                    reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's professional portfolio, prompt engineering capabilities, project milestones, and tech stack. Ask me about any historical deployment track!";
+                    reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's professional portfolio, background, and tech stack. Please ask me about his skills, projects, experience, or contact information!";
                 }
 
                 document.getElementById('vishwa-loading-node').remove();
@@ -1130,7 +1202,10 @@
                 botBubble.className = 'flex items-start gap-2.5';
                 botBubble.innerHTML = `
                     <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
-                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">${reply}</div>`;
+                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
+                        ${reply}
+                    </div>
+                `;
                 container.appendChild(botBubble);
                 lucide.createIcons();
                 setTimeout(() => { container.scrollTop = container.scrollHeight; }, 30);
@@ -1139,10 +1214,11 @@
                 if (document.getElementById('vishwa-loading-node')) {
                     document.getElementById('vishwa-loading-node').remove();
                 }
-                console.error("Vishwa Runtime Interface Error:", error);
+                console.error("Vishwa Error Details:", error);
             }
         }
 
+        // CONTROL HANDLERS FOR EMAIL-GATE MODAL AND PRINTING
         function openDownloadModal() {
             document.getElementById('downloadModal').classList.remove('hidden');
         }
@@ -1157,7 +1233,7 @@
             const company = document.getElementById('viewerCompany').value;
             const email = document.getElementById('viewerEmail').value;
             
-            // ANTI-BOT PROTECTION CHALLENGE VERIFICATION[cite: 3]
+            // ANTI-BOT PROTECTION CHALLENGE VERIFICATION GATE
             const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]').value;
             if (!turnstileResponse) {
                 alert("Security Verification Required: Please complete the Cloudflare validation check before continuing.");
@@ -1166,7 +1242,7 @@
 
             if(!email || !name || !company) return;
 
-            // IMMEDIATE STYLING FEEDBACK UX TRANSLATION[cite: 3]
+            // IMMEDIATE STYLING FEEDBACK ACTION LUX INTERFACES
             document.getElementById('cvTrackingForm').innerHTML = `
                 <div class="text-center py-6 space-y-2">
                     <div class="text-green-500 font-bold text-sm">✓ Verification Successful</div>
@@ -1188,14 +1264,14 @@
                     })
                 });
             } catch (err) {
-                console.warn("Analytics engine submission exception.", err);
+                console.warn("Analytics engine fall-through.", err);
             }
 
             closeDownloadModal();
             const currentLang = document.getElementById("currentLang").innerText === 'Norsk' ? 'no' : 'en';
             changeLanguage(currentLang);
 
-            // Give thread execution window time array to wipe native overlay masks before printing[cite: 3]
+            // Left 450ms safety allocation context to let browser reset UI masks before layout render fires
             setTimeout(() => {
                 window.print();
             }, 450);
