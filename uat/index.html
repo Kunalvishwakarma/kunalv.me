@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kunal Vishwakarma | Datacenter SME & Infrastructure Architect</title>
     
-    <!-- PRIMARY SEO IDENTIFIERS -->
     <meta name="description" content="Professional portfolio of Kunal Vishwakarma - Enterprise Datacenter SME & Infrastructure Architect based in Oslo, Norway. 20+ years of global migrations, cloud adoptions, and custom automation engineering.">
     <meta name="keywords" content="Datacenter SME, Infrastructure Architect, Azure Cloud Migration, Technical Project Manager, Oslo IT Consultant, Kunal Vishwakarma, Prompt Engineering">
     <meta name="author" content="Kunal Vishwakarma">
     <meta name="robots" content="index, follow">
 
-    <!-- OPEN GRAPH / LINKEDIN SOCIAL GRAPH CARDS -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kunalv.me">
     <meta property="og:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
     <meta property="og:description" content="20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures.">
     <meta property="og:image" content="https://kunalv.me/logo.png">
 
-    <!-- TWITTER/X SOCIAL GRAPH CARDS -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kunalv.me">
     <meta property="twitter:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
@@ -28,8 +25,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <!-- Cloudflare Turnstile CAPTCHA Validation Endpoint Script -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap');
@@ -81,7 +76,6 @@
         }
     </style>
 
-    <!-- JSON-LD PROFESSIONAL PROFILE STRUCTURED SCHEMA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -111,7 +105,6 @@
 </head>
 <body class="selection:bg-blue-500/20">
 
-    <!-- FIXED TOP NAVIGATION BAR -->
     <nav class="fixed w-full z-50 nav-blur top-0">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex flex-col space-y-1">
@@ -151,7 +144,6 @@
         </div>
     </nav>
 
-    <!-- ONE-LINE CONTACT SUB-NAVIGATION BAR -->
     <div class="fixed w-full z-40 subnav-contact top-[73px] py-2.5 px-6 hidden sm:block">
         <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400">
             <span class="email-container hover:text-blue-500 transition flex items-center gap-1.5">
@@ -168,7 +160,6 @@
         </div>
     </div>
 
-    <!-- MAIN PORTAL DISPLAY -->
     <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
@@ -181,7 +172,6 @@
                 <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
                     Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
-                <!-- RE-FRAMED REVISED PROMPT ENGINEERING PHRASE INJECTED HERE -->
                 <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
                     <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.
                 </div>
@@ -224,7 +214,6 @@
         </div>
     </section>
 
-    <!-- CORE SKILLS CONTAINER -->
     <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800">
         <div class="mb-12">
             <h2 data-i18n="skills-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -317,7 +306,6 @@
         </div>
     </section>
 
-    <!-- WHITE PAPERS AND CASE STUDIES -->
     <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6 space-y-8">
             <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -378,7 +366,6 @@
         </div>
     </section>
 
-    <!-- CONSOLIDATED CONCISE FOOTER -->
     <footer class="py-12 border-t border-slate-800 bg-black text-center space-y-4">
         <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-xs font-bold text-slate-400 px-6">
             <a href="https://kunalv.me" class="hover:text-blue-500 flex items-center gap-2 transition">
@@ -414,7 +401,6 @@
         <p class="text-slate-600 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
     </footer>
 
-    <!-- EMAIL-GATED DOWNLOAD MODAL -->
     <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
         
@@ -432,6 +418,8 @@
             </div>
 
             <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
+                <input type="text" name="from_name" class="hidden" style="display:none">
+
                 <div>
                     <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Full Name</label>
                     <input type="text" id="viewerName" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
@@ -445,12 +433,6 @@
                     <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
                 </div>
 
-                <!-- CLOUDFLARE TURNSTILE CAPTCHA CONTAINER -->
-                <div class="flex justify-center my-2">
-                    <div class="cf-turnstile" data-sitekey="YOUR_LIVE_CLOUDFLARE_PUBLIC_KEY" data-theme="dark"></div>
-                </div>
-
-                <!-- GDPR USER OPT-IN COMPLIANCE -->
                 <div class="flex items-start gap-2 my-2">
                     <input type="checkbox" id="gdprConsent" required class="mt-1 cursor-pointer">
                     <label for="gdprConsent" class="text-[10px] text-slate-400 select-none cursor-pointer">I consent to having my business contact details processed to log this CV file download request in accordance with EU privacy rules.</label>
@@ -463,11 +445,7 @@
         </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- COMPRESSED PRINT LAYOUT SPECIFICATIONS -->
-    <!-- ========================================== -->
     <div id="printableCV" class="print:block hidden bg-white text-slate-900 p-2 w-full text-[8.2px] font-sans leading-tight">
-        <!-- Header -->
         <div class="border-b-[1.5px] border-slate-800 pb-0.5 flex justify-between items-end">
             <div>
                 <h1 class="text-[14px] font-black tracking-tighter text-slate-950 uppercase leading-none">Kunal Vishwakarma</h1>
@@ -475,7 +453,6 @@
             </div>
         </div>
 
-        <!-- Clean Consolidated Contact Bar -->
         <div class="py-1 border-b border-slate-200 text-[8px] font-semibold text-slate-600 flex justify-between items-center flex-wrap gap-1">
             <div class="print-email-node">✉ </div>
             <div class="text-slate-300">|</div>
@@ -486,7 +463,6 @@
             <div>🌐 kunalv.me</div>
         </div>
 
-        <!-- Summary -->
         <div class="my-1.5">
             <p class="text-slate-700 text-justify text-[8.2px] leading-normal">
                 Migration Lead and Infrastructure Architect with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial boundaries. Proven track record managing multi-million dollar asset movements, industrial OT network hardening, and zero-downtime consolidations across Energy, Banking, and Pharmaceutical fields. Skilled in context-aware prompt designs across multiple LLMs to enable automated infrastructure flows.
@@ -494,7 +470,6 @@
         </div>
 
         <div class="grid grid-cols-3 gap-3 items-start">
-            <!-- Left Side: Experience & Projects -->
             <div class="col-span-2 space-y-2">
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Corporate Experience</h2>
@@ -547,7 +522,6 @@
                 </div>
             </div>
 
-            <!-- Right Side: Skills & Certifications -->
             <div class="space-y-2">
                 <div>
                     <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Core Competencies</h2>
@@ -589,7 +563,6 @@
         </div>
     </div>
 
-    <!-- Vishwa AI Chatbot -->
     <div class="fixed bottom-6 right-6 z-50">
         <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none">
             <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
@@ -699,8 +672,8 @@
                 "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-whitepapers": "Hvitbøker", "nav-awards": "Anerkjennelse", "nav-credentials": "Sertifiseringer",
                 "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
                 "hero-title": "Datasenter SME & Infrastrukturarkitekt | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker | OSINT-Forsker",
-                "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor strenge finans- og samsvarskrav.",
-                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Kompetent i å designe strukturerte, kontekstbevisste ledetekster (prompts) på tvers av ulike LLMer. Multi‑AI Model Practitioner som administrerer en dedikert, personlig AI LAB (Chatplayground.ai, 1minAI) for å drive automatisering og infrastrukturarbeid.`,
+                "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor begrensete finans- og samsvarskrav.",
+                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Kompetent i å designe strukturerte, kontekstbevisste ledetekster (prompts) på tvers av ulike LLMer. Multi‑AI Model Practitioner som administrerer en dedikert, personal AI LAB (Chatplayground.ai, 1minAI) for å drive automatisering og infrastrukturarbeid.`,
                 "count-exp": "Års IT-erfaring", "count-del": "Globale leveranser", "count-usr": "Globale Datasentre", "count-dat": "Lokasjoner Global Support",
                 "domain-title": "Bransjeerfaring",
                 "skills-title": "Kjernekompetanse", "skills-desc": "Grunnleggende gjennomføringsevne innenfor forretningskritiske tekniske domener.",
@@ -740,7 +713,7 @@
                         <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 2: Arkitektoniske funksjoner og operasjonelle resultater</p>
                     </div>
                     <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) gjennom 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen ble utført etter arbeidstid og i sommerferien for å omgå aktive endringsfrys-perioder.</p>
-                    <p><strong class="text-blue-400">Resultat:</strong> Oppnådde 33% direkte kostnadsbesparelse på nettverksutstyr, reduserte løpende vedlikeholdsutgifter og etablerte automatiserte routines for skysikkerhetskopiering.</p>
+                    <p><strong class="text-blue-400">Resultat:</strong> Oppnådde 33% direkte kostnadsbesparelse på nettverksutstyr, reduserte løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Kostnadseffektivitet: 33% Direkte Besparelse på Infrastruktur</span></div>
                 `,
                 
@@ -792,7 +765,7 @@
                 "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
                 "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
                 "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
-                "<strong>Datasenter-utfasing i Norge:</strong> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.",
+                "<strong>Datasenter-utfasing i Norge:</strong> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger to skyen.",
                 "<strong>KOP-IT Malaysia:</strong> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.",
                 "<strong>Besøkssystem for bedrifter:</strong> Implementerte automatiserte, kioskbaserte fysiske besøksløsninger på tvers av primære hovedkontorer.",
                 "<strong>AKER Tech House sikkerhet:</strong> Designet og implementerte fysisk IT-sikkerhetsinfrastruktur, nettverkstopologier og adgangskontrollmiljøer.",
@@ -1025,7 +998,7 @@
             ]
         };
 
-        // SAFETY GATE OBFUSCATION ENGINE (Assembles identity vectors dynamically to block tracking bots)
+        // SAFETY GATE OBFUSCATION ENGINE
         function setupEmailObfuscation() {
             const userVector = "contact";
             const serverVector = "kunalv.me";
@@ -1242,20 +1215,13 @@
             const company = document.getElementById('viewerCompany').value;
             const email = document.getElementById('viewerEmail').value;
             
-            // ANTI-BOT PROTECTION CHALLENGE VERIFICATION GATE
-            const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]').value;
-            if (!turnstileResponse) {
-                alert("Security Verification Required: Please complete the Cloudflare validation check before continuing.");
-                return;
-            }
-
             if(!email || !name || !company) return;
 
             // IMMEDIATE STYLING FEEDBACK ACTION LUX INTERFACES
             document.getElementById('cvTrackingForm').innerHTML = `
                 <div class="text-center py-6 space-y-2">
-                    <div class="text-green-500 font-bold text-sm">✓ Verification Successful</div>
-                    <p class="text-xs text-slate-400">Your secure transmission handshake has been logged. Preparing your print-ready document streams automatically...</p>
+                    <div class="text-green-500 font-bold text-sm">✓ Processing Request</div>
+                    <p class="text-xs text-slate-400">Preparing your print-ready document streams automatically...</p>
                 </div>`;
 
             try {
@@ -1263,12 +1229,11 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify({
-                        access_key: "YOUR_WEB3FORMS_ACCESS_KEY", 
+                        access_key: "59d95c34-e1c4-44e6-80fd-11ecd7e58ae9", 
                         subject: "Alert: CV Profile Downloaded",
                         name: name,
                         company: company,
                         email: email,
-                        "cf-turnstile-response": turnstileResponse,
                         message: `Kunal, an entry has just downloaded your CV profile summary.\n\nViewer Details:\nName: ${name}\nCompany: ${company}\nEmail: ${email}`
                     })
                 });
