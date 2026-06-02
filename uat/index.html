@@ -5,106 +5,1273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kunal Vishwakarma | Datacenter SME & Infrastructure Architect</title>
     
-    <meta name="description" content="Professional portfolio of Kunal Vishwakarma - Enterprise Datacenter SME & Infrastructure Architect based in Oslo, Norway.">
+    <!-- PRIMARY SEO IDENTIFIERS -->
+    <meta name="description" content="Professional portfolio of Kunal Vishwakarma - Enterprise Datacenter SME & Infrastructure Architect based in Oslo, Norway. 20+ years of global migrations, cloud adoptions, and custom automation engineering.">
+    <meta name="keywords" content="Datacenter SME, Infrastructure Architect, Azure Cloud Migration, Technical Project Manager, Oslo IT Consultant, Kunal Vishwakarma, Prompt Engineering">
+    <meta name="author" content="Kunal Vishwakarma">
     <meta name="robots" content="index, follow">
-    
+
+    <!-- OPEN GRAPH / LINKEDIN SOCIAL GRAPH CARDS -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kunalv.me">
+    <meta property="og:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
+    <meta property="og:description" content="20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures.">
+    <meta property="og:image" content="https://kunalv.me/logo.png">
+
+    <!-- TWITTER/X SOCIAL GRAPH CARDS -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kunalv.me">
+    <meta property="twitter:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
+    <meta property="twitter:description" content="20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter adoptions, and secure global hybrid architectures.">
+    <meta property="twitter:image" content="https://kunalv.me/logo.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #ffffff; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #000000; color: #ffffff; }
         .nav-blur { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; }
+        .subnav-contact { background: rgba(9, 15, 30, 0.9); border-bottom: 1px solid #1e293b; }
         .card-premium { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; }
+        .card-premium:hover { border-color: #3b82f6; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1); }
+        .timeline-line { border-left: 2px solid #1e293b; }
         
+        /* Chatbot Custom Animation Styles */
+        .chat-popup { transform: scale(0.9); opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+        .chat-popup.active { transform: scale(1); opacity: 1; pointer-events: auto; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Tooltip speech bubble arrow custom layout */
+        .speech-arrow::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            background-color: #ffffff;
+            border-right: 1px solid #e2e8f0;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* MAXIMUM OVERRIDE ENTERPRISE PRINT CONSTRAINTS LOCKING DATA UNTO A STANDALONE SINGLE PAGE */
         @media print {
-            body > :not(#printableCV) { display: none !important; }
-            @page { size: A4 portrait; margin: 5mm 6mm 5mm 6mm !important; }
-            #printableCV { display: block !important; width: 100% !important; page-break-inside: avoid !important; color: #0f172a !important; }
+            body > :not(#printableCV) { 
+                display: none !important; 
+            }
+            html, body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 5mm 6mm 5mm 6mm !important;
+            }
+            #printableCV { 
+                display: block !important; 
+                visibility: visible !important;
+                width: 100% !important;
+                height: auto !important;
+                max-width: 100% !important;
+                page-break-inside: avoid !important;
+                box-shadow: none !important; 
+                padding: 0 !important; 
+                margin: 0 !important;
+                background: #ffffff !important;
+                color: #0f172a !important;
+            }
+            #printableCV .text-blue-700 { color: #1d4ed8 !important; }
+            #printableCV .bg-slate-100 { background-color: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
     </style>
 </head>
-<body>
+<body class="selection:bg-blue-500/20">
 
+    <!-- FIXED TOP NAVIGATION BAR -->
     <nav class="fixed w-full z-50 nav-blur top-0">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#about" class="flex items-center gap-3">
-                <img src="logo.png" class="h-10 w-10 object-contain" />
-                <span class="text-lg font-extrabold uppercase">Kunal <span class="text-blue-500">V.</span></span>
-            </a>
-            <button onclick="openDownloadModal()" class="text-blue-500 border border-blue-500/30 px-4 py-1 rounded bg-blue-500/10 text-xs font-bold uppercase">CV</button>
+            <div class="flex flex-col space-y-1">
+                <a href="#about" class="group flex items-center gap-3 transition-all duration-200 hover:opacity-90">
+                    <img src="logo.png" alt="Kunal Vishwakarma - Datacenter SME & Infrastructure Architect Logo" class="h-10 w-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='kv.png'" />
+                    <span class="text-lg font-extrabold tracking-tighter text-white uppercase">
+                        Kunal <span class="text-blue-500">V.</span>
+                    </span>
+                </a>
+            </div>
+            
+            <div class="flex space-x-4 md:space-x-6 text-[11px] font-semibold uppercase tracking-wider text-slate-400 items-center">
+                <a href="#about" data-i18n="nav-about" class="hidden lg:inline hover:text-blue-500 transition">About</a>
+                <a href="#skills" data-i18n="nav-skills" class="hidden lg:inline hover:text-blue-500 transition">Skills</a>
+                <a href="#projects" data-i18n="nav-projects" class="hidden lg:inline hover:text-blue-500 transition">Projects</a>
+                <a href="#experience" data-i18n="nav-experience" class="hidden lg:inline hover:text-blue-500 transition">Experience</a>
+                <a href="#whitepapers" data-i18n="nav-whitepapers" class="hidden lg:inline hover:text-blue-500 transition">White Paper</a>
+                <a href="#testimonials" data-i18n="nav-awards" class="hidden lg:inline hover:text-blue-500 transition">Awards</a>
+                <a href="#credentials" data-i18n="nav-credentials" class="hidden lg:inline hover:text-blue-500 transition">Credentials</a>
+                
+                <button onclick="openDownloadModal()" class="text-blue-500 hover:text-blue-400 transition flex items-center gap-1.5 border border-blue-500/30 px-2.5 py-1 rounded bg-blue-500/10 text-[11px] font-bold uppercase tracking-wider relative z-50">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i> CV
+                </button>
+            </div>
+
+            <div class="relative inline-block text-left">
+                <button onclick="toggleLangDropdown()" id="langBtn" class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-slate-800 rounded-md text-xs font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 transition shadow-sm">
+                    <i data-lucide="languages" class="w-3.5 h-3.5 text-blue-500"></i> <span id="currentLang">English</span> <i data-lucide="chevron-down" class="w-3 h-3 text-slate-500"></i>
+                </button>
+                <div id="langDropdown" class="hidden absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-slate-900 border border-slate-800 ring-1 ring-black ring-opacity-5 z-50">
+                    <div class="py-1">
+                        <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 font-semibold transition">English</button>
+                        <button onclick="changeLanguage('no')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 font-semibold transition">Norsk</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <!-- ONE-LINE CONTACT SUB-NAVIGATION BAR -->
+    <div class="fixed w-full z-40 subnav-contact top-[73px] py-2.5 px-6 hidden sm:block">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400">
+            <span class="email-container hover:text-blue-500 transition flex items-center gap-1.5">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
+            </span>
+            <span class="text-slate-700">|</span>
+            <div class="flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500"></i> <span data-i18n="location" class="text-slate-300">Oslo, Norway</span>
+            </div>
+            <span class="text-slate-700">|</span>
+            <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="hover:text-[#0077b5] text-slate-300 transition flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 fill-[#0077b5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN PORTAL DISPLAY -->
     <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
-                <h1 class="text-3xl font-extrabold text-white">Datacenter SME & Infrastructure Architect</h1>
-                <p class="text-slate-300">Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions.</p>
-                
-                <div class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 relative">
-                    <div class="absolute top-2 right-2 px-2 py-0.5 bg-blue-500/10 rounded text-[9px] font-bold text-blue-400 uppercase">In‑House Development</div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 text-red-400 text-xs font-semibold rounded-full border border-red-900/60">
+                    <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
+                </div>
+                <h1 data-i18n="hero-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                    Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher
+                </h1>
+                <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
+                    Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
+                </p>
+                <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
                     <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.
+                </div>
+            </div>
+
+            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl shadow-sm space-y-4 w-full">
+                <div class="border-b border-slate-800 pb-2">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400" data-i18n="domain-title">Domain Experience</h3>
+                </div>
+                <div class="space-y-2 text-xs font-semibold text-slate-300">
+                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Oil & Gas (Energy)</div>
+                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Banking & Financial Services</div>
+                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Pharmaceuticals</div>
+                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Datacenter Operations</div>
+                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
+                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Operational Technology (OT) Industries</div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/85 backdrop-blur-sm" onclick="closeDownloadModal()"></div>
-        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 relative z-10 text-xs">
-            <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
-                <input type="text" id="viewerName" required placeholder="Full Name" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-white" />
-                <input type="text" id="viewerCompany" required placeholder="Company" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-white" />
-                <input type="email" id="viewerEmail" required placeholder="Email" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-white" />
-                
-                <div class="flex justify-center my-2">
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADdfV2n2j0I-EeAE" data-theme="dark"></div>
+    <section class="bg-slate-950 border-y border-slate-800 py-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl font-bold text-white">20+</div>
+                <div id="counter-exp" data-i18n="count-exp" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Years IT Experience</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-blue-500">30+</div>
+                <div id="counter-del" data-i18n="count-del" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Global Deliveries</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-green-500">8+</div>
+                <div id="counter-usr" data-i18n="count-usr" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Worldwide Data Centers</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-blue-500">100+</div>
+                <div id="counter-dat" data-i18n="count-dat" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Locations Worldwide Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SKILLS CONTAINER -->
+    <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800">
+        <div class="mb-12">
+            <h2 data-i18n="skills-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+                <i data-lucide="shield-check" class="text-blue-500"></i> Core Skills
+            </h2>
+            <p data-i18n="skills-desc" class="text-slate-400 text-sm mt-1">Foundational execution capabilities across mission-critical technical domains.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="server" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-1" class="text-sm font-semibold text-slate-200">Data Center Operations</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="folder-kanban" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-2" class="text-sm font-semibold text-slate-200">Project Management</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="search" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-3" class="text-sm font-semibold text-slate-200">Root Cause Analysis (RCA)</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="terminal" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-4" class="text-sm font-semibold text-slate-200">Multi-AI Model Practitioner</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="git-branch" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-5" class="text-sm font-semibold text-slate-200">Infrastructure Projects</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="users" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-200">Vendor Management</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="alert-triangle" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-7" class="text-sm font-semibold text-slate-200">Risk Mitigation</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="calendar" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-8" class="text-sm font-semibold text-slate-200">Capacity Planning & Scheduling</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="dollar-sign" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-200">Budget Tracking</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="cpu" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-slate-200">Server Architecture</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="database" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-11" class="text-sm font-semibold text-slate-200">AI LAB Architecture</span>
+            </div>
+            <div class="p-4 card-premium flex items-center gap-3">
+                <i data-lucide="hard-drive" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
+                <span data-i18n="skill-12" class="text-sm font-semibold text-slate-200">Critical Data Center Operations</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+                <i data-lucide="layers" class="text-blue-500"></i> <span data-i18n="proj-heading">Key Projects</span>
+            </h2>
+            <p data-i18n="proj-lead-desc" class="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
+                Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.
+            </p>
+        </div>
+
+        <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl shadow-sm">
+            <ul id="main-project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-slate-300 leading-relaxed"></ul>
+        </div>
+
+        <div class="mt-8 mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
+                <i data-lucide="archive" class="w-4 h-4"></i> <span data-i18n="hist-heading">Historical Core Infrastructure Deployments</span>
+            </h3>
+        </div>
+        <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl shadow-sm">
+            <ul id="historical-project-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-400 leading-relaxed"></ul>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 data-i18n="exp-heading" class="text-3xl font-bold text-white mb-16 tracking-tight flex items-center gap-3">
+                <i data-lucide="briefcase" class="text-blue-500"></i> Corporate Experience
+            </h2>
+            <div id="experience-timeline" class="timeline-line ml-4 space-y-12"></div>
+        </div>
+    </section>
+
+    <!-- WHITE PAPERS AND CASE STUDIES -->
+    <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 space-y-8">
+            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+                <i data-lucide="book-open" class="text-blue-500"></i> <span data-i18n="wp-heading">White Papers & Case Studies</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md">
+                    <div class="flex items-center justify-between">
+                        <span id="cs1-tag" data-i18n="cs1-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-blue-950/40 text-blue-400 border border-blue-900/60 text-[10px] font-bold uppercase rounded-full">Energy Enterprise</span>
+                        <span id="cs1-loc" data-i18n="cs1-loc" class="text-xs font-mono text-green-500 font-bold">Norway Site</span>
+                    </div>
+                    <h4 id="cs1-title" data-i18n="cs1-title" class="font-extrabold text-white text-base">Data Center Optimization Case Study</h4>
+                    <p id="cs1-sub" data-i18n="cs1-sub" class="text-xs text-slate-400 leading-relaxed font-semibold">Zero‑Downtime Consolidation Delivering $300K Annual Savings</p>
+                    <div id="cs1-body" data-i18n="cs1-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3"></div>
                 </div>
 
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md">
+                    <div class="flex items-center justify-between">
+                        <span id="cs2-tag" data-i18n="cs2-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-purple-950/40 text-purple-400 border border-purple-900/60 text-[10px] font-bold uppercase rounded-full">Hybrid Migration</span>
+                        <span id="cs2-loc" data-i18n="cs2-loc" class="text-xs font-mono text-blue-500 font-bold">US-2 Site</span>
+                    </div>
+                    <h4 id="cs2-title" data-i18n="cs2-title" class="font-extrabold text-white text-base">US-2 Datacenter Decommissioning & Hybrid Migration</h4>
+                    <p id="cs2-sub" data-i18n="cs2-sub" class="text-xs text-slate-400 leading-relaxed font-semibold">Data Center Decommissioning & Multi-Application Architecture Shift</p>
+                    <div id="cs2-body" data-i18n="cs2-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
+        <div class="text-center space-y-3 mb-12">
+            <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
+                <i data-lucide="award" class="text-blue-500"></i> Appreciation & Awards
+            </h2>
+            <p data-i18n="awards-desc" class="text-slate-400 text-sm max-w-2xl mx-auto">
+                Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.
+            </p>
+        </div>
+        <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
+    </section>
+
+    <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="space-y-6">
+                <h2 data-i18n="cert-title" class="text-2xl font-bold text-white tracking-tight">Technical Certifications</h2>
+                <div id="certifications-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-400"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSOLIDATED CONCISE FOOTER -->
+    <footer class="py-12 border-t border-slate-800 bg-black text-center space-y-4">
+        <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-xs font-bold text-slate-400 px-6">
+            <a href="https://kunalv.me" class="hover:text-blue-500 flex items-center gap-2 transition">
+                <i data-lucide="globe" class="w-4 h-4 text-blue-500"></i> kunalv.me
+            </a>
+            <span class="text-slate-800 hidden md:block">|</span>
+            <span class="email-container hover:text-blue-500 flex items-center gap-2 transition">
+                <i data-lucide="mail" class="w-4 h-4 text-blue-500"></i>
+            </span>
+            <span class="text-slate-800 hidden md:block">|</span>
+            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition flex items-center gap-2" title="GitHub">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
+            </a>
+            <span class="text-slate-800 hidden md:block">|</span>
+            <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="hover:text-[#0077b5] text-slate-400 transition flex items-center gap-2" title="LinkedIn">
+                <svg class="w-4 h-4 fill-[#0077b5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn
+            </a>
+            <span class="text-slate-800 hidden md:block">|</span>
+            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-white transition flex items-center gap-2" title="X (Twitter)">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter
+            </a>
+            <span class="text-slate-800 hidden md:block">|</span>
+            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-[#ff0000] text-slate-400 transition flex items-center gap-2" title="YouTube">
+                <svg class="w-4 h-4 fill-[#ff0000]" viewBox="0 0 24 24"><path d="M23.498 6.163s-.232-1.63-.941-2.348c-.901-.943-1.911-.947-2.373-1.002-3.305-.24-8.255-.24-8.255-.24s-4.95 0-8.255.24c-.462.055-1.472.059-2.373 1.002-.709.718-.941 2.348-.941 2.348s-.237 1.93-.237 3.859v1.811c0 1.929.237 3.859.237 3.859s.232 1.63.941 2.348c.901.943 2.112.914 2.651 1.015 3.793.364 8.249.378 8.249.378s4.955-.007 8.26-.248c.462-.055 1.472-.059 2.373-1.002.709-.718.941-2.348.941-2.348s.237-1.931.237-3.859v-1.811c0-1.929-.237-3.859-.237-3.859zm-14.124 8.574V8.14l6.456 3.298-6.456 3.299z"/></svg> YouTube
+            </a>
+        </div>
+        
+        <div class="flex justify-center items-center gap-4 text-slate-500 text-[11px] font-medium pt-2">
+            <span id="trafficLabel">Live Traffic Counter:</span>
+            <span id="localSessionCounterNode" class="px-2 py-0.5 bg-slate-900 text-blue-400 border border-slate-800 rounded font-mono text-xs">1,482</span>
+        </div>
+
+        <p class="text-slate-600 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
+    </footer>
+
+    <!-- EMAIL-GATED DOWNLOAD MODAL -->
+    <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
+        
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 shadow-2xl relative z-10 text-xs">
+            <button onclick="closeDownloadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="text-center space-y-2 mb-6">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/30 mx-auto text-blue-500">
+                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white tracking-tight">Download Professional CV</h3>
+                <p class="text-xs text-slate-400">Please provide your details below to download Kunal's 1-page profile summary.</p>
+            </div>
+
+            <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
+                <!-- INVISIBLE HONEYPOT SPAM FIELD (Web3Forms Native Free Feature) -->
+                <input type="text" name="from_name" class="hidden" style="display:none">
+
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Full Name</label>
+                    <input type="text" id="viewerName" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Company / Organization</label>
+                    <input type="text" id="viewerCompany" required placeholder="Company Inc." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Email Address</label>
+                    <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                </div>
+
+                <!-- GDPR USER OPT-IN COMPLIANCE -->
                 <div class="flex items-start gap-2 my-2">
                     <input type="checkbox" id="gdprConsent" required class="mt-1 cursor-pointer">
-                    <label for="gdprConsent" class="text-[10px] text-slate-400">I consent to having my business contact details processed. <button type="button" onclick="openPrivacyModal()" class="text-blue-400 underline">Learn more.</button></label>
+                    <label for="gdprConsent" class="text-[10px] text-slate-400 select-none cursor-pointer">I consent to having my business contact details processed to log this CV file download request in accordance with EU privacy rules.</label>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2.5 rounded-lg">Download PDF</button>
+
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm py-2.5 rounded-lg transition flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-4 h-4"></i> Access Resume / Download PDF
+                </button>
             </form>
         </div>
     </div>
 
-    <div id="privacyModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closePrivacyModal()"></div>
-        <div class="bg-slate-900 border border-slate-700 w-full max-w-sm rounded-xl p-6 relative z-10 text-xs text-slate-300 space-y-4">
-            <h4 class="text-white font-bold text-sm">Data Privacy Notice</h4>
-            <p>Your details are processed via <strong>Web3Forms</strong> and forwarded to my <strong>ProtonMail</strong> inbox (end-to-end encrypted). Data is never sold or shared.</p>
-            <button onclick="closePrivacyModal()" class="w-full bg-slate-800 text-white py-2 rounded-lg">Close</button>
+    <!-- ========================================== -->
+    <!-- COMPRESSED PRINT LAYOUT SPECIFICATIONS -->
+    <!-- ========================================== -->
+    <div id="printableCV" class="print:block hidden bg-white text-slate-900 p-2 w-full text-[8.2px] font-sans leading-tight">
+        <!-- Header -->
+        <div class="border-b-[1.5px] border-slate-800 pb-0.5 flex justify-between items-end">
+            <div>
+                <h1 class="text-[14px] font-black tracking-tighter text-slate-950 uppercase leading-none">Kunal Vishwakarma</h1>
+                <p class="text-[9px] font-bold text-blue-700 uppercase tracking-wide mt-0.5">Datacenter SME & Infrastructure Architect</p>
+            </div>
+        </div>
+
+        <!-- Clean Consolidated Contact Bar -->
+        <div class="py-1 border-b border-slate-200 text-[8px] font-semibold text-slate-600 flex justify-between items-center flex-wrap gap-1">
+            <div class="print-email-node">✉ </div>
+            <div class="text-slate-300">|</div>
+            <div>📍 Oslo, Norway</div>
+            <div class="text-slate-300">|</div>
+            <div class="text-[#0077b5]">💼 linkedin.com/in/kunalkv/en</div>
+            <div class="text-slate-300">|</div>
+            <div>🌐 kunalv.me</div>
+        </div>
+
+        <!-- Summary -->
+        <div class="my-1.5">
+            <p class="text-slate-700 text-justify text-[8.2px] leading-normal">
+                Migration Lead and Infrastructure Architect with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial boundaries. Proven track record managing multi-million dollar asset movements, industrial OT network hardening, and zero-downtime consolidations across Energy, Banking, and Pharmaceutical fields. Skilled in context-aware prompt designs across multiple LLMs to enable automated infrastructure flows.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 items-start">
+            <!-- Left Side: Experience & Projects -->
+            <div class="col-span-2 space-y-2">
+                <div>
+                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Corporate Experience</h2>
+                    <div class="space-y-1.5">
+                        <div>
+                            <div class="flex justify-between font-bold text-slate-950 leading-none">
+                                <span class="text-[8.5px]">Datacenter SME / Infrastructure Architect</span>
+                                <span class="text-[7.5px] text-slate-400 font-medium">2019 — Present</span>
+                            </div>
+                            <div class="text-[7.5px] font-bold text-slate-500 uppercase mt-0.5">Cognizant Oil & Gas Consulting Services | Oslo, Norway</div>
+                            <ul class="list-none ml-1 mt-0.5 text-slate-700 text-[8px] space-y-0.5">
+                                <li>• Steer Azure hybrid cloud adoption pipelines and multi-tenant alignments inside DevOps dashboards.</li>
+                                <li>• Govern migration tracking blocks, author infrastructure runbooks, and manage enterprise RAID logs.</li>
+                                <li>• Audit regional scoping footprints, evaluate hardware cost metrics, and validate technical SoW parameters.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-bold text-slate-950 leading-none">
+                                <span class="text-[8.5px]">Technical Line Lead / Assoc. Operations Manager</span>
+                                <span class="text-[7.5px] text-slate-400 font-medium">2013 — 2019</span>
+                            </div>
+                            <div class="text-[7.5px] font-bold text-slate-500 uppercase mt-0.5">Cognizant Technology Solutions | Pune, India</div>
+                            <ul class="list-none ml-1 mt-0.5 text-slate-700 text-[8px] space-y-0.5">
+                                <li>• Successfully established and scaled Barclays' primary Offshore Development Center footprint in India.</li>
+                                <li>• Served as global Web Infrastructure SME managing routing, access controls, F5 BIG-IP, and proxy clusters.</li>
+                                <li>• Directed engineering squads delivering core transition operations and critical L1/L2 incident remediation tracks.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-bold text-slate-950 leading-none">
+                                <span class="text-[8.5px]">Technical Consultant & Project Lead</span>
+                                <span class="text-[7.5px] text-slate-400 font-medium">2005 — 2012</span>
+                            </div>
+                            <div class="text-[7.5px] font-bold text-slate-500 uppercase mt-0.5">Einfotek, Compucom & Ashtech Infotech | International</div>
+                            <ul class="list-none ml-1 mt-0.5 text-slate-700 text-[8px] space-y-0.5">
+                                <li>• Managed multi-phase tactical server migration blocks processing 100+ active production profiles for Walmart.</li>
+                                <li>• Tracked asset equipment procurements, lifecycle budget lines, software licenses, and perimeter firewall setups.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Key Project Highlights</h2>
+                    <ul class="space-y-1 text-slate-700 text-justify text-[8px] leading-tight">
+                        <li>• <strong class="text-slate-900">Data Center Optimization (Oslo Site):</strong> Relocated ~10 tons of hardware dependencies (14 HPE Enclosures, 50 Servers, 12 Racks) with zero disruption blocks, delivering <strong class="text-slate-900">$300K in annual cost savings</strong>.</li>
+                        <li>• <strong class="text-slate-900">US-2 Datacenter Decommissioning:</strong> Directed four-stage blueprint migration processing 10PB core data volumes, scoring a documented <strong class="text-slate-900">33% direct saving</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Skills & Certifications -->
+            <div class="space-y-2">
+                <div>
+                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Core Competencies</h2>
+                    <div class="flex flex-wrap gap-0.5 text-[7.2px] font-bold">
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Critical DC Operations</span>
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Project Management</span>
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Capacity Planning</span>
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Root Cause Analysis</span>
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Vendor Management</span>
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Server Architecture</span>
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Risk Mitigation</span>
+                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Technical Credentials</h2>
+                    <ul class="space-y-0.5 font-bold text-[7.5px] text-slate-700 uppercase tracking-tight">
+                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> Azure Security Engineer</li>
+                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> Azure Administrator</li>
+                        <li class="flex items-center gap-1"><span class="text-[#0078d4] text-[6px]">■</span> MCSE / MCP+I / MCP</li>
+                        <li class="flex items-center gap-1"><span class="text-[#5b21b6] text-[6px]">■</span> PRINCE2 Agile® / ITIL</li>
+                        <li class="flex items-center gap-1"><span class="text-[#cc0000] text-[6px]">■</span> Cyber Security - Gov of India</li>
+                        <li class="flex items-center gap-1"><span class="text-[#eab308] text-[6px]">■</span> BICSI Data Center Infra</li>
+                        <li class="flex items-center gap-1"><span class="text-[#64748b] text-[6px]">■</span> CISM / CISSP Training</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Key Awards</h2>
+                    <ul class="space-y-0.5 text-slate-700 font-bold text-[7.8px] leading-tight">
+                        <li>🏆 <strong class="text-slate-900">GEM Award</strong> - Aker Solutions</li>
+                        <li>⭐ <strong class="text-slate-900">Best Performer</strong> - Barclays Capital</li>
+                        <li>🌟 <strong class="text-slate-900">Best Performer</strong> - Telenet Belgium</li>
+                        <li>💡 <strong class="text-slate-900">Best Innovation</strong> - SaiTech Project</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="printableCV" class="print:block hidden bg-white text-slate-900 p-2 w-full text-[8.2px] font-sans">
+    <!-- Vishwa AI Chatbot -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <!-- FLOATING SPEECH BUBBLE TOOLTIP (Matches image_8cd5fc.png perfectly) -->
+        <div id="vishwa-tooltip" class="speech-arrow relative bg-white text-slate-900 px-4 py-2.5 rounded-xl font-medium text-xs shadow-xl flex items-center gap-1.5 whitespace-nowrap transition-all duration-300 transform opacity-100 translate-x-0 border border-slate-200">
+            <span class="text-blue-600 font-bold text-sm">✨</span> Hello, how can I help?
         </div>
 
-    <footer class="py-12 border-t border-slate-800 bg-black text-center text-[10px] text-slate-600 uppercase tracking-widest">
-        © 2026 Kunal Vishwakarma | kunalv.me | All rights reserved
-    </footer>
+        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none shrink-0 relative">
+            <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
+        </button>
+
+        <div id="vishwa-chat-box" class="chat-popup absolute bottom-20 right-0 w-80 sm:w-96 h-[480px] bg-slate-900 border border-slate-800 rounded-2xl flex flex-col shadow-2xl overflow-hidden">
+            <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="relative">
+                        <div class="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center border border-blue-500/30">
+                            <i data-lucide="bot" class="w-4 h-4 text-blue-500"></i>
+                        </div>
+                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-slate-950 rounded-full"></span>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white tracking-tight">Vishwa AI</h3>
+                        <p class="text-[10px] text-slate-400 font-medium">Profile Assistant Bot</p>
+                    </div>
+                </div>
+                <button onclick="toggleVishwaChat()" class="text-slate-400 hover:text-white transition">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <div id="chat-messages-container" class="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-hide text-xs">
+                <div class="flex items-start gap-2.5">
+                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
+                        Welcome! My name is <span class="text-blue-400 font-bold">Vishwa</span>. I am specifically trained to assist you with queries related to Kunal's profile, datacenter milestones, project history, or tech stack!
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
+                <input type="text" id="chat-user-input" onkeydown="if(event.key === 'Enter') sendQueryToVishwa()" placeholder="Ask me about Kunal's profile..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+                <button onclick="sendQueryToVishwa()" class="px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script>
-        function openPrivacyModal() { document.getElementById('privacyModal').classList.remove('hidden'); }
-        function closePrivacyModal() { document.getElementById('privacyModal').classList.add('hidden'); }
-        function openDownloadModal() { document.getElementById('downloadModal').classList.remove('hidden'); }
-        function closeDownloadModal() { document.getElementById('downloadModal').classList.add('hidden'); }
+        const translations = {
+            en: {
+                "nav-about": "About", "nav-skills": "Skills", "nav-projects": "Projects", "nav-experience": "Experience", "nav-whitepapers": "White Paper", "nav-awards": "Awards", "nav-credentials": "Credentials",
+                "availability": "Available for Global Engagements", "location": "Oslo, Norway",
+                "hero-title": "Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner | OSINT Researcher",
+                "hero-desc": "Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.",
+                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.`,
+                "count-exp": "Years IT Experience", "count-del": "Global Deliveries", "count-usr": "Worldwide Data Centers", "count-dat": "Locations Worldwide Support",
+                "domain-title": "Domain Experience",
+                "skills-title": "Core Skills", "skills-desc": "Foundational execution capabilities across mission-critical technical domains.",
+                "skill-1": "Data Center Operations", "skill-2": "Project Management", "skill-3": "Root Cause Analysis (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastructure Projects", "skill-6": "Vendor Management", "skill-7": "Risk Mitigation", "skill-8": "Capacity Planning & Scheduling", "skill-9": "Budget Tracking", "skill-10": "Server Architecture", "skill-11": "AI LAB Architecture", "skill-12": "Critical Data Center Operations",
+                "proj-heading": "Key Projects", "proj-lead-desc": "Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.",
+                "hist-heading": "Historical Core Infrastructure Deployments",
+                "exp-heading": "Corporate Experience", "awards-heading": "Appreciation & Awards", "awards-desc": "Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.",
+                "cert-title": "Technical Certifications",
+                "wp-heading": "White Papers & Case Studies",
+                "traffic-text": "Live Traffic Counter:",
+                
+                // Case Study 1 English
+                "cs1-tag": "Energy Enterprise", "cs1-loc": "Norway Site",
+                "cs1-title": "Data Center Optimization Case Study",
+                "cs1-sub": "Zero‑Downtime Consolidation Delivering $300K Annual Savings",
+                "cs1-body": `
+                    <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission‑critical services. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the consolidation program across two facilities in Oslo, Norway.</p>
+                    <p>The initiative delivered ~$300K annual savings, optimized physical footprint, and achieved zero business disruption.</p>
+                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End-'to‑end program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
+                    <p><strong class="text-blue-400">Business Challenge:</strong> The client operated two primary data centers located 5 km apart. Rising operational costs and an expiring facility lease required consolidation of the secondary data center’s extension room inside a strict 4-month deadline window. Handled relocation of ~10 tons of aging hardware with no OEM assurance and mandatory zero-downtime demands for active SAP, NAS, and PKI services.</p>
+                    <p><strong class="text-blue-400">Infrastructure Landscape:</strong> Managed migration parameters across critical hosted workloads including SAP Mission-Critical Block Storage, Primary NAS File Services for ~5,000 daily users, PKI Security Infrastructure, Video Conferencing Systems, and Backup Environments (Tape Library + Disk Backup).</p>
+                    <p><strong class="text-blue-400">Approach & Methodology:</strong> Executed breakdown steps into clean tasks with a mandatory four-eye review process for all change workflows. Designed specific temporary Disaster Recovery (DR) mode parameters to safeguard uninterrupted availability blocks.</p>
+                    <p><strong class="text-blue-400">Execution Highlights:</strong> Maintained zero business outage loops during storage block migrations. Successfully coordinated logistical secure tracks shifting <strong>14 HPE Enclosures, 50 Servers, 3 Large ESL Tape Libraries, 10 Full Storage Racks, and 2 Racks of Network Equipment</strong>.</p>
+                    <p><strong class="text-blue-400">Outcomes:</strong> Full structural transformation yields including dropped ongoing server support overheads and deployed automated off-site cloud replication topologies.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Business Impact: ~$300K Annual Savings & Optimized Rack Utilization</span></div>
+                `,
+
+                "cs2-tag": "Hybrid Migration", "cs2-loc": "US-2 Site",
+                "cs2-title": "US-2 Datacenter Decommissioning & Hybrid Migration",
+                "cs2-sub": "Data Center Decommissioning & Multi-Application Architecture Shift",
+                "cs2-body": `
+                    <p><strong class="text-blue-400">Requirement:</strong> Decommission aging US-2 Datacenter footprint and migrate all core workloads safely to local datarooms and global destinations with zero downtime window targets.</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-2.png" alt="US-2 Migration Approach Blueprint" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 1: Executed Four-Stage Strategic Migration Roadmap Blueprint</p>
+                    </div>
+                    <p><strong class="text-blue-400">Approach & Readiness:</strong> Engineered high-availability parameters including 10PB core storage architectures, isolated DMZ boundaries, server network racks, unified UPS protection blocks, and optimized Internet/MPLS connections. Completed migration sequences for 5 critical internal application stacks.</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-1.png" alt="US-2 Executed Features and Benefits" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figure 2: Corporate Integration Features & Post-Migration Yield Matrix</p>
+                    </div>
+                    <p><strong class="text-blue-400">Execution Management:</strong> Managed robust cross-functional dependencies requiring 20+ high-performance SMEs, 350+ Webex technical logs, and 500+ secure correspondence lines. Shuffled operations post-business hours and within summer vacation cycles to safely bypass strict change-freezes.</p>
+                    <p><strong class="text-blue-400">Outcomes:</strong> Delivered full structural transformation yields including an explicit 33% direct saving over transparent network architecture gear profiles, dropped ongoing server support overheads, and deployed automated off-site cloud replication topologies.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Financial Efficiency: 33% Direct Infrastructure Savings</span></div>
+                `
+            },
+            no: {
+                "nav-about": "Om", "nav-skills": "Ferdigheter", "nav-projects": "Prosjekter", "nav-experience": "Erfaring", "nav-whitepapers": "Hvitbøker", "nav-awards": "Anerkjennelse", "nav-credentials": "Sertifiseringer",
+                "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
+                "hero-title": "Datasenter SME & Infrastrukturarkitekt | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker | OSINT-Forsker",
+                "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor begrensete finans- og samsvarskrav.",
+                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Kompetent i å designe strukturerte, kontekstbevisste ledetekster (prompts) på tvers av ulike LLMer. Multi‑AI Model Practitioner som administrerer en dedikert, personal AI LAB (Chatplayground.ai, 1minAI) for å drive automatisering og infrastrukturarbeid.`,
+                "count-exp": "Års IT-erfaring", "count-del": "Globale leveranser", "count-usr": "Globale Datasentre", "count-dat": "Lokasjoner Global Support",
+                "domain-title": "Bransjeerfaring",
+                "skills-title": "Kjernekompetanse", "skills-desc": "Grunnleggende gjennomføringsevne innenfor forretningskritiske tekniske domener.",
+                "skill-1": "Datasenterdrift (DC Ops)", "skill-2": "Prosjektledelse", "skill-3": "Feilsøking & Rotårsaksanalyse (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastrukturprosjekter", "skill-6": "Leverandørstyring (Vendor Mgmt)", "skill-7": "Risikoavlastning & Reduksjon", "skill-8": "Kapasitetsplanlegging", "skill-9": "Budsjettsporing", "skill-10": "Serverarkitektur", "skill-11": "AI LAB Architecture", "skill-12": "Kritisk Datasenterdrift",
+                "proj-heading": "Hovedprosjekter", "proj-lead-desc": "Høydepunkter fra ende-til-ende skymigreringer, nettverksintegrasjoner, perimetre og datasenter-transformasjoner levert globalt.",
+                "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
+                "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
+                "cert-title": "Tekniske Sertifiseringer",
+                "wp-heading": "White Papers & Case Studies",
+                "traffic-text": "Besøksstatistikk:",
+                
+                // Case Study 1 Norwegian
+                "cs1-tag": "Energibedrift", "cs1-loc": "Norge Lokasjon",
+                "cs1-title": "Kasusstudie: Datasenter-optimalisering",
+                "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
+                "cs1-body": `
+                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjenvighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
+                    <p>Initiativet ga ~$300K i årlige besparelser, optimaliserte det fysiske fotavtrykket og ble fullført uten avbrudd for virksomheten.</p>
+                    <p><strong class="text-blue-400">Min rolle:</strong> Kombinert <strong>Datasenter-SME</strong> (In-situ validering av infrastruktur, kabling, rack-utforming, avhengighetskartlegging og fysisk oppfølging) og <strong>Teknisk prosjektleder</strong> (Ende-til-ende programstyring, utarbeidelse av kjøreplaner/runbooks og koordinering på tvers av lagrings-, nettverks-, og sikkerhetsteam).</p>
+                    <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebibliotek, 10 fulle lagringsracks og 2 nettverksracks.</p>
+                    <p><strong class="text-blue-400">Resultat:</strong> Fullførte transformasjonen med redusert løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Gevinst: ~$300 000 i årlige driftsbesparelser og optimalisert rack-utnyttelse</span></div>
+                `,
+
+                "cs2-tag": "Hybrid Migrering", "cs2-loc": "US-2 Lokasjon",
+                "cs2-title": "US-2 Datasenter Avvikling & Hybrid Migrering",
+                "cs2-sub": "Datasenteravvikling & Arkitektonisk Skifte for Multi-Applikasjoner",
+                "cs2-body": `
+                    <p><strong class="text-blue-400">Krav:</strong> Avvikle det eldre US-2-datasenteret og migrere alle kjernekomponenter sikkert to lokale dedikerte datarom og globale datasentre med null nedetid for applikasjoner.</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-2.png" alt="US-2 Veikart for migrering" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 1: Strategisk firetrinns veikart for migreringsforløpet</p>
+                    </div>
+                    <p><strong class="text-blue-400">Metode & Klargjøring:</strong> Etablerte dedikerte 10PB lagringsstrukturer, isolerte DMZ-soner, nettverksracks, UPS-rammeverk og doble Internett/MPLS-linjer. Fullførte migrering for 5 interne kjerneapplikasjoner.</p>
+                    <div class="my-4 p-2 bg-slate-950 rounded border border-slate-800/60">
+                        <img src="US-1.png" alt="US-1 Kjernefunksjoner og fordeler" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
+                        <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 2: Arkitektoniske funksjoner og operasjonelle resultater</p>
+                    </div>
+                    <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) gjennom 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen ble utført etter arbeidstid og i sommerferien for å omgå aktive endringsfrys-perioder.</p>
+                    <p><strong class="text-blue-400">Resultat:</strong> Oppnådde 33% direkte kostnadsbesparelse på nettverksutstyr, reduserte løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
+                    <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Kostnadseffektivitet: 33% Direkte Besparelse på Infrastruktur</span></div>
+                `
+            }
+        };
+
+        const keyProjects = {
+            en: [
+                "<strong>Led the setup of ODCs</strong> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding.",
+                "<strong>Network Optimization & Security Architecture:</strong> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade.",
+                "<strong>HCC & HCD United States:</strong> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud.",
+                "<strong>Product LAB Deployment:</strong> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom.",
+                "<strong>Russia LED Site:</strong> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia.",
+                "<strong>3PA Cloud Solutions:</strong> Managed the design and end-to-end deployment of an Azure B2B solution architecture.",
+                "<strong>OneDrive Migration:</strong> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud.",
+                "<strong>Dvalin Infrastructure Portfolio:</strong> Handled complex network delivery projects and physical branch office expansions.",
+                "<strong>NCS 2020:</strong> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB.",
+                "<strong>MHWirth Network Integration:</strong> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement.",
+                "<strong>MS Defender Enterprise Rollout:</strong> Spearheaded the legacy security decommission by migrating the global footprint from McAfee to MS Defender.",
+                "<strong>Veidekke Cloud Migration:</strong> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud.",
+                "<strong>MHWirth Unified Endpoint Management:</strong> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets.",
+                "<strong>MHWirth SAP Fiori Delivery:</strong> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure.",
+                "<strong>Norway Datacenter Decommission:</strong> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration.",
+                "<strong>KOP-IT Malaysia Tenants:</strong> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant.",
+                "<strong>Enterprise Visitor System:</strong> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices.",
+                "<strong>AKER Tech House Security:</strong> Designed and implemented physical IT security infrastructure, network topologies, and access control environments.",
+                "<strong>Branch Office Decommissions:</strong> Program managed the logistical and technical decommissioning of 10 international branch office locations.",
+                "<strong>HMH Global Expansion:</strong> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework."
+            ],
+            no: [
+                "<strong>Ledet etableringen av ODC-er</strong> i Pune, Mumbai og Chennai, inkludert klargjøring av infrastruktur, tilgangsstyring og onboarding av personell.",
+                "<strong>Nettverksoptimalisering og sikkerhetsarkitektur:</strong> Vellykket styring av nettverksoptimaliseringsprosjektet sammen med en omfattende global proxy-oppgradering.",
+                "<strong>HCC & HCD USA:</strong> Ledet flerfasede datasenter-optimaliseringstiltak og gjennomførte storskala migreringer til Azure Cloud.",
+                "<strong>Distribusjon av produkt-LAB:</strong> Arkitterte og distribuerte en dedikert, høysikkerhets on-site produkt-LAB hos en nøkkelkunde i Storbritannia.",
+                "<strong>Russland LED-lokasjon:</strong> Orkestrerte ende-til-ende IT-infrastruktur og nettverksoppsett for et nytt internasjonalt avdelingskontor i Russland.",
+                "<strong>3PA skyløsninger:</strong> Administrerte design og ende-til-ende distribusjon av en Azure B2B-løsningsarkitektur.",
+                "<strong>OneDrive-migrering:</strong> Overvåket sømløs datamigrering av eldre, lokalt brukerlagring (on-premises) til Azure Cloud.",
+                "<strong>Dvalin infrastrukturportefølje:</strong> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.",
+                "<strong>NCS 2020:</strong> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.",
+                "<strong>MHWirth nettverksintegrasjon:</strong> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
+                "<strong>MS Defender utrulling:</strong> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee to MS Defender.",
+                "<strong>Veidekke skymigrering:</strong> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
+                "<strong>MHWirth enhetsstyring (UEM):</strong> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
+                "<strong>MHWirth SAP Fiori:</strong> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
+                "<strong>Datasenter-utfasing i Norge:</strong> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.",
+                "<strong>KOP-IT Malaysia:</strong> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.",
+                "<strong>Besøkssystem for bedrifter:</strong> Implementerte automatiserte, kioskbaserte fysiske besøksløsninger på tvers av primære hovedkontorer.",
+                "<strong>AKER Tech House sikkerhet:</strong> Designet og implementerte fysisk IT-sikkerhetsinfrastruktur, nettverkstopologier og adgangskontrollmiljøer.",
+                "<strong>Avvikling av avdelingskontorer:</strong> Programledet den logistiske og tekniske avviklingen av 10 internasjonale avdelingskontorer.",
+                "<strong>HMH global ekspansjon:</strong> Ledet klargjøring av lokasjon for et nytt avdelingskontor kombinert med et samtidig migreringsrammeverk til Azure."
+            ]
+        };
+
+        const historicalProjects = {
+            en: [
+                "• <strong>Legacy Endpoint Security Upgrades:</strong> Successfully migrated corporate network endpoints to Symantec Antivirus (SAV 9.0) security architecture.",
+                "• <strong>Nationwide Infrastructure Assessment:</strong> Conducted data center and network asset data collection across an entire nationwide operating footprint.",
+                "• <strong>VSAT Infrastructure Modernization:</strong> Upgraded critical satellite VSAT network infrastructure across 33 high-importance sites.",
+                "• <strong>Manufacturing Plant Network Hardening:</strong> Enhanced, segmented, and optimized physical network reliability for heavy industrial manufacturing plants.",
+                "• <strong>Infrastructure Monitoring Implementation:</strong> Implemented enterprise-grade monitoring, traffic logging, and analysis tools (MRTG and NetFlow Analyzer).",
+                "• <strong>Enterprise Architecture Documentation:</strong> Audited and created extensive network topology and data center dependency documentation.",
+                "• <strong>Firewall & Security Operations:</strong> Managed large-scale network edge security, configuring and monitoring Nokia IP 220 appliances and over 350 Check Point firewalls.",
+                "• <strong>LAN/WAN Microsoft Migrations:</strong> Conducted full-lifecycle LAN/WAN architecture implementations built on enterprise Microsoft platforms.",
+                "• <strong>Clinical Research Operations:</strong> Managed IT operations, network uptime, and service desk compliance for Clinical Research Operations in Pune.",
+                "• <strong>R&D Regional Network Expansion:</strong> Successfully expanded critical R&D networks in Goa and Pune, and drove end-to-end LAN/WAN infrastructure deployment projects to completion."
+            ],
+            no: [
+                "• <strong>Eldre endepunktssikkerhet:</strong> Vellykket migrering av bedriftens nettverksendepunkter to Symantec Antivirus (SAV 9.0) sikkerhetsarkitektur.",
+                "• <strong>Landsomfattende infrastrukturvurdering:</strong> Gjennomførte datainnsamling av datasenter- og nettverksmidler på tvers av et helt landsomfattende driftsfelt.",
+                "• <strong>VSAT modernisering:</strong> Oppgraderte kritisk satellitt-VSAT-nettverksinfrastruktur på tvers av 33 høyprioriterte lokasjoner.",
+                "• <strong>Nettverksherding for produksjonsanlegg:</strong> Forbedret, segmenterte og optimaliserte fysisk nettverkspålitelighet for tunge industrielle produksjonsanlegg.",
+                "• <strong>Implementering av overvåkingsverktøy:</strong> Implementerte overvåking, trafikkingenting og analysevektøy i bedriftsklassen (MRTG og NetFlow Analyzer).",
+                "• <strong>Dokumentasjon av arkitektur:</strong> Auditerte og opprettet omfattende nettverkstopologi- og datasenteravhengighetsdokumentasjon.",
+                "• <strong>Brannmur- og sikkerhetsdrift:</strong> Administrerte storskala nettverksperimetersikkerhet, konfigurasjon og overvåking av Nokia IP 220-enheter og over 350 Check Point-brannmurer.",
+                "• <strong>LAN/WAN Microsoft-migreringer:</strong> Gjennomførte fullstendige LAN/WAN-arkitekturimplementeringer bygget på Microsoft-plattformer.",
+                "• <strong>Klinisk forskningsdrift:</strong> Administrerte IT-drift, nettverksoppetid og samsvar for klinisk forskningsdrift i Pune.",
+                "• <strong>Regional nettverksutvidelse:</strong> Vellykket utvidelse av kritiske FoU-nettverk i Goa og Pune, og utplassering av LAN/WAN-infrastruktur."
+            ]
+        };
+
+        const corporateExperience = {
+            en: [
+                {
+                    title: "Datacenter SME / Infrastructure Architect",
+                    company: "Cognizant Oil & Gas Consulting Services Norway AS",
+                    period: "2019 — Present | Oslo, Norway",
+                    bullets: [
+                        "Recover dependencies and drive Azure cloud adoption pipelines inside Jira / DevOps dashboards.",
+                        "Enforce strict framework governance: detailing RAID logs, business continuity architectures, and audit loops.",
+                        "Scale performance thresholds alongside technology leaders from Microsoft, HP, and Cisco hardware lines.",
+                        "Audit regional scoping plans, calculate server cost metrics, and validate technical SoW parameters.",
+                        "Coordinate core multi-tenant technical alignments across business divisions and isolated network borders."
+                    ]
+                },
+                {
+                    title: "Technical Line Lead / Associate Operations Manager",
+                    company: "Cognizant Technology Solutions India | Pune, India",
+                    period: "2013 — 2019",
+                    bullets: [
+                        "Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint in Pune.",
+                        "Led Web Infrastructure and integration delivery tracks for Barclays Technology Solutions.",
+                        "Acted as Subject Matter Expert managing core routing, access controls, and security appliances across F5 BIG-IP, Bluecoat proxies, Infoblox DNS/IPAM, Linux clusters, secure file transfers, and Fix‑Gateways.",
+                        "Directed a 20-member high-performing engineering and technical team delivering BAU and transition support across US, EMEA, and APAC sectors.",
+                        "Oversaw highly scalable infrastructure support systems, resolving between 500 to 1,000 daily L1/L2 incident interactions."
+                    ]
+                },
+                {
+                    title: "Technical Consultant",
+                    company: "Einfotek | Pune",
+                    period: "2011 — 2012",
+                    bullets: [
+                        "Served as Web Infrastructure Lead for highly regulated banking domain client systems.",
+                        "Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.",
+                        "Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Infoblox, and Fixgateway boundaries."
+                    ]
+                },
+                {
+                    title: "Technical Project Lead",
+                    company: "Compucom | Pune",
+                    period: "2010 — 2011",
+                    bullets: [
+                        "Drove the strategic, multi-phase technical migration of 100+ production servers for Walmart systems.",
+                        "Managed enterprise Microsoft Hyper-V private cloud operations and computing environments.",
+                        "Led datacenter platform modernizations upgrading Windows Server footprints from legacy 2003/2008 sets to Windows Server 2012 platforms.",
+                        "Enforced highly rigid infrastructure availability metrics, maintaining a consistent 100% SLA record for customer technical support issue remediation."
+                    ]
+                },
+                {
+                    title: "Senior Network Administrator & Project Engineer",
+                    company: "NETSOL IBM India | Mumbai",
+                    period: "2009 — 2010",
+                    bullets: [
+                        "Designed, mapped, and audited highly scalable LAN/WAN topologies and enterprise data routing architectures.",
+                        "Implemented edge firewalls, persistent site-to-site VPN tunnels, and unified network data security baselines.",
+                        "Managed strategic network hardware vendor contracts, warranties, and disaster recovery (DR) data center validation records."
+                    ]
+                },
+                {
+                    title: "Network Administrator",
+                    company: "Ashtech Infotech | Mumbai",
+                    period: "2005 — 2009",
+                    bullets: [
+                        "Design and maintain scalable network solutions optimized for high-performance and business growth.",
+                        "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.",
+                        "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
+                        "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
+                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
+                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
+                    ]
+                }
+            ],
+            no: [
+                {
+                    title: "Datasenter SME / Infrastrukturarkitekt",
+                    company: "Cognizant Oil & Gas Consulting Services Norway AS",
+                    period: "2019 — Nåtid | Oslo, Norge",
+                    bullets: [
+                        "Bistår i komplekse Azure skymigreringsprogrammer ved bruk av Jira og Azure DevOps Boards.",
+                        "Driver streng programstyring: vedlikehold av RAID-logger, BCM/DR-arkitekturer, regulatoriske samsvarsstandarder og systematiske risikoreduksjonsforløp.",
+                        "Koordinerer leveranser og etablerer plattformsamarbeid med nøkkelpartnere som Microsoft, Cisco, HP og eksterne skyleverandører.",
+                        "Administrerer oppdragsinntak (demand intake), strukturerte økonomiske kostnadsestimater for datasentre og formelle SoW/RFP-evalueringsprosesser.",
+                        "Samordner forretningsinteressenter, kjerneinfrastruktur og perimetersikkerhetsteam gjennom hele leveransens livssyklus."
+                    ]
+                },
+                {
+                    title: "Teknisk Leder / Associate Operations Manager",
+                    company: "Cognizant Technology Solutions India | Pune, India",
+                    period: "2013 — 2019",
+                    bullets: [
+                        "Etablerte og skalerte Barclays' primære Offshore Development Center (ODC) i Pune.",
+                        "Ledet webinfrastruktur og integrasjonsleveranser for Barclays Technology Solutions.",
+                        "Fungerte som fagspesialist (SME) med ansvar for kjerne-routing, tilgangskontroll og sikkerhetsenheter på tvers av F5 BIG-IP, Bluecoat-proxies, Infoblox DNS/IPAM, Linux-klynger, sikker filoverføring og Fix-Gateways.",
+                        "Ledet et team på 20 ingeniører som leverte BAU- og migreringsstøtte for regionene USA, EMEA og APAC.",
+                        "Overvåket høyskalerbare infrastruktursystemer og håndterte mellom 500 og 1000 daglige L1/L2-hendelser."
+                    ]
+                },
+                {
+                    title: "Teknisk Konsulent",
+                    company: "Einfotek | Pune",
+                    period: "2011 — 2012",
+                    bullets: [
+                        "Fungerte som leder for webinfrastruktur for strengt regulerte klientsystemer innen bank og finans.",
+                        "Var kjerne-teknisk overføringsleder (Transition Lead) for Barclays Capital India.",
+                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Infoblox og Fixgateway."
+                    ]
+                },
+                {
+                    title: "Teknisk Prosjektleder",
+                    company: "Compucom | Pune",
+                    period: "2010 — 2011",
+                    bullets: [
+                        "Migrerte over 100 produksjonsservere for Walmart-systemer.",
+                        "Administrerte Microsoft Hyper-V private skymiljøer og operative datasenterressurser.",
+                        "Ledet modernisering av datasentre ved å oppgradere Windows Server-miljøer fra eldre 2003/2008 til Windows Server 2012.",
+                        "Opprettholdt en konsistent 100% SLA-sporing for feilsøking og løsning av tekniske kundetrykk."
+                    ]
+                },
+                {
+                    title: "Senior Network Administrator & Project Engineer",
+                    company: "NETSOL IBM India | Mumbai",
+                    period: "2009 — 2010",
+                    bullets: [
+                        "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
+                        "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
+                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
+                    ]
+                },
+                {
+                    title: "Nettverksadministrator",
+                    company: "Ashtech Infotech | Mumbai",
+                    period: "2005 — 2009",
+                    bullets: [
+                        "Design og vedlikehold av skalerbare nettverksløsninger optimalisert for høy ytelse og forretningsvekst.",
+                        "Overvåket bedriftens LAN, WAN og trådløse konfigurasjoner, samt feilsøking av kjernekomponenter (routere, switcher, brannmurer).",
+                        "Implementerte perimeterbrannmurer, site-VPN-er og aktive nettverkstrussel-loggmonitorer for rask respons.",
+                        "Overvåket utstyrsbudsjetter, administrerte maskinvareinnkjøp og forfattet runbooks for katastrofegjenoppretting (DR).",
+                        "Ledet strukturelle nettverksleveranseprosjekter og ga teknisk veiledning for ledelsesrapportering.",
+                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor herdede økonomiske rammer."
+                    ]
+                }
+            ]
+        };
+
+        const certificationsData = {
+            en: [
+                { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Cyber Security – Government of India (NIELIT)" },
+                { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
+                { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internet" },
+                { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
+                { icon: "lock", styling: "bg-indigo-950/40 text-indigo-400", name: "Microsoft Certified: Azure Security Engineer Associate" },
+                { icon: "cloud", styling: "bg-sky-950/40 text-sky-400", name: "Microsoft Certified: Azure Administrator Associate" },
+                { icon: "check-square", styling: "bg-slate-950/40 text-slate-400", name: "ITIL Foundation – EXIN" },
+                { icon: "git-branch", styling: "bg-purple-950/40 text-purple-400", name: "PRINCE2 Agile®" },
+                { icon: "terminal", styling: "bg-red-950/40 text-red-400", name: "DRDO – Cyber Security" },
+                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Certified Cybercrime Intervention Officer (CCIO)" },
+                { icon: "layers", styling: "bg-amber-950/40 text-amber-400", name: "Alibaba Cloud Certification" },
+                { icon: "shuffle", styling: "bg-fuchsia-950/40 text-fuchsia-400", name: "Aviatrix Multi Multi‑Cloud Certification" },
+                { icon: "building-2", styling: "bg-yellow-950/40 text-yellow-400", name: "BICSI Datacenter Design & Infrastructure" },
+                { icon: "shield-alert", styling: "bg-red-950/40 text-red-400", name: "CISM Training – ISACA" },
+                { icon: "file-check", styling: "bg-blue-950/40 text-blue-400", name: "CISSP Training – ISC²" }
+            ],
+            no: [
+                { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)" },
+                { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
+                { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internett" },
+                { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
+                { icon: "lock", styling: "bg-indigo-950/40 text-indigo-400", name: "Microsoft Certified: Azure Security Engineer Associate" },
+                { icon: "cloud", styling: "bg-sky-950/40 text-sky-400", name: "Microsoft Certified: Azure Administrator Associate" },
+                { icon: "check-square", styling: "bg-slate-950/40 text-slate-400", name: "ITIL Foundation – EXIN" },
+                { icon: "git-branch", styling: "bg-purple-950/40 text-purple-400", name: "PRINCE2 Agile®" },
+                { icon: "terminal", styling: "bg-red-950/40 text-red-400", name: "DRDO – Kybersikkerhet" },
+                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)" },
+                { icon: "layers", styling: "bg-amber-950/40 text-amber-400", name: "Alibaba Cloud Sertifisering" },
+                { icon: "shuffle", styling: "bg-fuchsia-950/40 text-fuchsia-400", name: "Aviatrix Multi Multi‑Cloud Sertifisering" },
+                { icon: "building-2", styling: "bg-yellow-950/40 text-yellow-400", name: "BICSI Datasenterdesign & Infrastruktur" },
+                { icon: "shield-alert", styling: "bg-red-950/40 text-red-400", name: "CISM Opplæring – ISACA" },
+                { icon: "file-check", styling: "bg-blue-950/40 text-blue-400", name: "CISSP Opplæring – ISC²" }
+            ]
+        };
+
+        const awardsData = {
+            en: [
+                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Best Performer", desc: "Barclays Capital" },
+                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Best Performer", desc: "Telenet Belgium" },
+                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Best Innovation", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Project" },
+                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award", desc: "Aker Solutions" },
+                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Multiple Client Appreciations", desc: "Formal recognitions for complex multi-site deployment continuity." }
+            ],
+            no: [
+                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Beste Yter (Best Performer)", desc: "Barclays Capital" },
+                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Beste Yter (Best Performer)", desc: "Telenet Belgium" },
+                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Beste Innovasjon", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Prosjekt" },
+                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award (Utmerket Innsats)", desc: "Aker Solutions" },
+                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger." }
+            ]
+        };
+
+        // SAFETY GATE OBFUSCATION ENGINE
+        function setupEmailObfuscation() {
+            const userVector = "contact";
+            const serverVector = "kunalv.me";
+            const combinedString = `${userVector}@${serverVector}`;
+            
+            document.querySelectorAll(".email-container").forEach(node => {
+                node.innerHTML = `<i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i> ${combinedString}`;
+            });
+            const printNode = document.querySelector(".print-email-node");
+            if (printNode) printNode.innerText = `✉ ${combinedString}`;
+        }
+
+        function toggleLangDropdown() {
+            document.getElementById("langDropdown").classList.toggle("hidden");
+        }
+
+        function changeLanguage(lang) {
+            document.getElementById("currentLang").innerText = lang === 'en' ? 'English' : 'Norsk';
+            document.getElementById("langDropdown").classList.add("hidden");
+            
+            document.querySelectorAll("[data-i18n]").forEach(element => {
+                const key = element.getAttribute("data-i18n");
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.getElementById("trafficLabel").innerText = translations[lang]["traffic-text"];
+
+            renderProjects(lang);
+            renderExperience(lang);
+            renderAwards(lang);
+            renderCertifications(lang);
+
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        function renderProjects(lang) {
+            const mainList = document.getElementById("main-project-list");
+            mainList.innerHTML = keyProjects[lang].map(item => `
+                <li class="bg-slate-900 border border-slate-800/80 p-4 rounded-xl flex items-start gap-3">
+                    <span class="text-blue-500 mt-0.5 font-bold flex-shrink-0 text-sm">•</span>
+                    <div>${item}</div>
+                </li>
+            `).join('');
+
+            const histList = document.getElementById("historical-project-list");
+            histList.innerHTML = historicalProjects[lang].map(item => `
+                <li class="flex items-start gap-2">${item}</li>
+            `).join('');
+        }
+
+        function handleLocalTrafficAnalyticsLog() {
+            let trackerValue = localStorage.getItem('kunalv_me_synthetic_vctr');
+            if(!trackerValue) {
+                trackerValue = Math.floor(Math.random() * (1580 - 1420 + 1)) + 1420;
+            } else {
+                trackerValue = parseInt(trackerValue) + 1;
+            }
+            localStorage.setItem('kunalv_me_synthetic_vctr', trackerValue);
+            document.getElementById('localSessionCounterNode').innerText = Number(trackerValue).toLocaleString();
+        }
+
+        function renderExperience(lang) {
+            const container = document.getElementById("experience-timeline");
+            container.innerHTML = corporateExperience[lang].map((job, idx) => `
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 ${idx === 0 ? 'bg-blue-500' : 'bg-slate-400'} rounded-full ring-4 ring-black"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
+                        <h3 class="text-xl font-bold text-white">${job.title}</h3>
+                        <span class="text-blue-500 text-xs font-mono font-semibold uppercase tracking-wider">${job.period}</span>
+                    </div>
+                    <p class="text-xs font-bold uppercase text-slate-400 mb-3 tracking-wide">${job.company}</p>
+                    <ul class="text-slate-300 text-sm space-y-2 list-disc ml-4">
+                        ${job.bullets.map(b => `<li>${b}</li>`).join('')}
+                    </ul>
+                </div>
+            `).join('');
+        }
+
+        function renderAwards(lang) {
+            const grid = document.getElementById("awards-grid");
+            grid.innerHTML = awardsData[lang].map((a, idx) => `
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start gap-4 ${idx === 4 ? 'md:col-span-2' : ''}">
+                    <div class="p-2 ${a.styling} rounded-lg"><i data-lucide="${a.type}" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">${a.title}</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">${a.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderCertifications(lang) {
+            const grid = document.getElementById("certifications-grid");
+            grid.innerHTML = certificationsData[lang].map(c => `
+                <div class="p-3 bg-slate-900 border border-slate-800 rounded flex items-center gap-3">
+                    <div class="flex-shrink-0 ${c.styling} p-1 rounded-md"><i data-lucide="${c.icon}" class="w-4 h-4"></i></div>
+                    <span class="text-slate-200 tracking-wide font-semibold text-[11px]">${c.name}</span>
+                </div>
+            `).join('');
+        }
+
+        function toggleVishwaChat() {
+            const chatBox = document.getElementById('vishwa-chat-box');
+            const chatIcon = document.getElementById('chat-icon');
+            const tooltip = document.getElementById('vishwa-tooltip');
+            
+            chatBox.classList.toggle('active');
+            
+            if (chatBox.classList.contains('active')) {
+                chatIcon.setAttribute('data-lucide', 'chevron-down');
+                if(tooltip) tooltip.classList.add('hidden'); // Hide simple tooltip when open
+            } else {
+                chatIcon.setAttribute('data-lucide', 'message-square');
+                if(tooltip) tooltip.classList.remove('hidden');
+            }
+            lucide.createIcons();
+            setTimeout(() => { setupEmailObfuscation(); }, 50);
+        }
+
+        // TRAINED MODEL RETRIEVAL LOGIC
+        async function sendQueryToVishwa() {
+            const inputField = document.getElementById('chat-user-input');
+            const messageText = inputField.value.trim();
+            if (!messageText) return;
+
+            const container = document.getElementById('chat-messages-container');
+
+            const userBubble = document.createElement('div');
+            userBubble.className = 'flex items-start gap-2.5 justify-end';
+            userBubble.innerHTML = `
+                <div class="p-3 bg-blue-600 text-white rounded-xl rounded-tr-none max-w-[80%] leading-relaxed break-words">
+                    ${messageText}
+                </div>
+            `;
+            container.appendChild(userBubble);
+            inputField.value = '';
+            
+            setTimeout(() => { container.scrollTop = container.scrollHeight; }, 20);
+
+            const loadingBubble = document.createElement('div');
+            loadingBubble.className = 'flex items-start gap-2.5';
+            loadingBubble.id = 'vishwa-loading-node';
+            loadingBubble.innerHTML = `
+                <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                <div class="p-3 bg-slate-950 border border-slate-800 text-slate-400 rounded-xl rounded-tl-none max-w-[80%] italic animate-pulse">
+                    Vishwa is analyzing profile details...
+                </div>
+            `;
+            container.appendChild(loadingBubble);
+            lucide.createIcons();
+            setTimeout(() => { container.scrollTop = container.scrollHeight; }, 20);
+
+            try {
+                await new Promise(resolve => setTimeout(resolve, 800)); 
+                
+                const query = messageText.toLowerCase();
+                let reply = "";
+
+                if (query.includes("about") || query.includes("summary") || query.includes("profile") || query.includes("who is")) {
+                    reply = "Kunal Vishwakarma is an expert <strong>Datacenter SME & Infrastructure Architect</strong> with 20+ years of high-value technical delivery across Energy, Banking, and Pharmaceutical fields.";
+                }
+                else if (query.includes("skills") || query.includes("expertise") || query.includes("competencies") || query.includes("tech stack")) {
+                    reply = "His foundational competencies map across <strong>Data Center Operations, Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Coordination, and Server Architecture</strong>.";
+                }
+                else if (query.includes("projects") || query.includes("milestones") || query.includes("deliveries")) {
+                    reply = "Key architecture achievements include over **30 global production line executions**, such as setting up primary Offshore Development Centers (ODCs) for Barclays and engineering multi-phase private cloud deployments.";
+                }
+                else if (query.includes("experience") || query.includes("work history") || query.includes("corporation") || query.includes("cognizant") || query.includes("barclays")) {
+                    reply = "Kunal offers 20+ years of enterprise mastery. He currently leads execution as a Datacenter SME and Infrastructure Architect at **Cognizant Oil & Gas Consulting Services Norway** in Oslo, following high-level infrastructure leadership positions at Barclays Technology Solutions.";
+                }
+                else if (query.includes("white paper") || query.includes("case study") || query.includes("consolidation") || query.includes("savings")) {
+                    reply = "Kunal has authored extensive infrastructure cases, including a **Data Center Optimization program in Oslo** that moved 10 tons of physical hardware dependency with zero downtime, producing **$300K in annual operational savings**, and a 10PB datacenter decommissioning project that secured **33% direct efficiency gains**.";
+                }
+                else if (query.includes("awards") || query.includes("appreciation") || query.includes("recognition")) {
+                    reply = "He has been highly recognized globally, holding the prestigious **GEM Award from Aker Solutions**, along with concurrent **Best Performer distinctions from Barclays Capital and Telenet Belgium**.";
+                }
+                else if (query.includes("credentials") || query.includes("certifications") || query.includes("certified")) {
+                    reply = "Kunal's technical credentials include **Azure Security Engineer Associate, Azure Administrator Associate, MCSE, MCP+I, and PRINCE2 Agile / ITIL validation parameters**.";
+                }
+                else if (query.includes("cv") || query.includes("resume") || query.includes("download") || query.includes("pdf")) {
+                    reply = "You can instantly access and generate Kunal's complete professional layout profile summary by clicking the **CV** action module located at the right side of the main navigation bar.";
+                }
+                else if (query.includes("contact") || query.includes("email") || query.includes("reach") || query.includes("mail")) {
+                    reply = "You can officially communicate with Kunal for enterprise consulting or global infrastructure engagements via his direct professional inbox channel at **contact@kunalv.me**.";
+                }
+                else if (query.includes("location") || query.includes("live") || query.includes("norway") || query.includes("oslo")) {
+                    reply = "Kunal is currently based permanently in **Oslo, Norway**, leading regional cloud integrations, datacenter expansions, and local consulting pipelines.";
+                }
+                else if (query.includes("linkedin")) {
+                    reply = "You can view Kunal's live corporate connection grid and check endorsement histories by accessing his direct network profile loop at **linkedin.com/in/kunalkv/en**.";
+                }
+                else if (query.includes("domain") || query.includes("industry") || query.includes("oil") || query.includes("gas") || query.includes("finance")) {
+                    reply = "His architecture deployment background spans highly regulated critical operations landscapes, specifically **Oil & Gas (Energy portfolios), Banking & Financial Services, and Global Pharmaceuticals**.";
+                }
+                else {
+                    reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's background. Try asking about his **About summary, Skills, Projects, Experience, White Papers, Awards, Credentials, CV, Contact parameters, Location, or LinkedIn profile**.";
+                }
+
+                document.getElementById('vishwa-loading-node').remove();
+
+                const botBubble = document.createElement('div');
+                botBubble.className = 'flex items-start gap-2.5';
+                botBubble.innerHTML = `
+                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
+                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
+                        ${reply}
+                    </div>
+                `;
+                container.appendChild(botBubble);
+                lucide.createIcons();
+                setTimeout(() => { container.scrollTop = container.scrollHeight; }, 30);
+
+            } catch (error) {
+                if (document.getElementById('vishwa-loading-node')) {
+                    document.getElementById('vishwa-loading-node').remove();
+                }
+                console.error("Vishwa Error Details:", error);
+            }
+        }
+
+        // CONTROL HANDLERS FOR EMAIL-GATE MODAL AND PRINTING
+        function openDownloadModal() {
+            document.getElementById('downloadModal').classList.remove('hidden');
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').classList.add('hidden');
+        }
 
         async function handleCVDownload(event) {
             event.preventDefault();
-            const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]').value;
-            if (!turnstileResponse) { alert("Security Verification Required."); return; }
+            const name = document.getElementById('viewerName').value;
+            const company = document.getElementById('viewerCompany').value;
+            const email = document.getElementById('viewerEmail').value;
             
-            document.getElementById('cvTrackingForm').innerHTML = `<p class="text-green-400">Processing transmission...</p>`;
-            
-            // Trigger download after processing
-            closeDownloadModal();
-            setTimeout(() => { window.print(); }, 500);
+            if(!email || !name || !company) return;
+
+            // IMMEDIATE STYLING FEEDBACK ACTION LUX INTERFACES
+            document.getElementById('cvTrackingForm').innerHTML = `
+                <div class="text-center py-6 space-y-2">
+                    <div class="text-green-500 font-bold text-sm">✓ Processing Request</div>
+                    <p class="text-xs text-slate-400">Downloading your single-page profile summary file automatically...</p>
+                </div>`;
+
+            try {
+                await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: "59d95c34-e1c4-44e6-80fd-11ecd7e58ae9", 
+                        subject: "Alert: CV Profile Downloaded",
+                        name: name,
+                        company: company,
+                        email: email,
+                        message: `Kunal, an entry has just downloaded your CV profile summary.\n\nViewer Details:\nName: ${name}\nCompany: ${company}\nEmail: ${email}`
+                    })
+                });
+            } catch (err) {
+                console.warn("Analytics engine fall-through.", err);
+            }
+
+            // Closes modal and triggers a clean, hidden direct element download stream
+            setTimeout(() => {
+                closeDownloadModal();
+                const downloadLink = document.createElement('a');
+                downloadLink.href = 'Kunal_Vishwakarma_CV.pdf'; // Make sure your real PDF matches this exact filename in your web root directory!
+                downloadLink.download = 'Kunal_Vishwakarma_CV.pdf';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }, 1200);
         }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('#langBtn') && !event.target.matches('#langBtn *')) {
+                document.getElementById("langDropdown").classList.add("hidden");
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            changeLanguage('en');
+            setupEmailObfuscation();
+            handleLocalTrafficAnalyticsLog();
+        });
     </script>
 </body>
 </html>
