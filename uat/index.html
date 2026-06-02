@@ -44,6 +44,20 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
+        /* Tooltip speech bubble arrow custom layout */
+        .speech-arrow::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            background-color: #ffffff;
+            border-right: 1px solid #e2e8f0;
+            border-top: 1px solid #e2e8f0;
+        }
+
         /* MAXIMUM OVERRIDE ENTERPRISE PRINT CONSTRAINTS LOCKING DATA UNTO A STANDALONE SINGLE PAGE */
         @media print {
             body > :not(#printableCV) { 
@@ -78,34 +92,6 @@
             #printableCV .bg-slate-100 { background-color: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
     </style>
-
-    <!-- JSON-LD PROFESSIONAL PROFILE STRUCTURED SCHEMA -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kunal Vishwakarma",
-      "jobTitle": "Datacenter SME & Infrastructure Architect",
-      "url": "https://kunalv.me",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Oslo",
-        "addressCountry": "Norway"
-      },
-      "sameAs": [
-        "https://no.linkedin.com/in/kunalkv/en",
-        "https://github.com/Kunalvishwakarma/kunal"
-      ],
-      "knowsAbout": [
-        "Data Center Operations",
-        "Infrastructure Projects",
-        "Cloud Migration",
-        "Azure Architecture",
-        "Project Management",
-        "Prompt Engineering"
-      ]
-    }
-    </script>
 </head>
 <body class="selection:bg-blue-500/20">
 
@@ -179,7 +165,6 @@
                 <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
                     Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
-                <!-- RE-FRAMED REVISED PROMPT ENGINEERING PHRASE INJECTED HERE -->
                 <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
                     <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.
                 </div>
@@ -575,8 +560,13 @@
     </div>
 
     <!-- Vishwa AI Chatbot -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none">
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <!-- FLOATING SPEECH BUBBLE TOOLTIP (Matches image_8cd5fc.png perfectly) -->
+        <div id="vishwa-tooltip" class="speech-arrow relative bg-white text-slate-900 px-4 py-2.5 rounded-xl font-medium text-xs shadow-xl flex items-center gap-1.5 whitespace-nowrap transition-all duration-300 transform opacity-100 translate-x-0 border border-slate-200">
+            <span class="text-blue-600 font-bold text-sm">✨</span> Hello, how can I help?
+        </div>
+
+        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none shrink-0 relative">
             <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
         </button>
 
@@ -600,15 +590,10 @@
             </div>
 
             <div id="chat-messages-container" class="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-hide text-xs">
-                <!-- NEW GREETING ATTR BANNER BLOCK -->
-                <div class="text-[10px] text-center border border-blue-900/30 bg-blue-950/20 text-slate-400 p-2 rounded-lg leading-tight font-medium">
-                    Hello, how can I help?
-                </div>
-                
                 <div class="flex items-start gap-2.5">
                     <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
                     <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
-                        Welcome! My name is <span class="text-blue-400 font-bold">Vishwa</span>. I am specifically trained to assist you with queries related to Kunal's profile, data center milestones, project history, or tech stack!
+                        Welcome! My name is <span class="text-blue-400 font-bold">Vishwa</span>. I am specifically trained to assist you with queries related to Kunal's profile, datacenter milestones, project history, or tech stack!
                     </div>
                 </div>
             </div>
@@ -648,7 +633,7 @@
                 "cs1-body": `
                     <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission‑critical services. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the consolidation program across two facilities in Oslo, Norway.</p>
                     <p>The initiative delivered ~$300K annual savings, optimized physical footprint, and achieved zero business disruption.</p>
-                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End‑to‑end program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
+                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End-'to‑end program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
                     <p><strong class="text-blue-400">Business Challenge:</strong> The client operated two primary data centers located 5 km apart. Rising operational costs and an expiring facility lease required consolidation of the secondary data center’s extension room inside a strict 4-month deadline window. Handled relocation of ~10 tons of aging hardware with no OEM assurance and mandatory zero-downtime demands for active SAP, NAS, and PKI services.</p>
                     <p><strong class="text-blue-400">Infrastructure Landscape:</strong> Managed migration parameters across critical hosted workloads including SAP Mission-Critical Block Storage, Primary NAS File Services for ~5,000 daily users, PKI Security Infrastructure, Video Conferencing Systems, and Backup Environments (Tape Library + Disk Backup).</p>
                     <p><strong class="text-blue-400">Approach & Methodology:</strong> Executed breakdown steps into clean tasks with a mandatory four-eye review process for all change workflows. Designed specific temporary Disaster Recovery (DR) mode parameters to safeguard uninterrupted availability blocks.</p>
@@ -1107,18 +1092,22 @@
         function toggleVishwaChat() {
             const chatBox = document.getElementById('vishwa-chat-box');
             const chatIcon = document.getElementById('chat-icon');
+            const tooltip = document.getElementById('vishwa-tooltip');
+            
             chatBox.classList.toggle('active');
             
             if (chatBox.classList.contains('active')) {
                 chatIcon.setAttribute('data-lucide', 'chevron-down');
+                if(tooltip) tooltip.classList.add('hidden'); // Hide simple tooltip when open
             } else {
                 chatIcon.setAttribute('data-lucide', 'message-square');
+                if(tooltip) tooltip.classList.remove('hidden');
             }
             lucide.createIcons();
             setTimeout(() => { setupEmailObfuscation(); }, 50);
         }
 
-        // TRAINED MODEL RETRIEVAL LOGIC - Mapped specifically to all professional portfolio variables
+        // TRAINED MODEL RETRIEVAL LOGIC
         async function sendQueryToVishwa() {
             const inputField = document.getElementById('chat-user-input');
             const messageText = inputField.value.trim();
@@ -1179,7 +1168,7 @@
                     reply = "Kunal's technical credentials include **Azure Security Engineer Associate, Azure Administrator Associate, MCSE, MCP+I, and PRINCE2 Agile / ITIL validation parameters**.";
                 }
                 else if (query.includes("cv") || query.includes("resume") || query.includes("download") || query.includes("pdf")) {
-                    reply = "You can instantly access and generate Kunal's complete, single-page professional layout profile summary by clicking the **CV** action module located at the right side of the main navigation bar.";
+                    reply = "You can instantly access and generate Kunal's complete professional layout profile summary by clicking the **CV** action module located at the right side of the main navigation bar.";
                 }
                 else if (query.includes("contact") || query.includes("email") || query.includes("reach") || query.includes("mail")) {
                     reply = "You can officially communicate with Kunal for enterprise consulting or global infrastructure engagements via his direct professional inbox channel at **contact@kunalv.me**.";
@@ -1240,7 +1229,7 @@
             document.getElementById('cvTrackingForm').innerHTML = `
                 <div class="text-center py-6 space-y-2">
                     <div class="text-green-500 font-bold text-sm">✓ Processing Request</div>
-                    <p class="text-xs text-slate-400">Preparing your print-ready document streams automatically...</p>
+                    <p class="text-xs text-slate-400">Downloading your single-page profile summary file automatically...</p>
                 </div>`;
 
             try {
@@ -1260,14 +1249,16 @@
                 console.warn("Analytics engine fall-through.", err);
             }
 
-            closeDownloadModal();
-            const currentLang = document.getElementById("currentLang").innerText === 'Norsk' ? 'no' : 'en';
-            changeLanguage(currentLang);
-
-            // Left 450ms safety allocation context to let browser reset UI masks before layout render fires
+            // Closes modal and triggers a clean, hidden direct element download stream
             setTimeout(() => {
-                window.print();
-            }, 450);
+                closeDownloadModal();
+                const downloadLink = document.createElement('a');
+                downloadLink.href = 'Kunal_Vishwakarma_CV.pdf'; // Make sure your real PDF matches this exact filename in your web root directory!
+                downloadLink.download = 'Kunal_Vishwakarma_CV.pdf';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }, 1200);
         }
 
         window.onclick = function(event) {
