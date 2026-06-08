@@ -106,7 +106,7 @@
             <div class="flex space-x-4 md:space-x-6 text-[11px] font-semibold uppercase tracking-wider text-slate-400 items-center">
                 <a href="#about" data-i18n="nav-about" class="hidden lg:inline hover:text-blue-500 transition">About</a>
                 <a href="#skills" data-i18n="nav-skills" class="hidden lg:inline hover:text-blue-500 transition">Skills</a>
-                <a href="#google-profile" data-i18n="nav-google" class="hidden lg:inline hover:text-blue-500 transition">Public Profile</a>
+                <a href="#google-profile" data-i18n="nav-google" class="hidden lg:inline hover:text-blue-500 transition">Google Maps Profile</a>
                 <a href="#projects" data-i18n="nav-projects" class="hidden lg:inline hover:text-blue-500 transition">Projects</a>
                 <a href="#experience" data-i18n="nav-experience" class="hidden lg:inline hover:text-blue-500 transition">Experience</a>
                 <a href="#whitepapers" data-i18n="nav-whitepapers" class="hidden lg:inline hover:text-blue-500 transition">White Paper</a>
@@ -267,28 +267,30 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-8">
                 <h2 data-i18n="google-section-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                    <i data-lucide="globe" class="text-blue-500"></i> Google Public Profile
+                    <i data-lucide="map" class="text-blue-500"></i> Google Maps Footprint
                 </h2>
                 <p data-i18n="google-section-desc" class="text-slate-400 text-sm mt-1">
-                    My personal public footprint, mapping local reviews, 5.2M+ global community contributions, and professional verification markers.
+                    Personal public contributions engine mapping global locations, local validation points, and verified navigation metadata.
                 </p>
             </div>
 
             <div class="p-6 bg-slate-900/60 border border-slate-800 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md hover:border-blue-500/50 transition-all duration-300">
                 <div class="flex items-center gap-4 flex-1">
-                    <div class="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-xl flex items-center justify-center border border-blue-500/30 shrink-0">
-                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                    <div class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-xl flex items-center justify-center border border-blue-500/30 shrink-0">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.113-6.886 4.113-4.947 0-8.966-4.042-8.966-9s4.019-9 8.966-9c2.493 0 4.53 1.012 6.133 2.501L21.44 2.13C19.13.044 15.867-1.2 12.24-1.2c-7.306 0-13.2 5.918-13.2 13.2s5.894 13.2 13.2 13.2c7.623 0 12.67-5.356 12.67-12.872 0-.825-.075-1.636-.214-2.428H12.24z"/>
+                        </svg>
                     </div>
                     <div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-base font-bold text-white tracking-tight">Kunal Vishwakarma</span>
-                            <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-[10px] font-mono font-bold uppercase">Verified</span>
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="text-base font-bold text-white tracking-tight">Lohar</span>
+                            <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded text-[10px] font-mono font-bold uppercase tracking-wider">Local Guide Level 7</span>
                         </div>
-                        <p class="text-xs text-slate-400 mt-0.5">Oslo, Norway • Maps Guide & Infrastructure Specialist</p>
+                        <p class="text-xs text-slate-400 mt-1">Oslo, Norway • Global Infrastructure Analyst & Core Map Contributor</p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-x-8 gap-y-1 bg-slate-950/50 border border-slate-800 px-6 py-3 rounded-xl min-w-[240px]">
+                <div class="grid grid-cols-2 gap-x-8 gap-y-1 bg-slate-950/50 border border-slate-800 px-6 py-3 rounded-xl min-w-[240px] w-full md:w-auto">
                     <div>
                         <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Contributions</span>
                         <span id="google-contrib-count" class="text-white font-mono font-bold text-base">5,200,000+</span>
@@ -303,8 +305,11 @@
                 </div>
                 
                 <div class="w-full md:w-auto shrink-0 flex justify-end">
-                    <a href="https://maps.app.goo.gl/SN8k8ev88GtrDiMz7?g_st=ac" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto text-center px-4 py-2.5 bg-slate-950 border border-slate-800 text-slate-200 hover:text-white hover:border-blue-500 text-xs font-semibold rounded-lg transition flex items-center justify-center gap-2 shadow-sm">
-                        <span data-i18n="view-google-profile">View Public Profile</span> 
+                    <a href="https://maps.app.goo.gl/SN8k8ev88GtrDiMz7?g_st=ac" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto text-center px-4 py-2.5 bg-slate-950 border border-slate-800 hover:border-blue-500/80 text-slate-200 hover:text-white text-xs font-bold rounded-lg transition flex items-center justify-center gap-2.5 shadow-sm group">
+                        <svg class="w-4 h-4 text-blue-500 transition-colors group-hover:text-white fill-current" viewBox="0 0 24 24">
+                            <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.113-6.886 4.113-4.947 0-8.966-4.042-8.966-9s4.019-9 8.966-9c2.493 0 4.53 1.012 6.133 2.501L21.44 2.13C19.13.044 15.867-1.2 12.24-1.2c-7.306 0-13.2 5.918-13.2 13.2s5.894 13.2 13.2 13.2c7.623 0 12.67-5.356 12.67-12.872 0-.825-.075-1.636-.214-2.428H12.24z"/>
+                        </svg>
+                        <span data-i18n="view-google-profile">Open Google Maps</span> 
                         <i data-lucide="external-link" class="w-3.5 h-3.5 text-blue-400"></i>
                     </a>
                 </div>
@@ -707,10 +712,10 @@
                 "wp-heading": "White Papers & Case Studies",
                 "resources-heading": "Learning Resources & Deals", "resources-desc": "Curated operational channels and tactical IT deals recommended for cybersecurity training.",
                 "traffic-text": "Live Traffic Counter:",
-                "nav-google": "Public Profile",
-                "google-section-title": "Google Public Profile",
-                "google-section-desc": "My personal public footprint, mapping local reviews, 5.2M+ global community contributions, and professional verification markers.",
-                "view-google-profile": "View Public Profile",
+                "nav-google": "Google Maps Profile",
+                "google-section-title": "Google Maps Footprint",
+                "google-section-desc": "Personal public contributions engine mapping global locations, local validation points, and verified navigation metadata.",
+                "view-google-profile": "Open Google Maps",
                 "rating-label": "Google Rating Score",
                 
                 // Case Study 1 English
@@ -765,10 +770,10 @@
                 "wp-heading": "White Papers & Case Studies",
                 "resources-heading": "Læringsressurser og Tilbud", "resources-desc": "Kuraterte operasjonelle kanaler og taktiske IT-tilbud anbefalt for cybersikkerhetsopplæring.",
                 "traffic-text": "Besøksstatistikk:",
-                "nav-google": "Offentlig Profil",
-                "google-section-title": "Google Offentlig Profil",
-                "google-section-desc": "Min personlige offentlige profil med lokale anmeldelser, 5.2M+ bidrag og profesjonelle verifikasjonsmarkører.",
-                "view-google-profile": "Vis offentlig profil",
+                "nav-google": "Google Maps-profil",
+                "google-section-title": "Google Maps-avtrykk",
+                "google-section-desc": "Personlig bidragsmotor som kartlegger globale lokasjoner, lokal validering og verifisert navigasjonsmetadata.",
+                "view-google-profile": "Åpne Google Maps",
                 "rating-label": "Google Rangering",
                 
                 // Case Study 1 Norwegian
@@ -912,7 +917,7 @@
                     bullets: [
                         "Served as Web Infrastructure Lead for highly regulated banking domain client systems.",
                         "Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.",
-                        "Maintaining specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Infoblox, and Fixgateway boundaries."
+                        "Maintained specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Infoblox, and Fixgateway boundaries."
                     ]
                 },
                 {
@@ -1246,7 +1251,7 @@
                     reply = "His foundational competencies map across <strong>Data Center Operations, Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Coordination, and Server Architecture</strong>.";
                 }
                 else if (query.includes("google") || query.includes("review") || query.includes("rating") || query.includes("maps")) {
-                    reply = "You can view Kunal's personal **Google Public Profile** directly on his site right below the Core Skills section. It highlights his verified global presence, public community ratings, and localized verification data.";
+                    reply = "You can view Kunal's personal **Google Maps Profile** directly on his site right below the Core Skills section. It highlights his verified global presence under his identity **Lohar (Local Guide Level 7)**, public community ratings, and localized verification data.";
                 }
                 else if (query.includes("projects") || query.includes("milestones") || query.includes("deliveries")) {
                     reply = "Key architecture achievements include over **30 global production line executions**, such as setting up primary Offshore Development Centers (ODCs) for Barclays and engineering multi-phase private cloud deployments.";
@@ -1282,7 +1287,7 @@
                     reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's background. Try asking about his **About summary, Skills, Projects, Experience, White Papers, Awards, Credentials, CV, Contact parameters, Location, or LinkedIn profile**.";
                 }
 
-                document.getElementById('vishwa-loading-node').remove();
+                document.getElementById('vishwa-chat-box').remove();
 
                 const botBubble = document.createElement('div');
                 botBubble.className = 'flex items-start gap-2.5';
@@ -1356,10 +1361,7 @@
         }
 
         function calculateDynamicGoogleContributions() {
-            // Base baseline representing verified historical contributions
             const baselineContributions = 5241980; 
-            
-            // Increment logic over time
             const dynamicOffset = Math.floor((Date.now() - new Date("2026-01-01").getTime()) / 600000);
             const calculatedTotal = baselineContributions + dynamicOffset;
             
