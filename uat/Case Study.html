@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Case Study – Architecture of www.kunalv.me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --docs-bg: #f3f2f1;
+      --docs-surface: #ffffff;
+      --docs-border: #e1dfdd;
+      --docs-accent: #2563eb;
+      --docs-accent-soft: #eff6ff;
+      --docs-text: #201f1e;
+      --docs-muted: #605e5c;
+      --docs-nav-bg: #ffffff;
+      --docs-nav-border: #e1dfdd;
+      --docs-link: #2563eb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--docs-bg);
+      color: var(--docs-text);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--docs-link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .top-nav {
+      background: var(--docs-nav-bg);
+      border-bottom: 1px solid var(--docs-nav-border);
+      padding: 0.6rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .top-nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .top-nav-logo {
+      width: 26px;
+      height: 26px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .top-nav-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+    .top-nav-right {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+      color: var(--docs-muted);
+    }
+    .top-nav-right a {
+      color: var(--docs-muted);
+    }
+    .layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 1.5rem;
+      padding: 1.5rem 1.5rem 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .side-nav {
+      background: var(--docs-surface);
+      border: 1px solid var(--docs-border);
+      border-radius: 6px;
+      padding: 1rem 1rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    .side-nav h3 {
+      margin: 0 0 0.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .side-nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.2rem 0 0;
+    }
+    .side-nav li {
+      margin: 0.15rem 0;
+    }
+    .side-nav a {
+      color: var(--docs-muted);
+    }
+    .side-nav a:hover {
+      color: var(--docs-link);
+    }
+    .content {
+      background: var(--docs-surface);
+      border: 1px solid var(--docs-border);
+      border-radius: 6px;
+      padding: 1.8rem 2rem 2.4rem;
+    }
+    h1, h2, h3 {
+      margin-top: 1.6rem;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      color: #111;
+    }
+    h1 {
+      font-size: 1.9rem;
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 1.35rem;
+      border-bottom: 1px solid #e1dfdd;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+    }
+    p {
+      margin: 0.4rem 0 0.8rem;
+    }
+    .tagline {
+      font-size: 0.98rem;
+      color: var(--docs-muted);
+      margin-bottom: 1.2rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.6rem;
+      font-size: 0.9rem;
+      color: var(--docs-muted);
+      margin-bottom: 1rem;
+    }
+    .meta span strong {
+      font-weight: 600;
+    }
+    .author-card {
+      border-radius: 6px;
+      border: 1px solid var(--docs-border);
+      background: #faf9f8;
+      padding: 0.9rem 1rem;
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+    }
+    .author-card-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .author-card-row {
+      margin: 0.1rem 0;
+    }
+    .highlight-box {
+      background: var(--docs-accent-soft);
+      border-left: 4px solid var(--docs-accent);
+      padding: 0.9rem 1rem;
+      margin: 1.2rem 0 1.4rem;
+      font-size: 0.95rem;
+    }
+    .confidential-note {
+      background: #fff8e1;
+      border-left: 4px solid #f59e0b;
+      padding: 0.9rem 1rem;
+      margin: 1.2rem 0 1.6rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.6rem;
+      font-size: 0.94rem;
+    }
+    th, td {
+      border: 1px solid #e2e2e2;
+      padding: 0.55rem 0.7rem;
+      vertical-align: top;
+    }
+    th {
+      background: #f5f5f5;
+      font-weight: 600;
+      text-align: left;
+    }
+    tr:nth-child(even) td {
+      background: #fafafa;
+    }
+    ul.checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.6rem 0 1.4rem;
+      font-size: 0.94rem;
+    }
+    ul.checklist li::before {
+      content: "✔ ";
+      color: #16a34a;
+      font-weight: 600;
+    }
+    .section-note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: -0.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .ascii-diagram {
+      background: #0b1020;
+      color: #e5e7eb;
+      padding: 1rem;
+      border-radius: 6px;
+      font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      margin: 1.2rem 0 1.8rem;
+    }
+    .footer-note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 2rem;
+      border-top: 1px solid #eee;
+      padding-top: 0.8rem;
+    }
+    img {
+      display: block;
+      margin: 1.5rem auto;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.4rem 0 1rem;
+      font-size: 0.8rem;
+    }
+    .pill {
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #e1dfdd;
+      background: #faf9f8;
+      color: #605e5c;
+    }
+    .key-components {
+      border-radius: 6px;
+      border: 1px solid var(--docs-border);
+      background: #faf9f8;
+      padding: 0.9rem 1rem 1rem;
+      font-size: 0.92rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    .key-components h3 {
+      margin-top: 0;
+      font-size: 0.98rem;
+    }
+    .key-components ul {
+      margin: 0.4rem 0 0.2rem;
+      padding-left: 1.1rem;
+    }
+    .key-components li {
+      margin: 0.15rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Microsoft Docs–style nav -->
+  <div class="top-nav">
+    <div class="top-nav-left">
+      <div class="top-nav-logo">KV</div>
+      <div class="top-nav-title"><a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a> – Architecture Case Study</div>
+    </div>
+    <div class="top-nav-right">
+      <a href="#overview">Overview</a>
+      <a href="#key-components">Key components</a>
+      <a href="#ai-integration">AI &amp; Vishwa AI</a>
+      <a href="#gdpr">GDPR &amp; compliance</a>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- Side navigation -->
+    <nav class="side-nav">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#overview">0. Overview</a></li>
+        <li><a href="#domain-dns">1. Domain &amp; DNS</a></li>
+        <li><a href="#hosting">2. Hosting &amp; environments</a></li>
+        <li><a href="#deployment">3. Deployment workflow</a></li>
+        <li><a href="#security">4. Security architecture</a></li>
+        <li><a href="#performance">5. Performance &amp; optimization</a></li>
+        <li><a href="#ai-integration">6. AI &amp; prompt engineering</a></li>
+        <li><a href="#gdpr">7. GDPR &amp; privacy</a></li>
+        <li><a href="#checklist">8. Compliance checklist</a></li>
+        <li><a href="#diagram">9. Architecture diagram</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main class="content">
+      <section id="overview">
+        <h1>Case Study: Architecture of <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a></h1>
+        <p class="tagline">
+          A static, secure, GDPR‑aligned personal portal, available in Norwegian and English, built entirely through prompt engineering and integrated with AI‑assisted workflows.
+        </p>
+
+        <div class="meta">
+          <span><strong>Owner:</strong> Kunal Vishwakarma</span>
+          <span><strong>Location:</strong> Oslo, Norway</span>
+          <span><strong>Portal Registration Initiated:</strong> 27.05.2026</span>
+          <span><strong>Languages:</strong> Norwegian &amp; English</span>
+        </div>
+
+        <div class="author-card">
+          <div class="author-card-title">Author &amp; Contact</div>
+          <div class="author-card-row"><strong>Name:</strong> Kunal Vishwakarma</div>
+          <div class="author-card-row">
+            <strong>Email:</strong>
+            <a href="mailto:Kunal.vishwakarma@cognizant.com">Kunal.vishwakarma@cognizant.com</a> &nbsp;|&nbsp;
+            <a href="mailto:contact@kunalv.me">contact@kunalv.me</a>
+          </div>
+          <div class="author-card-row">
+            <strong>Public profile:</strong>
+            <span>LinkedIn / GitHub / Portfolio (integrated via portal navigation and profile links).</span>
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--docs-border); margin: 0.6rem 0;" />
+          <div class="author-card-row" style="font-size: 0.85rem; color: var(--docs-muted);">
+            <strong>Document Lifecycle:</strong> Last Modified: <span id="last-modified-timestamp">08.06.2026 10:10</span>
+          </div>
+        </div>
+
+        <div class="pill-row">
+          <div class="pill">Static site on GitHub Pages</div>
+          <div class="pill">Domain: <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a></div>
+          <div class="pill">Porkbun + Cloudflare DNS</div>
+          <div class="pill">GDPR‑aligned</div>
+          <div class="pill">Norsk &amp; English</div>
+          <div class="pill">AI‑driven development</div>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Executive Summary:</strong>
+          <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a> is a static personal portal hosted on GitHub Pages using a folder‑based multi‑environment model.
+          The root of the <code>main</code> branch serves production, while a dedicated <code>/uat</code> folder provides
+          an isolated testing environment. Deployment is manual in Phase‑1, ensuring simplicity and full control, and
+          will evolve into CI/CD‑driven automated deployments for UAT and Production in Phase‑2. The domain is protected
+          with DNSSEC, SPF, DKIM, and DMARC, while HTTPS ensures encrypted delivery. The portal is designed to be
+          GDPR Susceptibility-aligned by avoiding unnecessary data collection, and all content is available in both Norwegian and
+          English. All text and structure are created and refined using 100% prompt‑engineering techniques across
+          multiple AI models, without a traditional coding background, and the portal integrates with the owner’s
+          own AI‑assisted workflows for content validation, evolution, and compliance tracking.
+        </div>
+
+        <div class="highlight-box">
+          <strong>Platform Compatibility &amp; Regulatory Alignment:</strong><br />
+          The portal has been tested across major operating systems and browsers, including
+          <strong>Android</strong> (Chrome, Samsung Internet), <strong>iOS</strong> (Safari, Chrome),
+          <strong>Windows</strong> (Chrome, Edge, Firefox), and <strong>macOS</strong> (Safari, Chrome).
+          Rendering, layout, and performance have been validated to ensure consistent behavior across
+          mobile and desktop environments. The portal aligns with <strong>EU regulations</strong>
+          such as GDPR, ePrivacy expectations, and accessibility considerations (WCAG 2.1), and follows
+          global best practices for static‑site security, privacy, and responsible digital design.
+        </div>
+
+        <div id="key-components" class="key-components">
+          <h3>Key components of the <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a> portal</h3>
+          <ul>
+            <li><strong>Domain name registration:</strong> <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a> registered via Porkbun.</li>
+            <li><strong>DNS configuration:</strong> Porkbun DNS with Cloudflare used for additional DNS/security where applicable; A/AAAA/CNAME for GitHub Pages.</li>
+            <li><strong>Logo &amp; branding:</strong> Personal branding and logo used across portal, email, and public profiles.</li>
+            <li><strong>Live traffic counter:</strong> Planned integration of a privacy‑respecting portal traffic counter (no invasive tracking).</li>
+            <li><strong>Public profile integration:</strong> Links to LinkedIn, GitHub, and other professional profiles.</li>
+            <li><strong>CV download:</strong> Downloadable CV (PDF) exposed via portal navigation.</li>
+            <li><strong>Multi‑language support:</strong> Norsk and English content, with clear language switching.</li>
+            <li><strong>Webform for CV requests:</strong> Planned webform for CV download / contact, aligned with GDPR consent.</li>
+            <li><strong>In‑house Vishwa AI integration:</strong> Planned integration of Vishwa AI as <code>kunalv.AI</code> for guided interactions and portfolio exploration.</li>
+          </ul>
+        </div>
+
+        <div class="confidential-note">
+          <strong>Confidential Notice:</strong><br />
+          The documentation, screenshots, and configuration parameters related to <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a> are strictly
+          confidential and must not be shared externally or reused without explicit permission from the owner.
+          This material represents <strong>Phase‑1</strong> implementation and serves as the foundation for introducing
+          CI/CD automation pipelines for UAT and Production environments in <strong>Phase‑2</strong>.
+        </div>
+      </section>
+
+      <section id="domain-dns">
+        <h2>1. Domain, DNS &amp; Identity Layer</h2>
+        <table>
+          <thead><tr><th>Component</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Domain Name</strong></td><td><a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a></td></tr>
+            <tr><td><strong>Registrar</strong></td><td>Porkbun</td></tr>
+            <tr><td><strong>DNS Hosting</strong></td><td>Porkbun DNS (with Cloudflare used for additional DNS/security where applicable)</td></tr>
+            <tr><td><strong>DNS Records</strong></td><td>A / AAAA / CNAME records configured for GitHub Pages.</td></tr>
+            <tr><td><strong>Email Routing</strong></td><td>ProtonMail using contact@kunalv.me.</td></tr>
+            <tr><td><strong>Email Security</strong></td><td>SPF, DKIM, and DMARC configured to prevent spoofing and phishing.</td></tr>
+            <tr><td><strong>DNS Security</strong></td><td>DNSSEC enabled to protect domain integrity.</td></tr>
+          </tbody>
+        </table>
+
+        <h3>1.1 Supporting screenshots – Domain &amp; DNS</h3>
+        <p class="section-note">Screenshots illustrate the actual configuration in Porkbun and Cloudflare.</p>
+
+        <img
+          src="DNS Configuration.png"
+          alt="Cloudflare DNS configuration and active custom records for www.kunalv.me"
+        />
+      </section>
+
+      <section id="hosting">
+        <h2>2. Hosting &amp; Environment Architecture</h2>
+        <table>
+          <thead><tr><th>Environment</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Production Hosting</strong></td>
+              <td>GitHub Pages (root of <code>main</code> branch) serving <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">https://www.kunalv.me</a>.</td>
+            </tr>
+            <tr>
+              <td><strong>UAT Hosting</strong></td>
+              <td>GitHub Pages serving <a href="https://www.kunalv.me/uat" target="_blank" rel="noopener noreferrer">https://www.kunalv.me/uat</a> from the <code>/uat</code> folder.</td>
+            </tr>
+            <tr>
+              <td><strong>Architecture Model</strong></td>
+              <td>Static site, folder‑based multi‑environment model (Production + UAT).</td>
+            </tr>
+            <tr>
+              <td><strong>Tech Stack</strong></td>
+              <td>HTML, CSS, JavaScript — authored and refined via prompt engineering with AI assistance.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>2.1 Supporting screenshots – GitHub repository &amp; hosting</h3>
+        <p class="section-note">Screenshots show repository structure, UAT folder, commit activity, and GitHub Pages configuration.</p>
+
+        <img src="github kunalv.me.png" alt="GitHub repository main branch overview for www.kunalv.me" />
+        <img src="github uat kunalv.me.png" alt="GitHub UAT folder structure for www.kunalv.me" />
+        <img src="commits overview.png" alt="GitHub contributions overview graph for www.kunalv.me" />
+        <img src="code frequency history.png" alt="GitHub code frequency graph showing additions and deletions over history" />
+        <img src="githun DNS Security.png" alt="GitHub Pages custom domain configuration and HTTPS enforcement settings" />
+      </section>
+
+      <section id="deployment">
+        <h2>3. Deployment Workflow – Phase‑1 (Manual) &amp; Phase‑2 (Planned CI/CD)</h2>
+        <table>
+          <thead><tr><th>Stage</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Development</strong></td>
+              <td>
+                Content and layout are designed using prompt engineering across multiple AI models.
+                HTML/CSS/JS are generated, refined, and validated without a traditional coding background.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>UAT Deployment (Phase‑1)</strong></td>
+              <td>Manual upload of updated files into the <code>/uat</code> folder in the GitHub repository.</td>
+            </tr>
+            <tr>
+              <td><strong>UAT Testing</strong></td>
+              <td>Validation at <a href="https://www.kunalv.me/uat" target="_blank" rel="noopener noreferrer">https://www.kunalv.me/uat</a> for layout, language, behavior, and content correctness.</td>
+            </tr>
+            <tr>
+              <td><strong>Production Deployment (Phase‑1)</strong></td>
+              <td>Once UAT is approved, files are manually copied from <code>/uat</code> to the root of the repository.</td>
+            </tr>
+            <tr>
+              <td><strong>Phase‑2 (Planned CI/CD)</strong></td>
+              <td>
+                Introduce CI/CD pipelines to automate build, validation, and deployment to UAT and Production,
+                reducing manual steps and enforcing consistent quality gates.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="security">
+        <h2>4. Security Architecture</h2>
+        <table>
+          <thead><tr><th>Security Layer</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>HTTPS/TLS</strong></td>
+              <td>Enforced by GitHub Pages for all traffic to <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a> and <code>/uat</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>DNSSEC</strong></td>
+              <td>Enabled at the registrar/DNS level to protect against DNS tampering.</td>
+            </tr>
+            <tr>
+              <td><strong>Email Authentication</strong></td>
+              <td>SPF, DKIM, and DMARC configured for contact@kunalv.me to prevent spoofing and phishing.</td>
+            </tr>
+            <tr>
+              <td><strong>Static Site Security</strong></td>
+              <td>No backend or database, resulting in a minimal attack surface and reduced risk profile.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="performance">
+        <h2>5. Performance &amp; Optimization</h2>
+        <table>
+          <thead><tr><th>Area</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>CDN Delivery</strong></td>
+              <td>GitHub Pages global CDN ensures fast delivery across regions.</td>
+            </tr>
+            <tr>
+              <td><strong>Asset Optimization</strong></td>
+              <td>CSS/JS are minified where applicable; images are compressed to reduce load times.</td>
+            </tr>
+            <tr>
+              <td><strong>Caching</strong></td>
+              <td>Browser and CDN caching leveraged for repeat visitors.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ai-integration">
+        <h2>6. AI Integration, Prompt Engineering &amp; Vishwa AI</h2>
+        <p class="section-note">How AI models and prompt engineering are embedded into the lifecycle of the portal.</p>
+        <table>
+          <thead><tr><th>AI Component</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Microsoft Copilot</strong></td>
+              <td>
+                Used for DNS registration guidance, configuration validation, content drafting, and architecture documentation.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Gemini (Personal Subscription)</strong></td>
+              <td>
+                Used for HTML/CSS/JS coding assistance, refactoring, and validating layout and behavior.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Multiple AI Models for Validation</strong></td>
+              <td>
+                Content, structure, and wording are validated across different AI models to reduce bias,
+                improve clarity, and ensure consistency.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>100% Prompt Engineering Approach</strong></td>
+              <td>
+                The portal is designed and evolved entirely through prompt engineering, without a traditional coding background,
+                demonstrating AI‑augmented development.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Own AI‑Assisted Workflow</strong></td>
+              <td>
+                The portal integrates with the owner’s AI‑driven workflow for continuous content review, refinement,
+                and future feature ideation.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Vishwa AI / kunalv.AI (Planned)</strong></td>
+              <td>
+                Planned in‑house Vishwa AI integration as <code>kunalv.AI</code>, enabling guided navigation, contextual Q&amp;A
+                on projects, and AI‑assisted CV / profile exploration, aligned with privacy and security expectations.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>6.1 Supporting screenshots – AI Workspace Validation</h3>
+        <p class="section-note">Visual sample of prompt-engineered layout and metadata generation inside the Google Gemini workspace environments.</p>
+        <img src="Gemini code .png" alt="Google Gemini interface showcasing code validation and generation for www.kunalv.me" />
+      </section>
+
+      <section id="gdpr">
+        <h2>7. GDPR &amp; Privacy Alignment</h2>
+        <p class="section-note">How the portal aligns with GDPR principles in a static, low‑data context.</p>
+        <ul class="checklist">
+          <li>No active collection of personal data via forms or tracking scripts.</li>
+          <li>No analytics or cookies that profile users without explicit consent.</li>
+          <li>Email contact is voluntary via contact@kunalv.me; users choose what to share.</li>
+          <li>No storage of user data on the portal itself (static hosting, no database).</li>
+          <li>External links clearly separate third‑party platforms from the portal.</li>
+          <li>Content is available in Norwegian and English to support local and international audiences.</li>
+        </ul>
+      </section>
+
+      <section id="checklist">
+        <h2>8. Portal Compliance Checklist (Summary)</h2>
+        <p class="section-note">High‑level checklist confirming readiness before sharing with stakeholders.</p>
+        <ul class="checklist">
+          <li>Domain &amp; DNS correctly configured (Porkbun, Cloudflare, DNSSEC, GitHub Pages records).</li>
+          <li>Email authentication in place (SPF, DKIM, DMARC for contact@kunalv.me).</li>
+          <li>Hosting model documented (Production + UAT on GitHub Pages).</li>
+          <li>Security controls described (HTTPS, static site, minimal attack surface).</li>
+          <li>Performance optimizations applied (CDN, minified assets, compressed images).</li>
+          <li>Content available in Norwegian and English, with clear navigation.</li>
+          <li>AI usage transparently disclosed (Copilot, Gemini, multi‑model validation).</li>
+          <li>Prompt‑engineering‑driven development explicitly stated.</li>
+          <li>GDPR‑aligned behavior: no unsolicited data collection, no invasive tracking.</li>
+          <li>Phase‑1 manual deployment documented; Phase‑2 CI/CD automation planned.</li>
+          <li>Case study and architecture intended for controlled stakeholder sharing only.</li>
+        </ul>
+      </section>
+
+      <section id="diagram">
+        <h2>9. High‑Level Architecture Diagram (ASCII)</h2>
+        <div class="ascii-diagram">
+<pre>
+                   +-----------------------------+
+                   |        Domain Layer         |
+                   |       www.kunalv.me         |
+                   +--------------+--------------+
+                                  |
+                                  v
+                   +-----------------------------+
+                   |         DNS Layer           |
+                   |  Porkbun DNS + DNSSEC       |
+                   |  SPF / DKIM / DMARC         |
+                   +--------------+--------------+
+                                  |
+                                  v
+        +------------------------------------------------------+
+        |                 Hosting Architecture                  |
+        +----------------------+-------------------------------+
+        |   Production (main) |   UAT (/uat folder)           |
+        |   GitHub Pages      |   GitHub Pages                |
+        |   URL: /            |   URL: /uat/                  |
+        +----------------------+-------------------------------+
+                                  |
+                                  v
+                   +-----------------------------+
+                   |     Deployment Workflow     |
+                   |  Phase-1: Manual push       |
+                   |  Phase-2: Planned CI/CD     |
+                   +-----------------------------+
+                                  |
+                                  v
+                   +-----------------------------+
+                   |      Security Layer         |
+                   | HTTPS / TLS / DNSSEC        |
+                   | Email Auth (SPF/DKIM/DMARC) |
+                   +-----------------------------+
+                                  |
+                                  v
+                   +-----------------------------+
+                   |   Performance Layer         |
+                   | CDN-backed GitHub Pages     |
+                   | Optimized Assets            |
+                   +-----------------------------+
+                                  |
+                                  v
+                   +-----------------------------+
+                   |   AI & Prompt Engineering   |
+                   | Copilot + Gemini + Own AI   |
+                   | Multi-model content review  |
+                   +-----------------------------+
+</pre>
+        </div>
+
+        <div class="footer-note">
+          © 2026 Kunal Vishwakarma — Architecture case study for <a href="https://www.kunalv.me" target="_blank" rel="noopener noreferrer">www.kunalv.me</a><br />
+          This document and its configuration details are intended for internal and stakeholder review only and must not be shared externally without explicit consent.
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      try {
+        var rawDate = new Date(document.lastModified);
+        if (!isNaN(rawDate.getTime())) {
+          var day = String(rawDate.getDate()).padStart(2, '0');
+          var month = String(rawDate.getMonth() + 1).padStart(2, '0');
+          var year = rawDate.getFullYear();
+          var hours = String(rawDate.getHours()).padStart(2, '0');
+          var minutes = String(rawDate.getMinutes()).padStart(2, '0');
+          
+          var formattedTimestamp = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes;
+          document.getElementById("last-modified-timestamp").textContent = formattedTimestamp;
+        }
+      } catch (e) {
+        console.warn("Could not dynamically parse document execution timestamp:", e);
+      }
+    });
+  </script>
+</body>
+</html>
