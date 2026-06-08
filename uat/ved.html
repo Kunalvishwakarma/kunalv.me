@@ -93,30 +93,38 @@
 <body class="selection:bg-blue-500/20">
 
     <nav class="fixed w-full z-50 nav-blur top-0">
-        <div class="max-w-6xl mx-auto px-6 py-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <div class="max-w-6xl mx-auto px-6 py-3.5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
                 <a href="#about" class="group flex items-center gap-3 transition-all duration-200 hover:opacity-90">
                     <img src="logo.png" alt="Kunal Vishwakarma - Datacenter SME & Infrastructure Architect Logo" class="h-10 w-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='kv.png'" />
-                    <span class="text-base font-extrabold tracking-tighter text-white uppercase leading-none">
-                        Kunal <span class="text-blue-500">Vishwakarma</span>
-                    </span>
+                    <div class="flex flex-col">
+                        <span class="text-base font-extrabold tracking-tighter text-white uppercase leading-none">
+                            Kunal <span class="text-blue-500">Vishwakarma</span>
+                        </span>
+                        
+                        <div class="flex items-center gap-1.5 mt-1 text-[10px] font-mono text-slate-400 font-bold tracking-normal">
+                            <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.53-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-8.77z"/>
+                                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.11 0-5.74-2.11-6.68-4.96H1.21v3.15C3.18 21.88 7.31 24 12 24z"/>
+                                <path fill="#FBBC05" d="M5.32 14.24A7.16 7.16 0 0 1 4.93 12c0-.79.13-1.57.39-2.31V6.54H1.21A11.94 11.94 0 0 0 0 12c0 1.92.45 3.74 1.21 5.39l4.11-3.15z"/>
+                                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.18 2.12 1.21 6.54l4.11 3.15c.94-2.85 3.57-4.94 6.68-4.94z"/>
+                            </svg>
+                            <span id="google-nav-metric-node">5.2M+ Impact</span>
+                            <span class="text-slate-700 font-normal">|</span>
+                            <span class="text-amber-500 font-sans text-[9px] tracking-tight">★★★★★</span>
+                        </div>
+                    </div>
                 </a>
                 
-                <div class="flex items-center gap-2 px-2.5 py-1 bg-slate-900 border border-slate-800 rounded-lg text-[10px] font-mono font-bold text-slate-300 shadow-md">
-                    <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24">
-                        <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.53-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-8.77z"/>
-                        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.11 0-5.74-2.11-6.68-4.96H1.21v3.15C3.18 21.88 7.31 24 12 24z"/>
-                        <path fill="#FBBC05" d="M5.32 14.24A7.16 7.16 0 0 1 4.93 12c0-.79.13-1.57.39-2.31V6.54H1.21A11.94 11.94 0 0 0 0 12c0 1.92.45 3.74 1.21 5.39l4.11-3.15z"/>
-                        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.18 2.12 1.21 6.54l4.11 3.15c.94-2.85 3.57-4.94 6.68-4.94z"/>
-                    </svg>
-                    <span id="google-nav-metric-node">5.2M+ Impact</span>
-                    <span class="text-slate-700 font-normal">|</span>
-                    <span class="text-amber-500 font-sans text-[9px] tracking-tight">★★★★★</span>
+                <div class="relative inline-block text-left md:hidden ml-auto">
+                    <button onclick="toggleLangDropdown()" class="inline-flex items-center gap-1 px-2 py-1 border border-slate-800 rounded text-xs font-semibold text-slate-300 bg-slate-900">
+                        <span id="currentLangMobile">EN</span> <i data-lucide="chevron-down" class="w-3 h-3 text-slate-500"></i>
+                    </button>
                 </div>
             </div>
             
-            <div class="flex flex-col gap-2 items-end w-full lg:w-auto">
-                <div class="flex flex-wrap gap-x-5 gap-y-1.5 text-[11px] font-bold uppercase tracking-wide justify-start lg:justify-end text-emerald-400">
+            <div class="flex flex-col gap-2 items-end w-full md:w-auto">
+                <div class="flex flex-wrap gap-x-4 md:gap-x-5 gap-y-1.5 text-[11px] font-bold uppercase tracking-wider justify-start md:justify-end text-emerald-400">
                     <a href="#about" data-i18n="nav-about" class="hover:text-white transition">About</a>
                     <a href="#skills" data-i18n="nav-skills" class="hover:text-white transition">Skills</a>
                     <a href="#projects" data-i18n="nav-projects" class="hover:text-white transition">Projects</a>
@@ -128,10 +136,10 @@
                 </div>
                 
                 <div class="flex items-center gap-3">
-                    <button onclick="openDownloadModal()" class="text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5 border border-blue-500/30 px-3 py-1 rounded bg-blue-500/10 text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                    <button onclick="openDownloadModal()" class="text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5 border border-blue-500/30 px-2.5 py-0.5 rounded bg-blue-500/10 text-[10px] font-bold uppercase tracking-wider shadow-sm">
                         <i data-lucide="download" class="w-3 h-3"></i> CV Access
                     </button>
-                    <div class="relative inline-block text-left">
+                    <div class="relative hidden md:inline-block text-left">
                         <button onclick="toggleLangDropdown()" id="langBtn" class="inline-flex items-center gap-1.5 px-2.5 py-1 border border-slate-800 rounded text-[10px] font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 transition shadow-sm">
                             <i data-lucide="languages" class="w-3 h-3 text-blue-500"></i> <span id="currentLang">English</span> <i data-lucide="chevron-down" class="w-2.5 h-2.5 text-slate-500"></i>
                         </button>
@@ -147,7 +155,7 @@
         </div>
     </nav>
 
-    <div class="fixed w-full z-40 subnav-contact top-[148px] lg:top-[78px] py-2.5 px-6 block">
+    <div class="fixed w-full z-40 subnav-contact top-[148px] md:top-[78px] py-2.5 px-6 block">
         <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400">
             <span class="email-container hover:text-blue-500 transition flex items-center gap-1.5">
                 <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
@@ -643,52 +651,6 @@
         </div>
     </div>
 
-    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-        <div id="vishwa-tooltip" class="speech-arrow relative bg-white text-slate-900 px-4 py-2.5 rounded-xl font-medium text-xs shadow-xl flex items-center gap-1.5 whitespace-nowrap transition-all duration-300 transform opacity-100 translate-x-0 border border-slate-200">
-            <span class="text-blue-600 font-bold text-sm">✨</span> Hello, how can I help?
-        </div>
-
-        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none shrink-0 relative">
-            <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
-        </button>
-
-        <div id="vishwa-chat-box" class="chat-popup absolute bottom-20 right-0 w-80 sm:w-96 h-[480px] bg-slate-900 border border-slate-800 rounded-2xl flex flex-col shadow-2xl overflow-hidden">
-            <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-2.5">
-                    <div class="relative">
-                        <div class="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center border border-blue-500/30">
-                            <i data-lucide="bot" class="w-4 h-4 text-blue-500"></i>
-                        </div>
-                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-slate-950 rounded-full"></span>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-bold text-white tracking-tight">Vishwa AI</h3>
-                        <p class="text-[10px] text-slate-400 font-medium">Profile Assistant Bot</p>
-                    </div>
-                </div>
-                <button onclick="toggleVishwaChat()" class="text-slate-400 hover:text-white transition">
-                    <i data-lucide="x" class="w-4 h-4"></i>
-                </button>
-            </div>
-
-            <div id="chat-messages-container" class="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-hide text-xs">
-                <div class="flex items-start gap-2.5">
-                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
-                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">
-                        Welcome! My name is <span class="text-blue-400 font-bold">Vishwa</span>. I am specifically trained to assist you with queries related to Kunal's profile, datacenter milestones, project history, or tech stack!
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
-                <input type="text" id="chat-user-input" onkeydown="if(event.key === 'Enter') sendQueryToVishwa()" placeholder="Ask me about Kunal's profile..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
-                <button onclick="sendQueryToVishwa()" class="px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition">
-                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
     <script>
         const translations = {
             en: {
@@ -1015,7 +977,7 @@
                 { icon: "check-square", styling: "bg-slate-950/40 text-slate-400", name: "ITIL Foundation – EXIN" },
                 { icon: "git-branch", styling: "bg-purple-950/40 text-purple-400", name: "PRINCE2 Agile®" },
                 { icon: "terminal", styling: "bg-red-950/40 text-red-400", name: "DRDO – Kybersikkerhet" },
-                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)" },
+                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Sertifisere Etterforsker av Digital Kriminalitet (CCIO)" },
                 { icon: "layers", styling: "bg-amber-950/40 text-amber-400", name: "Alibaba Cloud Sertifisering" },
                 { icon: "shuffle", styling: "bg-fuchsia-950/40 text-fuchsia-400", name: "Aviatrix Multi Multi‑Cloud Sertifisering" },
                 { icon: "building-2", styling: "bg-yellow-950/40 text-yellow-400", name: "BICSI Datasenterdesign & Infrastruktur" },
