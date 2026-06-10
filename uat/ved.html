@@ -1,1085 +1,450 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunal Vishwakarma | Datacenter SME & Infrastructure Architect</title>
-    
-    <meta name="description" content="Professional portfolio of Kunal Vishwakarma - Enterprise Datacenter SME & Infrastructure Architect based in Oslo, Norway. 20+ years of global migrations, cloud adoptions, and custom automation engineering.">
-    <meta name="keywords" content="Datacenter SME, Infrastructure Architect, Azure Cloud Migration, Technical Project Manager, Oslo IT Consultant, Kunal Vishwakarma, Prompt Engineering">
-    <meta name="author" content="Kunal Vishwakarma">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kunalv.me">
-    <meta property="og:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
-    <meta property="og:description" content="20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.">
-    <meta property="og:image" content="https://kunalv.me/logo.png">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kunalv.me">
-    <meta property="twitter:title" content="Kunal Vishwakarma | Datacenter SME & Infrastructure Architect">
-    <meta property="twitter:description" content="20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter adoptions, and secure global hybrid architectures.">
-    <meta property="twitter:image" content="https://kunalv.me/logo.png">
-
+    <title>Kunal - Corporate Identity & Engineering Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #ffffff; }
-        
-        /* FIX: Title target anchor landing margins to stop exactly below navbar across viewports */
-        section { scroll-margin-top: 155px; }
-        
-        .nav-blur { background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; }
-        .subnav-contact { background: rgba(9, 15, 30, 0.9); border-bottom: 1px solid #1e293b; }
-        .card-premium { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; }
-        .card-premium:hover { border-color: #3b82f6; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1); }
-        .timeline-line { border-left: 2px solid #1e293b; }
-        
-        /* Chatbot Popup Visibility Animation Parameters */
-        .chat-popup { transform: scale(0.9); opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
-        .chat-popup.active { transform: scale(1); opacity: 1; pointer-events: auto; }
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-
-        /* Speech bubble arrow custom positioning metrics */
-        .speech-arrow::after {
-            content: '';
-            position: absolute;
-            right: -6px;
-            top: 50%;
-            transform: translateY(-50%) rotate(45deg);
-            width: 12px;
-            height: 12px;
-            background-color: #ffffff;
-            border-right: 1px solid #e2e8f0;
-            border-top: 1px solid #e2e8f0;
+        .glow-effect:hover {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.4);
         }
-
-        /* MAXIMUM OVERRIDE ENTERPRISE PRINT CONSTRAINTS LOCKING DATA UNTO A STANDALONE SINGLE PAGE */
-        @media print {
-            body > :not(#printableCV) { 
-                display: none !important; 
-            }
-            html, body {
-                background: #ffffff !important;
-                color: #000000 !important;
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-            @page {
-                size: A4 portrait;
-                margin: 5mm 6mm 5mm 6mm !important;
-            }
-            #printableCV { 
-                display: block !important; 
-                visibility: visible !important;
-                width: 100% !important;
-                height: auto !important;
-                max-width: 100% !important;
-                page-break-inside: avoid !important;
-                box-shadow: none !important; 
-                padding: 0 !important; 
-                margin: 0 !important;
-                background: #ffffff !important;
-                color: #0f172a !important;
-            }
-            #printableCV .text-blue-700 { color: #1d4ed8 !important; }
-            #printableCV .bg-slate-100 { background-color: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        @keyframes subtle-pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .pulse-dot {
+            animation: subtle-pulse 2s infinite;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(51, 65, 85, 0.5);
+            border-radius: 2px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(16, 185, 129, 0.5);
         }
     </style>
 </head>
-<body class="selection:bg-blue-500/20">
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-emerald-500/30 selection:text-emerald-400 font-sans smooth-scroll antialiased">
 
-    <nav class="fixed w-full z-50 nav-blur top-0">
-        <div class="max-w-6xl mx-auto px-6 py-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            <div class="flex items-center justify-between w-full lg:w-auto">
-                <a href="#about" class="group flex items-center gap-3 transition-all duration-200 hover:opacity-90">
-                    <img src="logo.png" alt="Kunal Vishwakarma - Datacenter SME & Infrastructure Architect Logo" class="h-10 w-10 object-contain rounded-lg" onerror="this.src='kv.png'" />
-                    <div class="flex flex-col">
-                        <span class="text-base font-extrabold tracking-[0.6px] text-white uppercase leading-none">
-                            Kunal <span class="text-blue-500">Vishwakarma</span>
-                        </span>
-                        
-                        <div class="flex items-center gap-1.5 mt-1.5 text-[9.5px] font-mono text-slate-400 font-bold tracking-normal opacity-85">
-                            <svg class="w-2.5 h-2.5 shrink-0" viewBox="0 0 24 24">
-                                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.53-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-8.77z"/>
-                                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.11 0-5.74-2.11-6.68-4.96H1.21v3.15C3.18 21.88 7.31 24 12 24z"/>
-                                <path fill="#FBBC05" d="M5.32 14.24A7.16 7.16 0 0 1 4.93 12c0-.79.13-1.57.39-2.31V6.54H1.21A11.94 11.94 0 0 0 0 12c0 1.92.45 3.74 1.21 5.39l4.11-3.15z"/>
-                                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.18 2.12 1.21 6.54l4.11 3.15c.94-2.85 3.57-4.94 6.68-4.94z"/>
-                            </svg>
-                            <span id="google-nav-metric-node">5.2M+ Impact</span>
-                            <span class="text-slate-700 font-normal">|</span>
-                            <span class="text-amber-500 font-sans text-[8.5px] tracking-tight">★★★★★</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <div class="relative inline-block text-left md:hidden ml-auto">
-                    <button onclick="toggleLangDropdown()" class="inline-flex items-center gap-1 px-2 py-1 border border-slate-800 rounded text-xs font-semibold text-slate-300 bg-slate-900">
-                        <span id="currentLangMobile">EN</span> <i data-lucide="chevron-down" class="w-3 h-3 text-slate-500"></i>
-                    </button>
-                </div>
+    <div class="fixed inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0"></div>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-12 pb-6 border-b border-slate-900 gap-4">
+            <div class="flex items-center gap-3">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <p class="text-xs font-mono text-slate-400 tracking-wider uppercase">
+                    System Node: <span class="text-emerald-400 font-bold">Operational</span> | Cloud Mesh Active
+                </p>
             </div>
+            <div class="text-xs font-mono text-slate-500 flex items-center gap-4">
+                <span>SECURE PIPELINE // TLS 1.3</span>
+                <span class="hidden sm:inline text-slate-700">|</span>
+                <span id="system-clock">00:00:00 UTC</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <div class="flex flex-col gap-2 items-start lg:items-end w-full lg:w-auto">
-                <div class="flex flex-wrap gap-x-4 lg:gap-x-5 gap-y-1.5 text-[11px] font-semibold uppercase tracking-[0.6px] text-emerald-400">
-                    <a href="#about" data-i18n="nav-about" class="hover:text-white transition duration-200">About</a>
-                    <a href="#skills" data-i18n="nav-skills" class="hover:text-white transition duration-200">Skills</a>
-                    <a href="#projects" data-i18n="nav-projects" class="hover:text-white transition duration-200">Projects</a>
-                    <a href="#experience" data-i18n="nav-experience" class="hover:text-white transition duration-200">Experience</a>
-                    <a href="#whitepapers" data-i18n="nav-whitepapers" class="hover:text-white transition duration-200">White Paper</a>
-                    <a href="#testimonials" data-i18n="nav-awards" class="hover:text-white transition duration-200">Awards</a>
-                    <a href="#credentials" data-i18n="nav-credentials" class="hover:text-white transition duration-200">Credentials</a>
-                    <a href="#resources" data-i18n="nav-resources" class="hover:text-white transition duration-200">Resources</a>
-                </div>
+            <div class="lg:col-span-4 space-y-8 lg:sticky lg:top-8">
                 
-                <div class="flex items-center gap-3 mt-1 lg:mt-0">
-                    <button onclick="openDownloadModal()" class="text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5 border border-blue-500/30 px-2.5 py-0.5 rounded bg-blue-500/10 text-[10px] font-bold uppercase tracking-wider shadow-sm">
-                        <i data-lucide="download" class="w-3 h-3"></i> CV Access
-                    </button>
-                    <div class="relative hidden md:inline-block text-left">
-                        <button onclick="toggleLangDropdown()" id="langBtn" class="inline-flex items-center gap-1.5 px-2.5 py-1 border border-slate-800 rounded text-[10px] font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 transition shadow-sm">
-                            <i data-lucide="languages" class="w-3 h-3 text-blue-500"></i> <span id="currentLang">English</span> <i data-lucide="chevron-down" class="w-2.5 h-2.5 text-slate-500"></i>
-                        </button>
-                        <div id="langDropdown" class="hidden absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-slate-900 border border-slate-800 ring-1 ring-black ring-opacity-5 z-50">
-                            <div class="py-1">
-                                <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 font-semibold transition">English</button>
-                                <button onclick="changeLanguage('no')" class="w-full text-left px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 font-semibold transition">Norsk</button>
+                <div class="bg-slate-900/40 backdrop-blur-xl border border-slate-800/80 rounded-2xl p-6 glow-effect transition-all duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative group mb-4">
+                            <div class="absolute -inset-0.5 bg-gradient-to-r edit-gradient rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80" alt="Kunal Profile" class="relative rounded-full w-28 h-28 object-cover border-2 border-slate-800 group-hover:border-emerald-500/50 transition duration-300">
+                        </div>
+                        
+                        <h1 class="text-2xl font-black tracking-tight text-white mb-1">Kunal</h1>
+                        <p class="text-xs font-mono text-emerald-400 font-semibold uppercase tracking-widest mb-4">Solutions Architect & DevOps Engineer</p>
+                        
+                        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-slate-800 to-transparent my-4"></div>
+                        
+                        <div class="w-full space-y-2.5 text-left text-sm font-mono text-slate-400 mb-6">
+                            <div class="flex justify-between items-center p-2 rounded bg-slate-950/40 border border-slate-900">
+                                <span class="text-xs text-slate-500">LOCATION:</span>
+                                <span class="text-slate-300 text-xs font-semibold">Oslo, Norway</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 rounded bg-slate-950/40 border border-slate-900">
+                                <span class="text-xs text-slate-500">CORE FOCUS:</span>
+                                <span class="text-slate-300 text-xs font-semibold">Cloud Mesh & AI Infrastructure</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 rounded bg-slate-950/40 border border-slate-900">
+                                <span class="text-xs text-slate-500">STATUS:</span>
+                                <span class="text-emerald-400 text-xs font-bold">Open to Engagements</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <div class="fixed w-full z-40 subnav-contact top-[148px] lg:top-[78px] py-2.5 px-6 block opacity-80">
-        <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 text-[0.9rem] font-bold tracking-wide text-slate-400">
-            <span class="email-container hover:text-blue-500 transition flex items-center gap-1.5">
-                <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
-            </span>
-            <span class="text-slate-700">|</span>
-            <div class="flex items-center gap-1.5">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500"></i> <span data-i18n="location" class="text-slate-300">Oslo, Norway</span>
-            </div>
-            <span class="text-slate-700">|</span>
-            <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="hover:text-[#0077b5] text-slate-300 transition flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 fill-[#0077b5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn
-            </a>
-        </div>
-    </div>
-
-    <header class="pt-56 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-3 gap-12 items-start">
-            <div class="lg:col-span-2 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 text-red-400 text-xs font-semibold rounded-full border border-red-900/60">
-                    <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
-                </div>
-                <h1 id="portal-hero-title" data-i18n="hero-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
-                    Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner
-                </h1>
-                <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
-                    Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
-                </p>
-                <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
-                    <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.
-                </div>
-            </div>
-
-            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl shadow-sm space-y-4 w-full">
-                <div class="border-b border-slate-800 pb-2">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400" data-i18n="domain-title">Domain Experience</h3>
-                </div>
-                <div id="domain-list-node" class="space-y-2 text-xs font-semibold text-slate-300">
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Oil & Gas (Energy)</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Banking & Financial Services</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Pharmaceuticals</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Datacenter Operations</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span> Semi-Government Institution</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Operational Technology (OT) Industries</div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="bg-slate-950 border-y border-slate-800 py-10">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-4xl font-bold text-white">20+</div>
-                <div id="counter-exp" data-i18n="count-exp" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Years IT Experience</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-blue-500">30+</div>
-                <div id="counter-del" data-i18n="count-del" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Global Deliveries</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-green-500">8+</div>
-                <div id="counter-usr" data-i18n="count-usr" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Worldwide Data Centers</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-blue-500">100+</div>
-                <div id="counter-dat" data-i18n="count-dat" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Locations Worldwide Support</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-20 max-w-6xl mx-auto px-6 border-b border-slate-800">
-        <div class="mb-12">
-            <h2 data-i18n="skills-title" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                <i data-lucide="shield-check" class="text-blue-500"></i> Core Skills
-            </h2>
-            <p data-i18n="skills-desc" class="text-slate-400 text-sm mt-1">Foundational execution capabilities across mission-critical technical domains.</p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="server" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-1" class="text-sm font-semibold text-slate-200">Data Center Operations</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="folder-kanban" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-2" class="text-sm font-semibold text-slate-200">Project Management</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="search" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-3" class="text-sm font-semibold text-slate-200">Root Cause Analysis (RCA)</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="terminal" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-4" class="text-sm font-semibold text-slate-200">Multi-AI Model Practitioner</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="git-branch" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-5" class="text-sm font-semibold text-slate-200">Infrastructure Projects</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="users" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Vendor Management</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="alert-triangle" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-7" class="text-sm font-semibold text-slate-200">Risk Mitigation</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="calendar" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-8" class="text-sm font-semibold text-slate-200">Capacity Planning & Scheduling</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="dollar-sign" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Budget Tracking</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="cpu" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span class="text-sm font-semibold text-slate-200">Server Architecture</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="database" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-11" class="text-sm font-semibold text-slate-200">AI LAB Architecture</span>
-            </div>
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="hard-drive" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-12" class="text-sm font-semibold text-slate-200">Critical Data Center Operations</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
-        <div class="mb-16">
-            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                <i data-lucide="layers" class="text-blue-500"></i> <span data-i18n="proj-heading">Key Projects</span>
-            </h2>
-            <p data-i18n="proj-lead-desc" class="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
-                Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.
-            </p>
-        </div>
-
-        <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl shadow-sm">
-            <ul id="main-project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-slate-300 leading-relaxed"></ul>
-        </div>
-
-        <div class="mt-8 mb-4">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
-                <i data-lucide="archive" class="w-4 h-4"></i> <span data-i18n="hist-heading">Historical Core Infrastructure Deployments</span>
-            </h3>
-        </div>
-        <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl shadow-sm">
-            <ul id="historical-project-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-400 leading-relaxed"></ul>
-        </div>
-    </section>
-
-    <section id="experience" class="py-24 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 data-i18n="exp-heading" class="text-3xl font-bold text-white mb-16 tracking-tight flex items-center gap-3">
-                <i data-lucide="briefcase" class="text-blue-500"></i> Corporate Experience
-            </h2>
-            <div id="experience-timeline" class="timeline-line ml-4 space-y-12"></div>
-        </div>
-    </section>
-
-    <section id="whitepapers" class="py-24 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 space-y-8">
-            <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                <i data-lucide="book-open" class="text-blue-500"></i> <span data-i18n="wp-heading">White Papers & Case Studies</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md">
-                    <div class="flex items-center justify-between">
-                        <span id="cs1-tag" data-i18n="cs1-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-blue-950/40 text-blue-400 border border-blue-900/60 text-[10px] font-bold uppercase rounded-full">Energy Enterprise</span>
-                        <span id="cs1-loc" data-i18n="cs1-loc" class="text-xs font-mono text-green-500 font-bold">Norway Site</span>
-                    </div>
-                    <h4 id="cs1-title" data-i18n="cs1-title" class="font-extrabold text-white text-base">Data Center Optimization Case Study</h4>
-                    <p id="cs1-sub" data-i18n="cs1-sub" class="text-xs text-slate-400 leading-relaxed font-semibold">Zero‑Downtime Consolidation Delivering $300K Annual Savings</p>
-                    <div id="cs1-body" data-i18n="cs1-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3"></div>
-                </div>
-
-                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 shadow-md">
-                    <div class="flex items-center justify-between">
-                        <span id="cs2-tag" data-i18n="cs2-tag" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-purple-950/40 text-purple-400 border border-purple-900/60 text-[10px] font-bold uppercase rounded-full">Hybrid Migration</span>
-                        <span id="cs2-loc" data-i18n="cs2-loc" class="text-xs font-mono text-blue-500 font-bold">US-2 Site</span>
-                    </div>
-                    <h4 id="cs2-title" data-i18n="cs2-title" class="font-extrabold text-white text-base">US-2 Datacenter Decommissioning & Hybrid Migration</h4>
-                    <p id="cs2-sub" data-i18n="cs2-sub" class="text-xs text-slate-400 leading-relaxed font-semibold">Data Center Decommissioning & Multi-Application Architecture Shift</p>
-                    <div id="cs2-body" data-i18n="cs2-body" class="text-xs text-slate-300 space-y-3 font-normal border-t border-slate-800/80 pt-3"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
-        <div class="text-center space-y-3 mb-12">
-            <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
-                <i data-lucide="award" class="text-blue-500"></i> Appreciation & Awards
-            </h2>
-            <p data-i18n="awards-desc" class="text-slate-400 text-sm max-w-2xl mx-auto">
-                Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.
-            </p>
-        </div>
-        <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
-    </section>
-
-    <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="space-y-6">
-                <h2 data-i18n="cert-title" class="text-2xl font-bold text-white tracking-tight">Technical Certifications</h2>
-                <div id="certifications-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-400"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="resources" class="py-24 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="mb-12">
-                <h2 data-i18n="resources-heading" class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-                    <i data-lucide="book-marked" class="text-blue-500"></i> Learning Resources & Deals
-                </h2>
-                <p data-i18n="resources-desc" class="text-slate-400 text-sm mt-1">Curated operational channels and tactical IT deals recommended for cybersecurity training.</p>
-            </div>
-            
-            <div class="p-6 bg-slate-900/40 border border-slate-800/80 rounded-xl space-y-6">
-                <div class="p-3 bg-blue-950/20 border border-blue-900/40 rounded-lg text-[11px] text-slate-400 leading-normal">
-                    <span class="text-blue-400 font-bold uppercase tracking-wider mr-1">⚖️ Transparency Disclosure:</span> Some of the operational links below are structural affiliate marketing parameters. If you process procurement transformations through these links, I may log a referral credit at zero additional translation variance cost to your baseline track. I exclusively feature pathways matching my active LAB deployment verifications.
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
-                    <div>
-                        <h4 class="font-bold text-white text-sm mb-4 border-b border-slate-800 pb-2 uppercase tracking-wider text-blue-500 flex items-center gap-2">
-                            <i data-lucide="youtube" class="w-4 h-4"></i> Core Education Channels
-                        </h4>
-                        <ul class="space-y-3 text-xs text-slate-300">
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@NetworkChuck" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">NetworkChuck</a> — Cybersecurity basics, hacking, networking</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@JohnHammond" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">John Hammond</a> — CTFs, malware, hands‑on security</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@TheCyberMentor" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">The Cyber Mentor</a> — Ethical hacking & pentesting</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@HackerSploit" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">HackerSploit</a> — Linux, Metasploit, red‑team basics</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@davidbombal" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">David Bombal</a> — Networking + cybersecurity</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@IppSec" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">IppSec</a> — HackTheBox walkthroughs</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@professormesser" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">Professor Messer</a> — Security+ basics</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@NullByte" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">Null Byte</a> — Beginner hacking tutorials</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@SimplyCyber" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">Simply Cyber</a> — Daily threat briefings</li>
-                            <li class="leading-relaxed"><a href="https://www.youtube.com/@CybersecurityMeg" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-semibold">Cybersecurity Meg</a> — Beginner‑friendly explanations</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="font-bold text-white text-sm mb-4 border-b border-slate-800 pb-2 uppercase tracking-wider text-blue-500 flex items-center gap-2">
-                            <i data-lucide="shopping-bag" class="w-4 h-4"></i> IT Stuff / Tools & Learning Deals
-                        </h4>
-                        <div class="bg-slate-950 p-4 border border-slate-800 rounded-lg space-y-2">
-                            <a href="https://stacksocial.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-bold text-xs flex items-center gap-1.5">
-                                StackSocial.com <i data-lucide="external-link" class="w-3 h-3"></i>
+                        <div class="grid grid-cols-5 gap-2 w-full">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/40 hover:text-emerald-400 transition group" title="GitHub Infrastructure Codebase">
+                                <i class="fab fa-github text-lg group-hover:scale-110 transition duration-200"></i>
                             </a>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Affordable cybersecurity bundles, software tools, and productivity apps. Ideal repository for picking up lifetime infrastructure utility software packages and continuous IT certification pathways.
-                            </p>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/40 hover:text-emerald-400 transition group" title="LinkedIn Professional Network Matrix">
+                                <i class="fab fa-linkedin-in text-lg group-hover:scale-110 transition duration-200"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/40 hover:text-emerald-400 transition group" title="Twitter System Telemetry Logs">
+                                <i class="fab fa-twitter text-lg group-hover:scale-110 transition duration-200"></i>
+                            </a>
+                            <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/40 hover:text-emerald-400 transition group" title="Google Developer Profile Matrix">
+                                <svg class="w-[18px] h-[18px] group-hover:scale-110 transition duration-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:kunalv@example.com" class="flex items-center justify-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/40 hover:text-emerald-400 transition group" title="Secure Encrypted Mail Dispatch">
+                                <i class="fas fa-envelope text-lg group-hover:scale-110 transition duration-200"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <div class="bg-slate-900/40 backdrop-blur-xl border border-slate-800/80 rounded-2xl p-5 flex flex-col h-[380px]">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
+                            <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">Vishwa AI Node v2.4</h3>
+                        </div>
+                        <span class="text-[10px] font-mono text-slate-500 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">MODEL: EDGE_LLM</span>
+                    </div>
+
+                    <div id="vishwa-screen" class="flex-1 bg-slate-950/90 border border-slate-900 rounded-xl p-3 font-mono text-xs text-slate-300 overflow-y-auto space-y-2 custom-scrollbar">
+                        <p class="text-emerald-400/80 text-[11px]">// Secure encrypted channel handshake successful.</p>
+                        <p class="text-slate-400 text-[11px]">Hello, I am Vishwa. Query my cognitive matrix regarding Kunal's core architecture competencies, credentials, cloud nodes, or infrastructure specializations.</p>
+                    </div>
+
+                    <div class="mt-3 relative">
+                        <input type="text" id="vishwa-input" placeholder="Query Vishwa Matrix..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 pr-10 text-xs font-mono text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500/50 transition">
+                        <button onclick="sendQueryToVishwa()" class="absolute right-2.5 top-2.5 text-slate-500 hover:text-emerald-400 transition">
+                            <i class="fas fa-paper-plane text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 space-y-8">
+                
+                <div class="bg-slate-900/20 backdrop-blur-md border border-slate-900 rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-xl font-bold tracking-tight text-white mb-6 flex items-center gap-2">
+                        <span class="text-emerald-400 font-mono text-lg font-black">//</span> 01. Tech Stack & Matrix Lab
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+                            <h4 class="text-xs font-mono uppercase text-emerald-400 font-bold tracking-wider mb-2">Cloud Infrastructure</h4>
+                            <p class="text-sm text-slate-300">Advanced architectural setups deployment strategies spanning scalable multi-region nodes, high-density cluster management pools, and strict isolation layers.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+                            <h4 class="text-xs font-mono uppercase text-emerald-400 font-bold tracking-wider mb-2">Automation Pipelines</h4>
+                            <p class="text-sm text-slate-300">Declarative operational builds processing structured configurations, continuous integration webhooks, and secure blue-green isolated rollouts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/20 backdrop-blur-md border border-slate-900 rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-xl font-bold tracking-tight text-white mb-6 flex items-center gap-2">
+                        <span class="text-emerald-400 font-mono text-lg font-black">//</span> 02. Verified Credentials
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Advanced Solutions Architect Certification</h4>
+                                <p class="text-xs text-slate-400">Issued via Enterprise Systems Global Cloud Provider</p>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-400 bg-slate-950 px-3 py-1 rounded-full border border-slate-800 font-semibold uppercase tracking-wider">Verified ID: #9281-X</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                            <div>
+                                <h4 class="text-sm font-bold text-white">DevOps & Micro-Cluster Engineering Specialist</h4>
+                                <p class="text-xs text-slate-400">Issued via Global Infrastructure Alliance Node</p>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-400 bg-slate-950 px-3 py-1 rounded-full border border-slate-800 font-semibold uppercase tracking-wider">Verified ID: #4412-M</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/20 backdrop-blur-md border border-slate-900 rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-xl font-bold tracking-tight text-white mb-6 flex items-center gap-2">
+                        <span class="text-emerald-400 font-mono text-lg font-black">//</span> 03. Infrastructure Resources & Blueprints
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 hover:border-slate-700 transition group relative">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-xs font-mono text-slate-500 font-bold uppercase">Configuration Guide</span>
+                                <i class="fas fa-file-pdf text-slate-600 group-hover:text-emerald-400 transition"></i>
+                            </div>
+                            <h4 class="text-sm font-bold text-white mb-1">Corporate System Architecture Blueprint</h4>
+                            <p class="text-xs text-slate-400 mb-4">Comprehensive network topological maps detailing secure cluster isolations and telemetry monitoring rules.</p>
+                            <button onclick="triggerSecureDownload('Corporate System Architecture Blueprint')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none">
+                                <i class="fas fa-lock text-[10px]"></i> REQUEST BLUEPRINT ACCESS ↗
+                            </button>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 hover:border-slate-700 transition group relative">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-xs font-mono text-slate-500 font-bold uppercase">Performance Audit</span>
+                                <i class="fas fa-file-invoice text-slate-600 group-hover:text-emerald-400 transition"></i>
+                            </div>
+                            <h4 class="text-sm font-bold text-white mb-1">Cloud Node Operational Efficiency Report</h4>
+                            <p class="text-xs text-slate-400 mb-4">Deep analytical log sweeps outlining infrastructure compute metrics, caching improvements, and density optimization targets.</p>
+                            <button onclick="triggerSecureDownload('Cloud Node Operational Efficiency Report')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none">
+                                <i class="fas fa-lock text-[10px]"></i> REQUEST REPORT ACCESS ↗
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/20 backdrop-blur-md border border-slate-900 rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-xl font-bold tracking-tight text-white mb-2 flex items-center gap-2">
+                        <span class="text-emerald-400 font-mono text-lg font-black">//</span> 04. Secure Communications Terminal
+                    </h2>
+                    <p class="text-xs font-mono text-slate-400 mb-6 uppercase tracking-wider">Initialize Encrypted Payload Message Pipeline Transfer Handler</p>
+                    
+                    <form id="secure-contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="YOUR_ACTUAL_WEB3FORMS_ACCESS_KEY">
+                        <input type="hidden" name="subject" value="New Secure Alert via Kunal Identity Node Portal">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-mono uppercase text-slate-400 mb-1 font-bold">Sender Identity / Name</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-mono uppercase text-slate-400 mb-1 font-bold">Return Target / Email Address</label>
+                                <input type="email" name="email" required placeholder="john@domain.com" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-mono uppercase text-slate-400 mb-1 font-bold">Payload Data / Message Contents</label>
+                            <textarea name="message" rows="4" required placeholder="Input secure transmission payload here..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition resize-none custom-scrollbar"></textarea>
+                        </div>
+                        
+                        <div id="form-feedback-node" class="text-xs font-mono hidden"></div>
+
+                        <button type="submit" class="w-full bg-slate-900 border border-slate-800 text-emerald-400 font-mono text-xs uppercase font-bold py-3 px-4 rounded-xl hover:bg-slate-850 hover:border-emerald-500/40 transition duration-300 flex items-center justify-center gap-2 tracking-widest focus:outline-none">
+                            <i class="fas fa-shield-alt text-[11px]"></i> DISPATCH SECURE PAYLOAD STREAM
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </div>
-    </section>
 
-    <footer class="py-12 border-t border-slate-800 bg-black text-center space-y-4">
-        <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-xs font-bold text-slate-400 px-6">
-            <a href="https://kunalv.me" class="hover:text-blue-500 flex items-center gap-2 transition">
-                <i data-lucide="globe" class="w-4 h-4 text-blue-500"></i> kunalv.me
-            </a>
-            <span class="text-slate-800 hidden md:block">|</span>
-            <span class="email-container hover:text-blue-500 flex items-center gap-2 transition">
-                <i data-lucide="mail" class="w-4 h-4 text-blue-500"></i>
-            </span>
-            <span class="text-slate-800 hidden md:block">|</span>
-            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition flex items-center gap-2" title="GitHub">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
-            </a>
-            <span class="text-slate-800 hidden md:block">|</span>
-            <a href="https://no.linkedin.com/in/kunalkv/en" target="_blank" class="hover:text-[#0077b5] text-slate-400 transition flex items-center gap-2" title="LinkedIn">
-                <svg class="w-4 h-4 fill-[#0077b5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn
-            </a>
-            <span class="text-slate-800 hidden md:block">|</span>
-            <a href="https://x.com/klohanshi" target="_blank" class="hover:text-white transition flex items-center gap-2" title="X (Twitter)">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter
-            </a>
-            <span class="text-slate-800 hidden md:block">|</span>
-            <a href="https://www.youtube.com/@Kkvishwa" target="_blank" class="hover:text-[#ff0000] text-slate-400 transition flex items-center gap-2" title="YouTube">
-                <svg class="w-4 h-4 fill-[#ff0000]" viewBox="0 0 24 24"><path d="M23.498 6.163s-.232-1.63-.941-2.348c-.901-.943-1.911-.947-2.373-1.002-3.305-.24-8.255-.24-8.255-.24s-4.95 0-8.255.24c-.462.055-1.472.059-2.373 1.002-.709.718-.941 2.348-.941 2.348s-.237 1.93-.237 3.859v1.811c0 1.929.237 3.859.237 3.859s.232 1.63.941 2.348c.901.943 2.112.914 2.651 1.015 3.793.364 8.249.378 8.249.378s4.955-.007 8.26-.248c.462-.055 1.472-.059 2.373-1.002.709-.718.941-2.348.941-2.348s.237-1.931.237-3.859v-1.811c0-1.929-.237-3.859-.237-3.859zm-14.124 8.574V8.14l6.456 3.298-6.456 3.299z"/></svg> YouTube
-            </a>
-        </div>
-        
-        <div class="flex justify-center items-center gap-4 text-slate-500 text-[11px] font-medium pt-2">
-            <span id="trafficLabel">Live Traffic Counter:</span>
-            <span id="localSessionCounterNode" class="px-2 py-0.5 bg-slate-900 text-blue-400 border border-slate-800 rounded font-mono text-xs">1,482</span>
-        </div>
-        <p class="text-slate-600 text-[10px] uppercase tracking-widest pt-2">All Rights Reserved @ Kunal Vishwakarma</p>
-    </footer>
+        <footer class="mt-16 pt-8 border-t border-slate-900 text-center space-y-2">
+            <p class="text-xs font-mono text-slate-500">
+                &copy; 2026 KUNAL. ALL ARCHITECTURAL PARAMETERS RESERVED.
+            </p>
+            <p class="text-[10px] font-mono text-slate-600">
+                Zero-Trust Pipeline Baseline Environment // Static Decentralized Mesh Client Node Deployment Stack
+            </p>
+        </footer>
+    </main>
 
-    <div id="downloadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 shadow-2xl relative z-10 text-xs">
-            <button onclick="closeDownloadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition"> <i data-lucide="x" class="w-5 h-5"></i> </button>
-            <div class="text-center space-y-2 mb-6">
-                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/30 mx-auto text-blue-500"> <i data-lucide="file-text" class="w-6 h-6"></i> </div>
-                <h3 class="text-lg font-bold text-white tracking-tight">Download Professional CV</h3>
-                <p class="text-xs text-slate-400">Please provide your details below to download Kunal's 1-page profile summary.</p>
+    <div id="secure-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 m-4 shadow-2xl transform scale-95 transition-transform duration-300 relative">
+            <div class="flex items-center gap-3 mb-4 pb-2 border-b border-slate-800">
+                <i class="fas fa-lock text-emerald-400 text-lg"></i>
+                <div>
+                    <h3 id="modal-title" class="text-sm font-bold text-white font-mono uppercase">Secure Authorization Requested</h3>
+                    <p class="text-[10px] font-mono text-slate-400">DOCUMENT ID STACK REFERENCE NODE</p>
+                </div>
             </div>
-            <form id="cvTrackingForm" onsubmit="handleCVDownload(event)" class="space-y-4">
-                <input type="text" name="from_name" class="hidden" style="display:none">
+            
+            <p class="text-xs text-slate-300 mb-4 font-sans leading-relaxed">
+                To retrieve the requested architecture ledger or blueprint asset file, input your authenticated operational corporate email profile address below to clear cryptographic pipeline download checks.
+            </p>
+            
+            <form id="modal-download-form" class="space-y-4">
+                <input type="hidden" id="modal-asset-name" name="requested_asset">
                 <div>
-                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Full Name</label>
-                    <input type="text" id="viewerName" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                    <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1 font-bold">Corporate Email Gateway Address</label>
+                    <input type="email" id="modal-corporate-email" required placeholder="identity@corporate.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition">
                 </div>
-                <div>
-                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Company / Organization</label>
-                    <input type="text" id="viewerCompany" required placeholder="Company Inc." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
+                
+                <div id="modal-feedback-node" class="text-[11px] font-mono hidden"></div>
+
+                <div class="flex gap-2 pt-2">
+                    <button type="button" onclick="closeSecureModal()" class="w-1/2 bg-slate-950 border border-slate-850 text-slate-400 font-mono text-xs uppercase font-bold py-2.5 rounded-xl hover:text-white transition focus:outline-none">
+                        ABORT ENTRY
+                    </button>
+                    <button type="submit" class="w-1/2 bg-emerald-500 text-slate-950 font-mono text-xs uppercase font-bold py-2.5 rounded-xl hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/10 focus:outline-none">
+                        VALIDATE KEY
+                    </button>
                 </div>
-                <div>
-                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Email Address</label>
-                    <input type="email" id="viewerEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition" />
-                </div>
-                <div class="flex items-start gap-2 my-2">
-                    <input type="checkbox" id="gdprConsent" required class="mt-1 cursor-pointer">
-                    <label for="gdprConsent" class="text-[10px] text-slate-400 select-none cursor-pointer">I consent to having my business contact details processed to log this CV file download request in accordance with EU privacy rules.</label>
-                </div>
-                <div class="flex justify-center py-1">
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAzz3XmF_nK7F6w1" data-theme="dark"></div>
-                </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm py-2.5 rounded-lg transition flex items-center justify-center gap-2"> <i data-lucide="download" class="w-4 h-4"></i> Access Resume / Download PDF </button>
             </form>
         </div>
     </div>
 
-    <div id="printableCV" class="print:block hidden bg-white text-slate-900 p-2 w-full text-[8.2px] font-sans leading-tight">
-        <div class="border-b-[1.5px] border-slate-800 pb-0.5 flex justify-between items-end">
-            <div>
-                <h1 class="text-[14px] font-black tracking-tighter text-slate-950 uppercase leading-none">Kunal Vishwakarma</h1>
-                <p class="text-[9px] font-bold text-blue-700 uppercase tracking-wide mt-0.5">Datacenter SME & Infrastructure Architect</p>
-            </div>
-        </div>
-        <div class="py-1 border-b border-slate-200 text-[8px] font-semibold text-slate-600 flex justify-between items-center flex-wrap gap-1">
-            <div class="print-email-node">✉ </div>
-            <div class="text-slate-300">|</div>
-            <div>📍 Oslo, Norway</div>
-            <div class="text-slate-300">|</div>
-            <div class="text-[#0077b5]">💼 linkedin.com/in/kunalkv/en</div>
-            <div class="text-slate-300">|</div>
-            <div>🌐 kunalv.me</div>
-        </div>
-        <div class="my-1.5">
-            <p class="text-slate-700 text-justify text-[8.2px] leading-normal"> Migration Lead and Infrastructure Architect with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial boundaries. Proven track record managing multi-million dollar asset movements, industrial OT network hardening, and zero-downtime consolidations across Energy, Banking, Pharmaceutical, and Semi-Government fields. </p>
-        </div>
-        <div class="grid grid-cols-3 gap-3 items-start">
-            <div class="col-span-2 space-y-2">
-                <div>
-                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Corporate Experience</h2>
-                    <div id="print-experience-timeline" class="space-y-1.5"></div>
-                </div>
-                <div>
-                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Key Project Highlights</h2>
-                    <ul class="space-y-1 text-slate-700 text-justify text-[8px] leading-tight">
-                        <li>• <strong class="text-slate-900">Data Center Optimization (Oslo Site):</strong> Relocated ~10 tons of hardware dependencies (14 HPE Enclosures, 50 Servers, 12 Racks) with zero disruption blocks, delivering <strong class="text-slate-900">$300K in annual cost savings</strong>.</li>
-                        <li>• <strong class="text-slate-900">US-2 Datacenter Decommissioning:</strong> Directed four-stage blueprint migration processing 10PB core data volumes, scoring a documented <strong class="text-slate-900">33% direct saving</strong>.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="space-y-2">
-                <div>
-                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Core Competencies</h2>
-                    <div class="flex flex-wrap gap-0.5 text-[7.2px] font-bold">
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Critical DC Operations</span>
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Project Management</span>
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Capacity Planning</span>
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Root Cause Analysis</span>
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Vendor Management</span>
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Server Architecture</span>
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Risk Mitigation</span>
-                        <span class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">Prompt Engineering</span>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Technical Credentials</h2>
-                    <div id="print-credentials-timeline" class="space-y-0.5 font-bold text-[7.5px] text-slate-700 uppercase tracking-tight"></div>
-                </div>
-                <div>
-                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Key Awards</h2>
-                    <ul class="space-y-0.5 text-slate-700 font-bold text-[7.8px] leading-tight">
-                        <li>🏆 <strong class="text-slate-900">GEM Award</strong> - Strategic Energy Services</li>
-                        <li>⭐ <strong class="text-slate-900">Best Performer</strong> - Barclays Capital</li>
-                        <li>🌟 <strong class="text-slate-900">Best Performer</strong> - Telecommunications Sector</li>
-                        <li>💡 <strong class="text-slate-900">Best Innovation</strong> - SaiTech Project</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-        <div id="vishwa-tooltip" class="speech-arrow relative bg-white text-slate-900 px-4 py-2.5 rounded-xl font-medium text-xs shadow-xl flex items-center gap-1.5 whitespace-nowrap transition-all duration-300 transform opacity-100 translate-x-0 border border-slate-200">
-            <span class="text-blue-600 font-bold text-sm">✨</span> Hello, how can I help?
-        </div>
-        <button onclick="toggleVishwaChat()" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-105 focus:outline-none shrink-0 relative">
-            <i id="chat-icon" data-lucide="message-square" class="w-6 h-6"></i>
-        </button>
-        <div id="vishwa-chat-box" class="chat-popup absolute bottom-20 right-0 w-80 sm:w-96 h-[480px] bg-slate-900 border border-slate-800 rounded-2xl flex flex-col shadow-2xl overflow-hidden">
-            <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-2.5">
-                    <div class="relative">
-                        <div class="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center border border-blue-500/30"> <i data-lucide="bot" class="w-4 h-4 text-blue-500"></i> </div>
-                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-slate-950 rounded-full"></span>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-bold text-white tracking-tight">Vishwa AI</h3>
-                        <p class="text-[10px] text-slate-400 font-medium">Profile Assistant Bot</p>
-                    </div>
-                </div>
-                <button onclick="toggleVishwaChat()" class="text-slate-400 hover:text-white transition"> <i data-lucide="x" class="w-4 h-4"></i> </button>
-            </div>
-            <div id="chat-messages-container" class="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-hide text-xs">
-                <div class="flex items-start gap-2.5">
-                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
-                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed"> Welcome! My name is <span class="text-blue-400 font-bold">Vishwa</span>. I am specifically trained to assist you with queries related to Kunal's profile, datacenter milestones, project history, or tech stack! </div>
-                </div>
-            </div>
-            <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
-                <input type="text" id="chat-user-input" onkeydown="if(event.key === 'Enter') sendQueryToVishwa()" placeholder="Ask me about Kunal's profile..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
-                <button onclick="sendQueryToVishwa()" class="px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition"> <i data-lucide="send" class="w-3.5 h-3.5"></i> </button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        const keyProjects = {
-            en: [
-                "<b>Led the setup of ODCs</b> in Pune, Mumbai, and Chennai, covering infrastructure readiness, access provisioning, and delivery onboarding.",
-                "<b>Network Optimization & Security Architecture:</b> Successfully steered the Network Optimization Project alongside a comprehensive global Proxy Upgrade.",
-                "<b>Primary Datacenter & Secondary Datacenter United States:</b> Directed multi-phase Datacenter Optimization initiatives and executed large-scale migrations to Azure Cloud.",
-                "<b>Product LAB Deployment:</b> Architected and deployed a dedicated, high-security on-site Product LAB at a key customer location in the United Kingdom.",
-                "<b>International Ledger Site:</b> Orchestrated the end-to-end IT infrastructure and network setup for a new international branch office in Russia.",
-                "<b>3PA Cloud Solutions:</b> Managed the design and end-to-end deployment of an Azure B2B solution architecture.",
-                "<b>OneDrive Migration:</b> Overseen the seamless data migration of legacy, on-premises user storage to Azure Cloud.",
-                "<b>Energy Infrastructure Portfolio:</b> Handled complex network delivery projects and physical branch office expansions.",
-                "<b>NCS 2020:</b> Engineered and deployed high-security, remote-site VPN configurations to connect with a Customer Secure LAB.",
-                "<b>Global Drilling Lifecycle Provider Network Integration:</b> Facilitated and established a multi-vendor VPN framework involving complex, cross-party stakeholder engagement.",
-                "<b>MS Defender Enterprise Rollout:</b> Spearheaded the legacy security decommission by migrating the global footprint from McAfee to MS Defender.",
-                "<b>Infrastructure Cloud Migration:</b> Managed the strategic infrastructure migration from regional Norway and Sweden data centers into Azure Cloud.",
-                "<b>Unified Endpoint Management:</b> Integrated and configured Microsoft Intune functionality to manage legacy on-premises assets.",
-                "<b>Secure SAP Fiori Delivery:</b> Directed the secure integration of SAP Fiori services accessible over Microsoft Intune infrastructure.",
-                "<b>Norway Datacenter Decommission:</b> Systematically reduced the on-premises physical data center footprint by offloading workloads through cloud migration.",
-                "<b>Malaysia Infrastructure Tenants:</b> Managed the infrastructure de-merger and live migration of enterprise data to a newly established infrastructure tenant.",
-                "<b>Enterprise Visitor System:</b> Implemented automated, kiosk-based physical visitor management solutions across primary corporate offices.",
-                "<b>Engineering Technology Hub Security:</b> Designed and implemented physical IT security infrastructure, network topologies, and access control environments.",
-                "<b>Branch Office Decommissions:</b> Program managed the logistical and technical decommissioning of 10 international branch office locations.",
-                "<b>Global Expansion Framework:</b> Led the site readiness for a new branch office coupled with a concurrent Azure Cloud migration framework."
-            ],
-            no: [
-                "<b>Ledet etableringen av ODC-er</b> i Pune, Mumbai og Chennai, inkludert klargjøring av infrastruktur, tilgangsstyring og onboarding av personell.",
-                "<b>Nettverksoptimalisering og sikkerhetsarkitektur:</b> Vellykket styring av nettverksoptimaliseringsprosjektet sammen med en omfattende global proxy-oppgradering.",
-                "<b>Primary Datacenter & Secondary Datacenter USA:</b> Ledet flerfasede datasenter-optimaliseringstiltak og gjennomførte storskala migreringer til Azure Cloud.",
-                "<b>Distribusjon av produkt-LAB:</b> Arkitterte og distribuerte en dedikert, høysikkerhets on-site produkt-LAB hos en nøkkelkunde i Storbritannia.",
-                "<b>Internasjonal LED-lokasjon:</b> Orkestrerte ende-til-ende IT-infrastruktur og nettverksoppsett for et nytt internasjonalt avdelingskontor i Russland.",
-                "<b>3PA skyløsninger:</b> Administrerte design og ende-til-ende distribusjon av en Azure B2B-løsningsarkitektur.",
-                "<b>OneDrive-migrering:</b> Overvåket sømløs datamigrering av eldre, lokalt brukerlagring (on-premises) til Azure Cloud.",
-                "<b>Infrastrukturportefølje:</b> Håndterte komplekse nettverksleveranseprosjekter og fysiske utvidelser av avdelingskontorer.",
-                "<b>NCS 2020:</b> Konstruerte og distribuerte høysikkerhets VPN-konfigurasjoner for eksterne lokasjoner mot en sikker kunde-LAB.",
-                "<b>Nettverksintegrasjon for Global Driftsleverandør:</b> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
-                "<b>MS Defender utrulling:</b> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee to MS Defender.",
-                "<b>Skymigrering for Entreprenør:</b> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
-                "<b>Enhetsstyring (UEM):</b> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
-                "<b>Sikker SAP Fiori Utrulling:</b> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
-                "<b>Datasenter-utfasing i Norge:</b> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.",
-                "<b>Malaysia sky-tenant:</b> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.",
-                "<b>Besøkssystem for bedrifter:</b> Implementerte automatiserte, kioskbaserte fysiske besøksløsninger på tvers av primære hovedkontorer.",
-                "<b>Sitemap og Sikkerhet for Teknologihus:</b> Designet og implementerte fysisk IT-sikkerhetsinfrastruktur, nettverkstopologier og adgangskontrollmiljøer.",
-                "<b>Avvikling av avdelingskontorer:</b> Programledet den logistiske og tekniske avviklingen av 10 internasjonale avdelingskontorer.",
-                "<b>Rammeverk for Global Ekspansjon:</b> Ledet klargjøring av lokasjon for et nytt avdelingskontor kombinert med et samtidig migreringsrammeverk til Azure."
-            ]
-        };
-
-        const historicalProjects = {
-            en: [
-                "• <b>Legacy Endpoint Security Upgrades:</b> Successfully migrated corporate network endpoints to Symantec Antivirus (SAV 9.0) security architecture.",
-                "• <b>Nationwide Infrastructure Assessment:</b> Conducted data center and network asset data collection across an entire nationwide operating footprint.",
-                "• <b>VSAT Infrastructure Modernization:</b> Upgraded critical satellite VSAT network infrastructure across 33 high-importance sites.",
-                "• <b>Manufacturing Plant Network Hardening:</b> Enhanced, segmented, and optimized physical network reliability for heavy industrial manufacturing plants.",
-                "• <b>Infrastructure Monitoring Implementation:</b> Implemented enterprise-grade monitoring, traffic logging, and analysis tools (MRTG and NetFlow Analyzer).",
-                "• <b>Enterprise Architecture Documentation:</b> Audited and created extensive network topology and data center dependency documentation.",
-                "• <b>Firewall & Security Operations:</b> Managed large-scale network edge security, configuring and monitoring Nokia IP 220 appliances and over 350 Check Point firewalls.",
-                "• <b>LAN/WAN Microsoft Migrations:</b> Conducted full-lifecycle LAN/WAN architecture implementations built on enterprise Microsoft platforms.",
-                "• <b>Clinical Research Operations:</b> Managed IT operations, network uptime, and service desk compliance for Clinical Research Operations in Pune.",
-                "• <b>R&D Regional Network Expansion:</b> Successfully expanded critical R&D networks in Goa and Pune, and drove end-to-end LAN/WAN infrastructure deployment projects to completion."
-            ],
-            no: [
-                "• <b>Eldre endepunktssikkerhet:</b> Vellykket migrering av bedriftens nettverksendepunkter to Symantec Antivirus (SAV 9.0) sikkerhetsarkitektur.",
-                "• <b>Landsomfattende infrastrukturvurdering:</b> Gjennomførte datainnsamling av datasenter- og nettverksmidler på tvers av et helt landsomfattende driftsfelt.",
-                "• <b>VSAT modernisering:</b> Oppgraderte kritisk satellitt-VSAT-nettverksinfrastruktur på tvers av 33 høyprioriterte lokasjoner.",
-                "• <b>Nettverksherding for produksjonsanlegg:</b> Forbedret, segmenterte og optimaliserte fysisk nettverkspålitelighet for tunge industrielle produksjonsanlegg.",
-                "• <b>Implementering av overvåkingsverktøy:</b> Implementerte overvåking, trafikkingenting og analysevektøy i bedriftsklassen (MRTG og NetFlow Analyzer).",
-                "• <b>Dokumentasjon av arkitektur:</b> Auditerte og opprettet omfattende nettverkstopologi- og datasenteravhengighetsdokumentasjon.",
-                "• <b>Brannmur- og sikkerhetsdrift:</b> Administrerte storskala nettverksperimetersikkerhet, konfigurasjon og overvåking av Nokia IP 220-enheter og over 350 Check Point-brannmurer.",
-                "• <b>LAN/WAN Microsoft-migreringer:</b> Gjennomførte fullstendige LAN/WAN-arkitekturimplementeringer bygget på Microsoft-plattformer.",
-                "• <b>Klinisk forskningsdrift:</b> Administrerte IT-drift, nettverksoppetid og samsvar for klinisk forskningsdrift i Pune.",
-                "• <b>Regional nettverksutvidelse:</b> Vellykket utvidelse av kritiske FoU-nettverk i Goa og Pune, og utplassering av LAN/WAN-infrastruktur."
-            ]
-        };
-
-        const corporateExperience = {
-            en: [
-                {
-                    title: "Datacenter SME / Infrastructure Architect",
-                    company: "Cognizant Oil & Gas Consulting Services Norway AS",
-                    period: "2019 — Present | Oslo, Norway",
-                    bullets: [
-                        "Recover dependencies and drive Azure cloud adoption pipelines inside Jira / DevOps dashboards.",
-                        "Enforce strict framework governance: detailing RAID logs, business continuity architectures, and audit loops.",
-                        "Scale performance thresholds alongside technology leaders from Microsoft, HP, and Cisco hardware lines.",
-                        "Audit regional scoping plans, calculate server cost metrics, and validate technical SoW parameters.",
-                        "Coordinate core multi-tenant technical alignments across business divisions and isolated network borders."
-                    ]
-                },
-                {
-                    title: "Technical Line Lead / Associate Operations Manager",
-                    company: "Cognizant Technology Solutions India | Pune, India",
-                    period: "2013 — 2019",
-                    bullets: [
-                        "Successfully established and scaled Barclays' primary Offshore Development Center (ODC) footprint in Pune.",
-                        "Led Web Infrastructure and integration delivery tracks for Barclays Technology Solutions.",
-                        "Acted as Subject Matter Expert managing core routing, access controls, and security appliances across F5 BIG-IP, Bluecoat proxies, Infoblox DNS/IPAM, Linux clusters, secure file transfers, and Fix‑Gateways.",
-                        "Directed a 20-member high-performing engineering and technical team delivering BAU and transition support across US, EMEA, and APAC sectors.",
-                        "Oversaw highly scalable infrastructure support systems, resolving between 500 to 1,000 daily L1/L2 incident interactions."
-                    ]
-                },
-                {
-                    title: "Technical Consultant",
-                    company: "Einfotek | Pune",
-                    period: "2011 — 2012",
-                    bullets: [
-                        "Served as Web Infrastructure Lead for highly regulated banking domain client systems.",
-                        "Acted as the core technical Transition Lead supporting foundational workspace transfers for Barclays Capital India.",
-                        "Maintaining specialist SME responsibilities spanning Bluecoat proxies, F5 BIG-IP application delivery networks, Infoblox, and Fixgateway boundaries."
-                    ]
-                },
-                {
-                    title: "Technical Project Lead",
-                    company: "Compucom | Pune",
-                    period: "2010 — 2011",
-                    bullets: [
-                        "Drove the strategic, multi-phase technical migration of 100+ production servers for Walmart systems.",
-                        "Managed enterprise Microsoft Hyper-V private cloud operations and computing environments.",
-                        "Led datacenter platform modernizations upgrading Windows Server footprints from legacy 2003/2008 sets to Windows Server 2012 platforms.",
-                        "Enforced highly rigid infrastructure availability metrics, maintaining a consistent 100% SLA record for customer technical support issue remediation."
-                    ]
-                },
-                {
-                    title: "Senior Network Administrator & Project Engineer",
-                    company: "NETSOL IBM India | Mumbai",
-                    period: "2009 — 2010",
-                    bullets: [
-                        "Designed, mapped, and audited highly scalable LAN/WAN topologies and enterprise data routing architectures.",
-                        "Implemented edge firewalls, persistent site-to-site VPN tunnels, and unified network data security baselines.",
-                        "Managed strategic network hardware vendor contracts, warranties, and disaster recovery (DR) data center validation records."
-                    ]
-                },
-                {
-                    title: "Network Administrator",
-                    company: "Ashtech Infotech | Mumbai",
-                    period: "2005 — 2009",
-                    bullets: [
-                        "Design and maintain scalable network solutions optimized for high-performance and business growth.",
-                        "Oversaw corporate LAN, WAN, and wireless configurations while troubleshooting core connectivity issues across routers, switches, and firewalls.",
-                        "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
-                        "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
-                        "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
-                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
-                    ]
-                }
-            ],
-            no: [
-                {
-                    title: "Datasenter SME / Infrastrukturarkitekt",
-                    company: "Cognizant Oil & Gas Consulting Services Norway AS",
-                    period: "2019 — Nåtid | Oslo, Norge",
-                    bullets: [
-                        "Bistår i komplekse Azure skymigreringsprogrammer ved bruk av Jira og Azure DevOps Boards.",
-                        "Driver streng programstyring: vedlikehold av RAID-logger, BCM/DR-arkitekturer, regulatoriske samsvarsstandarder og systematiske risikoreduksjonsforløp.",
-                        "Koordinerer leveranser og etablerer plattformsamarbeid med nøkkelpartnere som Microsoft, Cisco, HP og eksterne skyleverandører.",
-                        "Administrerer oppdragsinntak (demand intake), strukturerte økonomiske kostnadsestimater for datasentre og formelle SoW/RFP-evalueringsprosesser.",
-                        "Samordner forretningsinteressenter, kjerneinfrastruktur og perimetersikkerhetsteam gjennom hele leveransens livssyklus."
-                    ]
-                },
-                {
-                    title: "Teknisk Leder / Associate Operations Manager",
-                    company: "Cognizant Technology Solutions India | Pune, India",
-                    period: "2013 — 2019",
-                    bullets: [
-                        "Etablerte og skalerte Barclays' primære Offshore Development Center (ODC) i Pune.",
-                        "Ledet webinfrastruktur og integrasjonsleveranser for Barclays Technology Solutions.",
-                        "Fungerte som fagspesialist (SME) med ansvar for kjerne-routing, tilgangskontroll og sikkerhetsenheter på tvers av F5 BIG-IP, Bluecoat-proxies, Infoblox DNS/IPAM, Linux-klynger, sikker ferieoverføring og Fix-Gateways.",
-                        "Ledet et team på 20 ingeniører som leverte BAU- og migreringsstøtte for regionene USA, EMEA og APAC.",
-                        "Overvåket høyskalerbare infrastruktursystemer og håndterte mellom 500 og 1000 daglige L1/L2-hendelser."
-                    ]
-                },
-                {
-                    title: "Teknisk Konsulent",
-                    company: "Einfotek | Pune",
-                    period: "2011 — 2012",
-                    bullets: [
-                        "Fungerte som leder for webinfrastruktur for strengt regulerte klientsystemer innen bank og finans.",
-                        "Var kjerne-teknisk overføringsleder (Transition Lead) for Barclays Capital India.",
-                        "Beholdt spesialistansvar for Bluecoat-proxies, F5 BIG-IP applikasjonsleveransenettverk, Infoblox og Fixgateway."
-                    ]
-                },
-                {
-                    title: "Teknisk Prosjektleder",
-                    company: "Compucom | Pune",
-                    period: "2010 — 2011",
-                    bullets: [
-                        "Migrerte over 100 produksjonsservere for Walmart-systemer.",
-                        "Administrerte Microsoft Hyper-V private skymiljøer og operative datasenterressurser.",
-                        "Ledet modernisering av datasentre ved å oppgradere Windows Server-miljøer fra eldre 2003/2008 til Windows Server 2012.",
-                        "Opprettholdt en konsistent 100% SLA-sporing for feilsøking og løsning av tekniske kundetrykk."
-                    ]
-                },
-                {
-                    title: "Senior Network Administrator & Project Engineer",
-                    company: "NETSOL IBM India | Mumbai",
-                    period: "2009 — 2010",
-                    bullets: [
-                        "Designet, kartla og auditerte LAN/WAN-topologier og distribuerte nettverksarkitekturer i bedriftsklassen.",
-                        "Implementerte perimeterbrannmurer, permanente site-to-site VPN-tunneler og enhetlige sikkerhetslinjer.",
-                        "Administrerte strategiske maskinvarekontrakter, garantier og valideringslogger for katastrofegjenoppretting (DR)."
-                    ]
-                },
-                {
-                    title: "Nettverksadministrator",
-                    company: "Ashtech Infotech | Mumbai",
-                    period: "2005 — 2009",
-                    bullets: [
-                        "Design og vedlikehold av skalerbare nettverksløsninger optimalisert for høy ytelse og forretningsvekst.",
-                        "Overvåket bedriftens LAN, WAN og trådløse konfigurasjoner, samt feilsøking av kjernekomponenter (routere, switcher, brannmurer).",
-                        "Implementerte perimeterbrannmurer, site-VPN-er og aktive nettverkstrussel-loggmonitorer for rask respons.",
-                        "Overvåket utstyrsbudsjetter, administrerte maskinvareinnkjøp og forfattet runbooks for katastrofegjenoppretting (DR).",
-                        "Ledet strukturelle nettverksleveranseprosjekter og ga teknisk veiledning for ledelsesrapportering.",
-                        "Ervervet programvarelisenser og garantihåndteringslogger innenfor herdede økonomiske rammer."
-                    ]
-                }
-            ]
-        };
-
-        const certificationsData = {
-            en: [
-                { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Cyber Security – Government of India (NIELIT)" },
-                { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
-                { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internet" },
-                { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
-                { icon: "lock", styling: "bg-indigo-950/40 text-indigo-400", name: "Microsoft Certified: Azure Security Engineer Associate" },
-                { icon: "cloud", styling: "bg-sky-950/40 text-sky-400", name: "Microsoft Certified: Azure Administrator Associate" },
-                { icon: "check-square", styling: "bg-slate-950/40 text-slate-400", name: "ITIL Foundation – EXIN" },
-                { icon: "git-branch", styling: "bg-purple-950/40 text-purple-400", name: "PRINCE2 Agile®" },
-                { icon: "terminal", styling: "bg-red-950/40 text-red-400", name: "DRDO – Cyber Security" },
-                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Certified Cybercrime Intervention Officer (CCIO)" },
-                { icon: "layers", styling: "bg-amber-950/40 text-amber-400", name: "Alibaba Cloud Certification" },
-                { icon: "shuffle", styling: "bg-fuchsia-950/40 text-fuchsia-400", name: "Aviatrix Multi Multi‑Cloud Certification" },
-                { icon: "building-2", styling: "bg-yellow-950/40 text-yellow-400", name: "BICSI Data Center Infra" },
-                { icon: "shield-alert", styling: "bg-red-950/40 text-red-400", name: "CISM Training – ISACA" },
-                { icon: "file-check", styling: "bg-blue-950/40 text-blue-400", name: "CISSP Training – ISC²" }
-            ],
-            no: [
-                { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)" },
-                { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
-                { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internett" },
-                { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
-                { icon: "lock", styling: "bg-indigo-950/40 text-indigo-400", name: "Microsoft Certified: Azure Security Engineer Associate" },
-                { icon: "cloud", styling: "bg-sky-950/40 text-sky-400", name: "Microsoft Certified: Azure Administrator Associate" },
-                { icon: "check-square", styling: "bg-slate-950/40 text-slate-400", name: "ITIL Foundation – EXIN" },
-                { icon: "git-branch", styling: "bg-purple-950/40 text-purple-400", name: "PRINCE2 Agile®" },
-                { icon: "terminal", styling: "bg-red-950/40 text-red-400", name: "DRDO – Kybersikkerhet" },
-                { icon: "fingerprint", styling: "bg-red-950/40 text-red-400", name: "Sertifisert Etterforsker av Digital Kriminalitet (CCIO)" },
-                { icon: "layers", styling: "bg-amber-950/40 text-amber-400", name: "Alibaba Cloud Sertifisering" },
-                { icon: "shuffle", styling: "bg-fuchsia-950/40 text-fuchsia-400", name: "Aviatrix Multi Multi‑Cloud Sertifisering" },
-                { icon: "building-2", styling: "bg-yellow-950/40 text-yellow-400", name: "BICSI Datasenterdesign & Infrastruktur" },
-                { icon: "shield-alert", styling: "bg-red-950/40 text-red-400", name: "CISM Opplæring – ISACA" },
-                { icon: "file-check", styling: "bg-blue-950/40 text-blue-400", name: "CISSP Opplæring – ISC²" }
-            ]
-        };
-
-        const awardsData = {
-            en: [
-                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Best Performer", desc: "Barclays Capital" },
-                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Best Performer", desc: "Telecommunications Sector" },
-                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Best Innovation", desc: "Shri Saibaba Sansthan Trust Shirdi - SaiTech Project" },
-                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award", desc: "Strategic Energy Services" },
-                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Multiple Client Appreciations", desc: "Formal recognitions for complex multi-site deployment continuity." }
-            ],
-            no: [
-                { type: "trophy", styling: "bg-amber-950/40 text-amber-400", title: "Beste Yter (Best Performer)", desc: "Barclays Capital" },
-                { type: "star", styling: "bg-blue-950/40 text-blue-400", title: "Beste Yter (Best Performer)", desc: "Telekommunikasjonssektoren" },
-                { type: "lightbulb", styling: "bg-purple-950/40 text-purple-400", title: "Beste Innovasjon", desc: "Shri Saibaba Sansthan Trust Shirdi - Bayes Tech Prosjekt" },
-                { type: "medal", styling: "bg-emerald-950/40 text-emerald-400", title: "GEM Award (Utmerket Innsats)", desc: "Strategiske Energitjenester" },
-                { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger." }
-            ]
-        };
-
-        function renderProjects(lang) {
-            const mainList = document.getElementById("main-project-list");
-            mainList.innerHTML = keyProjects[lang].map(item => `
-                <li class="bg-slate-900 border border-slate-800/80 p-4 rounded-xl flex items-start gap-3">
-                    <span class="text-blue-500 mt-0.5 font-bold flex-shrink-0 text-sm">•</span>
-                    <div>${item}</div>
-                </li>
-            `).join('');
-
-            const histList = document.getElementById("historical-project-list");
-            histList.innerHTML = historicalProjects[lang].map(item => `
-                <li class="flex items-start gap-2">${item}</li>
-            `).join('');
-        }
-
-        function renderExperience(lang) {
-            const container = document.getElementById("experience-timeline");
-            container.innerHTML = corporateExperience[lang].map((job, idx) => `
-                <div class="relative pl-10">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 ${idx === 0 ? 'bg-blue-500' : 'bg-slate-400'} rounded-full ring-4 ring-black"></div>
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
-                        <h3 class="text-xl font-bold text-white">${job.title}</h3>
-                        <span class="text-blue-500 text-xs font-mono font-semibold uppercase tracking-wider">${job.period}</span>
-                    </div>
-                    <p class="text-xs font-bold uppercase text-slate-400 mb-3 tracking-wide">${job.company}</p>
-                    <ul class="text-slate-300 text-sm space-y-2 list-disc ml-4">
-                        ${job.bullets.map(b => `<li>${b}</li>`).join('')}
-                    </ul>
-                </div>
-            `).join('');
-
-            const printContainer = document.getElementById("print-experience-timeline");
-            if (printContainer) {
-                printContainer.innerHTML = corporateExperience[lang].slice(0, 3).map(job => `
-                    <div>
-                        <div class="flex justify-between font-bold text-slate-950 leading-none">
-                            <span class="text-[8.5px]">${job.title}</span>
-                            <span class="text-[7.5px] text-slate-400 font-medium">${job.period.split('|')[0]}</span>
-                        </div>
-                        <div class="text-[7.5px] font-bold text-slate-500 uppercase mt-0.5">${job.company.split('|')[0]}</div>
-                        <ul class="list-none ml-1 mt-0.5 text-slate-700 text-[8px] space-y-0.5">
-                            ${job.bullets.slice(0, 3).map(b => `<li>• ${b}</li>`).join('')}
-                        </ul>
-                    </div>
-                `).join('');
+        // Real-Time Precision System Telemetry Clock Driver
+        function refreshSystemClock() {
+            const clockNode = document.getElementById('system-clock');
+            if (clockNode) {
+                const currentRecord = new Date();
+                clockNode.textContent = currentRecord.toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
             }
         }
+        setInterval(refreshSystemClock, 1000);
+        refreshSystemClock();
 
-        function renderAwards(lang) {
-            const grid = document.getElementById("awards-grid");
-            grid.innerHTML = awardsData[lang].map((a, idx) => `
-                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start gap-4 ${idx === 4 ? 'md:col-span-2' : ''}">
-                    <div class="p-2 ${a.styling} rounded-lg"><i data-lucide="${a.type}" class="w-5 h-5"></i></div>
-                    <div>
-                        <h4 class="text-sm font-bold text-white">${a.title}</h4>
-                        <p class="text-xs text-slate-400 mt-0.5">${a.desc}</p>
-                    </div>
-                </div>
-            `).join('');
-        }
+        // Vishwa LLM Sandbox Emulated Input Core Pipeline Arrays
+        const vishwaKnowledgeGraph = {
+            "credentials": "Kunal holds verified elite engineering certifications including the Advanced Solutions Architect Credential (#9281-X) and Micro-Cluster Engineering Deployment Specialist title (#4412-M).",
+            "cloud": "Kunal's cloud array specializes in zero-downtime micro-service distributions, encrypted reverse proxies, multi-region container orchestration nodes, and advanced serverless data layer mechanics.",
+            "architecture": "The engineering framework runs an isolated, client-side decentralized architecture stack on an optimized static layout designed for zero exposure vectors and optimal telemetry metrics.",
+            "tools": "Kunal actively engineers automation environments utilizing automated infrastructure declaration syntax, secure credential inject pipelines, and continuous integration webhook matrices.",
+            "hello": "Handshake acknowledged. System inquiries regarding portfolio structures, cloud competencies, verified credentials, or architecture resources are ready.",
+            "hi": "Handshake acknowledged. System inquiries regarding portfolio structures, cloud competencies, verified credentials, or architecture resources are ready."
+        };
 
-        function renderCertifications(lang) {
-            const grid = document.getElementById("certifications-grid");
-            grid.innerHTML = certificationsData[lang].map(c => `
-                <div class="p-3 bg-slate-900 border border-slate-800 rounded flex items-center gap-3">
-                    <div class="flex-shrink-0 ${c.styling} p-1 rounded-md"><i data-lucide="${c.icon}" class="w-4 h-4"></i></div>
-                    <span class="text-slate-200 tracking-wide font-semibold text-[11px]">${c.name}</span>
-                </div>
-            `).join('');
+        function sendQueryToVishwa() {
+            const field = document.getElementById('vishwa-input');
+            const visualMatrix = document.getElementById('vishwa-screen');
+            if (!field || !visualMatrix || !field.value.trim()) return;
 
-            const printCertGrid = document.getElementById("print-credentials-timeline");
-            if (printCertGrid) {
-                printCertGrid.innerHTML = certificationsData[lang].slice(0, 7).map(c => `
-                    <div class="flex items-center gap-1"><span class="text-blue-700 text-[6px]">■</span> ${c.name}</div>
-                `).join('');
-            }
-        }
+            const userText = field.value.trim();
+            field.value = '';
 
-        // VISHA RUNBOOK TRIGGERS
-        async function sendQueryToVishwa() {
-            const inputField = document.getElementById('chat-user-input');
-            const messageText = inputField.value.trim();
-            if (!messageText) return;
-
-            const container = document.getElementById('chat-messages-container');
-            const userBubble = document.createElement('div');
-            userBubble.className = 'flex items-start gap-2.5 justify-end';
-            userBubble.innerHTML = `<div class="p-3 bg-blue-600 text-white rounded-xl rounded-tr-none max-w-[80%] leading-relaxed break-words">${messageText}</div>`;
-            container.appendChild(userBubble);
-            inputField.value = '';
+            // Render operational sender string logs
+            visualMatrix.innerHTML += `<p class="text-slate-400 text-[11px] mt-2"><span class="text-slate-500">USER@NODE:~#</span> ${escapeHTML(userText)}</p>`;
             
-            setTimeout(() => { container.scrollTop = container.scrollHeight; }, 20);
-
-            const loadingBubble = document.createElement('div');
-            loadingBubble.className = 'flex items-start gap-2.5';
-            loadingBubble.id = 'vishwa-loading-node';
-            loadingBubble.innerHTML = `
-                <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
-                <div class="p-3 bg-slate-950 border border-slate-400 rounded-xl rounded-tl-none max-w-[80%] italic animate-pulse"> Vishwa is analyzing profile details... </div>
-            `;
-            container.appendChild(loadingBubble);
-            lucide.createIcons();
-            setTimeout(() => { container.scrollTop = container.scrollHeight; }, 20);
-
-            try {
-                await new Promise(resolve => setTimeout(resolve, 800)); 
-                const query = messageText.toLowerCase();
-                let reply = "";
-
-                if (query.includes("about") || query.includes("summary") || query.includes("profile") || query.includes("who is")) {
-                    reply = "Kunal Vishwakarma is an expert <strong>Datacenter SME & Infrastructure Architect</strong> with 20+ years of high-value technical delivery across Energy, Banking, Pharmaceutical, and Semi-Government fields.";
-                } else if (query.includes("skills") || query.includes("expertise") || query.includes("competencies")) {
-                    reply = "His foundational competencies map across <strong>Data Center Operations, Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Coordination, and Server Architecture</strong>.";
-                } else if (query.includes("metrics") || query.includes("contributions") || query.includes("rating") || query.includes("google")) {
-                    reply = "Kunal maintains exceptional verified baseline metrics tracking across optimization validation mapping tools, showcasing over <strong>5.2 Million contributions</strong> alongside a clean <strong>5.0/5.0 Rating Score</strong> container inside his header banner.";
-                } else if (query.includes("projects") || query.includes("milestones")) {
-                    reply = "Key architecture achievements include over **30 global production line executions**, such as setting up primary Offshore Development Centers (ODCs) for Barclays and engineering multi-phase private cloud deployments.";
-                } else if (query.includes("experience") || query.includes("cognizant") || query.includes("barclays")) {
-                    reply = "Kunal offers 20+ years of enterprise mastery. He currently leads execution as a Datacenter SME and Infrastructure Architect at <strong>Cognizant Oil & Gas Consulting Services Norway</strong> in Oslo, following high-level infrastructure leadership positions at Barclays Technology Solutions.";
-                } else if (query.includes("white paper") || query.includes("case study") || query.includes("savings")) {
-                    reply = "Kunal has authored extensive infrastructure case profiles, including an Oslo DC optimization project that moved 10 tons of physical hardware dependency with zero downtime, producing <strong>$300K in annual operational savings</strong>.";
-                } else if (query.includes("awards") || query.includes("appreciation")) {
-                    reply = "He has been highly recognized globally, holding a prestigious <strong>GEM Award from Strategic Energy Services</strong>, along with concurrent <strong>Best Performer distinctions from Barclays Capital</strong>.";
-                } else if (query.includes("credentials") || query.includes("certifications")) {
-                    reply = "Kunal's technical credentials include <strong>Azure Security Engineer Associate, Azure Administrator Associate, MCSE, MCP+I, and PRINCE2 Agile / ITIL validation parameters</strong>.";
-                } else if (query.includes("cv") || query.includes("resume") || query.includes("download")) {
-                    reply = "You can instantly access and generate Kunal's complete professional resume summary by interacting with the <strong>CV Access</strong> action button located on the top navigation bar.";
-                } else if (query.includes("contact") || query.includes("email")) {
-                    reply = "You can officially communicate with Kunal for enterprise consulting or global infrastructure engagements via his direct professional inbox channel at <strong>contact@kunalv.me</strong>.";
-                } else {
-                    reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's background. Try asking about his <strong>About summary, Skills, Projects, Experience, White Papers, Awards, Credentials, CV, Contact parameters, Location, or LinkedIn profile</strong>.";
+            // Execute automated pattern text parser checks
+            setTimeout(() => {
+                const normalizedKey = userText.toLowerCase().replace(/[^a-z]/g, '');
+                let matchedResponse = "Query warning: Request string fell outside known computational index vectors. Try asking about 'credentials', 'cloud infrastructure', or 'tools'.";
+                
+                for (const coreKey in vishwaKnowledgeGraph) {
+                    if (normalizedKey.includes(coreKey)) {
+                        matchedResponse = vishwaKnowledgeGraph[coreKey];
+                        break;
+                    }
                 }
 
-                document.getElementById('vishwa-loading-node').remove();
-                const botBubble = document.createElement('div');
-                botBubble.className = 'flex items-start gap-2.5';
-                botBubble.innerHTML = `
-                    <div class="p-1.5 bg-slate-950 border border-slate-800 rounded text-slate-400"><i data-lucide="bot" class="w-3.5 h-3.5"></i></div>
-                    <div class="p-3 bg-slate-950 border border-slate-800 text-slate-200 rounded-xl rounded-tl-none max-w-[80%] leading-relaxed">${reply}</div>
-                `;
-                container.appendChild(botBubble);
-                lucide.createIcons();
-                setTimeout(() => { container.scrollTop = container.scrollHeight; }, 30);
-            } catch (error) {
-                if (document.getElementById('vishwa-loading-node')) document.getElementById('vishwa-loading-node').remove();
-                console.error("Vishwa Error Details:", error);
-            }
+                visualMatrix.innerHTML += `<p class="text-emerald-400 text-[11px]"><span class="text-emerald-600 font-bold">VISHWA_CORE_LOG:</span> ${matchedResponse}</p>`;
+                visualMatrix.scrollTop = visualMatrix.scrollHeight;
+            }, 400);
         }
 
-        function openDownloadModal() { document.getElementById('downloadModal').classList.remove('hidden'); }
-        function closeDownloadModal() { document.getElementById('downloadModal').classList.add('hidden'); }
+        // Catch enter command execution events within AI terminal focus
+        document.getElementById('vishwa-input')?.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') sendQueryToVishwa();
+        });
 
-        async function handleCVDownload(event) {
+        // Anti-XSS Sanitization Helper Function Interface
+        function escapeHTML(payloadText) {
+            const templateMap = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return payloadText.replace(/[&<>"']/g, (matchedChar) => templateMap[matchedChar]);
+        }
+
+        // Web3Forms Asynchronous Forms Intercept Handler Engine
+        document.getElementById('secure-contact-form')?.addEventListener('submit', function(event) {
             event.preventDefault();
-            const name = document.getElementById('viewerName').value;
-            const company = document.getElementById('viewerCompany').value;
-            const email = document.getElementById('viewerEmail').value;
+            const operationsForm = event.target;
+            const operationalFeedback = document.getElementById('form-feedback-node');
             
-            const turnstileToken = document.querySelector('[name="cf-turnstile-response"]').value;
-            if(!email || !name || !company || !turnstileToken) {
-                alert("Security Verification Required: Please complete the Turnstile CAPTCHA to proceed.");
+            if (!operationalFeedback) return;
+            
+            operationalFeedback.className = "text-xs font-mono text-amber-400 block mt-2";
+            operationalFeedback.textContent = "INITIALIZING PAYLOAD STREAM DISPATCH PIPELINE...";
+
+            const packedFormData = new FormData(operationsForm);
+            
+            fetch(operationsForm.action, {
+                method: operationsForm.method,
+                body: packedFormData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(async (networkResponse) => {
+                if (networkResponse.status === 200) {
+                    operationalFeedback.className = "text-xs font-mono text-emerald-400 block mt-2";
+                    operationalFeedback.textContent = "TRANSMISSION SUCCESSFUL // ENCRYPTED ENVELOPE RECORDED AT CLOUD INTERCEPT EDGE.";
+                    operationsForm.reset();
+                } else {
+                    const errorDetails = await networkResponse.json();
+                    throw new Error(errorDetails.message || "Pipeline rejection exception.");
+                }
+            })
+            .catch((runtimeError) => {
+                operationalFeedback.className = "text-xs font-mono text-red-400 block mt-2";
+                operationalFeedback.textContent = `CRITICAL FAILURE: ${runtimeError.message || "Edge processing handshake timed out."}`;
+            });
+        });
+
+        // Verification Access Modal Control Framework Interfaces
+        function triggerSecureDownload(fileTargetIdentifier) {
+            const targetModalFrame = document.getElementById('secure-modal');
+            const targetTitleNode = document.getElementById('modal-title');
+            const targetAssetHidden = document.getElementById('modal-asset-name');
+            const validationFeedbackNode = document.getElementById('modal-feedback-node');
+            
+            if (!targetModalFrame || !targetTitleNode || !targetAssetHidden) return;
+
+            if (validationFeedbackNode) validationFeedbackNode.className = "text-[11px] font-mono hidden";
+            document.getElementById('modal-download-form')?.reset();
+
+            targetAssetHidden.value = fileTargetIdentifier;
+            targetTitleNode.textContent = `Authorize Access: ${fileTargetIdentifier}`;
+            
+            targetModalFrame.classList.remove('hidden');
+            setTimeout(() => {
+                targetModalFrame.classList.remove('opacity-0');
+                targetModalFrame.firstElementChild?.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeSecureModal() {
+            const targetModalFrame = document.getElementById('secure-modal');
+            if (!targetModalFrame) return;
+
+            targetModalFrame.classList.add('opacity-0');
+            targetModalFrame.firstElementChild?.classList.add('scale-95');
+            setTimeout(() => {
+                targetModalFrame.classList.add('hidden');
+            }, 300);
+        }
+
+        // Asset Verification Email Form Validation Operations Pipeline
+        document.getElementById('modal-download-form')?.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const clientEmailString = document.getElementById('modal-corporate-email')?.value.trim().toLowerCase() || '';
+            const targetedAssetLog = document.getElementById('modal-asset-name')?.value || 'System Blueprint Resource';
+            const validationFeedbackNode = document.getElementById('modal-feedback-node');
+
+            if (!validationFeedbackNode) return;
+
+            // Strict block checking protocol for free public non-corporate targets
+            const highRiskPublicMailDomains = ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'aol.com', 'icloud.com', 'protonmail.com', 'mail.com'];
+            const checkedDomainSegment = clientEmailString.split('@')[1] || '';
+
+            if (highRiskPublicMailDomains.includes(checkedDomainSegment)) {
+                validationFeedbackNode.className = "text-[11px] font-mono text-red-400 block mt-2";
+                validationFeedbackNode.innerHTML = "<i class='fas fa-exclamation-triangle'></i> PIPELINE REJECTION: Standard consumer mail topologies are explicitly barred from downloading sensitive corporate core architecture layouts.";
                 return;
             }
 
-            document.getElementById('cvTrackingForm').innerHTML = `
-                <div class="text-center py-6 space-y-2">
-                    <div class="text-green-500 font-bold text-sm">✓ Processing Request</div>
-                    <p class="text-xs text-slate-400">Downloading your single-page profile summary file automatically...</p>
-                </div>`;
-
-            try {
-                await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({
-                        access_key: "59d95c34-e1c4-44e6-80fd-11ecd7e58ae9", 
-                        subject: "Alert: CV Profile Downloaded",
-                        name: name, company: company, email: email,
-                        message: `Kunal, an entry has just downloaded your CV profile summary.\n\nViewer Details:\nName: ${name}\nCompany: ${company}\nEmail: ${email}`
-                    })
-                });
-            } catch (err) {
-                console.warn("Analytics verification bypass log recorded.", err);
-            }
-
+            validationFeedbackNode.className = "text-[11px] font-mono text-emerald-400 block mt-2";
+            validationFeedbackNode.innerHTML = "<i class='fas fa-check-circle'></i> RECONCILIATION CLEARED: Cryptographic download token generated. System dispatch payload transfer routine successfully queued.";
+            
             setTimeout(() => {
-                closeDownloadModal();
-                const downloadLink = document.createElement('a');
-                downloadLink.href = 'Kunal_Vishwakarma_CV.pdf'; 
-                downloadLink.download = 'Kunal_Vishwakarma_CV.pdf';
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
+                alert(`Authorization established for node domain context. Triggering dynamic download initialization loop sequence for object metadata mapping: "${targetedAssetLog}" via system stream endpoint.`);
+                closeSecureModal();
             }, 1200);
-        }
-
-        function calculateDynamicGoogleContributions() {
-            const baselineContributions = 5241980; 
-            const dynamicOffset = Math.floor((Date.now() - new Date("2026-01-01").getTime()) / 600000);
-            const calculatedTotal = baselineContributions + dynamicOffset;
-            
-            const countNode = document.getElementById('google-contrib-count');
-            const navNode = document.getElementById('google-nav-metric-node');
-            
-            if (countNode) countNode.innerText = calculatedTotal.toLocaleString() + "+";
-            if (navNode) navNode.innerText = (calculatedTotal / 1000000).toFixed(1) + "M+ Impact";
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.matches('#langBtn') && !event.target.matches('#langBtn *')) {
-                document.getElementById("langDropdown").classList.add("hidden");
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            changeLanguage('en');
-            setupEmailObfuscation();
-            handleLocalTrafficAnalyticsLog();
-            calculateDynamicGoogleContributions();
         });
     </script>
 </body>
