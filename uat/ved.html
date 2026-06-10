@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunal - Corporate Identity & Engineering Lab</title>
+    <title>Kunalv.me - Corporate Identity & Engineering Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         .glow-effect:hover {
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
-            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+        .edit-gradient {
+            background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
         }
         @keyframes subtle-pulse {
             0%, 100% { opacity: 0.4; }
@@ -19,14 +22,14 @@
             animation: subtle-pulse 2s infinite;
         }
         .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
+            width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
             background: rgba(15, 23, 42, 0.6);
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
             background: rgba(51, 65, 85, 0.5);
-            border-radius: 2px;
+            border-radius: 3px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: rgba(16, 185, 129, 0.5);
@@ -62,9 +65,11 @@
                 
                 <div class="bg-slate-900/40 backdrop-blur-xl border border-slate-800/80 rounded-2xl p-6 glow-effect transition-all duration-300">
                     <div class="flex flex-col items-center text-center">
-                        <div class="relative group mb-4">
-                            <div class="absolute -inset-0.5 bg-gradient-to-r edit-gradient rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80" alt="Kunal Profile" class="relative rounded-full w-28 h-28 object-cover border-2 border-slate-800 group-hover:border-emerald-500/50 transition duration-300">
+                        <div class="relative group mb-5">
+                            <div class="absolute -inset-1 bg-gradient-to-r edit-gradient rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                            <div class="relative rounded-full w-24 h-24 edit-gradient flex items-center justify-center border-4 border-slate-950 shadow-2xl">
+                                <span class="text-white text-3xl font-black tracking-tight select-none">K</span>
+                            </div>
                         </div>
                         
                         <h1 class="text-2xl font-black tracking-tight text-white mb-1">Kunal</h1>
@@ -73,17 +78,17 @@
                         <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-slate-800 to-transparent my-4"></div>
                         
                         <div class="w-full space-y-2.5 text-left text-sm font-mono text-slate-400 mb-6">
-                            <div class="flex justify-between items-center p-2 rounded bg-slate-950/40 border border-slate-900">
-                                <span class="text-xs text-slate-500">LOCATION:</span>
-                                <span class="text-slate-300 text-xs font-semibold">Oslo, Norway</span>
+                            <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-950/60 border border-slate-900">
+                                <span class="text-xs text-slate-500 font-bold">LOCATION:</span>
+                                <span class="text-slate-200 text-xs font-semibold">Oslo, Norway</span>
                             </div>
-                            <div class="flex justify-between items-center p-2 rounded bg-slate-950/40 border border-slate-900">
-                                <span class="text-xs text-slate-500">CORE FOCUS:</span>
-                                <span class="text-slate-300 text-xs font-semibold">Cloud Mesh & AI Infrastructure</span>
+                            <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-950/60 border border-slate-900">
+                                <span class="text-xs text-slate-500 font-bold">CORE FOCUS:</span>
+                                <span class="text-slate-200 text-xs font-semibold">Cloud Mesh & AI Infrastructure</span>
                             </div>
-                            <div class="flex justify-between items-center p-2 rounded bg-slate-950/40 border border-slate-900">
-                                <span class="text-xs text-slate-500">STATUS:</span>
-                                <span class="text-emerald-400 text-xs font-bold">Open to Engagements</span>
+                            <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-950/60 border border-slate-900">
+                                <span class="text-xs text-slate-500 font-bold">STATUS:</span>
+                                <span class="text-emerald-400 text-xs font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Open to Engagements</span>
                             </div>
                         </div>
 
@@ -143,13 +148,13 @@
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+                        <div class="p-5 rounded-xl bg-slate-900/40 border border-slate-800/60">
                             <h4 class="text-xs font-mono uppercase text-emerald-400 font-bold tracking-wider mb-2">Cloud Infrastructure</h4>
-                            <p class="text-sm text-slate-300">Advanced architectural setups deployment strategies spanning scalable multi-region nodes, high-density cluster management pools, and strict isolation layers.</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">Advanced architectural setups deployment strategies spanning scalable multi-region nodes, high-density cluster management pools, and strict isolation layers.</p>
                         </div>
-                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+                        <div class="p-5 rounded-xl bg-slate-900/40 border border-slate-800/60">
                             <h4 class="text-xs font-mono uppercase text-emerald-400 font-bold tracking-wider mb-2">Automation Pipelines</h4>
-                            <p class="text-sm text-slate-300">Declarative operational builds processing structured configurations, continuous integration webhooks, and secure blue-green isolated rollouts.</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">Declarative operational builds processing structured configurations, continuous integration webhooks, and secure blue-green isolated rollouts.</p>
                         </div>
                     </div>
                 </div>
@@ -160,19 +165,19 @@
                     </h2>
                     
                     <div class="space-y-4">
-                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                             <div>
                                 <h4 class="text-sm font-bold text-white">Advanced Solutions Architect Certification</h4>
-                                <p class="text-xs text-slate-400">Issued via Enterprise Systems Global Cloud Provider</p>
+                                <p class="text-xs text-slate-400 mt-0.5">Issued via Enterprise Systems Global Cloud Provider</p>
                             </div>
-                            <span class="text-[10px] font-mono text-slate-400 bg-slate-950 px-3 py-1 rounded-full border border-slate-800 font-semibold uppercase tracking-wider">Verified ID: #9281-X</span>
+                            <span class="text-[10px] font-mono text-slate-400 bg-slate-950 px-3 py-1 rounded-full border border-slate-800 font-semibold uppercase tracking-wider whitespace-nowrap">Verified ID: #9281-X</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                             <div>
                                 <h4 class="text-sm font-bold text-white">DevOps & Micro-Cluster Engineering Specialist</h4>
-                                <p class="text-xs text-slate-400">Issued via Global Infrastructure Alliance Node</p>
+                                <p class="text-xs text-slate-400 mt-0.5">Issued via Global Infrastructure Alliance Node</p>
                             </div>
-                            <span class="text-[10px] font-mono text-slate-400 bg-slate-950 px-3 py-1 rounded-full border border-slate-800 font-semibold uppercase tracking-wider">Verified ID: #4412-M</span>
+                            <span class="text-[10px] font-mono text-slate-400 bg-slate-950 px-3 py-1 rounded-full border border-slate-800 font-semibold uppercase tracking-wider whitespace-nowrap">Verified ID: #4412-M</span>
                         </div>
                     </div>
                 </div>
@@ -183,26 +188,30 @@
                     </h2>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 hover:border-slate-700 transition group relative">
-                            <div class="flex justify-between items-start mb-2">
-                                <span class="text-xs font-mono text-slate-500 font-bold uppercase">Configuration Guide</span>
-                                <i class="fas fa-file-pdf text-slate-600 group-hover:text-emerald-400 transition"></i>
+                        <div class="p-5 rounded-xl bg-slate-900/40 border border-slate-800/60 hover:border-slate-700 transition group relative flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="text-xs font-mono text-slate-500 font-bold uppercase">Configuration Guide</span>
+                                    <i class="fas fa-file-pdf text-slate-600 group-hover:text-emerald-400 transition"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-white mb-1">Corporate System Architecture Blueprint</h4>
+                                <p class="text-xs text-slate-400 mb-6 leading-relaxed">Comprehensive network topological maps detailing secure cluster isolations and telemetry monitoring rules.</p>
                             </div>
-                            <h4 class="text-sm font-bold text-white mb-1">Corporate System Architecture Blueprint</h4>
-                            <p class="text-xs text-slate-400 mb-4">Comprehensive network topological maps detailing secure cluster isolations and telemetry monitoring rules.</p>
-                            <button onclick="triggerSecureDownload('Corporate System Architecture Blueprint')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none">
+                            <button onclick="triggerSecureDownload('Corporate System Architecture Blueprint')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none mt-auto text-left">
                                 <i class="fas fa-lock text-[10px]"></i> REQUEST BLUEPRINT ACCESS ↗
                             </button>
                         </div>
 
-                        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 hover:border-slate-700 transition group relative">
-                            <div class="flex justify-between items-start mb-2">
-                                <span class="text-xs font-mono text-slate-500 font-bold uppercase">Performance Audit</span>
-                                <i class="fas fa-file-invoice text-slate-600 group-hover:text-emerald-400 transition"></i>
+                        <div class="p-5 rounded-xl bg-slate-900/40 border border-slate-800/60 hover:border-slate-700 transition group relative flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="text-xs font-mono text-slate-500 font-bold uppercase">Performance Audit</span>
+                                    <i class="fas fa-file-invoice text-slate-600 group-hover:text-emerald-400 transition"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-white mb-1">Cloud Node Operational Efficiency Report</h4>
+                                <p class="text-xs text-slate-400 mb-6 leading-relaxed">Deep analytical log sweeps outlining infrastructure compute metrics, caching improvements, and density optimization targets.</p>
                             </div>
-                            <h4 class="text-sm font-bold text-white mb-1">Cloud Node Operational Efficiency Report</h4>
-                            <p class="text-xs text-slate-400 mb-4">Deep analytical log sweeps outlining infrastructure compute metrics, caching improvements, and density optimization targets.</p>
-                            <button onclick="triggerSecureDownload('Cloud Node Operational Efficiency Report')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none">
+                            <button onclick="triggerSecureDownload('Cloud Node Operational Efficiency Report')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none mt-auto text-left">
                                 <i class="fas fa-lock text-[10px]"></i> REQUEST REPORT ACCESS ↗
                             </button>
                         </div>
