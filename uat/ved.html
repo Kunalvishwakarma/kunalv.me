@@ -197,7 +197,7 @@
                                 <h4 class="text-sm font-bold text-white mb-1">Corporate System Architecture Blueprint</h4>
                                 <p class="text-xs text-slate-400 mb-6 leading-relaxed">Comprehensive network topological maps detailing secure cluster isolations and telemetry monitoring rules.</p>
                             </div>
-                            <button onclick="triggerSecureDownload('Corporate System Architecture Blueprint')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none mt-auto text-left">
+                            <button type="button" onclick="triggerSecureDownload('Corporate System Architecture Blueprint')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none mt-auto text-left">
                                 <i class="fas fa-lock text-[10px]"></i> REQUEST BLUEPRINT ACCESS ↗
                             </button>
                         </div>
@@ -207,11 +207,11 @@
                                 <div class="flex justify-between items-start mb-2">
                                     <span class="text-xs font-mono text-slate-500 font-bold uppercase">Performance Audit</span>
                                     <i class="fas fa-file-invoice text-slate-600 group-hover:text-emerald-400 transition"></i>
-                                </div>
+                                }
                                 <h4 class="text-sm font-bold text-white mb-1">Cloud Node Operational Efficiency Report</h4>
                                 <p class="text-xs text-slate-400 mb-6 leading-relaxed">Deep analytical log sweeps outlining infrastructure compute metrics, caching improvements, and density optimization targets.</p>
                             </div>
-                            <button onclick="triggerSecureDownload('Cloud Node Operational Efficiency Report')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none mt-auto text-left">
+                            <button type="button" onclick="triggerSecureDownload('Cloud Node Operational Efficiency Report')" class="text-xs text-emerald-400 font-mono hover:underline flex items-center gap-1.5 focus:outline-none mt-auto text-left">
                                 <i class="fas fa-lock text-[10px]"></i> REQUEST REPORT ACCESS ↗
                             </button>
                         </div>
@@ -232,21 +232,21 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-[11px] font-mono uppercase text-slate-400 mb-1 font-bold">Sender Identity / Name</label>
-                                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition">
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition">
                             </div>
                             <div>
                                 <label class="block text-[11px] font-mono uppercase text-slate-400 mb-1 font-bold">Return Target / Email Address</label>
-                                <input type="email" name="email" required placeholder="john@domain.com" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition">
+                                <input type="email" name="email" required placeholder="john@domain.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition">
                             </div>
                         </div>
                         <div>
                             <label class="block text-[11px] font-mono uppercase text-slate-400 mb-1 font-bold">Payload Data / Message Contents</label>
-                            <textarea name="message" rows="4" required placeholder="Input secure transmission payload here..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition resize-none custom-scrollbar"></textarea>
+                            <textarea name="message" rows="4" required placeholder="Input secure transmission payload here..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-emerald-500/50 transition resize-none custom-scrollbar"></textarea>
                         </div>
                         
                         <div id="form-feedback-node" class="text-xs font-mono hidden"></div>
 
-                        <button type="submit" class="w-full bg-slate-900 border border-slate-800 text-emerald-400 font-mono text-xs uppercase font-bold py-3 px-4 rounded-xl hover:bg-slate-850 hover:border-emerald-500/40 transition duration-300 flex items-center justify-center gap-2 tracking-widest focus:outline-none">
+                        <button type="submit" class="w-full bg-slate-900 border border-slate-800 text-emerald-400 font-mono text-xs uppercase font-bold py-3 px-4 rounded-xl hover:text-emerald-300 hover:border-emerald-500/40 transition duration-300 flex items-center justify-center gap-2 tracking-widest focus:outline-none">
                             <i class="fas fa-shield-alt text-[11px]"></i> DISPATCH SECURE PAYLOAD STREAM
                         </button>
                     </form>
@@ -289,7 +289,7 @@
                 <div id="modal-feedback-node" class="text-[11px] font-mono hidden"></div>
 
                 <div class="flex gap-2 pt-2">
-                    <button type="button" onclick="closeSecureModal()" class="w-1/2 bg-slate-950 border border-slate-850 text-slate-400 font-mono text-xs uppercase font-bold py-2.5 rounded-xl hover:text-white transition focus:outline-none">
+                    <button type="button" onclick="closeSecureModal()" class="w-1/2 bg-slate-950 border border-slate-900 text-slate-400 font-mono text-xs uppercase font-bold py-2.5 rounded-xl hover:text-white transition focus:outline-none">
                         ABORT ENTRY
                     </button>
                     <button type="submit" class="w-1/2 bg-emerald-500 text-slate-950 font-mono text-xs uppercase font-bold py-2.5 rounded-xl hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/10 focus:outline-none">
