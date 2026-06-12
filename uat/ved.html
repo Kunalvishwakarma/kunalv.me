@@ -151,17 +151,19 @@
     <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
-                <div class="inline-flex items-center gap-3 bg-slate-900/50 border border-slate-800/80 px-4 py-2 rounded-xl shadow-lg backdrop-blur-sm relative overflow-hidden group max-w-md">
+                <div class="inline-flex items-center gap-3 bg-slate-900/50 border border-slate-800/80 px-4 py-2 rounded-xl shadow-lg backdrop-blur-sm relative overflow-hidden group max-w-lg">
                     <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="w-4 h-4 bg-slate-950 rounded flex items-center justify-center flex-shrink-0 relative z-10 border border-slate-800/60 overflow-hidden">
-                        <img src="https://maps.app.goo.gl/4RaFuhECXXaYeZM86?g_st=ac" alt="Google Profile Icon" class="w-full h-full object-cover" onerror="this.parentNode.innerHTML='<svg viewBox=%220 0 24 24%22 class=%22w-3.5 h-3.5%22><path fill=%22%234285F4%22 d=%22M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z%22/><path fill=%22%2334A853%22 d=%22M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z%22/><path fill=%22%23FBBC05%22 d=%22M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.22-.67-.35-1.37-.35-2.09z%22/><path fill=%22%23EA4335%22 d=%22M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.64 2.84c.87-2.6 3.3-4.52 6.18-4.52z%22/></svg>'">
+                    
+                    <div class="w-5 h-5 bg-slate-950 rounded flex items-center justify-center flex-shrink-0 relative z-10 border border-slate-800/60 overflow-hidden">
+                        <svg viewBox="0 0 24 24" class="w-4 h-4"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.22-.67-.35-1.37-.35-2.09z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.64 2.84c.87-2.6 3.3-4.52 6.18-4.52z"/></svg>
                     </div>
-                    <div class="flex items-center gap-1.5 text-xs relative z-10">
-                        <span class="text-white font-extrabold uppercase tracking-wide">Globally Ranked Top 10% worldwide</span>
+
+                    <div class="flex items-center gap-1.5 text-xs relative z-10 flex-wrap">
+                        <span class="text-white font-extrabold uppercase tracking-wide">Google Ranked Top 10% Worldwide</span>
                         <span class="text-slate-700 font-normal">|</span>
                         <span class="text-blue-400 font-bold font-mono">Level 7</span>
                         <span class="text-slate-700 font-normal">|</span>
-                        <span id="google-view-counter" class="text-emerald-400 font-black font-mono tracking-wide bg-emerald-950/20 px-1 rounded animate-pulse">Fetching metrics...</span>
+                        <span id="google-view-counter" class="text-emerald-400 font-black font-mono tracking-wide bg-emerald-950/40 px-1.5 py-0.5 rounded animate-pulse">Fetching metrics...</span>
                     </div>
                 </div>
 
@@ -1038,7 +1040,6 @@
         // REAL-TIME GOOGLE MAPS LOCAL GUIDE VIEW METRICS SCRAPER AGENT
         async function fetchRealtimeMetrics() {
             const counterNode = document.getElementById("google-view-counter");
-            // Public unique identifier mapping back to your platform contributions path
             const cid = "108630761623910970344";
             const targetUrl = `https://corsproxy.io/?${encodeURIComponent('https://www.google.com/maps/contrib/' + cid)}`;
             
@@ -1047,7 +1048,6 @@
                 if (!response.ok) throw new Error("Fallback execution matched");
                 const text = await response.text();
                 
-                // Extraction expression matching programmatic payload arrays injected inside standard view templates
                 const viewsRegex = /"([^"]+)\s+(views|visninger|visningar)"/i;
                 const match = text.match(viewsRegex);
                 
@@ -1055,7 +1055,6 @@
                     counterNode.classList.remove("animate-pulse");
                     counterNode.innerText = `${match[1].trim()} Views`;
                 } else {
-                    // Fail-through execution tracking regex logic fallback strategy
                     const fallbackRegex = /[0-9.,]+\s*(Million|Millioner|Mn|M)\s*(views|visninger)/i;
                     const fallbackMatch = text.match(fallbackRegex);
                     if(fallbackMatch) {
@@ -1066,7 +1065,6 @@
                     }
                 }
             } catch (err) {
-                // Production resilience mitigation logic: ensures layout retains original metric values if CORS rules block connection streams
                 console.warn("Realtime metric routing failed, utilizing baseline fallback tracking values.", err);
                 counterNode.classList.remove("animate-pulse");
                 counterNode.innerText = "5M+ Views";
@@ -1359,7 +1357,7 @@
             changeLanguage('en');
             setupEmailObfuscation();
             handleLocalTrafficAnalyticsLog();
-            fetchRealtimeMetrics(); // Triggers automated asynchronously parsed analytics call blocks
+            fetchRealtimeMetrics();
         });
     </script>
 </body>
