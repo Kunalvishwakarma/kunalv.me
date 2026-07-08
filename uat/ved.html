@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,9 +110,9 @@
                 <a href="#projects" data-i18n="nav-projects" class="hidden lg:inline hover:text-blue-500 transition">Projects</a>
                 <a href="#experience" data-i18n="nav-experience" class="hidden lg:inline hover:text-blue-500 transition">Experience</a>
                 <a href="#whitepapers" data-i18n="nav-whitepapers" class="hidden lg:inline hover:text-blue-500 transition">White Paper</a>
+                <a href="#testimonials" data-i18n="nav-awards" class="hidden lg:inline hover:text-blue-500 transition">Awards</a>
                 <a href="#credentials" data-i18n="nav-credentials" class="hidden lg:inline hover:text-blue-500 transition">Credentials</a>
                 <a href="#resources" data-i18n="nav-resources" class="hidden lg:inline hover:text-blue-500 transition">Resources</a>
-                <a href="#testimonials" data-i18n="nav-awards" class="hidden lg:inline hover:text-blue-500 transition">Awards</a>
                 
                 <button onclick="openDownloadModal()" class="text-blue-500 hover:text-blue-400 transition flex items-center gap-1.5 border border-blue-500/30 px-2.5 py-1 rounded bg-blue-500/10 text-[11px] font-bold uppercase tracking-wider relative z-50">
                     <i data-lucide="download" class="w-3.5 h-3.5"></i> CV
@@ -151,37 +152,17 @@
     <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2 space-y-6">
-                <div class="inline-flex items-center gap-3 bg-slate-900/50 border border-slate-800/80 px-4 py-2 rounded-xl shadow-lg backdrop-blur-sm relative overflow-hidden group max-w-lg">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    
-                    <div class="w-5 h-5 bg-slate-950 rounded flex items-center justify-center flex-shrink-0 relative z-10 border border-slate-800/60 overflow-hidden">
-                        <svg viewBox="0 0 24 24" class="w-4 h-4"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.22-.67-.35-1.37-.35-2.09z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.64 2.84c.87-2.6 3.3-4.52 6.18-4.52z"/></svg>
-                    </div>
-
-                    <div class="flex items-center gap-1.5 text-xs relative z-10 flex-wrap">
-                        <span class="text-white font-extrabold uppercase tracking-wide">Google Ranked Top 10% Worldwide</span>
-                        <span class="text-slate-700 font-normal">|</span>
-                        <span class="text-blue-400 font-bold font-mono">Level 7</span>
-                        <span class="text-slate-700 font-normal">|</span>
-                        <span id="google-view-counter" class="text-emerald-400 font-black font-mono tracking-wide bg-emerald-950/40 px-1.5 py-0.5 rounded animate-pulse">Fetching metrics...</span>
-                    </div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 text-red-400 text-xs font-semibold rounded-full border border-red-900/60">
+                    <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
                 </div>
-
                 <h1 id="portal-hero-title" data-i18n="hero-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
                     Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner
                 </h1>
-
-                <div class="block">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 text-red-400 text-xs font-semibold rounded-full border border-red-900/60">
-                        <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
-                    </div>
-                </div>
-
-                <p class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
+                <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
                     Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
                 </p>
                 <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
-                    <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.
+                    <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner.
                 </div>
             </div>
 
@@ -231,10 +212,6 @@
             <p data-i18n="skills-desc" class="text-slate-400 text-sm mt-1">Foundational execution capabilities across mission-critical technical domains.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="p-4 card-premium flex items-center gap-3">
-                <i data-lucide="server" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
-                <span data-i18n="skill-1" class="text-sm font-semibold text-slate-200">Data Center Operations</span>
-            </div>
             <div class="p-4 card-premium flex items-center gap-3">
                 <i data-lucide="folder-kanban" class="text-blue-500 w-5 h-5 flex-shrink-0"></i>
                 <span data-i18n="skill-2" class="text-sm font-semibold text-slate-200">Project Management</span>
@@ -344,6 +321,27 @@
         </div>
     </section>
 
+    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
+        <div class="text-center space-y-3 mb-12">
+            <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
+                <i data-lucide="award" class="text-blue-500"></i> Appreciation & Awards
+            </h2>
+            <p data-i18n="awards-desc" class="text-slate-400 text-sm max-w-2xl mx-auto">
+                Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.
+            </p>
+        </div>
+        <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
+    </section>
+
+    <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="space-y-6">
+                <h2 data-i18n="cert-title" class="text-2xl font-bold text-white tracking-tight">Technical Certifications</h2>
+                <div id="certifications-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-400"></div>
+            </div>
+        </div>
+    </section>
+
     <section id="resources" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-12">
@@ -392,27 +390,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-200">
-        <div class="text-center space-y-3 mb-12">
-            <h2 data-i18n="awards-heading" class="text-3xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
-                <i data-lucide="award" class="text-blue-500"></i> Appreciation & Awards
-            </h2>
-            <p data-i18n="awards-desc" class="text-slate-400 text-sm max-w-2xl mx-auto">
-                Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.
-            </p>
-        </div>
-        <div id="awards-grid" class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
-    </section>
-
-    <section id="credentials" class="py-24 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="space-y-6">
-                <h2 data-i18n="cert-title" class="text-2xl font-bold text-white tracking-tight">Technical Certifications</h2>
-                <div id="certifications-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium uppercase tracking-wide text-slate-400"></div>
             </div>
         </div>
     </section>
@@ -601,7 +578,7 @@
                 </div>
 
                 <div>
-                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-300 pb-0.5 mb-1">Key Awards</h2>
+                    <h2 class="text-[9px] font-black uppercase tracking-wider text-slate-950 border-b border-slate-300 pb-0.5 mb-1">Key Awards</h2>
                     <ul class="space-y-0.5 text-slate-700 font-bold text-[7.8px] leading-tight">
                         <li>🏆 <strong class="text-slate-900">GEM Award</strong> - Strategic Energy Services</li>
                         <li>⭐ <strong class="text-slate-900">Best Performer</strong> - Barclays Capital</li>
@@ -666,11 +643,11 @@
                 "availability": "Available for Global Engagements", "location": "Oslo, Norway",
                 "hero-title": "Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner",
                 "hero-desc": "Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.",
-                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner managing a dedicated, personal AI LAB (Chatplayground.ai, 1minAI) to drive automation and infrastructure workflows.`,
+                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner.`,
                 "count-exp": "Years IT Experience", "count-del": "Global Deliveries", "count-usr": "Worldwide Data Centers", "count-dat": "Locations Worldwide Support",
                 "domain-title": "Domain Experience",
                 "skills-title": "Core Skills", "skills-desc": "Foundational execution capabilities across mission-critical technical domains.",
-                "skill-1": "Data Center Operations", "skill-2": "Project Management", "skill-3": "Root Cause Analysis (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastructure Projects", "skill-6": "Vendor Management", "skill-7": "Risk Mitigation", "skill-8": "Capacity Planning & Scheduling", "skill-9": "Budget Tracking", "skill-10": "Server Architecture", "skill-11": "AI LAB Architecture", "skill-12": "Critical Data Center Operations",
+                "skill-2": "Project Management", "skill-3": "Root Cause Analysis (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastructure Projects", "skill-6": "Vendor Management", "skill-7": "Risk Mitigation", "skill-8": "Capacity Planning & Scheduling", "skill-9": "Budget Tracking", "skill-10": "Server Architecture", "skill-11": "AI LAB Architecture", "skill-12": "Critical Data Center Operations",
                 "proj-heading": "Key Projects", "proj-lead-desc": "Highlights of end-to-end cloud migrations, networking integrations, perimeters, and datacenter transformations delivered globally.",
                 "hist-heading": "Historical Core Infrastructure Deployments",
                 "exp-heading": "Corporate Experience", "awards-heading": "Appreciation & Awards", "awards-desc": "Recognized for excellence across Cloud, Datacenter, Security & Network Transformation Projects. Live performance verification available upon request.",
@@ -686,7 +663,7 @@
                 "cs1-body": `
                     <p><strong class="text-blue-400">Overview:</strong> A major enterprise required a strategic reduction in IT operational costs while maintaining uninterrupted availability for mission muscle workloads. As the Datacenter SME (Local Hands & Feet Support) and Technical Project Manager, I led the consolidation program across two facilities in Oslo, Norway.</p>
                     <p>The initiative delivered ~$300K annual savings, optimized physical footprint, and achieved zero business disruption.</p>
-                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On depths validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End-'to box program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
+                    <p><strong class="text-blue-400">My Role:</strong> Combined <strong>Datacenter SME (Local Hands & Feet Support)</strong> (On‑site validation of infrastructure, cabling, rack layouts, dependency mappings, physical movement supervision, post-migration health checks) and <strong>Technical Project Manager</strong> (End-'to box program governance, runbook creation, migration tracking across storage, compute, network, backup, and security structures).</p>
                     <p><strong class="text-blue-400">Business Challenge:</strong> The client operated two primary data centers located 5 km apart. Rising operational costs and an expiring facility lease required consolidation of the secondary data center’s extension room inside a strict 4-month deadline window. Handled relocation of ~10 tons of aging hardware with no OEM assurance and mandatory zero-downtime demands for active SAP, NAS, and PKI services.</p>
                     <p><strong class="text-blue-400">Infrastructure Landscape:</strong> Managed migration parameters across critical hosted workloads including SAP Mission-Critical Block Storage, Primary NAS File Services for ~5,000 daily users, PKI Security Infrastructure, Video Conferencing Systems, and Backup Environments (Tape Library + Disk Backup).</p>
                     <p><strong class="text-blue-400">Approach & Methodology:</strong> Executed breakdown steps into clean tasks with a mandatory four-eye review process for all change workflows. Designed specific temporary Disaster Recovery (DR) mode parameters to safeguard uninterrupted availability blocks.</p>
@@ -719,11 +696,11 @@
                 "availability": "Tilgjengelig for globale oppdrag", "location": "Oslo, Norge",
                 "hero-title": "Datasenter SME & Infrastrukturarkitekt | Teknisk Prosjektleder | Multimodal AI-Plattform Praktiker",
                 "hero-desc": "Migreringsleder med over 20 års erfaring med levering av storskala skytransformasjoner, datasentermodernisering og sikre globale hybride arkitekturer innenfor begrensete finans- og samsvarskrav.",
-                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Kompetent i å designe strukturerte, kontekstbevisste ledetekster (prompts) på tvers av ulike LLMer. Multi‑AI Model Practitioner som administrerer en dedikert, personal AI LAB (Chatplayground.ai, 1minAI) for å drive automatisering og infrastrukturarbeid.`,
+                "hero-prompt-eng": `<strong class="text-blue-400">Prompt Engineering:</strong> Kompetent i å designe strukturerte, kontekstbevisste ledetekster (prompts) på tvers av ulike LLMer. Multi‑AI Model Practitioner.`,
                 "count-exp": "Års IT-erfaring", "count-del": "Globale leveranser", "count-usr": "Globale Datasentre", "count-dat": "Lokasjoner Global Support",
                 "domain-title": "Bransjeerfaring",
                 "skills-title": "Kjernekompetanse", "skills-desc": "Grunnleggende gjennomføringsevne innenfor forretningskritiske tekniske domener.",
-                "skill-1": "Datasenterdrift (DC Ops)", "skill-2": "Prosjektledelse", "skill-3": "Feilsøking & Rotårsaksanalyse (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastrukturprosjekter", "skill-6": "Leverandørstyring (Vendor Mgmt)", "skill-7": "Risikoavlastning & Reduksjon", "skill-8": "Kapasitetsplanlegging", "skill-9": "Budsjettsporing", "skill-10": "Serverarkitektur", "skill-11": "AI LAB Architecture", "skill-12": "Kritisk Datasenterdrift",
+                "skill-2": "Prosjektledelse", "skill-3": "Feilsøking & Rotårsaksanalyse (RCA)", "skill-4": "Multi-AI Model Practitioner", "skill-5": "Infrastrukturprosjekter", "skill-6": "Leverandørstyring (Vendor Mgmt)", "skill-7": "Risikoavlastning & Reduksjon", "skill-8": "Kapasitetsplanlegging", "skill-9": "Budsjettsporing", "skill-10": "Serverarkitektur", "skill-11": "AI LAB Architecture", "skill-12": "Kritisk Datasenterdrift",
                 "proj-heading": "Hovedprosjekter", "proj-lead-desc": "Høydepunkter fra ende-til-ende skymigreringer, nettverksintegrasjoner, perimetre og datasenter-transformasjoner levert globalt.",
                 "hist-heading": "Historiske distribusjoner av kjerneinfrastruktur",
                 "exp-heading": "Yrkeserfaring", "awards-heading": "Anerkjennelse & Priser", "awards-desc": "Anerkjent for fremragende arbeid innen sky-, datasenter-, sikkerhets- og nettverkstransformasjons-prosjekter. Verifikasjon tilgjengelig på forespørsel.",
@@ -737,7 +714,7 @@
                 "cs1-title": "Kasusstudie: Datasenter-optimalisering",
                 "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
                 "cs1-body": `
-                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjenvighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
+                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjenvighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) and teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
                     <p>Initiativet ga ~$300K i årlige besparelser, optimaliserte det fysiske fotavtrykket og ble fullført uten avbrudd for virksomheten.</p>
                     <p><strong class="text-blue-400">Min rolle:</strong> Kombinert <strong>Datasenter-SME</strong> (In-situ validering av infrastruktur, kabling, rack-utforming, avhengighetskartlegging og fysisk oppfølging) og <strong>Teknisk prosjektleder</strong> (Ende-til-ende programstyring, utarbeidelse av kjøreplaner/runbooks og koordinering på tvers av lagrings-, nettverks-, og sikkerhetsteam).</p>
                     <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebibliotek, 10 fulle lagringsracks og 2 nettverksracks.</p>
@@ -802,7 +779,7 @@
                 "<b>Nettverksintegrasjon for Global Driftsleverandør:</b> Tilrettela og etablerte et rammeverk for VPN mellom flere leverandører med komplekst partssamarbeid.",
                 "<b>MS Defender utrulling:</b> Ledet utfasingen av eldre sikkerhetsløsninger ved å migrere det globale endepunktsavtrykket fra McAfee to MS Defender.",
                 "<b>Skymigrering for Entreprenør:</b> Administrerte den strategiske infrastrukturmigreringen fra regionale datasentre i Norge og Sverige til Azure Cloud.",
-                "<b>Enhetsstyring (UEM):</b> Integrerte og konfigurerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
+                "<b>Enhetsstyring (UEM):</b> Integrerte og konfiguerte Microsoft Intune-funksjonalitet for å administrere lokale on-premises enheter.",
                 "<b>Sikker SAP Fiori Utrulling:</b> Ledet den sikre integrasjonen av SAP Fiori-tjenester tilgjengelig via Microsoft Intune-infrastruktur.",
                 "<b>Datasenter-utfasing i Norge:</b> Reduserte systematisk det fysiske on-premises datasenteravtrykket ved å flytte arbeidsbelastninger til skyen.",
                 "<b>Malaysia sky-tenant:</b> Håndterte infrastruktur-fisjon (de-merger) og live-migrering av selskapsdata til en nyetablert sky-tenant.",
@@ -884,7 +861,7 @@
                         "Drove the strategic, multi-phase technical migration of 100+ production servers for Walmart systems.",
                         "Managed enterprise Microsoft Hyper-V private cloud operations and computing environments.",
                         "Led datacenter platform modernizations upgrading Windows Server footprints from legacy 2003/2008 sets to Windows Server 2012 platforms.",
-                        "Enforced highly rigid infrastructure availability metrics, maintaining a consistent 100% SLA record for customer technical support issue remediation."
+                        "Refined infrastructure availability metrics, maintaining a consistent 100% SLA record for customer technical support issue remediation."
                     ]
                 },
                 {
@@ -907,7 +884,7 @@
                         "Implemented defensive edge parameters including firewalls, site VPNs, and active network threat log monitors to deploy rapid response vectors.",
                         "Oversaw equipment lifecycle budgeting, managed hardware procurement contracts, and authored technical runbooks for disaster recovery (DR) operations.",
                         "Led structural network deployment projects to completion while mentoring junior engineers and tracking infrastructure performance logs for executive reporting.",
-                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within strict operational budget constraints."
+                        "Acquired comprehensive contract architectures, software licenses, and warranty management logs within operational budget constraints."
                     ]
                 }
             ],
@@ -986,6 +963,7 @@
         const certificationsData = {
             en: [
                 { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Cyber Security – Government of India (NIELIT)" },
+                { icon: "shield-check", styling: "bg-emerald-950/40 text-emerald-400", name: "CYBERSECURITY CERTIFIED - NATIONAL INSTITUTE OF ELECTRONICS AND INFORMATION TECHNOLOGY" },
                 { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
                 { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internet" },
                 { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
@@ -1003,6 +981,7 @@
             ],
             no: [
                 { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)" },
+                { icon: "shield-check", styling: "bg-emerald-950/40 text-emerald-400", name: "CYBERSECURITY CERTIFIED - NATIONAL INSTITUTE OF ELECTRONICS AND INFORMATION TECHNOLOGY" },
                 { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
                 { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internett" },
                 { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
@@ -1036,40 +1015,6 @@
                 { type: "message-square", styling: "bg-teal-950/40 text-teal-400", title: "Flere Klientanerkjennelser", desc: "Formell anerkjennelse for opprettholdelse av kontinuitet under komplekse migreringsbølger." }
             ]
         };
-
-        // REAL-TIME GOOGLE MAPS LOCAL GUIDE VIEW METRICS SCRAPER AGENT
-        async function fetchRealtimeMetrics() {
-            const counterNode = document.getElementById("google-view-counter");
-            const cid = "108630761623910970344";
-            const targetUrl = `https://corsproxy.io/?${encodeURIComponent('https://www.google.com/maps/contrib/' + cid)}`;
-            
-            try {
-                const response = await fetch(targetUrl);
-                if (!response.ok) throw new Error("Fallback execution matched");
-                const text = await response.text();
-                
-                const viewsRegex = /"([^"]+)\s+(views|visninger|visningar)"/i;
-                const match = text.match(viewsRegex);
-                
-                if (match && match[1]) {
-                    counterNode.classList.remove("animate-pulse");
-                    counterNode.innerText = `${match[1].trim()} Views`;
-                } else {
-                    const fallbackRegex = /[0-9.,]+\s*(Million|Millioner|Mn|M)\s*(views|visninger)/i;
-                    const fallbackMatch = text.match(fallbackRegex);
-                    if(fallbackMatch) {
-                         counterNode.classList.remove("animate-pulse");
-                         counterNode.innerText = fallbackMatch[0];
-                    } else {
-                         throw new Error("Formatting variance recorded");
-                    }
-                }
-            } catch (err) {
-                console.warn("Realtime metric routing failed, utilizing baseline fallback tracking values.", err);
-                counterNode.classList.remove("animate-pulse");
-                counterNode.innerText = "5M+ Views";
-            }
-        }
 
         // SAFETY GATE OBFUSCATION ENGINE
         function setupEmailObfuscation() {
@@ -1238,7 +1183,7 @@
                     reply = "Kunal Vishwakarma is an expert <strong>Datacenter SME & Infrastructure Architect</strong> with 20+ years of high-value technical delivery across Energy, Banking, Pharmaceutical, and Semi-Government fields.";
                 }
                 else if (query.includes("skills") || query.includes("expertise") || query.includes("competencies") || query.includes("tech stack")) {
-                    reply = "His foundational competencies map across <strong>Data Center Operations, Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Coordination, and Server Architecture</strong>.";
+                    reply = "His foundational competencies map across <strong>Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Coordination, and Server Architecture</strong>.";
                 }
                 else if (query.includes("projects") || query.includes("milestones") || query.includes("deliveries")) {
                     reply = "Key architecture achievements include over **30 global production line executions**, such as setting up primary Offshore Development Centers (ODCs) for Barclays and engineering multi-phase private cloud deployments.";
@@ -1357,8 +1302,9 @@
             changeLanguage('en');
             setupEmailObfuscation();
             handleLocalTrafficAnalyticsLog();
-            fetchRealtimeMetrics();
         });
     </script>
 </body>
 </html>
+
+```
