@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +34,7 @@
         .card-premium { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; }
         .card-premium:hover { border-color: #3b82f6; transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1); }
         .timeline-line { border-left: 2px solid #1e293b; }
+        section { scroll-margin-top: 120px; }
         
         /* Chatbot Custom Animation Styles */
         .chat-popup { transform: scale(0.9); opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -97,14 +97,14 @@
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex flex-col space-y-1">
                 <a href="#about" class="group flex items-center gap-3 transition-all duration-200 hover:opacity-90">
-                    <img src="logo.png" alt="Kunal Vishwakarma - Datacenter SME & Infrastructure Architect Logo" class="h-10 w-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='kv.png'" />
+                    <img src="logo.png" alt="Kunal Vishwakarma Logo" class="h-10 w-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='kv.png'" />
                     <span class="text-lg font-extrabold tracking-tighter text-white uppercase">
                         Kunal <span class="text-blue-500">V.</span>
                     </span>
                 </a>
             </div>
             
-            <div class="flex space-x-4 md:space-x-6 text-[11px] font-semibold uppercase tracking-wider text-slate-400 items-center">
+            <div class="flex space-x-4 md:space-x-6 text-[11px] font-bold uppercase tracking-wider text-slate-400 items-center">
                 <a href="#about" data-i18n="nav-about" class="hidden lg:inline hover:text-blue-500 transition">About</a>
                 <a href="#skills" data-i18n="nav-skills" class="hidden lg:inline hover:text-blue-500 transition">Skills</a>
                 <a href="#projects" data-i18n="nav-projects" class="hidden lg:inline hover:text-blue-500 transition">Projects</a>
@@ -112,7 +112,7 @@
                 <a href="#whitepapers" data-i18n="nav-whitepapers" class="hidden lg:inline hover:text-blue-500 transition">White Paper</a>
                 <a href="#testimonials" data-i18n="nav-awards" class="hidden lg:inline hover:text-blue-500 transition">Awards</a>
                 <a href="#credentials" data-i18n="nav-credentials" class="hidden lg:inline hover:text-blue-500 transition">Credentials</a>
-                <a href="#resources" data-i18n="nav-resources" class="hidden lg:inline hover:text-blue-500 transition">Resources</a>
+                <a href="#resources" data-i18n="nav-resources" class="hidden lg:inline hover:text-blue-500 transition text-green-400">Resources</a>
                 
                 <button onclick="openDownloadModal()" class="text-blue-500 hover:text-blue-400 transition flex items-center gap-1.5 border border-blue-500/30 px-2.5 py-1 rounded bg-blue-500/10 text-[11px] font-bold uppercase tracking-wider relative z-50">
                     <i data-lucide="download" class="w-3.5 h-3.5"></i> CV
@@ -134,7 +134,7 @@
     </nav>
 
     <div class="fixed w-full z-40 subnav-contact top-[73px] py-2.5 px-6 hidden sm:block">
-        <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold tracking-wide text-slate-400 opacity-80">
             <span class="email-container hover:text-blue-500 transition flex items-center gap-1.5">
                 <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
             </span>
@@ -151,17 +151,38 @@
 
     <header id="about" class="pt-52 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-12 items-start">
-            <div class="lg:col-span-2 space-y-6">
+            <div class="lg:col-span-2 space-y-5">
+                <div class="flex flex-col space-y-2">
+                    <h1 id="portal-hero-title" class="text-3xl lg:text-4xl font-extrabold text-white tracking-tight tracking-[0.6px] uppercase leading-none">
+                        Kunal Vishwakarma
+                    </h1>
+                    <div class="flex items-center gap-2.5 text-[11px] font-semibold text-slate-300/85">
+                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v3.92h6.61c-.29 1.51-1.14 2.78-2.42 3.63v3.01h3.89c2.28-2.1 3.61-5.19 3.61-8.49z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.97-1.08 7.96-2.91l-3.89-3.01c-1.08.72-2.47 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.11C3.27 21.83 7.39 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.27 14.28A7.17 7.17 0 0 1 4.8 12c0-.8.14-1.57.41-2.28V6.61H1.29A11.95 11.95 0 0 0 0 12c0 1.92.45 3.74 1.29 5.39l3.98-3.11z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.22 0 12 0 7.39 0 3.27 2.17 1.29 5.39l3.98 3.11c.95-2.85 3.6-4.96 6.73-4.96z"/>
+                        </svg>
+                        <span class="bg-blue-950/50 text-blue-400 border border-blue-900/40 px-2 py-0.5 rounded font-bold text-[10px]">LEVEL 7</span>
+                        <span>•</span>
+                        <span class="text-slate-400 font-medium">Oslo Footprint:</span>
+                        <span id="live-ranking-node" class="text-green-400 font-bold tracking-wide">Top 1% Contributor</span>
+                        <span>•</span>
+                        <div class="flex items-center text-amber-400 gap-0.5 font-bold">
+                            5.0 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-950/40 text-red-400 text-xs font-semibold rounded-full border border-red-900/60">
                     <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> <span data-i18n="availability">Available for Global Engagements</span>
                 </div>
-                <h1 id="portal-hero-title" data-i18n="hero-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
-                    Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner
-                </h1>
+                
                 <p data-i18n="hero-desc" class="text-base text-slate-300 font-normal leading-relaxed max-w-3xl">
-                    Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial and compliance boundaries.
+                    Datacenter SME & Infrastructure Architect | Technical Project Manager | Multimodal AI Platform Practitioner. Migration Lead with 20+ years of enterprise experience delivering large-scale cloud adoptions, datacenter modernizations, and secure global hybrid architectures across strict financial boundaries.
                 </p>
-                <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl">
+                <div id="hero-prompt-container" data-i18n="hero-prompt-eng" class="p-4 bg-blue-950/20 border border-blue-900/40 rounded-xl text-xs text-slate-300 leading-relaxed max-w-3xl relative">
+                    <span class="absolute top-2 right-3 px-1.5 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20 text-[9px] font-extrabold rounded uppercase tracking-wider">In-House Development</span>
                     <strong class="text-blue-400">Prompt Engineering:</strong> Skilled in designing structured, context‑aware prompts across various LLMs. Multi‑AI Model Practitioner.
                 </div>
             </div>
@@ -174,9 +195,8 @@
                     <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Oil & Gas (Energy)</div>
                     <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Banking & Financial Services</div>
                     <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Pharmaceuticals</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Datacenter Operations</div>
-                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
                     <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span> Semi-Government Institution</div>
+                    <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Physical Security</div>
                     <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg flex items-center gap-2.5"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Operational Technology (OT) Industries</div>
                 </div>
             </div>
@@ -187,19 +207,19 @@
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
                 <div class="text-4xl font-bold text-white">20+</div>
-                <div id="counter-exp" data-i18n="count-exp" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Years IT Experience</div>
+                <div id="counter-exp" data-i18n="count-exp" class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Years IT Experience</div>
             </div>
             <div>
                 <div class="text-4xl font-bold text-blue-500">30+</div>
-                <div id="counter-del" data-i18n="count-del" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Global Deliveries</div>
+                <div id="counter-del" data-i18n="count-del" class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Global Deliveries</div>
             </div>
             <div>
                 <div class="text-4xl font-bold text-green-500">8+</div>
-                <div id="counter-usr" data-i18n="count-usr" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Worldwide Data Centers</div>
+                <div id="counter-usr" data-i18n="count-usr" class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Worldwide Data Centers</div>
             </div>
             <div>
                 <div class="text-4xl font-bold text-blue-500">100+</div>
-                <div id="counter-dat" data-i18n="count-dat" class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Locations Worldwide Support</div>
+                <div id="counter-dat" data-i18n="count-dat" class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Locations Worldwide Support</div>
             </div>
         </div>
     </section>
@@ -656,7 +676,6 @@
                 "resources-heading": "Learning Resources & Deals", "resources-desc": "Curated operational channels and tactical IT deals recommended for cybersecurity training.",
                 "traffic-text": "Live Traffic Counter:",
                 
-                // Case Study 1 English
                 "cs1-tag": "Energy Enterprise", "cs1-loc": "Norway Site",
                 "cs1-title": "Data Center Optimization Case Study",
                 "cs1-sub": "Zero‑Downtime Consolidation Delivering $300K Annual Savings",
@@ -709,12 +728,11 @@
                 "resources-heading": "Læringsressurser og Tilbud", "resources-desc": "Kuraterte operasjonelle kanaler og taktiske IT-tilbud anbefalt for cybersikkerhetsopplæring.",
                 "traffic-text": "Besøksstatistikk:",
                 
-                // Case Study 1 Norwegian
                 "cs1-tag": "Energibedrift", "cs1-loc": "Norge Lokasjon",
                 "cs1-title": "Kasusstudie: Datasenter-optimalisering",
                 "cs1-sub": "Konsolidering med null nedetid gir $300K i årlige besparelser",
                 "cs1-body": `
-                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjenvighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) and teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
+                    <p><strong class="text-blue-400">Oversikt:</strong> En større virksomhet krevde en strategisk reduksjon i IT-driftskostnader, samtidig som uavbrutt tilgjenvighet ble opprettholdt for kritiske tjenester. Som datasenter-SME (Local Hands & Feet Support) og teknisk prosjektleder ledet jeg planleggingen og gjennomføringen av et komplekst konsolideringsprogram for to datasentre i Oslo, Norge.</p>
                     <p>Initiativet ga ~$300K i årlige besparelser, optimaliserte det fysiske fotavtrykket og ble fullført uten avbrudd for virksomheten.</p>
                     <p><strong class="text-blue-400">Min rolle:</strong> Kombinert <strong>Datasenter-SME</strong> (In-situ validering av infrastruktur, kabling, rack-utforming, avhengighetskartlegging og fysisk oppfølging) og <strong>Teknisk prosjektleder</strong> (Ende-til-ende programstyring, utarbeidelse av kjøreplaner/runbooks og koordinering på tvers av lagrings-, nettverks-, og sikkerhetsteam).</p>
                     <p><strong class="text-blue-400">Gjennomføring:</strong> Sikret null avbrudd under migrering av SAP Block Storage og NAS-fildeling for 5 000 daglige brukere under en streng 4-måneders tidsfrist. Koordinerte flytting av <strong>10 tonn maskinvare</strong>, inkludert 14 HPE-kabinetter, 50 servere, 3 ESL-tapebibliotek, 10 fulle lagringsracks og 2 nettverksracks.</p>
@@ -736,7 +754,7 @@
                         <img src="US-1.png" alt="US-1 Kjernefunksjoner og fordeler" class="w-full h-auto rounded opacity-90 hover:opacity-100 transition" />
                         <p class="text-[10px] text-slate-500 text-center mt-1.5 font-mono">Figur 2: Arkitektoniske funksjoner og operasjonelle resultater</p>
                     </div>
-                    <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) ghost 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen ble utført etter arbeidstid og i sommerferien for å omgå aktive endringsfrys-perioder.</p>
+                    <p><strong class="text-blue-400">Gjennomføring:</strong> Koordinerte komplekse tverrfaglige milepæler støttet av over 20 spesialiserte fagomådeeksperter (SMEs) gjennom 350+ Webex-møter og 500+ e-postutvekslinger. Migreringen ble utført etter arbeidstid og i sommerferien for å omgå aktive endringsfrys-perioder.</p>
                     <p><strong class="text-blue-400">Resultat:</strong> Oppnådde 33% direkte kostnadsbesparelse på nettverksutstyr, reduserte løpende vedlikeholdsutgifter og etablerte automatiserte rutiner for skysikkerhetskopiering.</p>
                     <div class="p-2 bg-slate-950 rounded border border-slate-800 text-center"><span class="text-green-400 font-bold">Kostnadseffektivitet: 33% Direkte Besparelse på Infrastruktur</span></div>
                 `
@@ -963,7 +981,6 @@
         const certificationsData = {
             en: [
                 { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Cyber Security – Government of India (NIELIT)" },
-                { icon: "shield-check", styling: "bg-emerald-950/40 text-emerald-400", name: "CYBERSECURITY CERTIFIED - NATIONAL INSTITUTE OF ELECTRONICS AND INFORMATION TECHNOLOGY" },
                 { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
                 { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internet" },
                 { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
@@ -981,7 +998,6 @@
             ],
             no: [
                 { icon: "shield", styling: "bg-orange-950/40 text-orange-400", name: "Kybersikkerhet – Indiske Myndigheter (NIELIT)" },
-                { icon: "shield-check", styling: "bg-emerald-950/40 text-emerald-400", name: "CYBERSECURITY CERTIFIED - NATIONAL INSTITUTE OF ELECTRONICS AND INFORMATION TECHNOLOGY" },
                 { icon: "cpu", styling: "bg-blue-950/40 text-blue-400", name: "MCP – Microsoft Certified Professional" },
                 { icon: "globe", styling: "bg-blue-950/40 text-blue-400", name: "MCP+I – Microsoft Certified Professional + Internett" },
                 { icon: "server", styling: "bg-blue-950/40 text-blue-400", name: "MCSE – Microsoft Certified Systems Engineer" },
@@ -1016,7 +1032,6 @@
             ]
         };
 
-        // SAFETY GATE OBFUSCATION ENGINE
         function setupEmailObfuscation() {
             const userVector = "contact";
             const serverVector = "kunalv.me";
@@ -1112,7 +1127,7 @@
             `).join('');
         }
 
-        function renderCertifications(lang) {
+        UX;function renderCertifications(lang) {
             const grid = document.getElementById("certifications-grid");
             grid.innerHTML = certificationsData[lang].map(c => `
                 <div class="p-3 bg-slate-900 border border-slate-800 rounded flex items-center gap-3">
@@ -1140,7 +1155,6 @@
             setTimeout(() => { setupEmailObfuscation(); }, 50);
         }
 
-        // TRAINED MODEL RETRIEVAL LOGIC
         async function sendQueryToVishwa() {
             const inputField = document.getElementById('chat-user-input');
             const messageText = inputField.value.trim();
@@ -1213,7 +1227,7 @@
                     reply = "You can view Kunal's live corporate connection grid and check endorsement histories by accessing his direct network profile loop at **linkedin.com/in/kunalkv/en**.";
                 }
                 else if (query.includes("domain") || query.includes("industry") || query.includes("oil") || query.includes("gas") || query.includes("finance")) {
-                    reply = "His architecture deployment background spans highly regulated critical operations landscapes, specifically **Oil & Gas (Energy portfolios), Banking & Financial Services, Global Pharmaceuticals, and Semi-Government Institutions**.";
+                    reply = "His architecture deployment background spans highly regulated critical operations landscapes, specifically **Oil & Gas (Energy portfolios), Banking & Financial Services, and Semi-Government Institutions**.";
                 }
                 else {
                     reply = "I am specifically optimized to assist with queries regarding Kunal Vishwakarma's background. Try asking about his **About summary, Skills, Projects, Experience, White Papers, Awards, Credentials, CV, Contact parameters, Location, or LinkedIn profile**.";
@@ -1241,7 +1255,6 @@
             }
         }
 
-        // CONTROL HANDLERS FOR EMAIL-GATE MODAL AND PRINTING
         function openDownloadModal() {
             document.getElementById('downloadModal').classList.remove('hidden');
         }
@@ -1306,5 +1319,3 @@
     </script>
 </body>
 </html>
-
-```
