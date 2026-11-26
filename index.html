@@ -103,6 +103,7 @@
                 <a href="#skills" data-i18n="nav-skills" class="hidden lg:inline hover:text-blue-500 transition">Skills</a>
                 <a href="#projects" data-i18n="nav-projects" class="hidden lg:inline hover:text-blue-500 transition">Projects</a>
                 <a href="#portfolio" class="hidden lg:inline hover:text-blue-500 transition">Portfolio</a>
+                <a href="https://github.com/Kunalvishwakarma" target="_blank" rel="noopener noreferrer" class="hidden lg:inline hover:text-blue-500 transition">GitHub</a>
                 <a href="#experience" data-i18n="nav-experience" class="hidden lg:inline hover:text-blue-500 transition">Experience</a>
                 <a href="#whitepapers" data-i18n="nav-whitepapers" class="hidden lg:inline hover:text-blue-500 transition">White Paper</a>
                 <a href="#testimonials" data-i18n="nav-awards" class="hidden lg:inline hover:text-blue-500 transition">Awards</a>
@@ -460,7 +461,7 @@
                 <i data-lucide="mail" class="w-4 h-4 text-blue-500"></i>
             </span>
             <span class="text-slate-800 hidden md:block">|</span>
-            <a href="https://github.com/Kunalvishwakarma/kunal" target="_blank" class="hover:text-white transition flex items-center gap-2" title="GitHub">
+            <a href="https://github.com/Kunalvishwakarma" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-2" title="GitHub">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
             </a>
             <span class="text-slate-800 hidden md:block">|</span>
@@ -1203,11 +1204,10 @@
 
             const userBubble = document.createElement('div');
             userBubble.className = 'flex items-start gap-2.5 justify-end';
-            userBubble.innerHTML = `
-                <div class="p-3 bg-blue-600 text-white rounded-xl rounded-tr-none max-w-[80%] leading-relaxed break-words">
-                    ${messageText}
-                </div>
-            `;
+            const userMessage = document.createElement('div');
+            userMessage.className = 'p-3 bg-blue-600 text-white rounded-xl rounded-tr-none max-w-[80%] leading-relaxed break-words';
+            userMessage.textContent = messageText;
+            userBubble.appendChild(userMessage);
             container.appendChild(userBubble);
             inputField.value = '';
             
@@ -1239,10 +1239,10 @@
                     reply = "His foundational competencies map across <strong>Project Management, Capacity Planning, Root Cause Analysis (RCA), Vendor Coordination, and Server Architecture</strong>.";
                 }
                 else if (query.includes("projects") || query.includes("milestones") || query.includes("deliveries")) {
-                    reply = "Key architecture achievements include over **30 global production line executions**, such as setting up primary Offshore Development Centers (ODCs) for Barclays and engineering multi-phase private cloud deployments.";
+                    reply = "Selected experience includes enterprise infrastructure modernisation, datacenter migration and decommissioning, hybrid-cloud initiatives, and technical delivery across the United States, Norway and APAC.";
                 }
                 else if (query.includes("experience") || query.includes("work history") || query.includes("corporation") || query.includes("cognizant") || query.includes("barclays")) {
-                    reply = "Kunal offers 20+ years of enterprise mastery. He currently leads execution as a Datacenter SME and Infrastructure Architect at **Cognizant Oil & Gas Consulting Services Norway** in Oslo, following high-level infrastructure leadership positions at Barclays Technology Solutions.";
+                    reply = "Kunal brings 20+ years of enterprise IT experience, including Datacenter SME and Infrastructure Architect responsibilities, infrastructure transformation, networking, cloud and technical project delivery.";
                 }
                 else if (query.includes("white paper") || query.includes("case study") || query.includes("consolidation") || query.includes("savings")) {
                     reply = "Kunal has authored extensive infrastructure cases, including datacenter consolidation and decommissioning initiatives involving infrastructure assessment, dependency mapping, migration planning, cross-functional coordination and operational transition.";
@@ -1260,7 +1260,7 @@
                     reply = "You can officially communicate with Kunal for enterprise consulting or global infrastructure engagements via his direct professional inbox channel at **contact@kunalv.me**.";
                 }
                 else if (query.includes("location") || query.includes("live") || query.includes("norway") || query.includes("oslo")) {
-                    reply = "Kunal is currently based permanently in **Oslo, Norway**, leading regional cloud integrations, datacenter expansions, and local consulting pipelines.";
+                    reply = "Kunal is based in **Oslo, Norway**. His portfolio focuses on enterprise infrastructure, datacenter transformation, cloud, networking and cybersecurity.";
                 }
                 else if (query.includes("linkedin")) {
                     reply = "You can view Kunal's live corporate connection grid and check endorsement histories by accessing his direct network profile loop at **linkedin.com/in/kunalkv/en**.";
